@@ -148,7 +148,7 @@ class Vehicule {
 		*  \param aucun
 		*  \return void
 		*/								
-		void afficher();
+		virtual void afficher();
 };
 
 #endif

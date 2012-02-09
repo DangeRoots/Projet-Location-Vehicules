@@ -11,9 +11,10 @@
  * \version 0.1
  */
 
-class Utilitaire : Vehicule {
+class Utilitaire : public Vehicule {
 	private:
-		float volumeUtile;
+		float m_volumeUtile;
+	
 	public:
 		/*!
 		*  \brief Constructeur
@@ -40,7 +41,7 @@ class Utilitaire : Vehicule {
 		*
 		*  Destructeur de la classe Ordre
 		*/
-		~Utilitaire();
+		virtual ~Utilitaire();
 		
 		/*!
 		 *  \fn float getVolumeUtile()
@@ -63,6 +64,16 @@ class Utilitaire : Vehicule {
 		 *  \return void
 		 */			
 		void setVolumeUtile(float volume);
+
+		/*!
+		*  \brief Afficher utilitaire
+		*
+		*  Affiche l'utilitaire
+		*
+		*  \param aucun
+		*  \return void
+		*/								
+		virtual void afficher();
 };
 
 #endif
