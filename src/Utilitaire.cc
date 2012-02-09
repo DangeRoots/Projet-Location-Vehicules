@@ -23,10 +23,11 @@ Utilitaire::~Utilitaire() {
 }
 
 float Utilitaire::getVolumeUtile() {
-	return 3.14;
+	return m_volumeUtile;
 }
 
 void Utilitaire::setVolumeUtile(float volume) {
+	m_volumeUtile = volume;
 }
 
 void Utilitaire::afficher() {
