@@ -2,3 +2,4 @@
 # On ignore les fichiers binaires
 #--------------------------------
 *.o
+bin/
