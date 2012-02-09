@@ -1,11 +1,9 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-#include "../inc/Vehicule.h"
-#include "../inc/Immat.h"
-
-// #include <Vehicule.h>
+#include <Vehicule.h>
 
 Vehicule::Vehicule (string immat, string marque, string modele, int kilometrage) {
 	m_immatriculation = immat;
@@ -61,7 +59,7 @@ bool Vehicule::operator==(const Vehicule &veh) {
 }
 
 void Vehicule::afficher() {
-	cout << "Marque : " << m_marque << endl;
-	cout << "Immatriculation : " << m_immatriculation << endl;
-	cout << "Kilométrage : " << m_kilometrage << endl;
+	cout << "Marque : " 			<< m_marque 			<< endl;
+	cout << "Immatriculation : "	<< m_immatriculation 	<< endl;
+	cout << "Kilométrage : " 		<< m_kilometrage 		<< endl;
 }

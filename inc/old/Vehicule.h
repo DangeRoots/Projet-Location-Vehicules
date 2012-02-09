@@ -13,7 +13,7 @@
  * \version 0.2
  */
 
-class Vehicule {	
+class Vehicule {
 	private:
 		string m_immatriculation, m_marque, m_modele;
 		int m_kilometrage;
@@ -29,7 +29,7 @@ class Vehicule {
 		*  \param marque, chaîne de caractères, la marque du véhicule
 		*  \param kilometrage, entier, le kilométrage du véhicule
 		*/
-		Vehicule(string immat, string marque, string modele, int kilometrage);
+		Vehicule (string immat, string marque, string modele, int kilometrage);
 		
 		/*!
 		 *  \brief Constructeur
@@ -38,7 +38,7 @@ class Vehicule {
 		 *
 		 *  \param aucun
 		 */
-		Vehicule();
+		Vehicule ();
 
 		/*!
 		 *  \brief Destructeur
@@ -67,7 +67,7 @@ class Vehicule {
 		 *  \param immat, chaîne de caractères, l'immatriculation du véhicule
 		 *  \return void
 		 */		
-		void setImmatriculation(std::string immat);
+		void setImmatriculation(string immat);
 
 		/*!
 		 *  \brief Accéder modèle
@@ -87,7 +87,7 @@ class Vehicule {
 		 *  \param modele, chaîne de caractères, le modèle du véhicule
 		 *  \return void
 		 */		
-		void setModele(std::string modele);
+		void setModele(string modele);
 
 		/*!
 		 *  \brief Accéder marque
@@ -107,7 +107,7 @@ class Vehicule {
 		 *  \param marque, chaîne de caractères, la marque du véhicule
 		 *  \return void
 		 */		
-		void setMarque(std::string marque);
+		void setMarque(string marque);
 
 		/*!
 		 *  \brief Accéder kilométrage
@@ -148,7 +148,7 @@ class Vehicule {
 		*  \param aucun
 		*  \return void
 		*/								
-		virtual void afficher();
+		void afficher();
 };
 
 #endif
