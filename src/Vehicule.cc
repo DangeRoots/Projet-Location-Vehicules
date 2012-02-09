@@ -1,10 +1,9 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-#include "../inc/Vehicule.h"
-
-// #include <Vehicule.h>
+#include <Vehicule.h>
 
 Vehicule::Vehicule (string immat, string marque, string modele, int kilometrage) {
 	m_immatriculation = immat;
