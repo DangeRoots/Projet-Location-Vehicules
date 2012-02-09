@@ -67,7 +67,7 @@ class Vehicule {
 		 *  \param immat, chaîne de caractères, l'immatriculation du véhicule
 		 *  \return void
 		 */		
-		void setImmatriculation(std::string immat);
+		void setImmatriculation(string immat);
 
 		/*!
 		 *  \brief Accéder modèle
