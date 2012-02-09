@@ -4,6 +4,7 @@ using namespace std;
 
 #include <Vehicule.h>
 #include <Utilitaire.h>
+#include <Camion.h>
 
 int main() {
 	Vehicule v1; // Constructeur par défaut
@@ -33,4 +34,16 @@ int main() {
 	
 	u2.setKilometrage(30);
 	u2.afficher();
+	
+	Camion c1;
+	Camion c2(12,12,"IMMAT_CAMION2", "Marque_camion2", "Modele_camion2", 100);
+	
+	cout << "---------------------" << endl;
+	cout << "Camion sans param" << endl;
+	c1.afficher();
+	cout << "---------------------" << endl;
+	cout << "Camion avec param" << endl;
+	c2.afficher();
+	c1.setPoidsUtile(12);
+	c1.afficher();
 }
