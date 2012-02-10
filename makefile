@@ -17,11 +17,11 @@ MAIN_C++_SOURCES = location
 #nom du répertoire contenant les autres fichiers source
 DIR_SOURCES      = src
 #nom des autres fichiers sources du repertoire DIR_SOURCES
-OTHERS_C++_SOURCES   = A_COMPLETER
+OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion
 #répertoire contenant les .h
 DIR_INCLUDE      = inc
 #répertoire pour les .o
-DIR_OBJETS       = lib
+DIR_OBJETS       = bin
 #répertoire pour l'exécutable
 DIR_BIN          = bin
 # nom exécutable (si essai alors TARGET = essai)
