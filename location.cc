@@ -5,6 +5,7 @@ using namespace std;
 #include <Vehicule.h>
 #include <Utilitaire.h>
 #include <Camion.h>
+#include <VP.h>
 
 int main() {
 	Vehicule v1; // Constructeur par défaut
@@ -46,4 +47,16 @@ int main() {
 	c2.afficher();
 	c1.setPoidsUtile(12);
 	c1.afficher();
+	
+	VP vp1;
+	VP vp2("0012ZZ87", "Porshe", "911 Carrera", 80000, 2 );
+	
+	cout << "---------------------" << endl;
+	cout << "VP sans param" << endl;
+	vp1.afficher();
+	cout << "---------------------" << endl;
+	cout << "VP avec paramètre" << endl;
+	vp2.afficher();
+	vp1.setNbPlaces(3);
+	vp1.afficher();
 }
