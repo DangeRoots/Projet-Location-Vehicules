@@ -11,7 +11,10 @@ VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces
 	m_nbPlaces = nbPlaces;
 }
 	
-VP::VP():Vehicule(){};
+VP::VP():Vehicule(){
+	
+	m_nbPlaces = 0;
+};
 
 VP::~VP(){}
 
