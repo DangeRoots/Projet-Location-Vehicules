@@ -1,5 +1,9 @@
 #--------------------------------
-# On ignore les fichiers binaires
+# On ignore 
+# - les fichiers binaires
+# - les fichiers temporaires
+# - les fichiers objets
 #--------------------------------
 *.o
 bin/
+*.*~
