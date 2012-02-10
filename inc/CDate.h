@@ -1,5 +1,5 @@
-#ifndef CDATE2_H
-#define CDATE2_H
+#ifndef CDATE_H
+#define CDATE_H
 
 /*!
  * \file CDate.h
@@ -8,10 +8,10 @@
  *  Cette classe propose des outils pour gérer une date
  * 
  * \author Franck Ruby, Gilles Coulais, Icham Sirat
- * \version 0.2
+ * \version 0.3
  */
  
-class CDate2 {
+class CDate {
 	private:
 		int m_jour;
 		int m_mois;
@@ -25,7 +25,7 @@ class CDate2 {
 		*
 		*  \param aucun
 		*/
-		CDate2();
+		CDate();
 		
 		/*!
 		*  \brief Constructeur
@@ -34,7 +34,7 @@ class CDate2 {
 		*
 		*  \param date, CDate, une date
 		*/
-		CDate2(const CDate2& date);
+		CDate(const CDate& date);
 		
 		/*!
 		*  \brief Constructeur
@@ -45,7 +45,7 @@ class CDate2 {
 		*  \param mois, entier, le mois
 		*  \param annee, entier, l'année
 		*/
-		CDate2(int jour, int mois, int annee);
+		CDate(int jour, int mois, int annee);
 
 		/*!
 		*  \brief Destructeur
@@ -54,7 +54,7 @@ class CDate2 {
 		* 
 		*  \param aucun
 		*/		
-		~CDate2();
+		~CDate();
 		
 		/*!
 		*  \brief Accéder au jour
@@ -218,7 +218,7 @@ class CDate2 {
 		*  \param aucun
 		*  \return void
 		*/								
-	    void affichageStandard();
+	    void afficher();
 	
 };
 #endif

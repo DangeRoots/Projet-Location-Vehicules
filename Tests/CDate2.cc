@@ -1,8 +1,6 @@
 // Classe CDate Améliorée
 // Auteur Sirat Icham 2011
 // Projet Location
-// Code à valider
-
 
 #include <string>
 #include <iostream>
