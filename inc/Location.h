@@ -14,11 +14,11 @@
 class Location {
 	private:
 		Vehicule vehicule;
-		Date dateDebut;
-		Date dateFinPrevue;
-		Date dateFinReelle;
-		int kmDebut;
-		int kmFin;
+		Date dateDepart;
+		Date dateRetourPrevu;
+		Date dateRetourReel;
+		int kilometreDepart;
+		int kilometreRetour;
 		// int nbLocation; // Nombre de fois où le véhicule a été loué
 
 	public:
