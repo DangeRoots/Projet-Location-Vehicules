@@ -31,7 +31,6 @@ std::string CDate2::GetStrMois(){
   return tab[m_mois-1];
 }
 
-// Retourne le nombre de jour que contient un mois d'une année précise
 int CDate2::nbJours (int mois, int annee){
 	// Si c'est février, c'est exceptionel
 		if( mois == 2 )
@@ -41,7 +40,7 @@ int CDate2::nbJours (int mois, int annee){
 		return 31;
 		else return 30;
 }
-// Retourne si une année est bissextile ou pas
+
 bool CDate2::estBissextile(int annee){
 	// Si l'année est divisible par 4, et non par 100 = ok
 	if( annee %4 == 0 && annee %100 != 0)
@@ -51,7 +50,7 @@ bool CDate2::estBissextile(int annee){
 		return true;
 	else return false;
 }
-// Retourne si la date existe ... est valide
+
 bool CDate2::validerDate( int jour, int mois, int annee){
 	if( mois < 0 || mois > 12 )
 		return false;
