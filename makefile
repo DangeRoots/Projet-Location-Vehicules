@@ -13,11 +13,11 @@ CC = g++
 #--------------------------------------
 
 #nom du fichier du repertoire principal contenant la fonction main
-MAIN_C++_SOURCES = location
+MAIN_C++_SOURCES = main
 #nom du répertoire contenant les autres fichiers source
 DIR_SOURCES      = src
 #nom des autres fichiers sources du repertoire DIR_SOURCES
-OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion VP
+OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion VP CDate Location
 #répertoire contenant les .h
 DIR_INCLUDE      = inc
 #répertoire pour les .o

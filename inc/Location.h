@@ -5,7 +5,7 @@
  * \file Location.h
  * \brief Classe Location
  * 
- *  Cette classe permet de gérer un véhicule du parc
+ *  Cette classe permet de gérer la location d'un véhicule
  * 
  * \author Gilles Coulais, Icham Sirat
  * \version 0.1
@@ -13,12 +13,12 @@
 
 class Location {
 	private:
-		Vehicule vehicule;
-		Date dateDepart;
-		Date dateRetourPrevu;
-		Date dateRetourReel;
-		int kilometreDepart;
-		int kilometreRetour;
+		Vehicule m_vehicule;
+		CDate m_dateDepart;
+		CDate m_dateRetourPrevu;
+		CDate m_dateRetourReel;
+		int m_kilometreDepart;
+		int m_kilometreRetour;
 		// int nbLocation; // Nombre de fois où le véhicule a été loué
 
 	public:
@@ -37,11 +37,13 @@ class Location {
 		*  Constructeur de la classe Location
 		*
 		*  \param vehicule, objet Vehicule, le véhicule à louer
-		*  \param dateDebut, objet Date, la date de début de location, NULL si le véhicule n'est pas loué
-		*  \param dateFinPrevue, objet Date, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
-		*  \param kmDebut, entier, le kilométrage du véhicule au début de location
+		*  \param dateDepart, objet CDate, la date de début de location, NULL si le véhicule n'est pas loué
+		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
+		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
+		*  \param kmDepart, entier, le kilométrage du véhicule au début de location
+		*  \param kmRetour, entier, le kilométrage du véhicule au retour de location
 		*/		
-		Location(Vehicule vehicule, Date dateDebut, Date dateFinPrevue, int kmDebut);
+		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int kmDepart, int kmRetour);
 		
 		/*!
 		*  \brief Destructeur
@@ -63,24 +65,54 @@ class Location {
 		Vehicule getVehicule();
 
 		/*!
+		*  \brief Modifier véhicule
+		*
+		*  Permet de modifier le véhicule à partir de son immatriculation
+		*
+		*  \param veh, objet Vehicule, le nouveau véhicule
+		*  \return void
+		*/		
+		void setVehicule(Vehicule veh);
+
+		/*!
 		*  \brief Accéder date début
 		*
 		*  Permet d'obtenir la date de début de location
 		*
 		*  \param aucun
-		*  \return un objet Date
+		*  \return un objet CDate
 		*/		
-		Date getDateDebut();
+		CDate getDateDepart();
 
 		/*!
-		*  \brief Accéder date fin prévue
+		*  \brief Modifier date départ
 		*
-		*  Permet d'obtenir la date de fin de location prévue
+		*  Permet de modifier la date de départ du véhicule
+		*
+		*  \param date, objet CDate, la nouvelle date du départ
+		*  \return void
+		*/		
+		void setDateDepart(CDate date);
+
+		/*!
+		*  \brief Accéder date retour prévue
+		*
+		*  Permet d'obtenir la date prévue de retour du véhicule
 		*
 		*  \param aucun
-		*  \return un objet Date
+		*  \return un objet CDate
 		*/		
-		Date getDateFinPrevue();
+		CDate getDateRetourPrevue();
+
+		/*!
+		*  \brief Modifier date retour prévue
+		*
+		*  Permet de modifier la date prévue de retour du véhicule
+		*
+		*  \param date, objet CDate, la nouvelle date de retour
+		*  \return void
+		*/		
+		void setDateRetourPrevue(CDate date);
 
 		/*!
 		*  \brief Accéder date fin réelle
@@ -88,17 +120,59 @@ class Location {
 		*  Permet d'obtenir la date de fin de location réelle
 		*
 		*  \param aucun
-		*  \return un objet Date
+		*  \return un objet CDate
 		*/		
-		Date getDateFinReelle();
-		
-		void setDateDebut(Date dateDebut);
-		void setDateFinPrevue(Date dateFin);
-		
-		int getKmDebut();
-		int getKmFin();
-		void setKmDebut(int km);
-		void setKmFin(int km);
+		CDate getDateRetourReelle();
+
+		/*!
+		*  \brief Modifier date retour réelle
+		*
+		*  Permet de modifier la date de retour réelle 
+		*
+		*  \param date, objet CDate, la nouvelle date de retour réelle
+		*  \return void
+		*/		
+		void setDateRetourReelle(CDate date);
+
+		/*!
+		*  \brief Récupérer le kilométrage de départ
+		*
+		*  Permet d'obtenir le kilométrage de départ de la location
+		*
+		*  \param void
+		*  \return entier, le kilométrage de départ
+		*/				
+		int getKmDepart();
+
+		/*!
+		*  \brief Modifier kilométrage de départ
+		*
+		*  Permet de modifier le kilométrage de départ de la location
+		*
+		*  \param kilom, entier, le nouveau kilométrage de départ
+		*  \return void
+		*/
+		void setKmDepart(int km);
+
+		/*!
+		*  \brief Modifier kilométrage retour
+		*
+		*  Permet d'obtenir le kilométrage retour de la location
+		*
+		*  \param none
+		*  \return entier, le kilométrage de retour
+		*/				
+		int getKmRetour();
+
+		/*!
+		*  \brief Modifier kilométrage de retour
+		*
+		*  Permet de modifier le kilométrage de retour de la location
+		*
+		*  \param kilom, entier, le nouveau kilométrage de retour
+		*  \return void
+		*/
+		void setKmRetour(int kilom);
 
 		/*!
 		*  \brief Afficher location
