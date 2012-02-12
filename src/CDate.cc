@@ -53,19 +53,25 @@ bool CDate::estBissextile(int annee){
 }
 
 bool CDate::operator==(const Date &date) const {
-	return (m_Jour == date.m_Jour && m_Mois == date.m_Mois && m_Annee ==date.m_Mois);
+	return (m_jour == date.m_jour && m_mois == date.m_mois && m_annee == date.m_mois);
 }
 
 bool CDate::operator <(const Date &date) const {
 	bool res = false;
-	if ((date.m_Annee < m_Annee) ||
-		(date.m_Annee == m_Annee && date.m_Mois < m_Mois) ||
-		(date.m_Annee == m_Annee && date.m_Mois == m_Mois && date.m_Jour < m_Jour))
+	if ((date.m_annee < m_annee) ||
+		(date.m_annee == m_annee && date.m_mois < m_mois) ||
+		(date.m_annee == m_annee && date.m_mois == m_mois && date.m_jour < m_jour))
 		res = true;
 	return res;
 }
 
 bool CDate::operator >(const Date &date) const {
+	bool res = false;
+	if ((date.m_annee > m_annee) ||
+		(date.m_annee == m_annee && date.m_mois > m_mois) ||
+		(date.m_annee == m_annee && date.m_mois == m_mois && date.m_jour > m_jour))
+		res = true;
+	return res;
 }
 
 bool CDate::operator <=(const Date &date) const {
@@ -77,7 +83,7 @@ bool CDate::operator >=(const Date &date) const {
 }
 
 bool CDate::validerDate( int jour, int mois, int annee){
-	return (!(Mois < 0 || Mois > 12 || Jour < 0 || Jour > nbJoursMois(Mois,Annee)));	
+	return (!(mois < 0 || mois > 12 || jour < 0 || jour > nbJours(mois,annee)));	
 }
 
 void CDate::afficher(){
