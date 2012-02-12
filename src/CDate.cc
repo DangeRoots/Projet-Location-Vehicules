@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#include <CDate>
+#include <CDate.h>
 
 CDate::CDate(){
 	m_jour = 1;
@@ -27,8 +27,8 @@ CDate::~CDate(){}
 
 std::string CDate::GetStrMois(){
     string tab[12]={"Janvier","Février","Mars","Avril","Mai","Juin",
-		  "Juillet","Aout","Septembre","Octobre","Novembre","Décembre"};
-  return tab[m_mois-1];
+					"Juillet","Aout","Septembre","Octobre","Novembre","Décembre"};
+	return tab[m_mois-1];
 }
 
 int CDate::nbJours (int mois, int annee){
@@ -52,11 +52,11 @@ bool CDate::estBissextile(int annee){
 		return false;
 }
 
-bool CDate::operator==(const Date &date) const {
+bool CDate::operator==(const CDate &date) const {
 	return (m_jour == date.m_jour && m_mois == date.m_mois && m_annee == date.m_mois);
 }
 
-bool CDate::operator <(const Date &date) const {
+bool CDate::operator <(const CDate &date) const {
 	bool res = false;
 	if ((date.m_annee < m_annee) ||
 		(date.m_annee == m_annee && date.m_mois < m_mois) ||
@@ -65,7 +65,7 @@ bool CDate::operator <(const Date &date) const {
 	return res;
 }
 
-bool CDate::operator >(const Date &date) const {
+bool CDate::operator >(const CDate &date) const {
 	bool res = false;
 	if ((date.m_annee > m_annee) ||
 		(date.m_annee == m_annee && date.m_mois > m_mois) ||
@@ -74,13 +74,15 @@ bool CDate::operator >(const Date &date) const {
 	return res;
 }
 
-bool CDate::operator <=(const Date &date) const {
+/*
+bool CDate::operator <=(const CDate &date) const {
 	return (this < date || this == date);
 }
 
 bool CDate::operator >=(const Date &date) const {
 	return (this > date || this == date);
 }
+* */
 
 bool CDate::validerDate( int jour, int mois, int annee){
 	return (!(mois < 0 || mois > 12 || jour < 0 || jour > nbJours(mois,annee)));	
