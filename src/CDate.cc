@@ -6,9 +6,9 @@ using namespace std;
 #include <CDate.h>
 
 CDate::CDate(){
-	m_jour = 1;
-	m_mois = 1;
-	m_annee = 2002;	
+	m_jour = 0;
+	m_mois = 0;
+	m_annee = 0;	
 }
 
 CDate::CDate(const CDate& date){
@@ -56,7 +56,7 @@ bool CDate::operator==(const CDate &date) const {
 	return (m_jour == date.m_jour && m_mois == date.m_mois && m_annee == date.m_mois);
 }
 
-bool CDate::operator <(const CDate &date) const {
+bool CDate::operator<(const CDate &date) const {
 	bool res = false;
 	if ((date.m_annee < m_annee) ||
 		(date.m_annee == m_annee && date.m_mois < m_mois) ||
@@ -65,7 +65,7 @@ bool CDate::operator <(const CDate &date) const {
 	return res;
 }
 
-bool CDate::operator >(const CDate &date) const {
+bool CDate::operator>(const CDate &date) const {
 	bool res = false;
 	if ((date.m_annee > m_annee) ||
 		(date.m_annee == m_annee && date.m_mois > m_mois) ||
@@ -73,13 +73,12 @@ bool CDate::operator >(const CDate &date) const {
 		res = true;
 	return res;
 }
-
 /*
 bool CDate::operator <=(const CDate &date) const {
 	return (this < date || this == date);
 }
 
-bool CDate::operator >=(const Date &date) const {
+bool CDate::operator >=(const CDate &date) const {
 	return (this > date || this == date);
 }
 * */

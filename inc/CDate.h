@@ -198,7 +198,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    // bool operator <=(const CDate &date) const;
+	    bool operator <=(const CDate &date) const;
 
 	    /*!
 		*  \brief Supériorité égalité dates
@@ -208,7 +208,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    // bool operator >=(const CDate &date) const;
+	    bool operator >=(const CDate &date) const;
 
 		/*!
 		*  \brief Afficher date

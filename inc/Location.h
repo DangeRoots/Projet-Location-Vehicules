@@ -77,102 +77,44 @@ class Location {
 		/*!
 		*  \brief Accéder date début
 		*
-		*  Permet d'obtenir la date de début de location
+		*  Permet d'obtenir les dates associées à la location : date de départ, date de retour prévu, date de retour réel
 		*
-		*  \param aucun
+		*  \param type, caractère, le type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
 		*  \return un objet CDate
 		*/		
-		CDate getDateDepart();
+		CDate getDate(char type);
 
 		/*!
-		*  \brief Modifier date départ
+		*  \brief Modifier date
 		*
-		*  Permet de modifier la date de départ du véhicule
+		*  Permet de modifier les dates associées à la location : date de départ, date de retour prévu, date de retour réel
 		*
-		*  \param date, objet CDate, la nouvelle date du départ
+		*  \param date, objet CDate, la nouvelle date
+		*  \param type, caractère, le type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
 		*  \return void
 		*/		
-		void setDateDepart(CDate date);
+		void setDate(CDate date, char type);
 
 		/*!
-		*  \brief Accéder date retour prévue
+		*  \brief Récupérer kilométrage
 		*
-		*  Permet d'obtenir la date prévue de retour du véhicule
+		*  Permet d'obtenir le kilométrage de départ ou retour du véhicule
 		*
-		*  \param aucun
-		*  \return un objet CDate
-		*/		
-		CDate getDateRetourPrevue();
-
-		/*!
-		*  \brief Modifier date retour prévue
-		*
-		*  Permet de modifier la date prévue de retour du véhicule
-		*
-		*  \param date, objet CDate, la nouvelle date de retour
-		*  \return void
-		*/		
-		void setDateRetourPrevue(CDate date);
-
-		/*!
-		*  \brief Accéder date fin réelle
-		*
-		*  Permet d'obtenir la date de fin de location réelle
-		*
-		*  \param aucun
-		*  \return un objet CDate
-		*/		
-		CDate getDateRetourReelle();
-
-		/*!
-		*  \brief Modifier date retour réelle
-		*
-		*  Permet de modifier la date de retour réelle 
-		*
-		*  \param date, objet CDate, la nouvelle date de retour réelle
-		*  \return void
-		*/		
-		void setDateRetourReelle(CDate date);
-
-		/*!
-		*  \brief Récupérer le kilométrage de départ
-		*
-		*  Permet d'obtenir le kilométrage de départ de la location
-		*
-		*  \param void
-		*  \return entier, le kilométrage de départ
+		*  \param type, caractère, le type de kilométrage souhaité : d pour départ, r pour retour
+		*  \return entier, le kilométrage
 		*/				
-		int getKmDepart();
+		int getKilometrage(char type);
 
 		/*!
-		*  \brief Modifier kilométrage de départ
+		*  \brief Modifier kilométrage
 		*
-		*  Permet de modifier le kilométrage de départ de la location
+		*  Permet de modifier le kilométrage départ ou retour du véhicule
 		*
-		*  \param kilom, entier, le nouveau kilométrage de départ
+		*  \param km, entier, le nouveau kilométrage de départ
+		*  \param typ, caractère, le type de kilométrage à modifier, d pour départ, r pour retour
 		*  \return void
 		*/
-		void setKmDepart(int km);
-
-		/*!
-		*  \brief Modifier kilométrage retour
-		*
-		*  Permet d'obtenir le kilométrage retour de la location
-		*
-		*  \param none
-		*  \return entier, le kilométrage de retour
-		*/				
-		int getKmRetour();
-
-		/*!
-		*  \brief Modifier kilométrage de retour
-		*
-		*  Permet de modifier le kilométrage de retour de la location
-		*
-		*  \param kilom, entier, le nouveau kilométrage de retour
-		*  \return void
-		*/
-		void setKmRetour(int kilom);
+		void setKilometrage(int km, char type);
 
 		/*!
 		*  \brief Afficher location
