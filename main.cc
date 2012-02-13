@@ -89,8 +89,14 @@ int main() {
 	cout << "-------------------------------------------"<<endl;
 	CDate d1(1,1, 2000);
 	CDate d2(1,1, 2001);
+	//test égalité
 	if (d1 == d2)	cout << "OK"<<endl;
 	else cout << "KO"<<endl;
-	
+	//test supériorité
+	if (d1 > d2)   cout << "sup OK"<<endl;
+	else cout <<"sup KO"<<endl;
+	//test infériorité
+	if (d1 < d2)   cout << "inf OK"<<endl;
+	else cout <<"inf KO"<<endl;
 
 }

@@ -58,18 +58,18 @@ bool CDate::operator==(const CDate &date) const {
 
 bool CDate::operator<(const CDate &date) const {
 	bool res = false;
-	if ((date.m_annee < m_annee) ||
-		(date.m_annee == m_annee && date.m_mois < m_mois) ||
-		(date.m_annee == m_annee && date.m_mois == m_mois && date.m_jour < m_jour))
+	if ((m_annee < date.m_annee) ||
+		(m_annee == date.m_annee && m_mois < date.m_mois) ||
+		(m_annee == date.m_annee && m_mois == date.m_mois && m_jour < date.m_jour))
 		res = true;
 	return res;
 }
 
 bool CDate::operator>(const CDate &date) const {
 	bool res = false;
-	if ((date.m_annee > m_annee) ||
-		(date.m_annee == m_annee && date.m_mois > m_mois) ||
-		(date.m_annee == m_annee && date.m_mois == m_mois && date.m_jour > m_jour))
+	if ((m_annee > date.m_annee) ||
+		(m_annee == date.m_annee && m_mois > date.m_mois) ||
+		(m_annee == date.m_annee && m_mois == date.m_mois && m_jour > date.m_jour))
 		res = true;
 	return res;
 }
