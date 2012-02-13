@@ -86,4 +86,11 @@ int main() {
 	c1.afficher();
 	loc2.afficher();
 	loc1.afficher();
+	cout << "-------------------------------------------"<<endl;
+	CDate d1(1,1, 2000);
+	CDate d2(1,1, 2001);
+	if (d1 == d2)	cout << "OK"<<endl;
+	else cout << "KO"<<endl;
+	
+
 }

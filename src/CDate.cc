@@ -53,7 +53,7 @@ bool CDate::estBissextile(int annee){
 }
 
 bool CDate::operator==(const CDate &date) const {
-	return (m_jour == date.m_jour && m_mois == date.m_mois && m_annee == date.m_mois);
+	return (m_jour == date.m_jour && m_mois == date.m_mois && m_annee == date.m_annee);
 }
 
 bool CDate::operator<(const CDate &date) const {
