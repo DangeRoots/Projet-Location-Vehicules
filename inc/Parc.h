@@ -13,8 +13,8 @@
 
 class Parc {
 	private:
-		list<Location> listeVehicule;
-		bool chargerParc();
+		list<Location> m_parcAuto;
+		// bool chargerParc();
 	
 	public:
 
@@ -23,9 +23,9 @@ class Parc {
 		*
 		*  Constructeur de la classe Parc
 		*
-		*  \param listeVehicule, liste de Location, la liste des véhicules du parc
+		*  \param inFile, fstream, le fichier contenant la liste des locations
 		*/
-		Parc (list<Location> listeVehicule);
+		Parc (fstream &inFile);
 		
 		/*!
 		*  \brief Constructeur
@@ -50,42 +50,44 @@ class Parc {
 		*
 		*  Permet d'ajouter un véhicule dans le parc
 		*
-		*  \param vehicule, Location
-		*  \return void
+		*  \param loc, Location
+		*  \return booléen, vrai si la location a été ajoutée, faux sinon 
 		*/		
-		void ajouterVehicule (Location vehicule);
+		bool ajouterLocation (Location loc);
 		
 		/*!
 		*  \brief Supprimer location
 		*
 		*  Permet de supprimer un véhicule du parc
 		*
-		*  \param vehicule, Location
-		*  \return void
+		*  \param loc, Location
+		*  \return booléen, vrai si le véhicule a été trouvé et supprimé, faux sinon
 		*/
-		void supprimerVehicule (Location vehicule);
+		bool supprimerLocation (Location loc);
 
 		/*!
 		*  \brief Modifier location
 		*
-		*  Permet de modifier un véhicule du parc
+		*  Permet de modifier une location du parc
 		*
-		*  \param vehicule, Location
+		*  \param loc, Location, la location à modifier
 		*  \return void
 		*/
-		void modifierVehicule (Location vehicule);
+		void modifierLocation (Location loc);
+		
 		
 		/*!
 		*  \brief Rechercher location
 		*
-		*  Permet de rechercher un véhicule du parc
+		*  Permet de rechercher une location dans le parc
 		*
 		*  \param type, caractères, le type de véhicule recherché : v pour vp, u pour utilitaire, c pour camion
 		*  \param dateDepart, CDate, la date de début de location souhaitée
 		*  \param dateRetour, CDate, la date de fin de location souhaitée
 		*  \return un objet Location
 		*/		
-		Location rechercherVehicule(char type, CDate dateDepart, CDate dateRetour);
+		//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);
+		
 		
 		/*!
 		*  \brief Afficher liste complète
@@ -95,7 +97,7 @@ class Parc {
 		*  \param aucun
 		*  \return void
 		*/				
-		void afficherParc ();
+		void afficher();
 		
 		/*!
 		*  \brief Afficher véhicules loués
@@ -111,7 +113,7 @@ class Parc {
 		/*!
 		*  \brief Afficher véhicules disponibles
 		*
-		*  Affiche la liste des véhicules disponibles entre deux dates
+		*  Affiche la liste des locations disponibles entre deux dates
 		*
 		*  \param dateDebut, CDate, la date de début de location souhaitée
 		*  \param dateFin, CDate, la date de fin de location souhaitée
@@ -122,7 +124,7 @@ class Parc {
 		/*!
 		*  \brief Afficher véhicules restituables
 		*
-		*  Affiche la liste des véhicules dont la date de retour prévue est égale ou inférieure à la date du jour
+		*  Affiche la liste des locations dont la date de retour prévue est égale ou inférieure à la date du jour
 		*
 		*  \param today, CDate, la date de consultation de la liste
 		*  \return void
@@ -132,7 +134,7 @@ class Parc {
 		/*!
 		*  \brief Sauvegarder parc
 		*
-		*  Sauvegarde la liste des véhicules sur disque
+		*  Sauvegarde la liste des locations sur disque
 		*
 		*  \param aucun
 		*  \return void

@@ -1,0 +1,43 @@
+commun type
+commun m_immatriculation
+commun m_marque
+commun m_modele
+commun kilometrageDepart
+commun kilometrageRetour
+commun nbLoc
+si vp :nbPlaces
+si u ou c : volumeUtile
+si c : poidsUtile
+boucler sur nbLoc
+-dateDepart
+-dateRetourPrevu
+-dateRetourReel
+
+u 123FE33 PEUGEOT 306 10000 12000 120 1 12 2012 3 12 2012 3 12 2012 5 12 2012 6 12 2012 6 12 2012 18 12 2012 20 12 2012 0 00 0000
+vp 124FE33 PEUGEOT 306 10000 11000 1 120 1 12 2012 3 12 2012 3 12 2012
+
+		
+TYPE : vp
+//IMMAT 124FE33
+//MARQUE PEUGEOT
+//MODELE 306
+//KILOM 10000 ==> kilomD
+//KILOM 12000 ==> kilomA
+//NBLOC 3
+NBPLACES 120 ==> VP
+cpt = 4
+dateDepartJour1 1
+dateDepartMois1 12
+date1 2012 ==> CDate
+date1 3
+date1 12
+date1 2012 ==> CDate
+date1 3
+date1 12
+date1 2012 ==> CDate
+==> Location
+push_back
+
+ajouter gestion nbLoc dans Veh
+Modifier Location ==> Suppression kilom
+Adapter Parc pour prendre en compte nouveau Veh / Location

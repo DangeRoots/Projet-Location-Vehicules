@@ -25,7 +25,7 @@ DIR_OBJETS       = bin
 #répertoire pour l'exécutable
 DIR_BIN          = bin
 # nom exécutable (si essai alors TARGET = essai)
-TARGET = location
+TARGET = locationMain
 
 #--------------------------------------
 #Options et répertoires
