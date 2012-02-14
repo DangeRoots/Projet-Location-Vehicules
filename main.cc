@@ -98,5 +98,10 @@ int main() {
 	//test infériorité
 	if (d1 < d2)   cout << "inf OK"<<endl;
 	else cout <<"inf KO"<<endl;
-
+	
+	//test fonction today
+	cout << "---------------------------------------------"<<endl;
+    cout << "test today()"<<endl;
+    CDate auj = auj.today();
+    auj.afficher();
 }

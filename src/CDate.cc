@@ -1,5 +1,7 @@
 #include <string>
 #include <iostream>
+#include <time.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -85,6 +87,23 @@ bool CDate::operator >=(const CDate &date) const {
 
 bool CDate::validerDate( int jour, int mois, int annee){
 	return (!(mois < 0 || mois > 12 || jour < 0 || jour > nbJours(mois,annee)));	
+}
+
+CDate CDate::today(){
+	time_t now = time(NULL);
+	struct tm * tm = localtime(&now);
+	char datestring[12];
+	setlocale (LC_ALL, "");
+	  // Récupère l'année et la transforme en int
+	  strftime(datestring, sizeof datestring, "%Y", tm);
+	  int a = atoi( (const char * )datestring);
+	  // Récupère le mois et le transforme en int
+	  strftime(datestring, sizeof datestring, "%m", tm);
+	  int m = atoi( (const char * )datestring);
+	  // Récupère le jour et le transforme en int 
+	  strftime(datestring, sizeof datestring, "%d", tm);
+	  int j = atoi( (const char * )datestring);
+	  return CDate(j,m,a);
 }
 
 void CDate::afficher(){
