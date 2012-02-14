@@ -13,22 +13,20 @@ Location::Location() {
 	m_dateDepart = d;
 	m_dateRetourPrevu = d;
 	m_dateRetourReel = d;
-	m_kilometreDepart = 0;
-	m_kilometreRetour = 0;
+	// m_kilometreDepart = 0;
+	// m_kilometreRetour = 0;
 }
 
 Location::Location(	Vehicule vehicule, 
 					CDate dateDepart, 
 					CDate dateRetourPrevu, 
-					CDate dateRetourReel, 
-					int kmDepart, 
-					int kmRetour) {
+					CDate dateRetourReel) {
 	m_vehicule = vehicule;
 	m_dateDepart = dateDepart;
 	m_dateRetourPrevu = dateRetourPrevu;
 	m_dateRetourReel = dateRetourReel;
-	m_kilometreDepart = kmDepart;
-	m_kilometreRetour = kmRetour;
+	// m_kilometreDepart = kmDepart;
+	// m_kilometreRetour = kmRetour;
 }
 
 Location::~Location() {

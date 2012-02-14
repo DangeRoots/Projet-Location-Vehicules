@@ -17,8 +17,8 @@ class Location {
 		CDate m_dateDepart;
 		CDate m_dateRetourPrevu;
 		CDate m_dateRetourReel;
-		int m_kilometreDepart;
-		int m_kilometreRetour;
+		// int m_kilometreDepart;
+		// int m_kilometreRetour;
 		// int nbLocation; // Nombre de fois où le véhicule a été loué
 
 	public:
@@ -40,10 +40,9 @@ class Location {
 		*  \param dateDepart, objet CDate, la date de début de location, NULL si le véhicule n'est pas loué
 		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
 		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
-		*  \param kmDepart, entier, le kilométrage du véhicule au début de location
-		*  \param kmRetour, entier, le kilométrage du véhicule au retour de location
+		*  \param km, entier, le kilométrage du véhicule
 		*/		
-		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int kmDepart, int kmRetour);
+		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int km);
 		
 		/*!
 		*  \brief Destructeur
