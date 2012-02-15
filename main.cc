@@ -19,10 +19,12 @@ int main() {
 	Location loc1;
 	
 	// Constructeurs avec paramètres
-	Vehicule v2("1234XY33", "Peugeot", "304", 22212);
-	Utilitaire u1(10.0, "IMMAT_U1", "MARQUE_U1", "MODELE_U1", 200);
-	Camion c2(12,12,"IMMAT_CAMION2", "Marque_camion2", "Modele_camion2", 100);
-	VP vp2("0012ZZ87", "Porshe", "911 Carrera", 80000, 2 );
+	// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
+	Vehicule v2("1234XY33", "Peugeot", "304", 22212, 3);
+	Utilitaire u1(10.0, "IMMAT_U1", "MARQUE_U1", "MODELE_U1", 200, 3);
+	Camion c2(12,12,"IMMAT_CAMION2", "Marque_camion2", "Modele_camion2", 100, 4);
+	VP vp2("0012ZZ87", "Porshe", "911 Carrera", 80000, 2, 5);
+
 	// Location(Vehicule vehicule, 
 	//			CDate dateDepart, 
 	//			CDate dateRetourPrevu, 
@@ -30,13 +32,13 @@ int main() {
 	//			int kmDepart, 
 	//			int kmRetour)
 	// Location avec Véhicule
-	Location loc2(v2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
+	// Location loc2(v2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
 	// Location avec Utilitaire
-	Location loc3(u1, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
+	// Location loc3(u1, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
 	// Location avec Camion
-	Location loc4(c2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
+	// Location loc4(c2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
 	// Location avec VP
-	Location loc5(vp2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
+	// Location loc5(vp2, CDate(12,2,2012), CDate(17,2,2012), CDate(), 10000, -1);
 	
 	// Fonctions et méthodes
 	cout << "---------------------" << endl;
@@ -84,24 +86,6 @@ int main() {
 	cout << "Camion sans param" << endl;
 	c1.setKilometrage(10000);
 	c1.afficher();
-	loc2.afficher();
-	loc1.afficher();
-	cout << "-------------------------------------------"<<endl;
-	CDate d1(1,1, 2000);
-	CDate d2(1,1, 2001);
-	//test égalité
-	if (d1 == d2)	cout << "OK"<<endl;
-	else cout << "KO"<<endl;
-	//test supériorité
-	if (d1 > d2)   cout << "sup OK"<<endl;
-	else cout <<"sup KO"<<endl;
-	//test infériorité
-	if (d1 < d2)   cout << "inf OK"<<endl;
-	else cout <<"inf KO"<<endl;
-	
-	//test fonction today
-	cout << "---------------------------------------------"<<endl;
-    cout << "test today()"<<endl;
-    CDate auj = auj.today();
-    auj.afficher();
+	// loc2.afficher();
+	// loc1.afficher();
 }

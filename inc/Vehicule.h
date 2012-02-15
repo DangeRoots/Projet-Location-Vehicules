@@ -17,6 +17,7 @@ class Vehicule {
 	private:
 		string m_immatriculation, m_marque, m_modele;
 		int m_kilometrage;
+		int m_nbLocation; // Nombre de fois où la véhicule a été loué
 			
 	public:
 		/*!
@@ -25,11 +26,12 @@ class Vehicule {
 		*  Constructeur de la classe Vehicule
 		*
 		*  \param immat, chaîne de caractères, l'immatriculation du véhicule
-		*  \param modele, chaîne de caractères, le modèle du véhicule
 		*  \param marque, chaîne de caractères, la marque du véhicule
+		*  \param modele, chaîne de caractères, le modèle du véhicule
 		*  \param kilometrage, entier, le kilométrage du véhicule
+		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
-		Vehicule(string immat, string marque, string modele, int kilometrage);
+		Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
 		
 		/*!
 		 *  \brief Constructeur
@@ -118,6 +120,26 @@ class Vehicule {
 		 *  \return m_kilometrage, entier, le kilométrage du véhicule
 		 */		
 		int getKilometrage();
+		
+		/*!
+		 *  \brief Accéder nombre locations
+		 *
+		 *  Permet d'obtenir le nombre de fois où le véhicule a fait l'objet d'une location
+		 *
+		 *  \param aucun
+		 *  \return m_nbLocation, entier, le nombre de locations du véhicule
+		 */		
+		int getNbLocation();
+
+		/*!
+		 *  \brief Modifier nombre locations
+		 *
+		 *  Permet de modifier le nombre de locations du véhicule
+		 *
+		 *  \param nbLoc, entier, le nouveau nombre de locations du véhicule
+		 *  \return void
+		 */	
+		void setNbLocation(int nbLoc);
 
 		/*!
 		 *  \brief Modifier kilométrage

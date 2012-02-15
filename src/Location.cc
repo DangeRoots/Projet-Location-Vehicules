@@ -83,7 +83,7 @@ CDate Location::getDateRetourReelle() {
 void Location::setDateRetourReelle(CDate date) {
 	m_dateRetourReel = date;
 }
-*/
+
 int Location::getKilometrage(char type) {
 	if (type == 'd')
 		return m_kilometreDepart;
@@ -105,7 +105,6 @@ void Location::setKilometrage(int km, char type) {
 	}
 }
 
-/*
 int Location::getKmRetour() {
 	return m_kilometreRetour;
 }
@@ -130,6 +129,6 @@ void Location::afficher() {
 		cout << "Véhicule non restitué" << endl;
 	else
 		m_dateRetourReel.afficher();
-	cout << "Kilométrage départ : " << m_kilometreDepart << endl;
-	cout << "Kilométrage retour : " << m_kilometreRetour << endl;
+	// cout << "Kilométrage départ : " << m_kilometreDepart << endl;
+	// cout << "Kilométrage retour : " << m_kilometreRetour << endl;
 }
