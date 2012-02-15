@@ -28,8 +28,9 @@ class Camion : public Utilitaire {
 		*  \param marque, chaîne de caractères, la marque du véhicule
 		*  \param modele, chaîne de caractères, le kilométrage du véhicule
 		*  \param kilom, entier, le kilométrage du véhicule
+		*  \param nbLocations, entier, le nombre de locations du véhicule
 		*/
-		Camion(float poids, float volume, string immat, string marque, string modele, int kilom);
+		Camion(float poids, float volume, string immat, string marque, string modele, int kilom, int nbLocations);
 
 		/*!
 		*  \brief Constructeur

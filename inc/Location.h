@@ -42,7 +42,8 @@ class Location {
 		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
 		*  \param km, entier, le kilométrage du véhicule
 		*/		
-		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int km);
+		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int km);
+		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
 		
 		/*!
 		*  \brief Destructeur
@@ -102,7 +103,7 @@ class Location {
 		*  \param type, caractère, le type de kilométrage souhaité : d pour départ, r pour retour
 		*  \return entier, le kilométrage
 		*/				
-		int getKilometrage(char type);
+		// int getKilometrage(char type);
 
 		/*!
 		*  \brief Modifier kilométrage
@@ -113,7 +114,7 @@ class Location {
 		*  \param typ, caractère, le type de kilométrage à modifier, d pour départ, r pour retour
 		*  \return void
 		*/
-		void setKilometrage(int km, char type);
+		// void setKilometrage(int km, char type);
 
 		/*!
 		*  \brief Afficher location

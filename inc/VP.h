@@ -27,8 +27,9 @@ class VP: public Vehicule {
 		*  \param marque, chaîne de caractères, la marque de la voiture
 		*  \param kilometrage, entier, le kilométrage de la voiture
 		*  \param nbPlaces, entier, le nombre de place de la voiture
+		*  \param nbLocation, entier, le nombre de locations de la voiture
 		*/
-		VP(string immat, string marque, string modele, int kilometrage, int nbPlaces);
+		VP(string immat, string marque, string modele, int kilometrage, int nbPlaces, int nbLocation);
 		
 		/*!
 		 *  \brief Constructeur

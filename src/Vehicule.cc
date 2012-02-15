@@ -72,4 +72,5 @@ void Vehicule::afficher() {
 	cout << "Marque : " 			<< m_marque 			<< endl;
 	cout << "Immatriculation : "	<< m_immatriculation 	<< endl;
 	cout << "Kilométrage : " 		<< m_kilometrage 		<< endl;
+	cout << "Nombre de locations : " << m_nbLocation		<< endl;
 }

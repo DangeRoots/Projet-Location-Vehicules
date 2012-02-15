@@ -38,6 +38,8 @@ date1 2012 ==> CDate
 ==> Location
 push_back
 
-ajouter gestion nbLoc dans Veh
-Modifier Location ==> Suppression kilom
+ajouter gestion nbLoc dans Veh ==> Done
+Modifier Location ==> Suppression kilom ==> En cours
+Adapter les classes VP / Utilitaire / Camion pour prendre en compte nbLocation
 Adapter Parc pour prendre en compte nouveau Veh / Location
+Adapter main pour prendre en compte nbLocation

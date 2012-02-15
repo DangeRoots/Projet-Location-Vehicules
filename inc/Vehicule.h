@@ -26,8 +26,8 @@ class Vehicule {
 		*  Constructeur de la classe Vehicule
 		*
 		*  \param immat, chaîne de caractères, l'immatriculation du véhicule
-		*  \param modele, chaîne de caractères, le modèle du véhicule
 		*  \param marque, chaîne de caractères, la marque du véhicule
+		*  \param modele, chaîne de caractères, le modèle du véhicule
 		*  \param kilometrage, entier, le kilométrage du véhicule
 		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
