@@ -10,9 +10,8 @@ Utilitaire::Utilitaire(	float volume,
 						string immat, 
 						string marque, 
 						string modele, 
-						int kilom,
-						int nbLocations)
-							:Vehicule(immat,marque, modele, kilom, nbLocations) {
+						int kilom)
+							:Vehicule(immat,marque, modele, kilom) {
 	m_volumeUtile = volume;
 }
 

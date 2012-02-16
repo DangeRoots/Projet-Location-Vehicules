@@ -17,7 +17,7 @@ class Vehicule {
 	private:
 		string m_immatriculation, m_marque, m_modele;
 		int m_kilometrage;
-		int m_nbLocation; // Nombre de fois où la véhicule a été loué
+		// int m_nbLocation; // Nombre de fois où la véhicule a été loué
 			
 	public:
 		/*!

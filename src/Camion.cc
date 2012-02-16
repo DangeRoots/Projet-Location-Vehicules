@@ -12,9 +12,8 @@ Camion::Camion(	float poids,
 				string immat, 
 				string marque, 
 				string modele, 
-				int kilom,
-				int nbLocations)
-					:Utilitaire(volume, immat,marque, modele, kilom, nbLocations) {
+				int kilom)
+					:Utilitaire(volume, immat,marque, modele, kilom) {
 	m_poidsUtile = poids;
 }
 

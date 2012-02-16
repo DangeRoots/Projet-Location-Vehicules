@@ -5,12 +5,12 @@ using namespace std;
 
 #include <Vehicule.h>
 
-Vehicule::Vehicule (string immat, string marque, string modele, int kilometrage, int nbLoc) {
+Vehicule::Vehicule (string immat, string marque, string modele, int kilometrage) {
 	m_immatriculation = immat;
 	m_marque = marque;
 	m_modele = modele;
 	m_kilometrage = kilometrage;
-	m_nbLocation = nbLoc;
+	// m_nbLocation = nbLoc;
 }
 
 Vehicule::Vehicule () {
@@ -18,7 +18,7 @@ Vehicule::Vehicule () {
 	m_marque = "";
 	m_modele = "";
 	m_kilometrage = 0;
-	m_nbLocation = 0;
+	// m_nbLocation = 0;
 }
 
 Vehicule::~Vehicule() {
@@ -55,7 +55,7 @@ int Vehicule::getKilometrage() {
 void Vehicule::setKilometrage(int kilom) {
 	m_kilometrage = kilom;
 }
-
+/*
 int Vehicule::getNbLocation() {
 	return m_nbLocation;
 }
@@ -63,7 +63,7 @@ int Vehicule::getNbLocation() {
 void Vehicule::setNbLocation(int nbLoc) {
 	m_nbLocation = nbLoc;
 }
-
+*/
 bool Vehicule::operator==(const Vehicule &veh) {
 	return (m_immatriculation == veh.m_immatriculation);
 }
@@ -72,5 +72,5 @@ void Vehicule::afficher() {
 	cout << "Marque : " 			<< m_marque 			<< endl;
 	cout << "Immatriculation : "	<< m_immatriculation 	<< endl;
 	cout << "Kilométrage : " 		<< m_kilometrage 		<< endl;
-	cout << "Nombre de locations : " << m_nbLocation		<< endl;
+	// cout << "Nombre de locations : " << m_nbLocation		<< endl;
 }
