@@ -1,6 +1,11 @@
 #ifndef CAMION_H
 #define CAMION_H
 
+#include <iostream>
+#include <string>
+#include <Vehicule.h>
+#include <Utilitaire.h> // classe de base
+
 /*!
  * \file Camion.h
  * \brief Classe Camion

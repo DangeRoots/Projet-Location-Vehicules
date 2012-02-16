@@ -1,6 +1,10 @@
 #ifndef LOCATION_H
 #define LOCATION_H
 
+#include <iostream>
+#include <Vehicule.h>
+#include <CDate.h>
+
 /*!
  * \file Location.h
  * \brief Classe Location

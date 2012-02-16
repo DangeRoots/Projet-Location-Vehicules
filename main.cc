@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// #include <Parc.h>
+#include <Parc.h>
 #include <Vehicule.h>
 #include <Location.h>
 #include <CDate.h>
@@ -14,12 +14,12 @@ using namespace std;
 int main() {
 	// Déclarations et variables
 	// Constructeurs par défaut
-	//~ Vehicule v1; 
-	//~ Utilitaire u2;
-	//~ Camion c1;
-	//~ VP vp1;
-	//~ Location loc1;
-	// Parc p1;
+	Vehicule v1; 
+	Utilitaire u2;
+	Camion c1;
+	VP vp1;
+	Location loc1;
+	Parc p1;
 	
 	// Constructeurs avec paramètres
 	// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);

@@ -1,10 +1,6 @@
-#include <iostream>
-
 using namespace std;
 
 #include <Location.h>
-#include <Vehicule.h>
-#include <CDate.h>
 
 Location::Location() {
 	Vehicule veh;

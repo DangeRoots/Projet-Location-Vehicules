@@ -1,6 +1,10 @@
 #ifndef VP_H
 #define VP_H
 
+#include <string>
+#include <iostream>
+#include <Vehicule.h>
+
 /*!
  * \file VP.h
  * \brief Classe VP

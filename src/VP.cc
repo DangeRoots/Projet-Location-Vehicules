@@ -1,9 +1,5 @@
-#include <string>
-#include <iostream>
-
 using namespace std;
 
-#include <Vehicule.h>
 #include <VP.h>
 
 VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces):Vehicule(immat, marque, modele, kilometrage){

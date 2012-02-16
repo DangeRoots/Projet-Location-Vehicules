@@ -1,9 +1,5 @@
-#include <iostream>
-#include <string>
-
 using namespace std;
 
-#include <Vehicule.h> // classe de base
 #include <Utilitaire.h>
 
 Utilitaire::Utilitaire(	float volume, 

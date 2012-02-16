@@ -1,6 +1,10 @@
 #ifndef UTILITAIRE_H
 #define UTILITAIRE_H
 
+#include <iostream>
+#include <string>
+#include <Vehicule.h> // classe de base
+
 /*!
  * \file Utilitaire.h
  * \brief Classe Utilitaire

@@ -1,6 +1,9 @@
 #ifndef VEHICULE_H
 #define VEHICULE_H
 
+#include <iostream>
+#include <string>
+
 /*!
  * \file Vehicule.h
  * \brief Classe Vehicule

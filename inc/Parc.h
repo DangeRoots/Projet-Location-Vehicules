@@ -1,6 +1,19 @@
 #ifndef PARC_H
 #define PARC_H
 
+#include <iostream>
+#include <fstream>
+#include <list>
+#include <vector> // Constructeur
+#include <sstream>
+// #include <iomanip> // setw
+#include <Location.h>
+#include <Vehicule.h>
+#include <Camion.h>
+#include <CDate.h>
+#include <VP.h>
+
+
 /*!
  * \file Parc.h
  * \brief Classe Parc
@@ -13,7 +26,7 @@
 
 class Parc {
 	private:
-		std::list<Location> m_parcAuto;
+		list<Location> m_parcAuto;
 	
 	public:
 		/*!

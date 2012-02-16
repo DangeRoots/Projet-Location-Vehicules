@@ -1,10 +1,5 @@
-#include <iostream>
-#include <string>
-
 using namespace std;
 
-#include <Vehicule.h>
-#include <Utilitaire.h> // classe de base
 #include <Camion.h>
 
 Camion::Camion(	float poids,
