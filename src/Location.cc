@@ -2,9 +2,9 @@
 
 using namespace std;
 
+#include <Location.h>
 #include <Vehicule.h>
 #include <CDate.h>
-#include <Location.h>
 
 Location::Location() {
 	Vehicule veh;
@@ -67,52 +67,6 @@ void Location::setDate(CDate date, char type) {
 	}
 }
 
-/*
-CDate Location::getDateRetourPrevue() {
-	return m_dateRetourPrevu;
-}
-
-void Location::setDateRetourPrevue(CDate date) {
-	m_dateRetourPrevu = date;
-}
-
-CDate Location::getDateRetourReelle() {
-	return m_dateRetourReel;
-}
-
-void Location::setDateRetourReelle(CDate date) {
-	m_dateRetourReel = date;
-}
-
-int Location::getKilometrage(char type) {
-	if (type == 'd')
-		return m_kilometreDepart;
-	if (type == 'r')
-		return m_kilometreRetour;
-	else {
-		cerr << "Type kilométrage inconnu : " << type << endl;
-		return -1;
-	}	
-}
-
-void Location::setKilometrage(int km, char type) {
-	if (type == 'd')
-		m_kilometreDepart = km;
-	else if (type == 'r')
-		m_kilometreRetour = km;
-	else {
-		cerr << "Type kilométrage inconnu : " << type << endl;
-	}
-}
-
-int Location::getKmRetour() {
-	return m_kilometreRetour;
-}
-
-void Location::setKmRetour(int kilom) {
-	m_kilometreRetour = kilom;
-}
-*/
 void Location::afficher() {
 	cout << "---------------------" << endl;
 	cout << "Véhicule" << endl;
@@ -129,6 +83,4 @@ void Location::afficher() {
 		cout << "Véhicule non restitué" << endl;
 	else
 		m_dateRetourReel.afficher();
-	// cout << "Kilométrage départ : " << m_kilometreDepart << endl;
-	// cout << "Kilométrage retour : " << m_kilometreRetour << endl;
 }

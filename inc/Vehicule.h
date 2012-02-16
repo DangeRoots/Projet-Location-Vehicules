@@ -31,7 +31,8 @@ class Vehicule {
 		*  \param kilometrage, entier, le kilométrage du véhicule
 		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
-		Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
+		// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
+		Vehicule(string immat, string marque, string modele, int kilometrage);
 		
 		/*!
 		 *  \brief Constructeur

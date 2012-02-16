@@ -13,11 +13,9 @@
 
 class Parc {
 	private:
-		list<Location> m_parcAuto;
-		// bool chargerParc();
+		std::list<Location> m_parcAuto;
 	
 	public:
-
 		/*!
 		*  \brief Constructeur
 		*
@@ -27,6 +25,8 @@ class Parc {
 		*/
 		Parc (fstream &inFile);
 		
+		// Parc(list<Location> listeVeh);
+		
 		/*!
 		*  \brief Constructeur
 		*
@@ -34,7 +34,7 @@ class Parc {
 		*
 		*  \param aucun
 		*/
-		Parc ();
+		Parc();
 		
 		/*!
 		*  \brief Destructeur

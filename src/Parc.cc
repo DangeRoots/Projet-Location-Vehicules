@@ -4,14 +4,13 @@
 #include <vector> // Constructeur
 // #include <iomanip> // setw
 
-using namespace std;
+// using namespace std;
 
-#include <Vehicule.h>
-#include <Camion.h>
-#include <CDate.h>
 #include <Location.h>
+//~ #include <Vehicule.h>
+//~ #include <Camion.h>
+//~ #include <CDate.h>
 #include <Parc.h>
-
 
 Parc::Parc (fstream &inFile) {
 	/*! Déclaration des variables temporaires */
@@ -73,7 +72,7 @@ Parc::Parc (fstream &inFile) {
 	}
 }
 
-Parc::Parc () {
+Parc::Parc() {
 }
 
 Parc::~Parc () {
