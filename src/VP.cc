@@ -27,5 +27,5 @@ void VP::setNbPlaces(int nbPlaces){
 void VP::afficher(){
 	
 	Vehicule::afficher();
-	cout << "Nombre de places : " << m_nbPlaces << endl;
+	cout << setw(20) << "Nombre de places : " << m_nbPlaces << endl;
 }

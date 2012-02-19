@@ -1,8 +1,9 @@
 #ifndef VP_H
 #define VP_H
 
-#include <string>
+// #include <string>
 #include <iostream>
+#include <iomanip>
 #include <Vehicule.h>
 
 /*!
@@ -13,7 +14,7 @@
  * 
  * \author Gilles Coulais, 
  * \author Icham Sirat
- * \version 0.1
+ * \version 0.2
  */
 
 class VP: public Vehicule {	
