@@ -58,8 +58,7 @@ bool Vehicule::operator==(const Vehicule &veh) {
 }
 
 void Vehicule::afficher() {
-	cout << "Marque : " 			<< m_marque 			<< endl;
-	cout << "Immatriculation : "	<< m_immatriculation 	<< endl;
-	cout << "Kilométrage : " 		<< m_kilometrage 		<< endl;
-	// cout << "Nombre de locations : " << m_nbLocation		<< endl;
+	cout 	<< setw(20) << "Marque : " << m_marque
+			<< setw(20)	<< "Immatriculation : "	<< m_immatriculation
+			<< setw(20)	<< "Kilométrage : " << m_kilometrage << endl;
 }

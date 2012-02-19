@@ -18,7 +18,6 @@ MAIN_C++_SOURCES = main
 DIR_SOURCES      = src
 #nom des autres fichiers sources du repertoire DIR_SOURCES
 OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion VP CDate Location Parc
-
 #répertoire contenant les .h
 DIR_INCLUDE      = inc
 #répertoire pour les .o
