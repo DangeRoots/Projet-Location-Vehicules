@@ -2,14 +2,14 @@
 #define UTILITAIRE_H
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 #include <Vehicule.h> // classe de base
 
 /*!
  * \file Utilitaire.h
  * \brief Classe Utilitaire
  * 
- *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe UtilitaireGros
+ *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe Camion
  * 
  * \author Gilles Coulais
  * \version 0.1
