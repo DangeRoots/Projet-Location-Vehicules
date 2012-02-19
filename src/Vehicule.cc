@@ -52,15 +52,7 @@ int Vehicule::getKilometrage() {
 void Vehicule::setKilometrage(int kilom) {
 	m_kilometrage = kilom;
 }
-/*
-int Vehicule::getNbLocation() {
-	return m_nbLocation;
-}
 
-void Vehicule::setNbLocation(int nbLoc) {
-	m_nbLocation = nbLoc;
-}
-*/
 bool Vehicule::operator==(const Vehicule &veh) {
 	return (m_immatriculation == veh.m_immatriculation);
 }

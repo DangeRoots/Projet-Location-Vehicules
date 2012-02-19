@@ -2,7 +2,7 @@
 #define VEHICULE_H
 
 #include <iostream>
-#include <string>
+// #include <string>
 
 /*!
  * \file Vehicule.h
@@ -125,26 +125,6 @@ class Vehicule {
 		 */		
 		int getKilometrage();
 		
-		/*!
-		 *  \brief Accéder nombre locations
-		 *
-		 *  Permet d'obtenir le nombre de fois où le véhicule a fait l'objet d'une location
-		 *
-		 *  \param aucun
-		 *  \return m_nbLocation, entier, le nombre de locations du véhicule
-		 */		
-		int getNbLocation();
-
-		/*!
-		 *  \brief Modifier nombre locations
-		 *
-		 *  Permet de modifier le nombre de locations du véhicule
-		 *
-		 *  \param nbLoc, entier, le nouveau nombre de locations du véhicule
-		 *  \return void
-		 */	
-		void setNbLocation(int nbLoc);
-
 		/*!
 		 *  \brief Modifier kilométrage
 		 *
