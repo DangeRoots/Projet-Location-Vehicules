@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Location de véhicules:  Fichier source de inc/Parc.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>inc/Parc.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_parc_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef PARC_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define PARC_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;vector&gt;</span> <span class="comment">// Constructeur</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">// #include &lt;iomanip&gt; // setw</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;<a class="code" href="_location_8h.html" title="Classe Location.">Location.h</a>&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="_vehicule_8h.html" title="Classe Vehicule.">Vehicule.h</a>&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="_camion_8h.html" title="Classe Camion.">Camion.h</a>&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;<a class="code" href="_c_date_8h.html" title="Classe cdate.">CDate.h</a>&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;<a class="code" href="_v_p_8h.html" title="Classe VP.">VP.h</a>&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 
+<a name="l00027"></a><a class="code" href="class_parc.html">00027</a> <span class="keyword">class </span><a class="code" href="class_parc.html">Parc</a> {
+<a name="l00028"></a>00028         <span class="keyword">private</span>:
+<a name="l00029"></a>00029                 list&lt;Location&gt; m_parcAuto;
+<a name="l00030"></a>00030                 list&lt;Location&gt;::iterator m_parcAutoI;
+<a name="l00031"></a>00031                 <span class="keywordtype">void</span> lectureDates(<span class="keywordtype">int</span> &amp;t_jDep, <span class="keywordtype">int</span> &amp;t_mDep,<span class="keywordtype">int</span> &amp;t_aDep,
+<a name="l00032"></a>00032                                                         <span class="keywordtype">int</span> &amp;t_jRetP, <span class="keywordtype">int</span> &amp;t_mRetP,<span class="keywordtype">int</span> &amp;t_aRetP,
+<a name="l00033"></a>00033                                                         <span class="keywordtype">int</span> &amp;t_jRetR, <span class="keywordtype">int</span> &amp;t_mRetR, <span class="keywordtype">int</span> &amp;t_aRetR,
+<a name="l00034"></a>00034                                                         fstream &amp;inFile);
+<a name="l00035"></a>00035         
+<a name="l00036"></a>00036         <span class="keyword">public</span>:
+<a name="l00044"></a>00044                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a> (fstream &amp;inFile);
+<a name="l00045"></a>00045                 
+<a name="l00053"></a>00053                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a>();
+<a name="l00054"></a>00054                 
+<a name="l00062"></a>00062                 <a class="code" href="class_parc.html#a45de4ddcf862a8ad3da902bc63e0c1f6" title="Destructeur.">~Parc</a> ();
+<a name="l00063"></a>00063                 
+<a name="l00072"></a>00072                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a38f675f16195ff1a795d247d2ab2277c" title="Ajouter location.">ajouterLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
+<a name="l00073"></a>00073                 
+<a name="l00082"></a>00082                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a9886186ab4182ee41a1480735600ed38" title="Supprimer location.">supprimerLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
+<a name="l00083"></a>00083 
+<a name="l00092"></a>00092                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880" title="Modifier location.">modifierLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
+<a name="l00093"></a>00093                 
+<a name="l00094"></a>00094                 
+<a name="l00105"></a>00105                 <span class="comment">//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);</span>
+<a name="l00106"></a>00106                 
+<a name="l00107"></a>00107                 
+<a name="l00116"></a>00116                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9" title="Rechercher location.">afficher</a>();
+<a name="l00117"></a>00117                 
+<a name="l00127"></a>00127                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a3b1165059db359bbcc910096bededc6d" title="Afficher véhicules loués.">afficherLoues</a> (<a class="code" href="class_c_date.html">CDate</a> dateDebut, <a class="code" href="class_c_date.html">CDate</a> dateFin);
+<a name="l00128"></a>00128                 
+<a name="l00138"></a>00138                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a0bf47b853e9c3cfaab5d11e9ce2f63dd" title="Afficher véhicules disponibles.">afficherDisponibles</a> (<a class="code" href="class_c_date.html">CDate</a> dateDebut, <a class="code" href="class_c_date.html">CDate</a> dateFin);
+<a name="l00139"></a>00139                 
+<a name="l00148"></a>00148                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9f61430cd0074b49b4e98b7fb7708de5" title="Afficher véhicules restituables.">afficherRestituables</a>(<a class="code" href="class_c_date.html">CDate</a> today);
+<a name="l00149"></a>00149                 
+<a name="l00158"></a>00158                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a144f06e69489648adc0c1d90b12dedd4" title="Sauvegarder parc.">sauvegarderParc</a>();
+<a name="l00159"></a>00159 };
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:35 pour Location de véhicules par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>

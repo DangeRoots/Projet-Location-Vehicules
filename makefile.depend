@@ -1,0 +1,11 @@
+bin/main.o: main.cc inc/Parc.h inc/Location.h inc/Vehicule.h inc/CDate.h \
+bin/ inc/Erreur.h inc/Camion.h inc/Utilitaire.h inc/VP.h
+bin/Vehicule.o: src/Vehicule.cc inc/Vehicule.h
+bin/Utilitaire.o: src/Utilitaire.cc inc/Utilitaire.h inc/Vehicule.h
+bin/Camion.o: src/Camion.cc inc/Camion.h inc/Utilitaire.h inc/Vehicule.h
+bin/VP.o: src/VP.cc inc/VP.h inc/Vehicule.h
+bin/CDate.o: src/CDate.cc inc/CDate.h
+bin/Location.o: src/Location.cc inc/Location.h inc/Vehicule.h inc/CDate.h \
+bin/ inc/Erreur.h
+bin/Parc.o: src/Parc.cc inc/Parc.h inc/Location.h inc/Vehicule.h inc/CDate.h \
+bin/ inc/Erreur.h inc/Camion.h inc/Utilitaire.h inc/VP.h

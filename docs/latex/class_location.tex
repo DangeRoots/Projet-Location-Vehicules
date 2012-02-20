@@ -1,0 +1,238 @@
+\hypertarget{class_location}{
+\section{Référence de la classe Location}
+\label{class_location}\index{Location@{Location}}
+}
+
+
+{\ttfamily \#include $<$Location.h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_location_a87790c14997fd8cdd12080c78c9794bb}{Location} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_location_a5a09ef0b7e8bd346553572e4a17e916a}{Location} (\hyperlink{class_vehicule}{Vehicule} $\ast$vehicule, \hyperlink{class_c_date}{CDate} dateDepart, \hyperlink{class_c_date}{CDate} dateRetourPrevu, \hyperlink{class_c_date}{CDate} dateRetourReel)
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_location_af5be2c6550bbd96137cbb3144ec3c529}{$\sim$Location} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_vehicule}{Vehicule} $\ast$ \hyperlink{class_location_a3f130f10a4a558d6b792b1e538e9fb40}{getVehicule} ()
+\begin{DoxyCompactList}\small\item\em Accéder au véhicule. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_location_a66eaf6883a88c65a6281ccf111db3c03}{setVehicule} (\hyperlink{class_vehicule}{Vehicule} $\ast$veh)
+\begin{DoxyCompactList}\small\item\em Modifier véhicule. \item\end{DoxyCompactList}\item 
+\hyperlink{class_c_date}{CDate} \hyperlink{class_location_a02e6d2fc6aca23b344994df6e128ccff}{getDate} (char type)
+\begin{DoxyCompactList}\small\item\em Accéder date début. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_location_ab01cd2764d9db2771d2f2c7befa8123c}{setDate} (\hyperlink{class_c_date}{CDate} date, char type)
+\begin{DoxyCompactList}\small\item\em Modifier date. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_location_ad7dadc3847da51c3c012f0647f011706}{afficher} ()
+\begin{DoxyCompactList}\small\item\em Afficher location. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Remarques Déclarer un pointeur \{ \hyperlink{class_vehicule}{Vehicule} $\ast$m\_\-vehicule; \} affecter un pointeur \{ \hyperlink{class_vehicule}{Vehicule} veh; m\_\-vehicule =  \} allouer un pointeur \{ m\_\-vehicule = new Vehicule() ; \} 
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_location_a87790c14997fd8cdd12080c78c9794bb}{
+\index{Location@{Location}!Location@{Location}}
+\index{Location@{Location}!Location@{Location}}
+\subsubsection[{Location}]{\setlength{\rightskip}{0pt plus 5cm}Location::Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_a87790c14997fd8cdd12080c78c9794bb}
+
+
+Constructeur. 
+
+Constructeur par défaut de la classe \hyperlink{class_location}{Location}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_location_a5a09ef0b7e8bd346553572e4a17e916a}{
+\index{Location@{Location}!Location@{Location}}
+\index{Location@{Location}!Location@{Location}}
+\subsubsection[{Location}]{\setlength{\rightskip}{0pt plus 5cm}Location::Location (
+\begin{DoxyParamCaption}
+\item[{{\bf Vehicule} $\ast$}]{vehicule, }
+\item[{{\bf CDate}}]{dateDepart, }
+\item[{{\bf CDate}}]{dateRetourPrevu, }
+\item[{{\bf CDate}}]{dateRetourReel}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_a5a09ef0b7e8bd346553572e4a17e916a}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_location}{Location}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em vehicule,un} & pointeur de véhicule \\
+\hline
+{\em dateDepart,objet} & \hyperlink{class_c_date}{CDate}, la date de début de location, NULL si le véhicule n'est pas loué \\
+\hline
+{\em dateRetourPrevue,objet} & \hyperlink{class_c_date}{CDate}, la date de fin prévue de la location, NULL si le véhicule n'est pas loué \\
+\hline
+{\em dateRetourReel,objet} & \hyperlink{class_c_date}{CDate}, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_location_af5be2c6550bbd96137cbb3144ec3c529}{
+\index{Location@{Location}!$\sim$Location@{$\sim$Location}}
+\index{$\sim$Location@{$\sim$Location}!Location@{Location}}
+\subsubsection[{$\sim$Location}]{\setlength{\rightskip}{0pt plus 5cm}Location::$\sim$Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_af5be2c6550bbd96137cbb3144ec3c529}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{class_location}{Location}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_location_ad7dadc3847da51c3c012f0647f011706}{
+\index{Location@{Location}!afficher@{afficher}}
+\index{afficher@{afficher}!Location@{Location}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Location::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_ad7dadc3847da51c3c012f0647f011706}
+
+
+Afficher location. 
+
+Affiche la location
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_location_a02e6d2fc6aca23b344994df6e128ccff}{
+\index{Location@{Location}!getDate@{getDate}}
+\index{getDate@{getDate}!Location@{Location}}
+\subsubsection[{getDate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDate} Location::getDate (
+\begin{DoxyParamCaption}
+\item[{char}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_a02e6d2fc6aca23b344994df6e128ccff}
+
+
+Accéder date début. 
+
+Permet d'obtenir les dates associées à la location : date de départ, date de retour prévu, date de retour réel
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type,caractère,le} & type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un objet \hyperlink{class_c_date}{CDate} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em si} & type différent de \char`\"{}d\char`\"{}, \char`\"{}r\char`\"{}, ou \char`\"{}p\char`\"{}, lance une erreur \char`\"{}erreur(1) mauvais type de date\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_location_a3f130f10a4a558d6b792b1e538e9fb40}{
+\index{Location@{Location}!getVehicule@{getVehicule}}
+\index{getVehicule@{getVehicule}!Location@{Location}}
+\subsubsection[{getVehicule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vehicule}$\ast$ Location::getVehicule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_a3f130f10a4a558d6b792b1e538e9fb40}
+
+
+Accéder au véhicule. 
+
+Permet d'obtenir le véhicule à partir de son immatriculation
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un pointeur vers un objet \hyperlink{class_vehicule}{Vehicule} 
+\end{DoxyReturn}
+\hypertarget{class_location_ab01cd2764d9db2771d2f2c7befa8123c}{
+\index{Location@{Location}!setDate@{setDate}}
+\index{setDate@{setDate}!Location@{Location}}
+\subsubsection[{setDate}]{\setlength{\rightskip}{0pt plus 5cm}void Location::setDate (
+\begin{DoxyParamCaption}
+\item[{{\bf CDate}}]{date, }
+\item[{char}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_ab01cd2764d9db2771d2f2c7befa8123c}
+
+
+Modifier date. 
+
+Permet de modifier les dates associées à la location : date de départ, date de retour prévu, date de retour réel
+
+
+\begin{DoxyParams}{Paramètres}
+{\em date,objet} & \hyperlink{class_c_date}{CDate}, la nouvelle date \\
+\hline
+{\em type,caractère,le} & type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em si} & type différent de \char`\"{}d\char`\"{}, \char`\"{}r\char`\"{}, ou \char`\"{}p\char`\"{}, lance une erreur \char`\"{}erreur(1) mauvais type de date\char`\"{} \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_location_a66eaf6883a88c65a6281ccf111db3c03}{
+\index{Location@{Location}!setVehicule@{setVehicule}}
+\index{setVehicule@{setVehicule}!Location@{Location}}
+\subsubsection[{setVehicule}]{\setlength{\rightskip}{0pt plus 5cm}void Location::setVehicule (
+\begin{DoxyParamCaption}
+\item[{{\bf Vehicule} $\ast$}]{veh}
+\end{DoxyParamCaption}
+)}}
+\label{class_location_a66eaf6883a88c65a6281ccf111db3c03}
+
+
+Modifier véhicule. 
+
+Permet de modifier le véhicule à partir de son immatriculation
+
+
+\begin{DoxyParams}{Paramètres}
+{\em veh,un} & pointeur vers un objet \hyperlink{class_vehicule}{Vehicule}, le nouveau véhicule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_location_8h}{Location.h}\end{DoxyCompactItemize}

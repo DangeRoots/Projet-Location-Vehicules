@@ -3,9 +3,7 @@ using namespace std;
 #include <Location.h>
 
 Location::Location() {
-	Vehicule *veh;
 	CDate d;
-	m_vehicule = veh;
 	m_dateDepart = d;
 	m_dateRetourPrevu = d;
 	m_dateRetourReel = d;
