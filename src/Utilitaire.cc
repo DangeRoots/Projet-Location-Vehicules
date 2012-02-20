@@ -28,5 +28,5 @@ void Utilitaire::setVolumeUtile(float volume) {
 
 void Utilitaire::afficher() {
 	Vehicule::afficher();
-	cout << setw(20) << "Volume utile : " << m_volumeUtile << endl;
+	cout << "Volume utile : " << m_volumeUtile << endl;
 }
