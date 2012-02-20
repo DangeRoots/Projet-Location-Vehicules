@@ -1,6 +1,11 @@
 #ifndef CDATE_H
 #define CDATE_H
 
+#include <string>
+#include <iostream>
+#include <time.h>
+#include <cstdlib>
+
 /*!
  * \file CDate.h
  * \brief Classe cdate
@@ -8,7 +13,7 @@
  *  Cette classe propose des outils pour gérer une date
  * 
  * \author Franck Ruby, Gilles Coulais, Icham Sirat
- * \version 0.3
+ * \version 0.4
  */
  
 class CDate {

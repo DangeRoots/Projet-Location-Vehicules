@@ -1,10 +1,5 @@
-#include <iostream>
-#include <string>
-
 using namespace std;
 
-#include <Vehicule.h>
-#include <Utilitaire.h> // classe de base
 #include <Camion.h>
 
 Camion::Camion(	float poids,
@@ -12,9 +7,8 @@ Camion::Camion(	float poids,
 				string immat, 
 				string marque, 
 				string modele, 
-				int kilom,
-				int nbLocations)
-					:Utilitaire(volume, immat,marque, modele, kilom, nbLocations) {
+				int kilom)
+					:Utilitaire(volume, immat,marque, modele, kilom) {
 	m_poidsUtile = poids;
 }
 
@@ -35,5 +29,5 @@ void Camion::setPoidsUtile(float poids) {
 
 void Camion::afficher() {
 	Utilitaire::afficher();
-	cout << "Poids utile : " << m_poidsUtile << endl;
+	cout << setw(20) << "Poids utile : " << m_poidsUtile << endl;
 }

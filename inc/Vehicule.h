@@ -1,6 +1,11 @@
 #ifndef VEHICULE_H
 #define VEHICULE_H
 
+#include <iostream>
+#include <iomanip>
+
+// #include <string>
+
 /*!
  * \file Vehicule.h
  * \brief Classe Vehicule
@@ -17,7 +22,7 @@ class Vehicule {
 	private:
 		string m_immatriculation, m_marque, m_modele;
 		int m_kilometrage;
-		int m_nbLocation; // Nombre de fois où la véhicule a été loué
+		// int m_nbLocation; // Nombre de fois où la véhicule a été loué
 			
 	public:
 		/*!
@@ -31,7 +36,8 @@ class Vehicule {
 		*  \param kilometrage, entier, le kilométrage du véhicule
 		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
-		Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
+		// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
+		Vehicule(string immat, string marque, string modele, int kilometrage);
 		
 		/*!
 		 *  \brief Constructeur
@@ -121,26 +127,6 @@ class Vehicule {
 		 */		
 		int getKilometrage();
 		
-		/*!
-		 *  \brief Accéder nombre locations
-		 *
-		 *  Permet d'obtenir le nombre de fois où le véhicule a fait l'objet d'une location
-		 *
-		 *  \param aucun
-		 *  \return m_nbLocation, entier, le nombre de locations du véhicule
-		 */		
-		int getNbLocation();
-
-		/*!
-		 *  \brief Modifier nombre locations
-		 *
-		 *  Permet de modifier le nombre de locations du véhicule
-		 *
-		 *  \param nbLoc, entier, le nouveau nombre de locations du véhicule
-		 *  \return void
-		 */	
-		void setNbLocation(int nbLoc);
-
 		/*!
 		 *  \brief Modifier kilométrage
 		 *

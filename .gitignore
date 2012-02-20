@@ -1,9 +1,10 @@
 #--------------------------------
 # On ignore 
-# - les fichiers binaires
+# - le main compilé
 # - les fichiers temporaires
 # - les fichiers objets
 #--------------------------------
 *.o
-bin/
 *.*~
+locationMain
+*.autosave

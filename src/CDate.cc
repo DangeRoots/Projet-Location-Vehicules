@@ -1,8 +1,3 @@
-#include <string>
-#include <iostream>
-#include <time.h>
-#include <cstdlib>
-
 using namespace std;
 
 #include <CDate.h>

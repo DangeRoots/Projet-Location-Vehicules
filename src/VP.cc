@@ -1,12 +1,8 @@
-#include <string>
-#include <iostream>
-
 using namespace std;
 
-#include <Vehicule.h>
 #include <VP.h>
 
-VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces, int nbLocation):Vehicule(immat, marque, modele, kilometrage, nbLocation){
+VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces):Vehicule(immat, marque, modele, kilometrage){
 
 	m_nbPlaces = nbPlaces;
 }
@@ -31,5 +27,5 @@ void VP::setNbPlaces(int nbPlaces){
 void VP::afficher(){
 	
 	Vehicule::afficher();
-	cout << "Nombre de places : " << m_nbPlaces << endl;
+	cout << setw(20) << "Nombre de places : " << m_nbPlaces << endl;
 }

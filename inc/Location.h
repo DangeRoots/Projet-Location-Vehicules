@@ -1,6 +1,10 @@
 #ifndef LOCATION_H
 #define LOCATION_H
 
+#include <iostream>
+#include <Vehicule.h>
+#include <CDate.h>
+
 /*!
  * \file Location.h
  * \brief Classe Location
@@ -40,7 +44,6 @@ class Location {
 		*  \param dateDepart, objet CDate, la date de début de location, NULL si le véhicule n'est pas loué
 		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
 		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
-		*  \param km, entier, le kilométrage du véhicule
 		*/		
 		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int km);
 		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
