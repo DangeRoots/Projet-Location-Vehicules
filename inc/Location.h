@@ -77,7 +77,7 @@ class Location {
 		*  \return un pointeur vers un objet Vehicule
 		*/		
 		// Vehicule getVehicule();
-		Vehicule *getVehicule();
+		Vehicule* getVehicule();
 
 		/*!
 		*  \brief Modifier véhicule

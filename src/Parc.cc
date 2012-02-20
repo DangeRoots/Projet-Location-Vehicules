@@ -10,10 +10,7 @@ Parc::Parc (fstream &inFile) {
 		
 	// Lecture fichier et création des objets
 	inFile >> tmp_type;
-	// getline(inFile,ligne);
-	// i = v_donnees.begin();
 	while (!inFile.eof()) {	
-		// création du stringstream
 		inFile >> tmp_immat;
 		inFile >> tmp_marque;
 		inFile >> tmp_modele;
@@ -22,15 +19,15 @@ Parc::Parc (fstream &inFile) {
 			inFile >> tmp_poidsUtile;
 			inFile >> tmp_volumeUtile;
 			Camion c(tmp_poidsUtile,tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom);
-			m_parcAuto.push_back(Location(c, CDate(), CDate(), CDate()));
+			m_parcAuto.push_back(Location(new Camion(tmp_poidsUtile,tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom), CDate(), CDate(), CDate()));
 		} else if (tmp_type == "u") { // ajout des variables spécifiques aux utilitaires
 			inFile >> tmp_volumeUtile;
 			Utilitaire u(tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom);
-			m_parcAuto.push_back(Location(u, CDate(), CDate(), CDate()));
+			m_parcAuto.push_back(Location(new Utilitaire(tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom), CDate(), CDate(), CDate()));
 		} else if (tmp_type == "v") { // ajout des variables spécifiques aux VP
 			inFile >> tmp_nbPlaces;
 			VP v(tmp_immat, tmp_marque, tmp_modele, tmp_kilom, tmp_nbPlaces);
-			m_parcAuto.push_back(Location(v, CDate(), CDate(), CDate()));
+			m_parcAuto.push_back(Location(new VP(tmp_immat, tmp_marque, tmp_modele, tmp_kilom, tmp_nbPlaces), CDate(), CDate(), CDate()));
 		}
 		inFile >> tmp_type;
 	}
