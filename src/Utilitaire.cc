@@ -1,18 +1,13 @@
-#include <iostream>
-#include <string>
-
 using namespace std;
 
-#include <Vehicule.h> // classe de base
 #include <Utilitaire.h>
 
 Utilitaire::Utilitaire(	float volume, 
 						string immat, 
 						string marque, 
 						string modele, 
-						int kilom,
-						int nbLocations)
-							:Vehicule(immat,marque, modele, kilom, nbLocations) {
+						int kilom)
+							:Vehicule(immat,marque, modele, kilom) {
 	m_volumeUtile = volume;
 }
 
@@ -33,5 +28,5 @@ void Utilitaire::setVolumeUtile(float volume) {
 
 void Utilitaire::afficher() {
 	Vehicule::afficher();
-	cout << "Volume utile : " << m_volumeUtile << endl;
+	cout << setw(20) << "Volume utile : " << m_volumeUtile << endl;
 }

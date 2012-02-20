@@ -1,6 +1,19 @@
 #ifndef PARC_H
 #define PARC_H
 
+#include <iostream>
+#include <fstream>
+#include <list>
+#include <vector> // Constructeur
+#include <sstream>
+// #include <iomanip> // setw
+#include <Location.h>
+#include <Vehicule.h>
+#include <Camion.h>
+#include <CDate.h>
+#include <VP.h>
+
+
 /*!
  * \file Parc.h
  * \brief Classe Parc
@@ -14,10 +27,8 @@
 class Parc {
 	private:
 		list<Location> m_parcAuto;
-		// bool chargerParc();
 	
 	public:
-
 		/*!
 		*  \brief Constructeur
 		*
@@ -27,6 +38,8 @@ class Parc {
 		*/
 		Parc (fstream &inFile);
 		
+		// Parc(list<Location> listeVeh);
+		
 		/*!
 		*  \brief Constructeur
 		*
@@ -34,7 +47,7 @@ class Parc {
 		*
 		*  \param aucun
 		*/
-		Parc ();
+		Parc();
 		
 		/*!
 		*  \brief Destructeur

@@ -1,11 +1,15 @@
 #ifndef UTILITAIRE_H
 #define UTILITAIRE_H
 
+#include <iostream>
+#include <iomanip>
+#include <Vehicule.h> // classe de base
+
 /*!
  * \file Utilitaire.h
  * \brief Classe Utilitaire
  * 
- *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe UtilitaireGros
+ *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe Camion
  * 
  * \author Gilles Coulais
  * \version 0.1
@@ -26,9 +30,8 @@ class Utilitaire : public Vehicule {
 		*  \param marque, chaîne de caractères, la marque du véhicule
 		*  \param modele, chaîne de caractères, le kilométrage du véhicule
 		*  \param kilom, entier, le kilométrage du véhicule
-		*  \param nbLocations, entier, le nombre de locations de l'utilitaire
 		*/
-		Utilitaire(float volume, string immat, string marque, string modele, int kilom, int nbLocations);
+		Utilitaire(float volume, string immat, string marque, string modele, int kilom);
 
 		/*!
 		*  \brief Constructeur

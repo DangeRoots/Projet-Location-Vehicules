@@ -1,16 +1,7 @@
 Classes
-- date *
-// immatriculation
-// constructeur
+- date
 - parc
-- véhicule *
-- VP (hérite de véhicule) *
-- utilitaire < 3,5 t (hérite de véhicule) *
-- utilitaire > 3,5 t (hérite de utilitaire < 3,5 t) *
-
-Comment
-- gérer la liste des véhicules ==> parc
-- gérer la liste des véhicules ==> parc
-- gérer la liste des véhicules ==> parc
-
-Est ce qu'on décide de gérer le modèle de véhicule ? Fait dans la classe Vehicule
+- véhicule
+- VP (hérite de véhicule)
+- Utilitaire (hérite de véhicule)
+- Camion (hérite de utilitaire)
