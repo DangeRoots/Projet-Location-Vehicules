@@ -4,6 +4,7 @@
 #include <iostream>
 #include <Vehicule.h>
 #include <CDate.h>
+#include <Erreur.h>
 
 /*!
  * \file Location.h
@@ -97,6 +98,7 @@ class Location {
 		*
 		*  \param type, caractère, le type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
 		*  \return un objet CDate
+		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
 		*/		
 		CDate getDate(char type);
 
@@ -108,6 +110,7 @@ class Location {
 		*  \param date, objet CDate, la nouvelle date
 		*  \param type, caractère, le type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
 		*  \return void
+		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
 		*/		
 		void setDate(CDate date, char type);
 

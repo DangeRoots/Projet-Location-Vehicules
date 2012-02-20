@@ -33,30 +33,35 @@ void Location::setVehicule(Vehicule *veh) {
 }
 
 CDate Location::getDate(char type) {
-	if (type =='d')
-		return m_dateDepart;
-	if (type == 'r')
-		return m_dateRetourReel;
-	if (type == 'p')
-		return m_dateRetourPrevu;
-	else {
-		// Pas propre. À transformer en Exception
-		cerr << "Type date inconnu : " << type << endl;
-		CDate res(0,0,0);
-		return res;
-	}
+	switch (type){
+		case 'd':
+			return m_dateDepart;
+			break;
+		case 'r':
+			return m_dateRetourReel;
+			break;
+		case 'p':
+			return m_dateRetourPrevu;
+			break;
+		default:
+			throw erreur(1);
+		}
 }
 
 void Location::setDate(CDate date, char type) {
-	if (type == 'd')
-		m_dateDepart = date;
-	else if (type == 'r')
-		m_dateRetourReel = date;
-	else if (type == 'p')
-		m_dateRetourPrevu = date;
-	else {
-		cerr << "Type date inconnu : " << type << endl;
-	}
+	switch (type){
+		case 'd':
+			m_dateDepart = date;
+			break;
+		case 'r':
+			m_dateRetourReel = date;
+			break;
+		case 'p':
+			m_dateRetourPrevu = date;
+			break;
+		default:
+			throw erreur(1);
+		}
 }
 
 void Location::afficher() {

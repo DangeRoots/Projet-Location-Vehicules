@@ -33,7 +33,7 @@ int main() {
 	
 	// Location(Vehicule *vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
 	// Location avec Véhicule
-	Location loc2(new Vehicule("1234XY33", "Peugeot", "304", 22212),CDate(),CDate(),CDate());
+	Location loc2(new Vehicule("1234XY33", "Peugeot", "304", 22212),CDate(11,02,2012),CDate(13,02,2012),CDate(12,02,2012));
 	// Location avec Utilitaire
 	Location loc3(new Utilitaire(10, "IMMAT_U1", "MARQUE_U1", "MODELE_U1", 200),CDate(),CDate(),CDate());
 	// Location avec Camion
@@ -54,15 +54,31 @@ int main() {
 	loc3.afficher();
 	cout << endl;
 	
-	cout << "-- affichage locations --" << endl;
-	//~ loc5.afficher();
-	//~ loc2.afficher();
-	//~ loc3.afficher();
-	//~ loc4.afficher();
-	//~ 
-	//~ bool res = p1.ajouterLocation(loc5);
-	//~ res = p1.ajouterLocation(loc2);
-	//~ res = p1.ajouterLocation(loc3);
-	//~ res = p1.ajouterLocation(loc4);
-	//~ p1.afficher();
+//----------------------------------------------------------------------	
+	cout << "---------------------------"<<endl;
+
+	cout << "test erreur"<<endl;
+		try{	
+			
+			(loc2.getDate('y')).afficher();
+		}
+		catch (erreur a1){
+			cerr << "Argument type getDate erroné!"<<endl;
+		}
+
+		cout << "Test déroulement programme après try/catch"<<endl;
+		loc2.afficher();
+		try{
+			loc2.setDate(CDate (12,2,2012), 'd');
+			loc2.setDate(CDate (13,2,2012), 'r');
+			loc2.setDate(CDate (14,2,2012), 'm');
+		} 
+		catch (erreur a1){
+			cerr << "Argument type setDate erroné, conservation de l'ancienne valeur!"<<endl;
+			cout << "Mauvais type de date [Rappel: 'd', 'r' ou 'p']"<<endl;
+		}
+
+		cout << "Test déroulement programme après try/catch 2"<<endl;
+		loc2.afficher();
 }
+	
