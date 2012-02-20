@@ -28,6 +28,10 @@ class Parc {
 	private:
 		list<Location> m_parcAuto;
 		list<Location>::iterator m_parcAutoI;
+		void lectureDates(int &t_jDep, int &t_mDep,int &t_aDep,
+							int &t_jRetP, int &t_mRetP,int &t_aRetP,
+							int &t_jRetR, int &t_mRetR, int &t_aRetR,
+							fstream &inFile);
 	
 	public:
 		/*!
@@ -38,8 +42,6 @@ class Parc {
 		*  \param inFile, fstream, le fichier contenant la liste des locations
 		*/
 		Parc (fstream &inFile);
-		
-		// Parc(list<Location> listeVeh);
 		
 		/*!
 		*  \brief Constructeur
