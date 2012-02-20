@@ -27,6 +27,7 @@
 class Parc {
 	private:
 		list<Location> m_parcAuto;
+		list<Location>::iterator m_parcAutoI;
 	
 	public:
 		/*!

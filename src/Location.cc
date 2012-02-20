@@ -3,17 +3,15 @@ using namespace std;
 #include <Location.h>
 
 Location::Location() {
-	Vehicule veh;
+	Vehicule *veh;
 	CDate d;
 	m_vehicule = veh;
 	m_dateDepart = d;
 	m_dateRetourPrevu = d;
 	m_dateRetourReel = d;
-	// m_kilometreDepart = 0;
-	// m_kilometreRetour = 0;
 }
 
-Location::Location(	Vehicule vehicule, 
+Location::Location(	Vehicule *vehicule, 
 					CDate dateDepart, 
 					CDate dateRetourPrevu, 
 					CDate dateRetourReel) {
@@ -21,18 +19,16 @@ Location::Location(	Vehicule vehicule,
 	m_dateDepart = dateDepart;
 	m_dateRetourPrevu = dateRetourPrevu;
 	m_dateRetourReel = dateRetourReel;
-	// m_kilometreDepart = kmDepart;
-	// m_kilometreRetour = kmRetour;
 }
 
 Location::~Location() {
 }
 
-Vehicule Location::getVehicule() {
+Vehicule* Location::getVehicule() {
 	return m_vehicule;
-}
+}	
 
-void Location::setVehicule(Vehicule veh) {
+void Location::setVehicule(Vehicule *veh) {
 	m_vehicule = veh;
 }
 
@@ -64,9 +60,8 @@ void Location::setDate(CDate date, char type) {
 }
 
 void Location::afficher() {
-	cout << "---------------------" << endl;
 	cout << "Véhicule" << endl;
-	m_vehicule.afficher();
+	m_vehicule->afficher();
 	cout << "Date de départ : ";
 	if (m_dateDepart == CDate(0,0,0))
 		cout << "Véhicule disponible" << endl;

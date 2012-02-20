@@ -29,5 +29,5 @@ void Camion::setPoidsUtile(float poids) {
 
 void Camion::afficher() {
 	Utilitaire::afficher();
-	cout << setw(20) << "Poids utile : " << m_poidsUtile << endl;
+	cout << "Poids utile : " << m_poidsUtile << endl;
 }
