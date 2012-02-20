@@ -16,22 +16,8 @@
  * \version 0.1
  */
 
-/*! Remarques
- * Déclarer un pointeur {
- * 		Vehicule *m_vehicule;
- * }
- * affecter un pointeur {
- * 		Vehicule veh; 
- * 		m_vehicule = &veh; 
- * }
- * allouer un pointeur {
- *		m_vehicule = new Vehicule() ;
- * }
- */
-
 class Location {
 	private:
-		// Vehicule m_vehicule;
 		Vehicule *m_vehicule;
 		CDate m_dateDepart;
 		CDate m_dateRetourPrevu;

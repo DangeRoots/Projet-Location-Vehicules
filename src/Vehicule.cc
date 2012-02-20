@@ -17,6 +17,7 @@ Vehicule::Vehicule () {
 }
 
 Vehicule::~Vehicule() {
+	cout << "Destructeur de Vehicule" << endl;
 }
 
 string Vehicule::getImmatriculation() {

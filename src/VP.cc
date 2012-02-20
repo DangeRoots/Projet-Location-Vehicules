@@ -12,7 +12,9 @@ VP::VP():Vehicule(){
 	m_nbPlaces = 0;
 };
 
-VP::~VP(){}
+VP::~VP(){
+	cout << "Destructeur de VP" << endl;
+}
 
 int VP::getNbPlaces(){
 

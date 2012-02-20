@@ -17,6 +17,7 @@ Camion::Camion():Utilitaire() {
 }
 
 Camion::~Camion() {
+	cout << "Destructeur de Camion" << endl;
 }
 
 float Camion::getPoidsUtile() {

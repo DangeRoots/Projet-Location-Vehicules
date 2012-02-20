@@ -53,6 +53,7 @@ Parc::Parc (fstream &inFile) {
 }
 
 Parc::Parc() {
+	cout << "Destructeur de parc" << endl;
 }
 
 Parc::~Parc () {
