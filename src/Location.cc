@@ -65,7 +65,6 @@ void Location::setDate(CDate date, char type) {
 }
 
 void Location::afficher() {
-	cout << "Véhicule" << endl;
 	m_vehicule->afficher();
 	cout << "Date de départ : ";
 	if (m_dateDepart == CDate(0,0,0))

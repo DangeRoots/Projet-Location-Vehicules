@@ -4,32 +4,51 @@ using namespace std;
 
 Parc::Parc (fstream &inFile) {
 	/*! Déclaration des variables temporaires */
-	string tmp_type, tmp_immat, tmp_marque, tmp_modele, donnee;
-	int tmp_kilom, tmp_nbPlaces;
-	float tmp_volumeUtile, tmp_poidsUtile;
-		
-	// Lecture fichier et création des objets
-	inFile >> tmp_type;
+	string t_type, t_immat, t_marque, t_modele, donnee;
+	int t_kilom, t_nbPlaces, t_jDep, t_mDep, t_aDep, t_jRetP, t_mRetP, t_aRetP, t_jRetR, t_mRetR, t_aRetR;
+	float t_volumeUtile, t_poidsUtile;
+	CDate dateDep, dateRetP, dateRetR;
+	
+	/*! Traitement du fichier */
+	inFile >> t_type;
 	while (!inFile.eof()) {	
-		inFile >> tmp_immat;
-		inFile >> tmp_marque;
-		inFile >> tmp_modele;
-		inFile >> tmp_kilom;
-		if (tmp_type == "c") { // ajout des variables spécifiques aux camions
-			inFile >> tmp_poidsUtile;
-			inFile >> tmp_volumeUtile;
-			Camion c(tmp_poidsUtile,tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom);
-			m_parcAuto.push_back(Location(new Camion(tmp_poidsUtile,tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom), CDate(), CDate(), CDate()));
-		} else if (tmp_type == "u") { // ajout des variables spécifiques aux utilitaires
-			inFile >> tmp_volumeUtile;
-			Utilitaire u(tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom);
-			m_parcAuto.push_back(Location(new Utilitaire(tmp_volumeUtile, tmp_immat, tmp_marque, tmp_modele, tmp_kilom), CDate(), CDate(), CDate()));
-		} else if (tmp_type == "v") { // ajout des variables spécifiques aux VP
-			inFile >> tmp_nbPlaces;
-			VP v(tmp_immat, tmp_marque, tmp_modele, tmp_kilom, tmp_nbPlaces);
-			m_parcAuto.push_back(Location(new VP(tmp_immat, tmp_marque, tmp_modele, tmp_kilom, tmp_nbPlaces), CDate(), CDate(), CDate()));
+		inFile >> t_immat;
+		inFile >> t_marque;
+		inFile >> t_modele;
+		inFile >> t_kilom;
+		if (t_type == "c") { // ajout des variables spécifiques aux camions
+			inFile >> t_poidsUtile;
+			inFile >> t_volumeUtile;
+			lectureDates(	t_jDep, t_mDep,t_aDep,
+							t_jRetP, t_mRetP,t_aRetP,
+							t_jRetR, t_mRetR, t_aRetR,
+							inFile);
+			m_parcAuto.push_back(	Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele, t_kilom), 
+									CDate(t_jDep,t_mDep,t_aDep), 
+									CDate(t_jRetP, t_mRetP, t_aRetP), 
+									CDate(t_jRetR, t_mRetR, t_aRetR)));
+		} else if (t_type == "u") { // ajout des variables spécifiques aux utilitaires
+			inFile >> t_volumeUtile;
+			lectureDates(	t_jDep, t_mDep,t_aDep,
+							t_jRetP, t_mRetP,t_aRetP,
+							t_jRetR, t_mRetR, t_aRetR,
+							inFile);
+			m_parcAuto.push_back(	Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele, t_kilom), 
+									CDate(t_jDep,t_mDep,t_aDep), 
+									CDate(t_jRetP, t_mRetP, t_aRetP), 
+									CDate(t_jRetR, t_mRetR, t_aRetR)));
+		} else if (t_type == "v") { // ajout des variables spécifiques aux VP
+			inFile >> t_nbPlaces;
+			lectureDates(	t_jDep, t_mDep,t_aDep,
+							t_jRetP, t_mRetP,t_aRetP,
+							t_jRetR, t_mRetR, t_aRetR,
+							inFile);
+			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_kilom, t_nbPlaces), 						
+											CDate(t_jDep,t_mDep,t_aDep), 
+											CDate(t_jRetP, t_mRetP, t_aRetP), 
+											CDate(t_jRetR, t_mRetR, t_aRetR)));
 		}
-		inFile >> tmp_type;
+		inFile >> t_type;
 	}
 }
 
@@ -57,8 +76,10 @@ Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour) {
 */
 
 void Parc::afficher() {
-	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++)
+	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
 		m_parcAutoI->afficher();
+		cout << "--------------------" << endl;
+	}
 }
 
 void Parc::afficherLoues (CDate dateDebut, CDate dateFin) {}
@@ -69,4 +90,19 @@ void Parc::afficherRestituables(CDate today) {}
 
 bool Parc::sauvegarderParc() {
 	return true;
+}
+
+void Parc::lectureDates(	int &t_jDep, int &t_mDep,int &t_aDep,
+							int &t_jRetP, int &t_mRetP,int &t_aRetP,
+							int &t_jRetR, int &t_mRetR, int &t_aRetR,
+							fstream &inFile) {
+			inFile >> t_jDep;
+			inFile >> t_mDep;
+			inFile >> t_aDep;
+			inFile >> t_jRetP;
+			inFile >> t_mRetP;
+			inFile >> t_aRetP;
+			inFile >> t_jRetR;
+			inFile >> t_mRetR;
+			inFile >> t_aRetR;
 }
