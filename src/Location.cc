@@ -30,7 +30,7 @@ Location::~Location() {
 
 Vehicule Location::getVehicule() {
 	return m_vehicule;
-}
+}	
 
 void Location::setVehicule(Vehicule veh) {
 	m_vehicule = veh;
@@ -64,7 +64,6 @@ void Location::setDate(CDate date, char type) {
 }
 
 void Location::afficher() {
-	cout << "---------------------" << endl;
 	cout << "Véhicule" << endl;
 	m_vehicule.afficher();
 	cout << "Date de départ : ";

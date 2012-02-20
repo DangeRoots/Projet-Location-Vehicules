@@ -21,9 +21,6 @@ class Location {
 		CDate m_dateDepart;
 		CDate m_dateRetourPrevu;
 		CDate m_dateRetourReel;
-		// int m_kilometreDepart;
-		// int m_kilometreRetour;
-		// int nbLocation; // Nombre de fois où le véhicule a été loué
 
 	public:
 		/*!
@@ -45,7 +42,6 @@ class Location {
 		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
 		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
 		*/		
-		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel, int km);
 		Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
 		
 		/*!
@@ -97,27 +93,6 @@ class Location {
 		*  \return void
 		*/		
 		void setDate(CDate date, char type);
-
-		/*!
-		*  \brief Récupérer kilométrage
-		*
-		*  Permet d'obtenir le kilométrage de départ ou retour du véhicule
-		*
-		*  \param type, caractère, le type de kilométrage souhaité : d pour départ, r pour retour
-		*  \return entier, le kilométrage
-		*/				
-		// int getKilometrage(char type);
-
-		/*!
-		*  \brief Modifier kilométrage
-		*
-		*  Permet de modifier le kilométrage départ ou retour du véhicule
-		*
-		*  \param km, entier, le nouveau kilométrage de départ
-		*  \param typ, caractère, le type de kilométrage à modifier, d pour départ, r pour retour
-		*  \return void
-		*/
-		// void setKilometrage(int km, char type);
 
 		/*!
 		*  \brief Afficher location

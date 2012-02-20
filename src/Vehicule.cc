@@ -7,7 +7,6 @@ Vehicule::Vehicule (string immat, string marque, string modele, int kilometrage)
 	m_marque = marque;
 	m_modele = modele;
 	m_kilometrage = kilometrage;
-	// m_nbLocation = nbLoc;
 }
 
 Vehicule::Vehicule () {
@@ -15,7 +14,6 @@ Vehicule::Vehicule () {
 	m_marque = "";
 	m_modele = "";
 	m_kilometrage = 0;
-	// m_nbLocation = 0;
 }
 
 Vehicule::~Vehicule() {
@@ -58,7 +56,7 @@ bool Vehicule::operator==(const Vehicule &veh) {
 }
 
 void Vehicule::afficher() {
-	cout 	<< setw(20) << "Marque : " << m_marque
-			<< setw(20)	<< "Immatriculation : "	<< m_immatriculation
-			<< setw(20)	<< "Kilométrage : " << m_kilometrage << endl;
+	cout 	<< setw(1) << m_marque << " " << m_modele << endl
+			<< "Immatriculation : "	<< setw(9)	<< m_immatriculation << endl
+			<< "Kilométrage : " << m_kilometrage << endl;
 }
