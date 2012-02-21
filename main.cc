@@ -12,6 +12,9 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 	
+	bool fin = false;
+	char continuer = 'o';
+	
 	if (argc < 2) {
 		cerr << "Argument manquant : chemin/vers/fichier/locations ! Impossible de poursuivre !" << endl;
 		exit (-1);
@@ -28,6 +31,18 @@ int main(int argc, char *argv[]) {
 	Parc p1(fichierEntrant);
 	fichierEntrant.close();
 	
-	p1.afficher();
+	while (!fin) {
+		cout << "Ajouter nouvelle location (o/n) ? " << endl;
+		cin >> continuer;
+		if (continuer=='n')
+			fin = true;
+		else {
+			
+		}
+		p1.afficher();		
+	}
+	
+	
+	
 }
 	

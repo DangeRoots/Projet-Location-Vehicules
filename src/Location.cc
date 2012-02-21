@@ -20,8 +20,7 @@ Location::Location(	Vehicule *vehicule,
 }
 
 Location::~Location() {
-	cout << "Destruction de Location" << endl;
-	// delete m_vehicule;
+	// cout << "Destruction de Location" << endl;
 }
 
 Vehicule* Location::getVehicule() {

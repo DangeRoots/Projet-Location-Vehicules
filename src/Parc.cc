@@ -53,15 +53,17 @@ Parc::Parc (fstream &inFile) {
 }
 
 Parc::Parc() {
+#ifdef DEBUG
 	cout << "Destructeur de parc" << endl;
+#endif
 }
 
 Parc::~Parc () {
 }
 
-bool Parc::ajouterLocation (Location loc) {
+void Parc::ajouterLocation (Location loc) {
 	m_parcAuto.push_back(loc);
-	return true;
+	// return true;
 }
 
 bool Parc::supprimerLocation (Location loc) {

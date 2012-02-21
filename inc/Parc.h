@@ -4,9 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <list>
-#include <vector> // Constructeur
-#include <sstream>
-// #include <iomanip> // setw
+
 #include <Location.h>
 #include <Vehicule.h>
 #include <Camion.h>
@@ -69,7 +67,7 @@ class Parc {
 		*  \param loc, Location
 		*  \return booléen, vrai si la location a été ajoutée, faux sinon 
 		*/		
-		bool ajouterLocation (Location loc);
+		void ajouterLocation (Location loc);
 		
 		/*!
 		*  \brief Supprimer location
