@@ -116,7 +116,7 @@ class Parc {
 		*  \param aucun
 		*  \return void
 		*/												
-		void sauvegarderParc();
+		void sauvegarderParc(fstream &inFile);
 };
 
 #endif

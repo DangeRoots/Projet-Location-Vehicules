@@ -50,3 +50,7 @@ void Vehicule::afficher() {
 	cout 	<< "--- " << m_marque << " " << m_modele
 			<< " - Immat. : " << m_immatriculation << " ---" << endl;
 }
+
+void Vehicule::save(fstream &fs) {
+	fs << m_immatriculation << " " << m_marque << " " <<  m_modele << " ";
+} 

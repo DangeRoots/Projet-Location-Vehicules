@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
-
+#include <fstream>
 // #include <string>
 
 /*!
@@ -136,6 +136,15 @@ class Vehicule {
 		*  \return void
 		*/								
 		virtual void afficher();
+		
+		/*!
+		*  \brief sauvegarder véhicule
+		*
+		*  Sauvegarde le véhicule
+		*
+		*  \param aucun
+		*  \return void
+		*/								
+		virtual void save(fstream &fs);
 };
-
 #endif

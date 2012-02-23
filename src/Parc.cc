@@ -64,5 +64,6 @@ void Parc::afficher() {
 void Parc::sauvegarderParc(fstream &inFile) {
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
 		// chaque donnée unitaire
+		m_parcAutoI->save(inFile);
 	}
 }

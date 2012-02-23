@@ -31,3 +31,9 @@ void Camion::afficher() {
 	Utilitaire::afficher();
 	cout << "Poids : " << m_poidsUtile << endl;
 }
+
+void Camion::save(fstream &fs) {
+	fs << "c " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << getVolumeUtile() << " " << m_poidsUtile << " ";
+}
+	
+	

@@ -81,6 +81,16 @@ class VP: public Vehicule {
 		*  \return void
 		*/								
 		virtual void afficher();
+		
+		/*!
+		*  \brief sauvegarder VP
+		*
+		*  Sauvegarde le VP
+		*
+		*  \param aucun
+		*  \return void
+		*/								
+		virtual void save(fstream &fs);
 };
 
 #endif

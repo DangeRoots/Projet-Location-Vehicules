@@ -30,3 +30,7 @@ void Utilitaire::afficher() {
 	Vehicule::afficher();
 	cout << "Volume : " << m_volumeUtile << endl;
 }
+
+void Utilitaire::save(fstream &fs) {
+	fs << "u " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << m_volumeUtile << " ";
+}

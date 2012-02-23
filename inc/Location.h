@@ -2,6 +2,7 @@
 #define LOCATION_H
 
 #include <iostream>
+#include <fstream>
 #include <Vehicule.h>
 #include <CDate.h>
 #include <Erreur.h>
@@ -87,6 +88,10 @@ class Location {
 		*  \return void
 		*/								
 		void afficher();
+		
+		// Sauvegarde
+		void save(fstream &inFile);
+		// void save();
 };
 
 #endif

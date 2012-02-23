@@ -78,6 +78,8 @@ class Camion : public Utilitaire {
 		*  \return void
 		*/								
 		virtual void afficher();
+		
+		virtual void save(fstream &fs);
 };
 
 #endif

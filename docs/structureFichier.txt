@@ -1,6 +1,6 @@
-v : type immat marque modele kilom nbPortes
-c : type immat marque modele kilom poids volume
-u : type immat marque modele kilom volume
+v : type immat marque modele nbPortes kilom 
+c : type immat marque modele poids volume kilom 
+u : type immat marque modele volume kilom 
 
 -------------------------------------------------
 

@@ -31,3 +31,8 @@ void VP::afficher(){
 	Vehicule::afficher();
 	cout << "Nombre de places : " << m_nbPlaces << endl;
 }
+
+
+void VP::save(fstream &fs) {
+	fs << "v " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << m_nbPlaces << " ";
+}
