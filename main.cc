@@ -28,9 +28,12 @@ int main(int argc, char *argv[]) {
 	Parc p1(vehFile);
 	vehFile.close();
 	
+	cout << "--- avant ajout ---" << endl;
 	p1.afficher();
 	
-	p1.ajouterLocation(Location(new Camion(15000,32, "777DD33", "NEW_MARQUE", "NEW_MODELE"), 50000));
+	for (int i=0; i < 100; i++)
+		p1.ajouterLocation(Location(new Camion(15,64,"AAA_DD33", "NEW_MARQUE", "NEW_MODELE"), 50*i));
+	cout << "--- après ajout ---" << endl;
 	p1.afficher();
 	
 	vehFile.open(nomFichier.c_str(),ios::out);
@@ -38,7 +41,8 @@ int main(int argc, char *argv[]) {
 		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
 		exit (-2);
 	}
+	cout << "Sauvegarde fichier" << endl;
 	p1.sauvegarderParc(vehFile);
-	// p1.sauvegarderParc();
+	cout << "Fin Sauvegarde fichier" << endl;
 }
 	
