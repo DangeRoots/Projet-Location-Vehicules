@@ -26,11 +26,7 @@ class Parc {
 	private:
 		list<Location> m_parcAuto;
 		list<Location>::iterator m_parcAutoI;
-		void lectureDates(int &t_jDep, int &t_mDep,int &t_aDep,
-							int &t_jRetP, int &t_mRetP,int &t_aRetP,
-							int &t_jRetR, int &t_mRetR, int &t_aRetR,
-							fstream &inFile);
-	
+		
 	public:
 		/*!
 		*  \brief Constructeur
@@ -102,7 +98,6 @@ class Parc {
 		*/		
 		//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);
 		
-		
 		/*!
 		*  \brief Afficher liste complète
 		*
@@ -114,38 +109,6 @@ class Parc {
 		void afficher();
 		
 		/*!
-		*  \brief Afficher véhicules loués
-		*
-		*  Affiche la liste des véhicules en cours de location entre deux dates
-		*
-		*  \param dateDebut, CDate, la date de début de location
-		*  \param dateFin, CDate, la date de fin de location
-		*  \return void
-		*/						
-		void afficherLoues (CDate dateDebut, CDate dateFin);
-		
-		/*!
-		*  \brief Afficher véhicules disponibles
-		*
-		*  Affiche la liste des locations disponibles entre deux dates
-		*
-		*  \param dateDebut, CDate, la date de début de location souhaitée
-		*  \param dateFin, CDate, la date de fin de location souhaitée
-		*  \return void
-		*/								
-		void afficherDisponibles (CDate dateDebut, CDate dateFin);
-		
-		/*!
-		*  \brief Afficher véhicules restituables
-		*
-		*  Affiche la liste des locations dont la date de retour prévue est égale ou inférieure à la date du jour
-		*
-		*  \param today, CDate, la date de consultation de la liste
-		*  \return void
-		*/										
-		void afficherRestituables(CDate today);
-		
-		/*!
 		*  \brief Sauvegarder parc
 		*
 		*  Sauvegarde la liste des locations sur disque
@@ -153,7 +116,7 @@ class Parc {
 		*  \param aucun
 		*  \return void
 		*/												
-		bool sauvegarderParc();
+		void sauvegarderParc();
 };
 
 #endif

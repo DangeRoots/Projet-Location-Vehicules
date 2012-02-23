@@ -3,18 +3,15 @@
 using namespace std;
 
 #include <Parc.h>
-#include <Vehicule.h>
+//~ #include <Vehicule.h>
 #include <Location.h>
-#include <CDate.h>
-#include <Utilitaire.h>
-#include <Camion.h>
-#include <VP.h>
+//~ #include <CDate.h>
+//~ #include <Utilitaire.h>
+//~ #include <Camion.h>
+//~ #include <VP.h>
 
 int main(int argc, char *argv[]) {
-	
-	bool fin = false;
-	char continuer = 'o';
-	
+		
 	if (argc < 2) {
 		cerr << "Argument manquant : chemin/vers/fichier/locations ! Impossible de poursuivre !" << endl;
 		exit (-1);
@@ -31,17 +28,10 @@ int main(int argc, char *argv[]) {
 	Parc p1(fichierEntrant);
 	fichierEntrant.close();
 	
-	while (!fin) {
-		cout << "Ajouter nouvelle location (o/n) ? " << endl;
-		cin >> continuer;
-		if (continuer=='n')
-			fin = true;
-		else {
-			
-		}
-		p1.afficher();		
-	}
+	p1.afficher();
 	
+	p1.ajouterLocation(Location(new Camion(15000,32, "777DD33", "NEW_MARQUE", "NEW_MODELE"), 50000));
+	p1.afficher();
 	
 	
 }

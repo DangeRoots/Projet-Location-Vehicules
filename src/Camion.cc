@@ -6,9 +6,8 @@ Camion::Camion(	float poids,
 				float volume, 
 				string immat, 
 				string marque, 
-				string modele, 
-				int kilom)
-					:Utilitaire(volume, immat,marque, modele, kilom) {
+				string modele)
+					:Utilitaire(volume, immat,marque, modele) {
 	m_poidsUtile = poids;
 }
 
@@ -30,5 +29,5 @@ void Camion::setPoidsUtile(float poids) {
 
 void Camion::afficher() {
 	Utilitaire::afficher();
-	cout << "Poids utile : " << m_poidsUtile << endl;
+	cout << "Poids : " << m_poidsUtile << endl;
 }

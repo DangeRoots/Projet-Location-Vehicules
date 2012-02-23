@@ -29,9 +29,8 @@ class Utilitaire : public Vehicule {
 		*  \param immat, chaîne de caractères, le modèle du véhicule
 		*  \param marque, chaîne de caractères, la marque du véhicule
 		*  \param modele, chaîne de caractères, le kilométrage du véhicule
-		*  \param kilom, entier, le kilométrage du véhicule
 		*/
-		Utilitaire(float volume, string immat, string marque, string modele, int kilom);
+		Utilitaire(float volume, string immat, string marque, string modele);
 
 		/*!
 		*  \brief Constructeur

@@ -5,9 +5,8 @@ using namespace std;
 Utilitaire::Utilitaire(	float volume, 
 						string immat, 
 						string marque, 
-						string modele, 
-						int kilom)
-							:Vehicule(immat,marque, modele, kilom) {
+						string modele)
+							:Vehicule(immat,marque, modele) {
 	m_volumeUtile = volume;
 }
 
@@ -29,5 +28,5 @@ void Utilitaire::setVolumeUtile(float volume) {
 
 void Utilitaire::afficher() {
 	Vehicule::afficher();
-	cout << "Volume utile : " << m_volumeUtile << endl;
+	cout << "Volume : " << m_volumeUtile << endl;
 }

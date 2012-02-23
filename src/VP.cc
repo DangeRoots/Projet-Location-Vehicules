@@ -2,7 +2,7 @@ using namespace std;
 
 #include <VP.h>
 
-VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces):Vehicule(immat, marque, modele, kilometrage){
+VP::VP(string immat, string marque, string modele, int nbPlaces):Vehicule(immat, marque, modele){
 
 	m_nbPlaces = nbPlaces;
 }

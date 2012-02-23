@@ -19,9 +19,10 @@
 class Location {
 	private:
 		Vehicule *m_vehicule;
-		CDate m_dateDepart;
-		CDate m_dateRetourPrevu;
-		CDate m_dateRetourReel;
+		int m_kilometrage;
+		// CDate m_dateDepart;
+		// CDate m_dateRetourPrevu;
+		// CDate m_dateRetourReel;
 
 	public:
 		/*!
@@ -44,7 +45,7 @@ class Location {
 		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
 		*/		
 		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
-		Location(Vehicule *vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
+		Location(Vehicule *vehicule, int kilometrage);
 		
 		/*!
 		*  \brief Destructeur
@@ -76,29 +77,6 @@ class Location {
 		*/		
 		// void setVehicule(Vehicule veh);
 		void setVehicule(Vehicule *veh);
-
-		/*!
-		*  \brief Accéder date début
-		*
-		*  Permet d'obtenir les dates associées à la location : date de départ, date de retour prévu, date de retour réel
-		*
-		*  \param type, caractère, le type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
-		*  \return un objet CDate
-		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
-		*/		
-		CDate getDate(char type);
-
-		/*!
-		*  \brief Modifier date
-		*
-		*  Permet de modifier les dates associées à la location : date de départ, date de retour prévu, date de retour réel
-		*
-		*  \param date, objet CDate, la nouvelle date
-		*  \param type, caractère, le type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
-		*  \return void
-		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
-		*/		
-		void setDate(CDate date, char type);
 
 		/*!
 		*  \brief Afficher location

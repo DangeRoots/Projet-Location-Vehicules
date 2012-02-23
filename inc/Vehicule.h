@@ -21,8 +21,7 @@
 class Vehicule {	
 	private:
 		string m_immatriculation, m_marque, m_modele;
-		int m_kilometrage;
-		// int m_nbLocation; // Nombre de fois où la véhicule a été loué
+		// int m_kilometrage;
 			
 	public:
 		/*!
@@ -37,7 +36,7 @@ class Vehicule {
 		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
 		// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
-		Vehicule(string immat, string marque, string modele, int kilometrage);
+		Vehicule(string immat, string marque, string modele);
 		
 		/*!
 		 *  \brief Constructeur
@@ -95,7 +94,7 @@ class Vehicule {
 		 *  \param modele, chaîne de caractères, le modèle du véhicule
 		 *  \return void
 		 */		
-		void setModele(std::string modele);
+		void setModele(string modele);
 
 		/*!
 		 *  \brief Accéder marque
@@ -116,26 +115,6 @@ class Vehicule {
 		 *  \return void
 		 */		
 		void setMarque(std::string marque);
-
-		/*!
-		 *  \brief Accéder kilométrage
-		 *
-		 *  Permet d'obtenir le kilométrage du véhicule
-		 *
-		 *  \param aucun
-		 *  \return m_kilometrage, entier, le kilométrage du véhicule
-		 */		
-		int getKilometrage();
-		
-		/*!
-		 *  \brief Modifier kilométrage
-		 *
-		 *  Permet de modifier le kilométrage du véhicule
-		 *
-		 *  \param kilom, entier, le nouveau kilométrage du véhicule
-		 *  \return void
-		 */		
-		void setKilometrage(int kilom);
 
 		/*!
 		 *  \brief Véhicule identiques

@@ -1,3 +1,9 @@
+v : type immat marque modele kilom nbPortes
+c : type immat marque modele kilom poids volume
+u : type immat marque modele kilom volume
+
+-------------------------------------------------
+
 commun type
 commun m_immatriculation
 commun m_marque
