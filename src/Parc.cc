@@ -8,21 +8,21 @@ Parc::Parc (fstream &inFile) {
 	int t_kilom, t_nbPlaces;
 	float t_volumeUtile, t_poidsUtile;
 	
-	/*! Traitement du fichier */
+	/*! Lecture du fichier et création des  véhicules*/
 	inFile >> t_type;
 	while (!inFile.eof()) {	
 		inFile >> t_immat;
 		inFile >> t_marque;
 		inFile >> t_modele;
 		inFile >> t_kilom;
-		if (t_type == "c") { // ajout des variables spécifiques aux camions
+		if (t_type == "c") { // Données spécifiques aux camions
 			inFile >> t_poidsUtile;
 			inFile >> t_volumeUtile;
 			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-		} else if (t_type == "u") { // ajout des variables spécifiques aux utilitaires
+		} else if (t_type == "u") { // Données spécifiques aux utilitaires
 			inFile >> t_volumeUtile;
 			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-		} else if (t_type == "v") { // ajout des variables spécifiques aux VP
+		} else if (t_type == "v") { // Données spécifiques aux VP
 			inFile >> t_nbPlaces;
 			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
 		}
@@ -37,6 +37,7 @@ Parc::Parc() {
 }
 
 Parc::~Parc () {
+	
 }
 
 void Parc::ajouterLocation (Location loc) {
@@ -61,9 +62,8 @@ void Parc::afficher() {
 	}
 }
 
-void Parc::sauvegarderParc(fstream &inFile) {
+void Parc::sauvegarder(fstream &inFile) {
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
-		// chaque donnée unitaire
 		m_parcAutoI->save(inFile);
 	}
 }

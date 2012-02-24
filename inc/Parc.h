@@ -6,11 +6,9 @@
 #include <list>
 
 #include <Location.h>
-#include <Vehicule.h>
 #include <Camion.h>
-#include <CDate.h>
+#include <Utilitaire.h>
 #include <VP.h>
-
 
 /*!
  * \file Parc.h
@@ -19,7 +17,7 @@
  *  Cette classe permet de gérer un parc de locations de véhicules
  * 
  * \author Gilles Coulais, Icham Sirat
- * \version 0.1
+ * \version 0.2
  */
 
 class Parc {
@@ -111,12 +109,12 @@ class Parc {
 		/*!
 		*  \brief Sauvegarder parc
 		*
-		*  Sauvegarde la liste des locations sur disque
+		*  Sauvegarde le parc dans un fichier
 		*
-		*  \param aucun
+		*  \param [in,out] inFile fstream, le fichier de sauvegarde
 		*  \return void
 		*/												
-		void sauvegarderParc(fstream &inFile);
+		void sauvegarder(fstream &inFile);
 };
 
 #endif
