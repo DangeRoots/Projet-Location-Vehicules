@@ -2,7 +2,7 @@ using namespace std;
 
 #include <VP.h>
 
-VP::VP(string immat, string marque, string modele, int kilometrage, int nbPlaces):Vehicule(immat, marque, modele, kilometrage){
+VP::VP(string immat, string marque, string modele, int nbPlaces):Vehicule(immat, marque, modele){
 
 	m_nbPlaces = nbPlaces;
 }
@@ -12,7 +12,9 @@ VP::VP():Vehicule(){
 	m_nbPlaces = 0;
 };
 
-VP::~VP(){}
+VP::~VP(){
+	// cout << "Destructeur de VP" << endl;
+}
 
 int VP::getNbPlaces(){
 
@@ -25,7 +27,11 @@ void VP::setNbPlaces(int nbPlaces){
 }
 
 void VP::afficher(){
-	
 	Vehicule::afficher();
-	cout << "Nombre de places : " << m_nbPlaces << endl;
+	cout << m_nbPlaces << " ";
+}
+
+
+void VP::save(fstream &fs) {
+	fs << "v " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << m_nbPlaces << " ";
 }

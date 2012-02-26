@@ -5,62 +5,79 @@ using namespace std;
 Parc::Parc (fstream &inFile) {
 	/*! Déclaration des variables temporaires */
 	string t_type, t_immat, t_marque, t_modele, donnee;
-	int t_kilom, t_nbPlaces, t_jDep, t_mDep, t_aDep, t_jRetP, t_mRetP, t_aRetP, t_jRetR, t_mRetR, t_aRetR;
+	int t_kilom, t_nbPlaces;
 	float t_volumeUtile, t_poidsUtile;
-	CDate dateDep, dateRetP, dateRetR;
 	
-	/*! Traitement du fichier */
+	/*! Lecture du fichier et création des  véhicules*/
 	inFile >> t_type;
 	while (!inFile.eof()) {	
 		inFile >> t_immat;
 		inFile >> t_marque;
 		inFile >> t_modele;
 		inFile >> t_kilom;
-		if (t_type == "c") { // ajout des variables spécifiques aux camions
+		if (t_type == "c") { // Données spécifiques aux camions
 			inFile >> t_poidsUtile;
 			inFile >> t_volumeUtile;
-			lectureDates(	t_jDep, t_mDep,t_aDep,
-							t_jRetP, t_mRetP,t_aRetP,
-							t_jRetR, t_mRetR, t_aRetR,
-							inFile);
-			m_parcAuto.push_back(	Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele, t_kilom), 
-									CDate(t_jDep,t_mDep,t_aDep), 
-									CDate(t_jRetP, t_mRetP, t_aRetP), 
-									CDate(t_jRetR, t_mRetR, t_aRetR)));
-		} else if (t_type == "u") { // ajout des variables spécifiques aux utilitaires
+			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		} else if (t_type == "u") { // Données spécifiques aux utilitaires
 			inFile >> t_volumeUtile;
-			lectureDates(	t_jDep, t_mDep,t_aDep,
-							t_jRetP, t_mRetP,t_aRetP,
-							t_jRetR, t_mRetR, t_aRetR,
-							inFile);
-			m_parcAuto.push_back(	Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele, t_kilom), 
-									CDate(t_jDep,t_mDep,t_aDep), 
-									CDate(t_jRetP, t_mRetP, t_aRetP), 
-									CDate(t_jRetR, t_mRetR, t_aRetR)));
-		} else if (t_type == "v") { // ajout des variables spécifiques aux VP
+			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		} else if (t_type == "v") { // Données spécifiques aux VP
 			inFile >> t_nbPlaces;
-			lectureDates(	t_jDep, t_mDep,t_aDep,
-							t_jRetP, t_mRetP,t_aRetP,
-							t_jRetR, t_mRetR, t_aRetR,
-							inFile);
-			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_kilom, t_nbPlaces), 						
-											CDate(t_jDep,t_mDep,t_aDep), 
-											CDate(t_jRetP, t_mRetP, t_aRetP), 
-											CDate(t_jRetR, t_mRetR, t_aRetR)));
+			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
 		}
 		inFile >> t_type;
 	}
 }
 
 Parc::Parc() {
+#ifdef DEBUG
+	cout << "Destructeur de parc" << endl;
+#endif
 }
 
 Parc::~Parc () {
+	
 }
 
-bool Parc::ajouterLocation (Location loc) {
-	m_parcAuto.push_back(loc);
-	return true;
+void Parc::ajouterLocation () {
+	// Déclaration des variables temporaires
+	char t_type;
+	string t_marque, t_modele, t_immat;
+	int t_kilom, t_nbPlaces;
+	float t_poidsUtile, t_volumeUtile;
+	cout << "Type de véhicule (v/c/u) : ";
+	cin >> t_type;
+	cout << "Immatriculation  : ";
+	cin >> t_immat;
+	cout << "Marque  : ";
+	cin >> t_marque;
+	cout << "Modele  : ";
+	cin >> t_modele;
+	cout << "Kilométrage  : ";
+	cin >> t_kilom;
+	if (t_kilom < 0)
+		t_kilom = 0;
+	if (t_type != 'c' && t_type != 'v' && t_type != 'u') {
+		// Erreur.h
+	} else {
+		if (t_type == 'c') {
+			cout << "Poids  : ";
+			cin >> t_poidsUtile;
+			cout << "Volume  : ";
+			cin >> t_volumeUtile;
+			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		} else if (t_type == 'v') {
+			cout << "Nombre de places  : ";
+			cin >> t_nbPlaces;
+			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
+		} else if (t_type == 'u') {
+			cout << "Volume  : ";
+			cin >> t_volumeUtile;
+			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		}
+		cout << "Véhicule ajouté !" << endl;
+	}
 }
 
 bool Parc::supprimerLocation (Location loc) {
@@ -70,39 +87,27 @@ bool Parc::supprimerLocation (Location loc) {
 void Parc::modifierLocation (Location loc) {
 }
 
-/*
-Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour) {
+bool Parc::rechercherLocation(string immat, Location &loc) {
+	bool trouve = false;
+	m_parcAutoI=m_parcAuto.begin();
+	while(!trouve && m_parcAutoI !=m_parcAuto.end()) {
+		if (m_parcAutoI->getVehicule()->getImmatriculation() == immat) {
+			trouve = true;
+			loc = *m_parcAutoI;
+		}
+		else m_parcAutoI++;
+	}
+	return trouve;
 }
-*/
 
 void Parc::afficher() {
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
 		m_parcAutoI->afficher();
-		cout << "--------------------" << endl;
 	}
 }
 
-void Parc::afficherLoues (CDate dateDebut, CDate dateFin) {}
-
-void Parc::afficherDisponibles (CDate dateDebut, CDate dateFin) {}
-
-void Parc::afficherRestituables(CDate today) {}
-
-bool Parc::sauvegarderParc() {
-	return true;
-}
-
-void Parc::lectureDates(	int &t_jDep, int &t_mDep,int &t_aDep,
-							int &t_jRetP, int &t_mRetP,int &t_aRetP,
-							int &t_jRetR, int &t_mRetR, int &t_aRetR,
-							fstream &inFile) {
-			inFile >> t_jDep;
-			inFile >> t_mDep;
-			inFile >> t_aDep;
-			inFile >> t_jRetP;
-			inFile >> t_mRetP;
-			inFile >> t_aRetP;
-			inFile >> t_jRetR;
-			inFile >> t_mRetR;
-			inFile >> t_aRetR;
+void Parc::sauvegarder(fstream &inFile) {
+	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
+		m_parcAutoI->save(inFile);
+	}
 }

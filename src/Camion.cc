@@ -6,9 +6,8 @@ Camion::Camion(	float poids,
 				float volume, 
 				string immat, 
 				string marque, 
-				string modele, 
-				int kilom)
-					:Utilitaire(volume, immat,marque, modele, kilom) {
+				string modele)
+					:Utilitaire(volume, immat,marque, modele) {
 	m_poidsUtile = poids;
 }
 
@@ -17,6 +16,7 @@ Camion::Camion():Utilitaire() {
 }
 
 Camion::~Camion() {
+	// cout << "Destructeur de Camion" << endl;
 }
 
 float Camion::getPoidsUtile() {
@@ -29,5 +29,11 @@ void Camion::setPoidsUtile(float poids) {
 
 void Camion::afficher() {
 	Utilitaire::afficher();
-	cout << "Poids utile : " << m_poidsUtile << endl;
+	cout << m_poidsUtile << " ";
 }
+
+void Camion::save(fstream &fs) {
+	fs << "c " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << getVolumeUtile() << " " << m_poidsUtile << " ";
+}
+	
+	

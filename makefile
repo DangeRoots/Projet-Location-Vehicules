@@ -17,7 +17,7 @@ MAIN_C++_SOURCES = main
 #nom du répertoire contenant les autres fichiers source
 DIR_SOURCES      = src
 #nom des autres fichiers sources du repertoire DIR_SOURCES
-OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion VP CDate Location Parc
+OTHERS_C++_SOURCES   = Vehicule Utilitaire Camion VP CDate Location Parc Reservation ListeReservations
 #répertoire contenant les .h
 DIR_INCLUDE      = inc
 #répertoire pour les .o
@@ -59,7 +59,7 @@ OTHERSOBJETFILES = $(patsubst %, $(DIR_OBJETS)/%,$(OTHERS_C++_SOURCES:=.o))
 
 
 $(DIR_BIN)/$(TARGET) : $(OBJETFILES)
-	@echo "--- Création exécutable :" $(DIR_BIN)/$(TARGET) " ---"
+	@echo "--- Creation executable :" $(DIR_BIN)/$(TARGET) " ---"
 	@$(CC) $(LIBSDIR) -o $(DIR_BIN)/$(TARGET) $(OBJETFILES) $(LIBS)
 
 #pour le main
@@ -96,7 +96,14 @@ clean	:
 
 -include makefile.depend
 
+#----------------------------------------
+# Tests
 
+vierge	:
+	./bin/locationMain
+
+donnees : 
+	./bin/locationMain res/data.txt
 
 
 

@@ -2,6 +2,7 @@
 #define LOCATION_H
 
 #include <iostream>
+#include <fstream>
 #include <Vehicule.h>
 #include <CDate.h>
 #include <Erreur.h>
@@ -16,26 +17,13 @@
  * \version 0.1
  */
 
-/*! Remarques
- * Déclarer un pointeur {
- * 		Vehicule *m_vehicule;
- * }
- * affecter un pointeur {
- * 		Vehicule veh; 
- * 		m_vehicule = &veh; 
- * }
- * allouer un pointeur {
- *		m_vehicule = new Vehicule() ;
- * }
- */
-
 class Location {
 	private:
-		// Vehicule m_vehicule;
 		Vehicule *m_vehicule;
-		CDate m_dateDepart;
-		CDate m_dateRetourPrevu;
-		CDate m_dateRetourReel;
+		int m_kilometrage;
+		// CDate m_dateDepart;
+		// CDate m_dateRetourPrevu;
+		// CDate m_dateRetourReel;
 
 	public:
 		/*!
@@ -52,13 +40,10 @@ class Location {
 		*
 		*  Constructeur de la classe Location
 		*
-		*  \param vehicule, un pointeur de véhicule
-		*  \param dateDepart, objet CDate, la date de début de location, NULL si le véhicule n'est pas loué
-		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
-		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
+		*  \param [in] vehicule Pointeur de véhicule, le véhicule de la location
+		*  \param [in] kilometrage entier, le kilométrage du véhicule
 		*/		
-		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
-		Location(Vehicule *vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
+		Location(Vehicule *vehicule, int kilometrage);
 		
 		/*!
 		*  \brief Destructeur
@@ -76,8 +61,7 @@ class Location {
 		*
 		*  \param aucun
 		*  \return un pointeur vers un objet Vehicule
-		*/		
-		// Vehicule getVehicule();
+		*/	
 		Vehicule* getVehicule();
 
 		/*!
@@ -88,31 +72,7 @@ class Location {
 		*  \param veh, un pointeur vers un objet Vehicule, le nouveau véhicule
 		*  \return void
 		*/		
-		// void setVehicule(Vehicule veh);
 		void setVehicule(Vehicule *veh);
-
-		/*!
-		*  \brief Accéder date début
-		*
-		*  Permet d'obtenir les dates associées à la location : date de départ, date de retour prévu, date de retour réel
-		*
-		*  \param type, caractère, le type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
-		*  \return un objet CDate
-		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
-		*/		
-		CDate getDate(char type);
-
-		/*!
-		*  \brief Modifier date
-		*
-		*  Permet de modifier les dates associées à la location : date de départ, date de retour prévu, date de retour réel
-		*
-		*  \param date, objet CDate, la nouvelle date
-		*  \param type, caractère, le type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu
-		*  \return void
-		*  \exception si type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" 
-		*/		
-		void setDate(CDate date, char type);
 
 		/*!
 		*  \brief Afficher location
@@ -123,6 +83,21 @@ class Location {
 		*  \return void
 		*/								
 		void afficher();
+		
+		/*!
+		*  \brief Locations identiques
+		*
+		*  Permet de savoir si deux locations sont identiques
+		*
+		*  \param [in] loc Location, la location à comparer
+		*  \return true si elles sont identiques
+		*  \return false si elles sont différentes
+		*/										
+		bool operator==(Location &loc);
+		
+		// Sauvegarde
+		void save(fstream &inFile);
+		// void save();
 };
 
 #endif

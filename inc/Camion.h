@@ -30,9 +30,8 @@ class Camion : public Utilitaire {
 		*  \param immat, chaîne de caractères, le modèle du véhicule
 		*  \param marque, chaîne de caractères, la marque du véhicule
 		*  \param modele, chaîne de caractères, le kilométrage du véhicule
-		*  \param kilom, entier, le kilométrage du véhicule
 		*/
-		Camion(float poids, float volume, string immat, string marque, string modele, int kilom);
+		Camion(float poids, float volume, string immat, string marque, string modele);
 
 		/*!
 		*  \brief Constructeur
@@ -79,6 +78,16 @@ class Camion : public Utilitaire {
 		*  \return void
 		*/								
 		virtual void afficher();
+		
+		/*!
+		*  \brief sauvegarder camion
+		*
+		*  Sauvegarde le camion
+		*
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
+		*  \return void
+		*/								
+		virtual void save(fstream &fs);
 };
 
 #endif

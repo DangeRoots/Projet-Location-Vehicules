@@ -151,7 +151,7 @@ class CDate {
 		*  \param annee, entier, l'année
 		*  \return bool
 		*/								
-	    	bool estBissextile(int annee);
+		bool estBissextile(int annee);
 	    	
 	   	/*!
 		*  \brief Permet de valider une date
@@ -163,7 +163,7 @@ class CDate {
 		*  \param annee, entier, l'année
 		*  \return bool
 		*/
-	    	bool validerDate( int jour, int mois, int annee);
+		bool validerDate( int jour, int mois, int annee);
 
 		/*!
 		*  \brief Égalité dates
@@ -173,7 +173,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    	bool operator==(const CDate &date) const;
+		bool operator==(const CDate &date) const;
 	   	 
 		/*!
 		*  \brief Infériorité dates
@@ -183,7 +183,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    	bool operator <(const CDate &date) const;
+		bool operator <(const CDate &date) const;
 
 	    	/*!
 		*  \brief Supériorité dates
@@ -193,7 +193,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    	bool operator >(const CDate &date) const;
+		bool operator >(const CDate &date) const;
 
 	    	/*!
 		*  \brief Infériorité égalité dates
@@ -203,7 +203,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    	bool operator <=(const CDate &date) const;
+    	// bool operator <=(const CDate &date) const;
 
 	    	/*!
 		*  \brief Supériorité égalité dates
@@ -213,7 +213,7 @@ class CDate {
 		*  \param date, objet Date, la date à comparer
 		*  \return bool
 		*/									    
-	    	bool operator >=(const CDate &date) const;
+    	bool operator >=(const CDate &date) const;
 
 		/*!
 		*  \brief Date du jour
@@ -233,7 +233,7 @@ class CDate {
 		*  \param aucun
 		*  \return void
 		*/								
-	    	void afficher();
+		void afficher();
 	
 };
 #endif

@@ -4,15 +4,11 @@
 #include <iostream>
 #include <fstream>
 #include <list>
-#include <vector> // Constructeur
-#include <sstream>
-// #include <iomanip> // setw
-#include <Location.h>
-#include <Vehicule.h>
-#include <Camion.h>
-#include <CDate.h>
-#include <VP.h>
 
+#include <Location.h>
+#include <Camion.h>
+#include <Utilitaire.h>
+#include <VP.h>
 
 /*!
  * \file Parc.h
@@ -21,18 +17,14 @@
  *  Cette classe permet de gérer un parc de locations de véhicules
  * 
  * \author Gilles Coulais, Icham Sirat
- * \version 0.1
+ * \version 0.2
  */
 
 class Parc {
 	private:
 		list<Location> m_parcAuto;
 		list<Location>::iterator m_parcAutoI;
-		void lectureDates(int &t_jDep, int &t_mDep,int &t_aDep,
-							int &t_jRetP, int &t_mRetP,int &t_aRetP,
-							int &t_jRetR, int &t_mRetR, int &t_aRetR,
-							fstream &inFile);
-	
+		
 	public:
 		/*!
 		*  \brief Constructeur
@@ -69,7 +61,7 @@ class Parc {
 		*  \param loc, Location
 		*  \return booléen, vrai si la location a été ajoutée, faux sinon 
 		*/		
-		bool ajouterLocation (Location loc);
+		void ajouterLocation ();
 		
 		/*!
 		*  \brief Supprimer location
@@ -102,8 +94,7 @@ class Parc {
 		*  \param dateRetour, CDate, la date de fin de location souhaitée
 		*  \return un objet Location
 		*/		
-		//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);
-		
+		bool rechercherLocation(string immat, Location &loc);
 		
 		/*!
 		*  \brief Afficher liste complète
@@ -116,46 +107,14 @@ class Parc {
 		void afficher();
 		
 		/*!
-		*  \brief Afficher véhicules loués
-		*
-		*  Affiche la liste des véhicules en cours de location entre deux dates
-		*
-		*  \param dateDebut, CDate, la date de début de location
-		*  \param dateFin, CDate, la date de fin de location
-		*  \return void
-		*/						
-		void afficherLoues (CDate dateDebut, CDate dateFin);
-		
-		/*!
-		*  \brief Afficher véhicules disponibles
-		*
-		*  Affiche la liste des locations disponibles entre deux dates
-		*
-		*  \param dateDebut, CDate, la date de début de location souhaitée
-		*  \param dateFin, CDate, la date de fin de location souhaitée
-		*  \return void
-		*/								
-		void afficherDisponibles (CDate dateDebut, CDate dateFin);
-		
-		/*!
-		*  \brief Afficher véhicules restituables
-		*
-		*  Affiche la liste des locations dont la date de retour prévue est égale ou inférieure à la date du jour
-		*
-		*  \param today, CDate, la date de consultation de la liste
-		*  \return void
-		*/										
-		void afficherRestituables(CDate today);
-		
-		/*!
 		*  \brief Sauvegarder parc
 		*
-		*  Sauvegarde la liste des locations sur disque
+		*  Sauvegarde le parc dans un fichier
 		*
-		*  \param aucun
+		*  \param [in,out] inFile fstream, le fichier de sauvegarde
 		*  \return void
 		*/												
-		bool sauvegarderParc();
+		void sauvegarder(fstream &inFile);
 };
 
 #endif

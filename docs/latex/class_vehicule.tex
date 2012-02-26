@@ -1,0 +1,357 @@
+\hypertarget{class_vehicule}{
+\section{Référence de la classe Vehicule}
+\label{class_vehicule}\index{Vehicule@{Vehicule}}
+}
+Graphe d'héritage de Vehicule:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vehicule}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vehicule_a860b5bc4192acc8061b79551e373df02}{Vehicule} (string immat, string marque, string modele, int kilometrage)
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_vehicule_ac9352572d0ca9cd4d3138247842c4ce8}{Vehicule} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{class_vehicule_af35800a1c217e3d39e91801932cc35ba}{$\sim$Vehicule} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\item 
+string \hyperlink{class_vehicule_a5be9ca3e75797e8009f1c9a8bd6f0f58}{getImmatriculation} ()
+\begin{DoxyCompactList}\small\item\em Accéder immatriculation. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_vehicule_a8a70b407fbeb7cc7359d4c5cc4a11150}{setImmatriculation} (string immat)
+\begin{DoxyCompactList}\small\item\em Modifier immatriculation. \item\end{DoxyCompactList}\item 
+string \hyperlink{class_vehicule_a61fd72adc19ab2aaa08e3a36775f27ba}{getModele} ()
+\begin{DoxyCompactList}\small\item\em Accéder modèle. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_vehicule_a877770a5a09ba45ec23c5d1befad2311}{setModele} (std::string modele)
+\begin{DoxyCompactList}\small\item\em Modifier modele. \item\end{DoxyCompactList}\item 
+string \hyperlink{class_vehicule_aca7733632f1a0f1f56d76726895a8c78}{getMarque} ()
+\begin{DoxyCompactList}\small\item\em Accéder marque. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_vehicule_aa203aed9acca9590b347d119e14cf558}{setMarque} (std::string marque)
+\begin{DoxyCompactList}\small\item\em Modifier marque. \item\end{DoxyCompactList}\item 
+int \hyperlink{class_vehicule_ac5b3c0462bc23251f75da41208b6720c}{getKilometrage} ()
+\begin{DoxyCompactList}\small\item\em Accéder kilométrage. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_vehicule_afe9c7d3740ae34ab098f1027a93329cd}{setKilometrage} (int kilom)
+\begin{DoxyCompactList}\small\item\em Modifier kilométrage. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_vehicule_afa55989329da4544093cad8e99b2f3b2}{operator==} (const \hyperlink{class_vehicule}{Vehicule} \&veh)
+\begin{DoxyCompactList}\small\item\em Véhicule identiques. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_vehicule_aa83469d5e8e5fa9844cc52698b8ddf76}{afficher} ()
+\begin{DoxyCompactList}\small\item\em Afficher véhicule. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_vehicule_a860b5bc4192acc8061b79551e373df02}{
+\index{Vehicule@{Vehicule}!Vehicule@{Vehicule}}
+\index{Vehicule@{Vehicule}!Vehicule@{Vehicule}}
+\subsubsection[{Vehicule}]{\setlength{\rightskip}{0pt plus 5cm}Vehicule::Vehicule (
+\begin{DoxyParamCaption}
+\item[{string}]{immat, }
+\item[{string}]{marque, }
+\item[{string}]{modele, }
+\item[{int}]{kilometrage}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_a860b5bc4192acc8061b79551e373df02}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_vehicule}{Vehicule}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em immat,chaîne} & de caractères, l'immatriculation du véhicule \\
+\hline
+{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\hline
+{\em modele,chaîne} & de caractères, le modèle du véhicule \\
+\hline
+{\em kilometrage,entier,le} & kilométrage du véhicule \\
+\hline
+{\em nbLocation,entier,le} & nombre de locations du véhicule \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vehicule_ac9352572d0ca9cd4d3138247842c4ce8}{
+\index{Vehicule@{Vehicule}!Vehicule@{Vehicule}}
+\index{Vehicule@{Vehicule}!Vehicule@{Vehicule}}
+\subsubsection[{Vehicule}]{\setlength{\rightskip}{0pt plus 5cm}Vehicule::Vehicule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_ac9352572d0ca9cd4d3138247842c4ce8}
+
+
+Constructeur. 
+
+Constructeur par défaut de la classe \hyperlink{class_vehicule}{Vehicule}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vehicule_af35800a1c217e3d39e91801932cc35ba}{
+\index{Vehicule@{Vehicule}!$\sim$Vehicule@{$\sim$Vehicule}}
+\index{$\sim$Vehicule@{$\sim$Vehicule}!Vehicule@{Vehicule}}
+\subsubsection[{$\sim$Vehicule}]{\setlength{\rightskip}{0pt plus 5cm}virtual Vehicule::$\sim$Vehicule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_vehicule_af35800a1c217e3d39e91801932cc35ba}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{class_vehicule}{Vehicule}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_vehicule_aa83469d5e8e5fa9844cc52698b8ddf76}{
+\index{Vehicule@{Vehicule}!afficher@{afficher}}
+\index{afficher@{afficher}!Vehicule@{Vehicule}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vehicule::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_vehicule_aa83469d5e8e5fa9844cc52698b8ddf76}
+
+
+Afficher véhicule. 
+
+Affiche le véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \hyperlink{class_camion_a1b7d9e844a03b1a1e7143a7618911157}{Camion}, \hyperlink{class_utilitaire_a1092986e687a5a907bc86d252a8416c9}{Utilitaire}, et \hyperlink{class_v_p_a3af04349e81a3c643b497898ad19ef7a}{VP}.
+
+\hypertarget{class_vehicule_a5be9ca3e75797e8009f1c9a8bd6f0f58}{
+\index{Vehicule@{Vehicule}!getImmatriculation@{getImmatriculation}}
+\index{getImmatriculation@{getImmatriculation}!Vehicule@{Vehicule}}
+\subsubsection[{getImmatriculation}]{\setlength{\rightskip}{0pt plus 5cm}string Vehicule::getImmatriculation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_a5be9ca3e75797e8009f1c9a8bd6f0f58}
+
+
+Accéder immatriculation. 
+
+Permet d'obtenir l'immatriculation du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+m\_\-immatriculation, chaîne de caractères, l'immatriculation du véhicule 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_ac5b3c0462bc23251f75da41208b6720c}{
+\index{Vehicule@{Vehicule}!getKilometrage@{getKilometrage}}
+\index{getKilometrage@{getKilometrage}!Vehicule@{Vehicule}}
+\subsubsection[{getKilometrage}]{\setlength{\rightskip}{0pt plus 5cm}int Vehicule::getKilometrage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_ac5b3c0462bc23251f75da41208b6720c}
+
+
+Accéder kilométrage. 
+
+Permet d'obtenir le kilométrage du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+m\_\-kilometrage, entier, le kilométrage du véhicule 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_aca7733632f1a0f1f56d76726895a8c78}{
+\index{Vehicule@{Vehicule}!getMarque@{getMarque}}
+\index{getMarque@{getMarque}!Vehicule@{Vehicule}}
+\subsubsection[{getMarque}]{\setlength{\rightskip}{0pt plus 5cm}string Vehicule::getMarque (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_aca7733632f1a0f1f56d76726895a8c78}
+
+
+Accéder marque. 
+
+Permet d'obtenir la marque du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+m\_\-marque, chaîne de caractères, la marque du véhicule 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_a61fd72adc19ab2aaa08e3a36775f27ba}{
+\index{Vehicule@{Vehicule}!getModele@{getModele}}
+\index{getModele@{getModele}!Vehicule@{Vehicule}}
+\subsubsection[{getModele}]{\setlength{\rightskip}{0pt plus 5cm}string Vehicule::getModele (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_a61fd72adc19ab2aaa08e3a36775f27ba}
+
+
+Accéder modèle. 
+
+Permet d'obtenir le modèle du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+m\_\-modele, chaîne de caractères, le modèle du véhicule 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_afa55989329da4544093cad8e99b2f3b2}{
+\index{Vehicule@{Vehicule}!operator==@{operator==}}
+\index{operator==@{operator==}!Vehicule@{Vehicule}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicule::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vehicule} \&}]{veh}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_afa55989329da4544093cad8e99b2f3b2}
+
+
+Véhicule identiques. 
+
+Permet de savoir si deux véhicules sont identiques
+
+
+\begin{DoxyParams}{Paramètres}
+{\em veh,objet} & \hyperlink{class_vehicule}{Vehicule}, le véhicule à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true s'il sont identiques 
+
+false s'il sont différents 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_a8a70b407fbeb7cc7359d4c5cc4a11150}{
+\index{Vehicule@{Vehicule}!setImmatriculation@{setImmatriculation}}
+\index{setImmatriculation@{setImmatriculation}!Vehicule@{Vehicule}}
+\subsubsection[{setImmatriculation}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicule::setImmatriculation (
+\begin{DoxyParamCaption}
+\item[{string}]{immat}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_a8a70b407fbeb7cc7359d4c5cc4a11150}
+
+
+Modifier immatriculation. 
+
+Permet de modifier l'immatriculation du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em immat,chaîne} & de caractères, l'immatriculation du véhicule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_afe9c7d3740ae34ab098f1027a93329cd}{
+\index{Vehicule@{Vehicule}!setKilometrage@{setKilometrage}}
+\index{setKilometrage@{setKilometrage}!Vehicule@{Vehicule}}
+\subsubsection[{setKilometrage}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicule::setKilometrage (
+\begin{DoxyParamCaption}
+\item[{int}]{kilom}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_afe9c7d3740ae34ab098f1027a93329cd}
+
+
+Modifier kilométrage. 
+
+Permet de modifier le kilométrage du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em kilom,entier,le} & nouveau kilométrage du véhicule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_aa203aed9acca9590b347d119e14cf558}{
+\index{Vehicule@{Vehicule}!setMarque@{setMarque}}
+\index{setMarque@{setMarque}!Vehicule@{Vehicule}}
+\subsubsection[{setMarque}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicule::setMarque (
+\begin{DoxyParamCaption}
+\item[{std::string}]{marque}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_aa203aed9acca9590b347d119e14cf558}
+
+
+Modifier marque. 
+
+Permet de modifier la marque du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_vehicule_a877770a5a09ba45ec23c5d1befad2311}{
+\index{Vehicule@{Vehicule}!setModele@{setModele}}
+\index{setModele@{setModele}!Vehicule@{Vehicule}}
+\subsubsection[{setModele}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicule::setModele (
+\begin{DoxyParamCaption}
+\item[{std::string}]{modele}
+\end{DoxyParamCaption}
+)}}
+\label{class_vehicule_a877770a5a09ba45ec23c5d1befad2311}
+
+
+Modifier modele. 
+
+Permet de modifier le modèle du véhicule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em modele,chaîne} & de caractères, le modèle du véhicule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_vehicule_8h}{Vehicule.h}\end{DoxyCompactItemize}

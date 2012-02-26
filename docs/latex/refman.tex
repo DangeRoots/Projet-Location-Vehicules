@@ -1,0 +1,82 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Location de véhicules \\[1ex]\large 0.1 }\\
+\vspace*{1cm}
+{\large Généré par Doxygen 1.7.3}\\
+\vspace*{0.5cm}
+{\small Mon Feb 20 2012 15:00:35}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+\chapter{Index des classes}
+\input{hierarchy}
+\chapter{Index des classes}
+\input{annotated}
+\chapter{Index des fichiers}
+\input{files}
+\chapter{Documentation des classes}
+\input{class_camion}
+\input{class_c_date}
+\input{classerreur}
+\input{class_location}
+\input{class_parc}
+\input{class_utilitaire}
+\input{class_vehicule}
+\input{class_v_p}
+\chapter{Documentation des fichiers}
+\input{_camion_8h}
+\input{_c_date_8h}
+\input{_location_8h}
+\input{_parc_8h}
+\input{_utilitaire_8h}
+\input{_vehicule_8h}
+\input{_v_p_8h}
+\printindex
+\end{document}

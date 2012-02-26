@@ -1,0 +1,306 @@
+\hypertarget{class_parc}{
+\section{Référence de la classe Parc}
+\label{class_parc}\index{Parc@{Parc}}
+}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_parc_ac974868bc248cc8ded2ac7c7d536251f}{Parc} (fstream \&inFile)
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_parc_ad7545bbf00b69b6bc47d8bc9e6584363}{Parc} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\hyperlink{class_parc_a45de4ddcf862a8ad3da902bc63e0c1f6}{$\sim$Parc} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_parc_a38f675f16195ff1a795d247d2ab2277c}{ajouterLocation} (\hyperlink{class_location}{Location} loc)
+\begin{DoxyCompactList}\small\item\em Ajouter location. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_parc_a9886186ab4182ee41a1480735600ed38}{supprimerLocation} (\hyperlink{class_location}{Location} loc)
+\begin{DoxyCompactList}\small\item\em Supprimer location. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_parc_a4ce1969e29ebff5c149c7050e358e880}{modifierLocation} (\hyperlink{class_location}{Location} loc)
+\begin{DoxyCompactList}\small\item\em Modifier location. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_parc_a9e12eab27b180061f18c222e8cc30ee9}{afficher} ()
+\begin{DoxyCompactList}\small\item\em Rechercher location. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_parc_a3b1165059db359bbcc910096bededc6d}{afficherLoues} (\hyperlink{class_c_date}{CDate} dateDebut, \hyperlink{class_c_date}{CDate} dateFin)
+\begin{DoxyCompactList}\small\item\em Afficher véhicules loués. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_parc_a0bf47b853e9c3cfaab5d11e9ce2f63dd}{afficherDisponibles} (\hyperlink{class_c_date}{CDate} dateDebut, \hyperlink{class_c_date}{CDate} dateFin)
+\begin{DoxyCompactList}\small\item\em Afficher véhicules disponibles. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_parc_a9f61430cd0074b49b4e98b7fb7708de5}{afficherRestituables} (\hyperlink{class_c_date}{CDate} today)
+\begin{DoxyCompactList}\small\item\em Afficher véhicules restituables. \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_parc_a144f06e69489648adc0c1d90b12dedd4}{sauvegarderParc} ()
+\begin{DoxyCompactList}\small\item\em Sauvegarder parc. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_parc_ac974868bc248cc8ded2ac7c7d536251f}{
+\index{Parc@{Parc}!Parc@{Parc}}
+\index{Parc@{Parc}!Parc@{Parc}}
+\subsubsection[{Parc}]{\setlength{\rightskip}{0pt plus 5cm}Parc::Parc (
+\begin{DoxyParamCaption}
+\item[{fstream \&}]{inFile}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_ac974868bc248cc8ded2ac7c7d536251f}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_parc}{Parc}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em inFile,fstream,le} & fichier contenant la liste des locations \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_parc_ad7545bbf00b69b6bc47d8bc9e6584363}{
+\index{Parc@{Parc}!Parc@{Parc}}
+\index{Parc@{Parc}!Parc@{Parc}}
+\subsubsection[{Parc}]{\setlength{\rightskip}{0pt plus 5cm}Parc::Parc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_ad7545bbf00b69b6bc47d8bc9e6584363}
+
+
+Constructeur. 
+
+Constructeur par défaut de la classe \hyperlink{class_parc}{Parc}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_parc_a45de4ddcf862a8ad3da902bc63e0c1f6}{
+\index{Parc@{Parc}!$\sim$Parc@{$\sim$Parc}}
+\index{$\sim$Parc@{$\sim$Parc}!Parc@{Parc}}
+\subsubsection[{$\sim$Parc}]{\setlength{\rightskip}{0pt plus 5cm}Parc::$\sim$Parc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a45de4ddcf862a8ad3da902bc63e0c1f6}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{class_parc}{Parc}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_parc_a9e12eab27b180061f18c222e8cc30ee9}{
+\index{Parc@{Parc}!afficher@{afficher}}
+\index{afficher@{afficher}!Parc@{Parc}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Parc::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a9e12eab27b180061f18c222e8cc30ee9}
+
+
+Rechercher location. 
+
+Permet de rechercher une location dans le parc
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type,caractères,le} & type de véhicule recherché : v pour vp, u pour utilitaire, c pour camion \\
+\hline
+{\em dateDepart,\hyperlink{class_c_date}{CDate},la} & date de début de location souhaitée \\
+\hline
+{\em dateRetour,\hyperlink{class_c_date}{CDate},la} & date de fin de location souhaitée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un objet \hyperlink{class_location}{Location}
+\end{DoxyReturn}
+Afficher liste complète
+
+Affiche la liste complète des véhicules du parc
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a0bf47b853e9c3cfaab5d11e9ce2f63dd}{
+\index{Parc@{Parc}!afficherDisponibles@{afficherDisponibles}}
+\index{afficherDisponibles@{afficherDisponibles}!Parc@{Parc}}
+\subsubsection[{afficherDisponibles}]{\setlength{\rightskip}{0pt plus 5cm}void Parc::afficherDisponibles (
+\begin{DoxyParamCaption}
+\item[{{\bf CDate}}]{dateDebut, }
+\item[{{\bf CDate}}]{dateFin}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a0bf47b853e9c3cfaab5d11e9ce2f63dd}
+
+
+Afficher véhicules disponibles. 
+
+Affiche la liste des locations disponibles entre deux dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dateDebut,\hyperlink{class_c_date}{CDate},la} & date de début de location souhaitée \\
+\hline
+{\em dateFin,\hyperlink{class_c_date}{CDate},la} & date de fin de location souhaitée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a3b1165059db359bbcc910096bededc6d}{
+\index{Parc@{Parc}!afficherLoues@{afficherLoues}}
+\index{afficherLoues@{afficherLoues}!Parc@{Parc}}
+\subsubsection[{afficherLoues}]{\setlength{\rightskip}{0pt plus 5cm}void Parc::afficherLoues (
+\begin{DoxyParamCaption}
+\item[{{\bf CDate}}]{dateDebut, }
+\item[{{\bf CDate}}]{dateFin}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a3b1165059db359bbcc910096bededc6d}
+
+
+Afficher véhicules loués. 
+
+Affiche la liste des véhicules en cours de location entre deux dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dateDebut,\hyperlink{class_c_date}{CDate},la} & date de début de location \\
+\hline
+{\em dateFin,\hyperlink{class_c_date}{CDate},la} & date de fin de location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a9f61430cd0074b49b4e98b7fb7708de5}{
+\index{Parc@{Parc}!afficherRestituables@{afficherRestituables}}
+\index{afficherRestituables@{afficherRestituables}!Parc@{Parc}}
+\subsubsection[{afficherRestituables}]{\setlength{\rightskip}{0pt plus 5cm}void Parc::afficherRestituables (
+\begin{DoxyParamCaption}
+\item[{{\bf CDate}}]{today}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a9f61430cd0074b49b4e98b7fb7708de5}
+
+
+Afficher véhicules restituables. 
+
+Affiche la liste des locations dont la date de retour prévue est égale ou inférieure à la date du jour
+
+
+\begin{DoxyParams}{Paramètres}
+{\em today,\hyperlink{class_c_date}{CDate},la} & date de consultation de la liste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a38f675f16195ff1a795d247d2ab2277c}{
+\index{Parc@{Parc}!ajouterLocation@{ajouterLocation}}
+\index{ajouterLocation@{ajouterLocation}!Parc@{Parc}}
+\subsubsection[{ajouterLocation}]{\setlength{\rightskip}{0pt plus 5cm}bool Parc::ajouterLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a38f675f16195ff1a795d247d2ab2277c}
+
+
+Ajouter location. 
+
+Permet d'ajouter un véhicule dans le parc
+
+
+\begin{DoxyParams}{Paramètres}
+{\em loc,\hyperlink{class_location}{Location}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+booléen, vrai si la location a été ajoutée, faux sinon 
+\end{DoxyReturn}
+\hypertarget{class_parc_a4ce1969e29ebff5c149c7050e358e880}{
+\index{Parc@{Parc}!modifierLocation@{modifierLocation}}
+\index{modifierLocation@{modifierLocation}!Parc@{Parc}}
+\subsubsection[{modifierLocation}]{\setlength{\rightskip}{0pt plus 5cm}void Parc::modifierLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a4ce1969e29ebff5c149c7050e358e880}
+
+
+Modifier location. 
+
+Permet de modifier une location du parc
+
+
+\begin{DoxyParams}{Paramètres}
+{\em loc,\hyperlink{class_location}{Location},la} & location à modifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a144f06e69489648adc0c1d90b12dedd4}{
+\index{Parc@{Parc}!sauvegarderParc@{sauvegarderParc}}
+\index{sauvegarderParc@{sauvegarderParc}!Parc@{Parc}}
+\subsubsection[{sauvegarderParc}]{\setlength{\rightskip}{0pt plus 5cm}bool Parc::sauvegarderParc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a144f06e69489648adc0c1d90b12dedd4}
+
+
+Sauvegarder parc. 
+
+Sauvegarde la liste des locations sur disque
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\hypertarget{class_parc_a9886186ab4182ee41a1480735600ed38}{
+\index{Parc@{Parc}!supprimerLocation@{supprimerLocation}}
+\index{supprimerLocation@{supprimerLocation}!Parc@{Parc}}
+\subsubsection[{supprimerLocation}]{\setlength{\rightskip}{0pt plus 5cm}bool Parc::supprimerLocation (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}
+\label{class_parc_a9886186ab4182ee41a1480735600ed38}
+
+
+Supprimer location. 
+
+Permet de supprimer un véhicule du parc
+
+
+\begin{DoxyParams}{Paramètres}
+{\em loc,\hyperlink{class_location}{Location}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+booléen, vrai si le véhicule a été trouvé et supprimé, faux sinon 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_parc_8h}{Parc.h}\end{DoxyCompactItemize}

@@ -2,9 +2,8 @@
 #define VEHICULE_H
 
 #include <iostream>
-#include <iomanip>
-
-// #include <string>
+// #include <iomanip>
+#include <fstream>
 
 /*!
  * \file Vehicule.h
@@ -21,8 +20,7 @@
 class Vehicule {	
 	private:
 		string m_immatriculation, m_marque, m_modele;
-		int m_kilometrage;
-		// int m_nbLocation; // Nombre de fois où la véhicule a été loué
+		// int m_kilometrage;
 			
 	public:
 		/*!
@@ -37,7 +35,7 @@ class Vehicule {
 		*  \param nbLocation, entier, le nombre de locations du véhicule
 		*/
 		// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
-		Vehicule(string immat, string marque, string modele, int kilometrage);
+		Vehicule(string immat, string marque, string modele);
 		
 		/*!
 		 *  \brief Constructeur
@@ -95,7 +93,7 @@ class Vehicule {
 		 *  \param modele, chaîne de caractères, le modèle du véhicule
 		 *  \return void
 		 */		
-		void setModele(std::string modele);
+		void setModele(string modele);
 
 		/*!
 		 *  \brief Accéder marque
@@ -115,34 +113,14 @@ class Vehicule {
 		 *  \param marque, chaîne de caractères, la marque du véhicule
 		 *  \return void
 		 */		
-		void setMarque(std::string marque);
-
-		/*!
-		 *  \brief Accéder kilométrage
-		 *
-		 *  Permet d'obtenir le kilométrage du véhicule
-		 *
-		 *  \param aucun
-		 *  \return m_kilometrage, entier, le kilométrage du véhicule
-		 */		
-		int getKilometrage();
-		
-		/*!
-		 *  \brief Modifier kilométrage
-		 *
-		 *  Permet de modifier le kilométrage du véhicule
-		 *
-		 *  \param kilom, entier, le nouveau kilométrage du véhicule
-		 *  \return void
-		 */		
-		void setKilometrage(int kilom);
+		void setMarque(string marque);
 
 		/*!
 		 *  \brief Véhicule identiques
 		 *
 		 *  Permet de savoir si deux véhicules sont identiques
 		 *
-		 *  \param veh, objet Vehicule, le véhicule à comparer
+		 *  \param [in] veh Vehicule, le véhicule à comparer
 		 *  \return true s'il sont identiques
 		 *  \return false s'il sont différents
 		 */			
@@ -157,6 +135,15 @@ class Vehicule {
 		*  \return void
 		*/								
 		virtual void afficher();
+		
+		/*!
+		*  \brief sauvegarder véhicule
+		*
+		*  Sauvegarde le véhicule
+		*
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
+		*  \return void
+		*/								
+		virtual void save(fstream &fs);
 };
-
 #endif
