@@ -2,9 +2,8 @@
 #define VEHICULE_H
 
 #include <iostream>
-#include <iomanip>
+// #include <iomanip>
 #include <fstream>
-// #include <string>
 
 /*!
  * \file Vehicule.h
@@ -121,7 +120,7 @@ class Vehicule {
 		 *
 		 *  Permet de savoir si deux véhicules sont identiques
 		 *
-		 *  \param veh, objet Vehicule, le véhicule à comparer
+		 *  \param [in] veh Vehicule, le véhicule à comparer
 		 *  \return true s'il sont identiques
 		 *  \return false s'il sont différents
 		 */			

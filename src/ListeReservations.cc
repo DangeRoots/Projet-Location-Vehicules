@@ -17,7 +17,8 @@ ListeReservations::ListeReservations (fstream &inFile) {
 		inFile >> t_moisRet;
 		inFile >> t_anneeRet;
 		m_listeReservations.push_back(Reservation(t_immat,CDate(t_jourDep, t_moisDep, t_anneeDep),
-														CDate(t_jourRet, t_moisRet, t_anneeRet)));
+		 												CDate(t_jourRet, t_moisRet, t_anneeRet)));
+		// m_listeReservations.push_back(Reservation(t_immat,CDate(),CDate()));
 		inFile >> t_immat;
 	}
 }
@@ -32,4 +33,5 @@ void ListeReservations::afficher() {
 }
 
 void ListeReservations::sauvegarder(fstream &outFile) {
+	// for_each(m_listeReservationsI)
 }

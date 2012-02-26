@@ -89,6 +89,17 @@ class Location {
 		*/								
 		void afficher();
 		
+		/*!
+		*  \brief Locations identiques
+		*
+		*  Permet de savoir si deux locations sont identiques
+		*
+		*  \param [in] loc Location, la location à comparer
+		*  \return true si elles sont identiques
+		*  \return false si elles sont différentes
+		*/										
+		bool operator==(Location &loc);
+		
 		// Sauvegarde
 		void save(fstream &inFile);
 		// void save();

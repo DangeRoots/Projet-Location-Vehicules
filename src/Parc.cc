@@ -87,10 +87,17 @@ bool Parc::supprimerLocation (Location loc) {
 void Parc::modifierLocation (Location loc) {
 }
 
-/*
-Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour) {
+Location Parc::rechercherLocation(string immat) {
+	bool trouve = false;
+	m_parcAutoI=m_parcAuto.begin();
+	while(!trouve && m_parcAutoI !=m_parcAuto.end()) {
+		if (m_parcAutoI->getVehicule()->getImmatriculation() == immat) {
+			trouve = true;
+			return *m_parcAutoI;
+		}
+		else m_parcAutoI++;
+	}
 }
-*/
 
 void Parc::afficher() {
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {

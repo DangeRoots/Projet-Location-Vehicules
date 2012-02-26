@@ -31,3 +31,7 @@ CDate Reservation::getDate (char type) {
 	else
 		return m_dateRetour;
 }
+
+void Reservation::afficher() {
+	
+}

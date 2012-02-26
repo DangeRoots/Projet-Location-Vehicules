@@ -27,6 +27,10 @@ void Location::afficher() {
 	cout << m_kilometrage << endl;
 }
 
+bool Location::operator==( Location &loc) {
+	return (m_vehicule->getImmatriculation() == loc.getVehicule()->getImmatriculation());
+}
+
 void Location::save(fstream &inFile) {
 	// fstream fs;
 	m_vehicule->save(inFile);

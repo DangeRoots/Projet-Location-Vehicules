@@ -3,6 +3,7 @@
 using namespace std;
 
 #include <Parc.h>
+#include <ListeReservations.h>
 #include <Location.h>
 
 int main(int argc, char *argv[]) {
@@ -12,28 +13,28 @@ int main(int argc, char *argv[]) {
 		exit (-1);
 	}
 
-	fstream vehFile;
-	string nomFichier = "res/Vehicule.data";
+	fstream vehFile, resaFile;
+	string nomFichierVeh = "res/Vehicule.data";
+	string nomFichierResa = "res/Reservations.data";
 	
-	vehFile.open(nomFichier.c_str(),ios::in);
+	
+	vehFile.open(nomFichierVeh.c_str(),ios::in);
+	resaFile.open(nomFichierResa.c_str(),ios::in);
+	
 	if (vehFile.fail()) {
-		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
+		cerr << "Ouverture du fichier " << nomFichierVeh << " impossible : fichier introuvable !" << endl;
+		exit (-2);
+	}
+	if (resaFile.fail()) {
+		cerr << "Ouverture du fichier " << nomFichierResa << " impossible : fichier introuvable !" << endl;
 		exit (-2);
 	}
 	Parc p1(vehFile);
 	vehFile.close();
+	ListeReservations resa(resaFile);
+	resaFile.close();
 	
-	cout << "--- avant ajout ---" << endl;
-/*
-	cout << right
-			<< setw(12) << "MARQUE"
-			<< setw(12) << "MODÈLE"
-			<< setw(12) << "IMMAT."
-			<< setw(12) << "Nb PLACES (VP)"
-			<< setw(12) << "VOLUME"
-			<< setw(12) << "POIDS" 
-			<< setw(12) << "KILOMÉTRAGE" << endl;
-			*/
+	// cout << "--- avant ajout ---" << endl;
 	cout 	<< "MARQUE "
 			<< "MODÈLE "
 			<< "IMMAT. "
@@ -56,14 +57,15 @@ int main(int argc, char *argv[]) {
 
 	cout << "--- après ajout ---" << endl;
 	p1.afficher();
-*/	
-	vehFile.open(nomFichier.c_str(),ios::out);
+
+	vehFile.open(nomFichierVeh.c_str(),ios::out);
 	if (vehFile.fail()) {
-		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
+		cerr << "Ouverture du fichier " << nomFichierVeh << " impossible : fichier introuvable !" << endl;
 		exit (-2);
 	}
 	cout << "Sauvegarde fichier" << endl;
 	p1.sauvegarder(vehFile);
 	cout << "Fin Sauvegarde fichier" << endl;
+	*/	
 }
 	

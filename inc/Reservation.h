@@ -29,7 +29,7 @@ class Reservation {
 		*
 		*  \param [in,out] inFile fstream, le fichier contenant la liste des réservations
 		*/
-		Reservation (string immatVeh, CDate dateDep, CDate dateRet);
+		Reservation (string Veh, CDate dateDep, CDate dateRet);
 		
 		/*!
 		*  \brief Constructeur
@@ -70,7 +70,7 @@ class Reservation {
 		*/		
 		CDate getDate (char type);
 
-
+		void afficher();
 };
 
 #endif
