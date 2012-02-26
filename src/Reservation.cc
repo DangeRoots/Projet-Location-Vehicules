@@ -57,3 +57,19 @@ void Reservation::save(fstream &outFile) {
 			<< " " << m_dateRetour.getAnnee()
 			<< endl;
 }
+
+bool Reservation::operator==(Reservation &res) const {
+	return (m_vehicule ==res.getVehicule());
+}
+
+bool Reservation::estDisponible(CDate dep, CDate ret) {
+	bool dispo = false;
+	if ((m_dateDepart < dep  && m_dateRetour < dep) ||
+		(m_dateDepart > ret))
+		dispo = true;
+	return dispo;
+}
+
+string Reservation::getVehicule() {
+	return m_vehicule;
+}

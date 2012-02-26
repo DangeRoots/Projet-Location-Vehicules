@@ -91,6 +91,21 @@ class Reservation {
 		*/												
 		void save(fstream &outFile);
 
+		/*!
+		*  \brief Vérifie disponibilité
+		*
+		*  Vérifie la disponibilité du véhicule dans la période comprise en deux dates
+		*
+		*  \param [in] dep CDate, la date de départ souhaitée
+		*  \param [in] ret CDate, la date de retour souhaitée
+		*  \return bool vrai si le véhicule est disponible
+		*  \return bool faux si le véhicule est indisponible
+		*/														
+		bool estDisponible(CDate dep, CDate ret);
+		
+		string getVehicule();
+		
+		bool operator==(Reservation &res) const;
 };
 
 #endif

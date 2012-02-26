@@ -5,6 +5,7 @@ using namespace std;
 #include <Parc.h>
 #include <ListeReservations.h>
 #include <Location.h>
+#include <Reservation.h>
 
 int main(int argc, char *argv[]) {
 		
@@ -15,7 +16,7 @@ int main(int argc, char *argv[]) {
 
 	fstream vehFile, resaFile;
 	string nomFichierVeh = "res/Vehicule.data";
-	string nomFichierResa = "res/Reservations.data";
+	string nomFichierResa = "res/ReservationsDates.data";
 	
 	
 	vehFile.open(nomFichierVeh.c_str(),ios::in);
@@ -34,20 +35,6 @@ int main(int argc, char *argv[]) {
 	vehFile.close();
 	ListeReservations resa(resaFile);
 	resaFile.close();
-	
-	// cout << "--- avant ajout ---" << endl;
-	cout << "--- Affichage parc ---" << endl;
-	cout 	<< "MARQUE "
-			<< "MODÈLE "
-			<< "IMMAT. "
-			<< "Nb PLACES (VP) "
-			<< "VOLUME "
-			<< "POIDS " 
-			<< "KILOMÉTRAGE" << endl;
-			
-	p1.afficher();
-	cout << endl << "--- Affichage réservations ---" << endl;
-	resa.afficher(p1);
 	/*
 	int done = 1;
 	while (done != 0) {
@@ -70,5 +57,27 @@ int main(int argc, char *argv[]) {
 	p1.sauvegarder(vehFile);
 	cout << "Fin Sauvegarde fichier" << endl;
 	*/	
+	
+	cout << "-- Tests de disponibilités -- " << endl;
+	Reservation testDate("111FE33", CDate(10,01,2012), CDate(15,01,2012));
+	cout << "--- Nouvelle réservation ---" << endl;
+	testDate.afficher(p1);
+	cout << "10/01/2012 au 15/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(10,01,2012));
+	testDate.setDate('r', CDate(14,01,2012));
+	testDate.afficher(p1);
+	cout << "10/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(10,01,2012));
+	testDate.setDate('r', CDate(13,01,2012));
+	testDate.afficher(p1);
+	cout << "10/01/2012 au 13/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(10,01,2012));
+	testDate.setDate('r', CDate(12,01,2012));
+	testDate.afficher(p1);
+	cout << "10/01/2012 au 12/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(10,01,2012));
+	testDate.setDate('r', CDate(11,01,2012));
+	testDate.afficher(p1);
+	cout << "10/01/2012 au 11/01/2012 : OK " << resa.ajouterReservation(testDate) << endl;
 }
 	

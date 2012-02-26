@@ -24,6 +24,8 @@ class ListeReservations {
 		list<Reservation>::iterator m_listeReservationsI;
 		
 	public:
+	
+		// list<Reservation> m_listeReservations;
 		/*!
 		*  \brief Constructeur
 		*
@@ -56,10 +58,11 @@ class ListeReservations {
 		*
 		*  Permet d'ajouter une réservation à la liste
 		*
-		*  \param aucun
-		*  \return void
+		*  \param [in] res Reservation, la réservation à ajouter
+		*  \return bool vrai si la réservation a été ajoutée à la liste
+		*  \return bool faux si la réservation n'a pas pu être ajoutée à la liste
 		*/		
-		// void ajouterRes ();
+		bool ajouterReservation (Reservation res);
 		
 		/*!
 		*  \brief Supprimer location

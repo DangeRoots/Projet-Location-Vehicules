@@ -70,15 +70,18 @@ bool CDate::operator>(const CDate &date) const {
 		res = true;
 	return res;
 }
+
 /*
-bool CDate::operator <=(const CDate &date) const {
-	return (this < date || this == date);
+bool static CDate::operator <=(const CDate &date1, const CDate &date2) const {
+	return ((date1 < date2) || (date1 == date2));
 }
+
+
 
 bool CDate::operator >=(const CDate &date) const {
 	return (this > date || this == date);
 }
-* */
+*/
 
 bool CDate::validerDate( int jour, int mois, int annee){
 	return (!(mois < 0 || mois > 12 || jour < 0 || jour > nbJours(mois,annee)));	
