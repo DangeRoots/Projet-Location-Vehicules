@@ -78,6 +78,14 @@ class Utilitaire : public Vehicule {
 		*/								
 		virtual void afficher();
 		
+		/*!
+		*  \brief sauvegarder utilitaire
+		*
+		*  Sauvegarde l'utilitaire
+		*
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
+		*  \return void
+		*/								
 		virtual void save(fstream &fs);
 };
 

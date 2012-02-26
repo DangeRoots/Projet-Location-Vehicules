@@ -32,7 +32,6 @@ bool Location::operator==( Location &loc) {
 }
 
 void Location::save(fstream &inFile) {
-	// fstream fs;
 	m_vehicule->save(inFile);
 	inFile << m_kilometrage << endl;
 }

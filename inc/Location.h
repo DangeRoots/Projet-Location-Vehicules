@@ -40,12 +40,9 @@ class Location {
 		*
 		*  Constructeur de la classe Location
 		*
-		*  \param vehicule, un pointeur de véhicule
-		*  \param dateDepart, objet CDate, la date de début de location, NULL si le véhicule n'est pas loué
-		*  \param dateRetourPrevue, objet CDate, la date de fin prévue de la location, NULL si le véhicule n'est pas loué
-		*  \param dateRetourReel, objet CDate, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location
+		*  \param [in] vehicule Pointeur de véhicule, le véhicule de la location
+		*  \param [in] kilometrage entier, le kilométrage du véhicule
 		*/		
-		// Location(Vehicule vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel);
 		Location(Vehicule *vehicule, int kilometrage);
 		
 		/*!
@@ -64,8 +61,7 @@ class Location {
 		*
 		*  \param aucun
 		*  \return un pointeur vers un objet Vehicule
-		*/		
-		// Vehicule getVehicule();
+		*/	
 		Vehicule* getVehicule();
 
 		/*!
@@ -76,7 +72,6 @@ class Location {
 		*  \param veh, un pointeur vers un objet Vehicule, le nouveau véhicule
 		*  \return void
 		*/		
-		// void setVehicule(Vehicule veh);
 		void setVehicule(Vehicule *veh);
 
 		/*!

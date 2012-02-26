@@ -113,7 +113,7 @@ class Vehicule {
 		 *  \param marque, chaîne de caractères, la marque du véhicule
 		 *  \return void
 		 */		
-		void setMarque(std::string marque);
+		void setMarque(string marque);
 
 		/*!
 		 *  \brief Véhicule identiques
@@ -141,7 +141,7 @@ class Vehicule {
 		*
 		*  Sauvegarde le véhicule
 		*
-		*  \param aucun
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
 		*  \return void
 		*/								
 		virtual void save(fstream &fs);

@@ -79,6 +79,14 @@ class Camion : public Utilitaire {
 		*/								
 		virtual void afficher();
 		
+		/*!
+		*  \brief sauvegarder camion
+		*
+		*  Sauvegarde le camion
+		*
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
+		*  \return void
+		*/								
 		virtual void save(fstream &fs);
 };
 

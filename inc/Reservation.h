@@ -71,6 +71,14 @@ class Reservation {
 		*/		
 		CDate getDate (char type);
 
+		/*!
+		*  \brief Afficher resservation
+		*
+		*  Affiche une réservation, en récupérant les caractéristiques du véhicule dans le parc passé en paramètre
+		*
+		*  \param [in] p Parc, le parc à explorer
+		*  \return void
+		*/
 		void afficher(Parc p);
 };
 
