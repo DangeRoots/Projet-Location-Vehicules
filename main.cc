@@ -3,12 +3,7 @@
 using namespace std;
 
 #include <Parc.h>
-//~ #include <Vehicule.h>
 #include <Location.h>
-//~ #include <CDate.h>
-//~ #include <Utilitaire.h>
-//~ #include <Camion.h>
-//~ #include <VP.h>
 
 int main(int argc, char *argv[]) {
 		
