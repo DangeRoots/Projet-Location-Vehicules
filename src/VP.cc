@@ -13,7 +13,7 @@ VP::VP():Vehicule(){
 };
 
 VP::~VP(){
-	cout << "Destructeur de VP" << endl;
+	// cout << "Destructeur de VP" << endl;
 }
 
 int VP::getNbPlaces(){
@@ -27,9 +27,8 @@ void VP::setNbPlaces(int nbPlaces){
 }
 
 void VP::afficher(){
-	
 	Vehicule::afficher();
-	cout << "Nombre de places : " << m_nbPlaces << endl;
+	cout << m_nbPlaces << " ";
 }
 
 

@@ -24,7 +24,7 @@ void Location::setVehicule(Vehicule *veh) {
 
 void Location::afficher() {
 	m_vehicule->afficher();
-	cout << "Kilométrage : " << m_kilometrage << endl;
+	cout << m_kilometrage << endl;
 }
 
 void Location::save(fstream &inFile) {

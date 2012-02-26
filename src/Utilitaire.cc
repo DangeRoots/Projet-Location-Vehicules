@@ -15,7 +15,7 @@ Utilitaire::Utilitaire():Vehicule() {
 }
 
 Utilitaire::~Utilitaire() {
-	cout << "Destructeur d'Utilitaire" << endl;
+	// cout << "Destructeur d'Utilitaire" << endl;
 }
 
 float Utilitaire::getVolumeUtile() {
@@ -28,7 +28,7 @@ void Utilitaire::setVolumeUtile(float volume) {
 
 void Utilitaire::afficher() {
 	Vehicule::afficher();
-	cout << "Volume : " << m_volumeUtile << endl;
+	cout << m_volumeUtile << " ";
 }
 
 void Utilitaire::save(fstream &fs) {

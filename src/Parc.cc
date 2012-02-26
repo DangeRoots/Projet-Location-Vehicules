@@ -40,8 +40,44 @@ Parc::~Parc () {
 	
 }
 
-void Parc::ajouterLocation (Location loc) {
-	m_parcAuto.push_back(loc);
+void Parc::ajouterLocation () {
+	// Déclaration des variables temporaires
+	char t_type;
+	string t_marque, t_modele, t_immat;
+	int t_kilom, t_nbPlaces;
+	float t_poidsUtile, t_volumeUtile;
+	cout << "Type de véhicule (v/c/u) : ";
+	cin >> t_type;
+	cout << "Immatriculation  : ";
+	cin >> t_immat;
+	cout << "Marque  : ";
+	cin >> t_marque;
+	cout << "Modele  : ";
+	cin >> t_modele;
+	cout << "Kilométrage  : ";
+	cin >> t_kilom;
+	if (t_kilom < 0)
+		t_kilom = 0;
+	if (t_type != 'c' && t_type != 'v' && t_type != 'u') {
+		// Erreur.h
+	} else {
+		if (t_type == 'c') {
+			cout << "Poids  : ";
+			cin >> t_poidsUtile;
+			cout << "Volume  : ";
+			cin >> t_volumeUtile;
+			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		} else if (t_type == 'v') {
+			cout << "Nombre de places  : ";
+			cin >> t_nbPlaces;
+			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
+		} else if (t_type == 'u') {
+			cout << "Volume  : ";
+			cin >> t_volumeUtile;
+			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		}
+		cout << "Véhicule ajouté !" << endl;
+	}
 }
 
 bool Parc::supprimerLocation (Location loc) {

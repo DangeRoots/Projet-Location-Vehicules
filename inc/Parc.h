@@ -61,7 +61,7 @@ class Parc {
 		*  \param loc, Location
 		*  \return booléen, vrai si la location a été ajoutée, faux sinon 
 		*/		
-		void ajouterLocation (Location loc);
+		void ajouterLocation ();
 		
 		/*!
 		*  \brief Supprimer location

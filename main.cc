@@ -29,16 +29,39 @@ int main(int argc, char *argv[]) {
 	vehFile.close();
 	
 	cout << "--- avant ajout ---" << endl;
+/*
+	cout << right
+			<< setw(12) << "MARQUE"
+			<< setw(12) << "MODÈLE"
+			<< setw(12) << "IMMAT."
+			<< setw(12) << "Nb PLACES (VP)"
+			<< setw(12) << "VOLUME"
+			<< setw(12) << "POIDS" 
+			<< setw(12) << "KILOMÉTRAGE" << endl;
+			*/
+	cout 	<< "MARQUE "
+			<< "MODÈLE "
+			<< "IMMAT. "
+			<< "Nb PLACES (VP) "
+			<< "VOLUME "
+			<< "POIDS " 
+			<< "KILOMÉTRAGE" << endl;
+			
 	p1.afficher();
 	
-	for (int i=0; i < 10; i++) {
-		p1.ajouterLocation(Location(new Camion(i,64,"AAA_DD33", "NEW_CAMION", "NEW_MODELE"), 50*i));
-		p1.ajouterLocation(Location(new Utilitaire(i,"AAA_DD33", "NEW_UTIL", "NEW_MODELE"), 50*i));
-		p1.ajouterLocation(Location(new VP("AAA_DD33", "NEW_VP", "NEW_MODELE", i), 50*i));
+	/*
+	int done = 1;
+	while (done != 0) {
+		cout << "----- Ajout véhicule -----" << endl;
+		p1.ajouterLocation();
+		cout << "autre ajout (0 pour arrêter) ?" << endl;
+		cin >> done;
 	}
+
+
 	cout << "--- après ajout ---" << endl;
 	p1.afficher();
-	
+*/	
 	vehFile.open(nomFichier.c_str(),ios::out);
 	if (vehFile.fail()) {
 		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
