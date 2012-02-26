@@ -46,3 +46,14 @@ void Reservation::afficher(Parc p) {
 	}
 	
 }
+
+void Reservation::save(fstream &outFile) {
+	outFile	<< m_vehicule 
+			<< " " << m_dateDepart.getJour()
+			<< " " << m_dateDepart.getMois()
+			<< " " << m_dateDepart.getAnnee()
+			<< " " << m_dateRetour.getJour()
+			<< " " << m_dateRetour.getMois()
+			<< " " << m_dateRetour.getAnnee()
+			<< endl;
+}

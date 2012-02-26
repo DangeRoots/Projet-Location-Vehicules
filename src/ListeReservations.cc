@@ -36,5 +36,8 @@ void ListeReservations::afficher(Parc p) {
 }
 
 void ListeReservations::sauvegarder(fstream &outFile) {
-	// for_each(m_listeReservationsI)
+	for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
+		m_listeReservationsI->save(outFile);
+	}
+
 }

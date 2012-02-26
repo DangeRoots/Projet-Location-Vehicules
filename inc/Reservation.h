@@ -80,6 +80,17 @@ class Reservation {
 		*  \return void
 		*/
 		void afficher(Parc p);
+		
+		/*!
+		*  \brief Sauvegarder réservation
+		*
+		*  Sauvegarde la réservation
+		*
+		*  \param [in,out] outFile fstream, le fichier de sauvegarde
+		*  \return void
+		*/												
+		void save(fstream &outFile);
+
 };
 
 #endif
