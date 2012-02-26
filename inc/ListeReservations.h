@@ -102,7 +102,7 @@ class ListeReservations {
 		*  \param aucun
 		*  \return void
 		*/				
-		void afficher();
+		void afficher(Parc p);
 		
 		/*!
 		*  \brief Sauvegarder liste réservations

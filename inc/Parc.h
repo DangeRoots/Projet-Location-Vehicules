@@ -94,7 +94,7 @@ class Parc {
 		*  \param dateRetour, CDate, la date de fin de location souhaitée
 		*  \return un objet Location
 		*/		
-		Location rechercherLocation(string immat);
+		bool rechercherLocation(string immat, Location &loc);
 		
 		/*!
 		*  \brief Afficher liste complète

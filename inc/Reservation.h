@@ -5,6 +5,7 @@
 #include <fstream>
 #include <CDate.h>
 #include <Location.h>
+#include <Parc.h>
 
 /*!
  * \file Reservation.h
@@ -70,7 +71,7 @@ class Reservation {
 		*/		
 		CDate getDate (char type);
 
-		void afficher();
+		void afficher(Parc p);
 };
 
 #endif

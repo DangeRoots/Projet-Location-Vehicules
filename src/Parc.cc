@@ -87,16 +87,17 @@ bool Parc::supprimerLocation (Location loc) {
 void Parc::modifierLocation (Location loc) {
 }
 
-Location Parc::rechercherLocation(string immat) {
+bool Parc::rechercherLocation(string immat, Location &loc) {
 	bool trouve = false;
 	m_parcAutoI=m_parcAuto.begin();
 	while(!trouve && m_parcAutoI !=m_parcAuto.end()) {
 		if (m_parcAutoI->getVehicule()->getImmatriculation() == immat) {
 			trouve = true;
-			return *m_parcAutoI;
+			loc = *m_parcAutoI;
 		}
 		else m_parcAutoI++;
 	}
+	return trouve;
 }
 
 void Parc::afficher() {

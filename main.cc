@@ -29,12 +29,14 @@ int main(int argc, char *argv[]) {
 		cerr << "Ouverture du fichier " << nomFichierResa << " impossible : fichier introuvable !" << endl;
 		exit (-2);
 	}
+
 	Parc p1(vehFile);
 	vehFile.close();
 	ListeReservations resa(resaFile);
 	resaFile.close();
 	
 	// cout << "--- avant ajout ---" << endl;
+	cout << "--- Affichage parc ---" << endl;
 	cout 	<< "MARQUE "
 			<< "MODÈLE "
 			<< "IMMAT. "
@@ -44,7 +46,8 @@ int main(int argc, char *argv[]) {
 			<< "KILOMÉTRAGE" << endl;
 			
 	p1.afficher();
-	
+	cout << endl << "--- Affichage réservations ---" << endl;
+	resa.afficher(p1);
 	/*
 	int done = 1;
 	while (done != 0) {

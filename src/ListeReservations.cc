@@ -29,7 +29,10 @@ ListeReservations::ListeReservations() {
 ListeReservations::~ListeReservations() {
 }
 
-void ListeReservations::afficher() {
+void ListeReservations::afficher(Parc p) {
+	for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
+		m_listeReservationsI->afficher(p);
+	}
 }
 
 void ListeReservations::sauvegarder(fstream &outFile) {
