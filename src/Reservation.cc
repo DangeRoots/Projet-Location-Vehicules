@@ -63,11 +63,8 @@ bool Reservation::operator==(Reservation &res) const {
 }
 
 bool Reservation::estDisponible(CDate dep, CDate ret) {
-	bool dispo = false;
-	if ((m_dateDepart < dep  && m_dateRetour < dep) ||
-		(m_dateDepart > ret))
-		dispo = true;
-	return dispo;
+	return ((m_dateDepart < dep  && m_dateRetour < dep) ||
+		(m_dateDepart > ret));
 }
 
 string Reservation::getVehicule() {

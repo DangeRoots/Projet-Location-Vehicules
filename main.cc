@@ -60,6 +60,8 @@ int main(int argc, char *argv[]) {
 	
 	cout << "-- Tests de disponibilités -- " << endl;
 	Reservation testDate("111FE33", CDate(10,01,2012), CDate(15,01,2012));
+	cout << endl << "--- liste avant ajout ---" << endl;
+	resa.afficher(p1);
 	cout << "--- Nouvelle réservation ---" << endl;
 	testDate.afficher(p1);
 	cout << "10/01/2012 au 15/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
@@ -79,5 +81,8 @@ int main(int argc, char *argv[]) {
 	testDate.setDate('r', CDate(11,01,2012));
 	testDate.afficher(p1);
 	cout << "10/01/2012 au 11/01/2012 : OK " << resa.ajouterReservation(testDate) << endl;
+	cout << endl << "--- liste après ajout ---" << endl;
+	resa.afficher(p1);
+	resa.sauvegarder(resaFile);
 }
 	
