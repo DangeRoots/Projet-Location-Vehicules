@@ -59,30 +59,36 @@ int main(int argc, char *argv[]) {
 	*/	
 	
 	cout << "-- Tests de disponibilités -- " << endl;
-	Reservation testDate("111FE33", CDate(10,01,2012), CDate(15,01,2012));
+	Reservation testDate("111FE33", CDate(10,01,2012), CDate(10,01,2012));
 	cout << endl << "--- liste avant ajout ---" << endl;
 	resa.afficher(p1);
 	cout << "--- Nouvelle réservation ---" << endl;
 	testDate.afficher(p1);
-	cout << "10/01/2012 au 15/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(10,01,2012));
+	cout << "10/01/2012 au 10/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(13,01,2012));
 	testDate.setDate('r', CDate(14,01,2012));
 	testDate.afficher(p1);
-	cout << "10/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(10,01,2012));
-	testDate.setDate('r', CDate(13,01,2012));
+	cout << "13/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(12,01,2012));
+	testDate.setDate('r', CDate(14,01,2012));
 	testDate.afficher(p1);
-	cout << "10/01/2012 au 13/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(10,01,2012));
-	testDate.setDate('r', CDate(12,01,2012));
+	cout << "12/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(14,01,2012));
+	testDate.setDate('r', CDate(18,01,2012));
 	testDate.afficher(p1);
-	cout << "10/01/2012 au 12/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(10,01,2012));
-	testDate.setDate('r', CDate(11,01,2012));
+	cout << "14/01/2012 au 18/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
+	testDate.setDate('d', CDate(15,01,2012));
+	testDate.setDate('r', CDate(19,01,2012));
 	testDate.afficher(p1);
-	cout << "10/01/2012 au 11/01/2012 : OK " << resa.ajouterReservation(testDate) << endl;
+	cout << "15/01/2012 au 19/01/2012 : OK " << resa.ajouterReservation(testDate) << endl;
 	cout << endl << "--- liste après ajout ---" << endl;
 	resa.afficher(p1);
+	
+	resaFile.open(nomFichierResa.c_str(),ios::out);
+	if (resaFile.fail()) {
+		cerr << "Ouverture du fichier " << nomFichierResa << " impossible : fichier introuvable !" << endl;
+		exit (-2);
+	}
 	resa.sauvegarder(resaFile);
 }
 	
