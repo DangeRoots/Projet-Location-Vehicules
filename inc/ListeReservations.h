@@ -25,13 +25,12 @@ class ListeReservations {
 		
 	public:
 	
-		// list<Reservation> m_listeReservations;
 		/*!
 		*  \brief Constructeur
 		*
 		*  Constructeur de la classe ListeReservations
 		*
-		*  \param inFile, fstream, le fichier contenant la liste des réservations
+		*  \param [in,out] inFile fstream, le fichier contenant la liste des réservations
 		*/
 		ListeReservations (fstream &inFile);
 		
@@ -65,35 +64,34 @@ class ListeReservations {
 		bool ajouterReservation (Reservation res);
 		
 		/*!
-		*  \brief Supprimer location
+		*  \brief Supprimer réservation
 		*
-		*  Permet de supprimer un véhicule du parc
+		*  Permet de supprimer une réservation
 		*
-		*  \param loc, Location
-		*  \return booléen, vrai si le véhicule a été trouvé et supprimé, faux sinon
+		*  \param [in,out] resa Reservation, la réservation à supprimer
+		*  \return bool vrai si la réservation a été supprimée
+		*  \return bool faux si la réservation n'a pas pu être supprimée
 		*/
-		// bool supprimerLocation (Location loc);
+		// bool supprimerReservation (Reservation resa);
 
 		/*!
-		*  \brief Modifier location
+		*  \brief Modifier réservation
 		*
-		*  Permet de modifier une location du parc
+		*  Permet de modifier une réservation existante
 		*
-		*  \param loc, Location, la location à modifier
-		*  \return void
+		*  \param [in,out] resa Reservation, la réservation à modifier
+		*  \return bool vrai si la réservation a été modifiée
+		*  \return bool faux si la réservation n'a pas pu être modifiée
 		*/
-		// void modifierLocation (Location loc);
+		// void modifierReservation (Location loc);
 		
 		
 		/*!
-		*  \brief Rechercher location
+		*  \brief Rechercher réservation
 		*
-		*  Permet de rechercher une location dans le parc
+		*  Permet de rechercher une réservation dans la liste
 		*
-		*  \param type, caractères, le type de véhicule recherché : v pour vp, u pour utilitaire, c pour camion
-		*  \param dateDepart, CDate, la date de début de location souhaitée
-		*  \param dateRetour, CDate, la date de fin de location souhaitée
-		*  \return un objet Location
+		*  \return Reservation une réservation
 		*/		
 		//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);
 		
@@ -102,7 +100,7 @@ class ListeReservations {
 		*
 		*  Affiche la liste complète des réservations
 		*
-		*  \param aucun
+		*  \param [in] p le parc de véhicule dans lequel rechercher les informations sur les véhicules réservés
 		*  \return void
 		*/				
 		void afficher(Parc p);

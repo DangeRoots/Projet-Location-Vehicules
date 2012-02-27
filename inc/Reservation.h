@@ -4,8 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <CDate.h>
-#include <Location.h>
-#include <Parc.h>
 
 /*!
  * \file Reservation.h
@@ -28,9 +26,11 @@ class Reservation {
 		*
 		*  Constructeur de la classe Reservation
 		*
-		*  \param [in,out] inFile fstream, le fichier contenant la liste des réservations
+		*  \param [in] veh string, l'immatriculation du véhicule
+		*  \param [in] dateDep CDate, la date de début de réservation
+		*  \param [in] dateRet CDate, la date de fin de réservation
 		*/
-		Reservation (string Veh, CDate dateDep, CDate dateRet);
+		Reservation (string veh, CDate dateDep, CDate dateRet);
 		
 		/*!
 		*  \brief Constructeur
@@ -76,7 +76,7 @@ class Reservation {
 		*
 		*  Affiche une réservation, en récupérant les caractéristiques du véhicule dans le parc passé en paramètre
 		*
-		*  \param [in] p Parc, le parc à explorer
+		*  \param [in] p Parc, le parc à explorer. Les informations sur les véhicules doivent être stockées dans une instance de la classe Parc
 		*  \return void
 		*/
 		void afficher(Parc p);
@@ -103,8 +103,25 @@ class Reservation {
 		*/														
 		bool estDisponible(CDate dep, CDate ret);
 		
+		/*!
+		*  \brief Obtenir véhicule
+		*
+		*  Renvoie le véhicule lié à la réservation
+		*
+		*  \param none
+		*  \return string l'immatriculation du véhicule
+		*/														
 		string getVehicule();
-		
+
+		/*!
+		*  \brief Réservations égales
+		*
+		*  Vérifie si deux réservations sont identiques
+		*
+		*  \param [in,out] res Reservation, la réservation à comparer
+		*  \return bool vrai si les deux réservations sont identiques (même véhicule et mêmes dates de départ et retour)
+		*  \return bool faux si les deux réservations sont différentes.
+		*/																
 		bool operator==(Reservation &res) const;
 };
 
