@@ -8,11 +8,12 @@ using namespace std;
 #include <Reservation.h>
 
 int main(int argc, char *argv[]) {
-		
+	/*	
 	if (argc < 2) {
 		cerr << "Argument manquant : chemin/vers/fichier/locations ! Impossible de poursuivre !" << endl;
 		exit (-1);
 	}
+	*/
 
 	fstream vehFile, resaFile;
 	string nomFichierVeh = "res/Vehicule.data";
@@ -35,15 +36,15 @@ int main(int argc, char *argv[]) {
 	vehFile.close();
 	ListeReservations resa(resaFile);
 	resaFile.close();
-	/*
+
 	int done = 1;
 	while (done != 0) {
+		p1.afficher();
 		cout << "----- Ajout véhicule -----" << endl;
 		p1.ajouterLocation();
 		cout << "autre ajout (0 pour arrêter) ?" << endl;
 		cin >> done;
 	}
-
 
 	cout << "--- après ajout ---" << endl;
 	p1.afficher();
@@ -56,8 +57,8 @@ int main(int argc, char *argv[]) {
 	cout << "Sauvegarde fichier" << endl;
 	p1.sauvegarder(vehFile);
 	cout << "Fin Sauvegarde fichier" << endl;
-	*/	
 	
+	/*
 	cout << "-- Tests de disponibilités -- " << endl;
 	Reservation testDate("111FE33", CDate(10,01,2012), CDate(10,01,2012));
 	cout << endl << "--- liste avant ajout ---" << endl;
@@ -90,5 +91,6 @@ int main(int argc, char *argv[]) {
 		exit (-2);
 	}
 	resa.sauvegarder(resaFile);
+	*/
 }
 	

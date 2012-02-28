@@ -37,48 +37,64 @@ Parc::Parc() {
 }
 
 Parc::~Parc () {
-	
+	// @TODO
 }
 
 void Parc::ajouterLocation () {
 	// Déclaration des variables temporaires
 	char t_type;
 	string t_marque, t_modele, t_immat;
-	int t_kilom, t_nbPlaces;
+	int t_kilom, t_nbPlaces = 0;
+	// string t_kilom, t_nbPlaces = 0;
 	float t_poidsUtile, t_volumeUtile;
-	cout << "Type de véhicule (v/c/u) : ";
-	cin >> t_type;
-	cout << "Immatriculation  : ";
-	cin >> t_immat;
+	bool existe = true;
+	while (t_type != 'c' && t_type != 'v' && t_type != 'u') {
+		cout << "Type de véhicule (v/c/u) : ";
+		cin >> t_type;
+		if (t_type != 'c' && t_type != 'v' && t_type != 'u')
+			cout << "Type incorrect ! " << endl;
+	}
+	while (existe) {
+		cout << "Immatriculation  : ";
+		cin >> t_immat;
+		Tools::stringToUpper(t_immat);
+		Location tmp;
+		existe = rechercherLocation(t_immat,tmp);
+		if (existe)
+			cout << "Véhicule existant !" << endl;
+	}
 	cout << "Marque  : ";
 	cin >> t_marque;
 	cout << "Modele  : ";
 	cin >> t_modele;
+	Tools::stringToUpper(t_marque);
+	Tools::stringToUpper(t_modele);
 	cout << "Kilométrage  : ";
 	cin >> t_kilom;
-	if (t_kilom < 0)
-		t_kilom = 0;
-	if (t_type != 'c' && t_type != 'v' && t_type != 'u') {
-		// Erreur.h
-	} else {
-		if (t_type == 'c') {
-			cout << "Poids  : ";
-			cin >> t_poidsUtile;
-			cout << "Volume  : ";
-			cin >> t_volumeUtile;
-			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-		} else if (t_type == 'v') {
+	if (t_type == 'c') {
+		cout << "Poids  : ";
+		cin >> t_poidsUtile;
+		cout << "Volume  : ";
+		cin >> t_volumeUtile;
+		m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+	} else if (t_type == 'v') {
+		while (t_nbPlaces < 1) {
 			cout << "Nombre de places  : ";
 			cin >> t_nbPlaces;
-			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
-		} else if (t_type == 'u') {
-			cout << "Volume  : ";
-			cin >> t_volumeUtile;
-			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+			if (t_nbPlaces < 1 ) {
+				cout << "Nombre de places insuffisant" << endl;
+				t_nbPlaces = 0;
+			}
 		}
-		cout << "Véhicule ajouté !" << endl;
+		m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
+	} else if (t_type == 'u') {
+		cout << "Volume  : ";
+		cin >> t_volumeUtile;
+		m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
 	}
+	cout << "Véhicule ajouté !" << endl;
 }
+
 
 bool Parc::supprimerLocation (Location loc) {
 	return true;
