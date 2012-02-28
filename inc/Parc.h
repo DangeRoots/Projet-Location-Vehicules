@@ -9,6 +9,7 @@
 #include <Camion.h>
 #include <Utilitaire.h>
 #include <VP.h>
+#include <Tools.h>
 
 /*!
  * \file Parc.h
