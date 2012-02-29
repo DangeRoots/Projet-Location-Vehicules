@@ -86,11 +86,37 @@ class Tools {
 		 *  \return none
 		 */				
 		static void stringToUpper (string &chaine);
-		
+
+	   /*!
+		 *  \brief transforme en majuscules
+		 *
+		 *  Transforme un caractère en lettre majuscule
+		 *
+		 *  \param [in,out]	c, un caractère
+		 *  \return none
+		 */				
 		static void charToUpper (char &c);
 		
+		/*!
+		 *  \brief transforme en minuscules
+		 *
+		 *  Transforme un caractère en lettre minuscule
+		 *
+		 *  \param c, un caractères
+		 *  \return none
+		 */		
 		static void charToLower (char &c);
 		
+		/*!
+		 *  \brief Conversion en entier
+		 *
+		 *  Convertit une chaine de caractères en nombre entier
+		 *
+		 *  \param
+		 * 		val, une chaîne de caractères
+		 *  \return
+		 * 		int, un nombre entier
+		 */
 		static int stringToInt(const string val);
 };
 #endif

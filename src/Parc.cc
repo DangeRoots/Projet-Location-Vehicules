@@ -59,58 +59,22 @@ void Parc::ajouterLocation () {
 	entrerImmat(t_immat);
 	entrerMarqueModele(t_marque, t_modele);
 	entrerKilometrage(t_kilom);
-
-	//
-	t_input = "";
-	if (t_type == 'c') {
-		while(!Tools::estReel(t_input)){
-			cout << "Poids  : ";
-			cin >> t_input;
-			if (Tools::estReel(t_input)){
-				t_poidsUtile = Tools::stringToFloat(t_input);
-			} else 
-				cout << "Veuillez entrer un nombre !"<< endl;
+		// Si c'est un camion => poidsUtile + volumeUtile
+		if (t_type == 'c') {
+			entrerPoidsUtile(t_poidsUtile);
+			entrerVolumeUtile(t_volumeUtile);
+			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
 		}
-		t_input = "";
-		while(!Tools::estReel(t_input)){
-			cout << "Volume : ";
-			cin >> t_input;
-			if (Tools::estReel(t_input)){
-				t_volumeUtile = Tools::stringToFloat(t_input);
-			} else 
-				cout << "Veuillez entrer un nombre !"<< endl;
-		}		
-		m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-	} else if (t_type == 'v') {
-		//t_input = "";
-		while (t_nbPlaces < 1) {
-			t_input = "";
-			while(!Tools::estEntier(t_input)){
-				cout << "Nombre de places  : ";
-				cin >> t_input;
-				if (Tools::estEntier(t_input)){
-					t_nbPlaces = Tools::stringToInt(t_input);
-				} else
-					cout << "Veuillez entrer un nombre !"<< endl;
-			}			
-			if (t_nbPlaces < 1 ) {
-				cout << "Nombre de places insuffisant" << endl;
-				t_nbPlaces = 0;
-			}
+		// Si c'est une voiture => nbPlaces
+		else if (t_type == 'v') {
+			entrerNbPlaces(t_nbPlaces);
+			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
 		}
-		m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
-	} else if (t_type == 'u') {
-		t_input = "";
-			while(!Tools::estReel(t_input)){
-				cout << "Volume : ";
-				cin >> t_input;
-				if (Tools::estReel(t_input)){
-					t_volumeUtile = Tools::stringToFloat(t_input);
-				} else 
-					cout << "Veuillez entrer un nombre !"<< endl;
-			}
-		m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-	}
+		// Si c'est un utilitaire => volumeUtile
+		else if (t_type == 'u') {
+			entrerVolumeUtile(t_volumeUtile);
+			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+		}
 	cout << "Véhicule ajouté !" << endl;
 }
 
@@ -190,3 +154,46 @@ void Parc::entrerKilometrage(int &t_kilom) {
 			cout << "Veuillez entrer un nombre !"<< endl;
 	}	
 }
+
+void Parc::entrerVolumeUtile(float &t_volumeUtile){
+	string t_input = "";
+	while(!Tools::estReel(t_input)){
+		cout << "Volume : ";
+		cin >> t_input;
+		if (Tools::estReel(t_input)){
+			t_volumeUtile = Tools::stringToFloat(t_input);
+		} else 
+			cout << "Veuillez entrer un nombre !"<< endl;
+		}
+}
+
+void Parc::entrerPoidsUtile(float &t_poidsUtile){
+	string t_input = "";
+	while(!Tools::estReel(t_input)){
+		cout << "Poids  : ";
+		cin >> t_input;
+		if (Tools::estReel(t_input)){
+			t_poidsUtile = Tools::stringToFloat(t_input);
+		} else
+			cout << "Veuillez entrer un nombre !"<< endl;
+	}
+}
+
+void Parc::entrerNbPlaces(int &t_nbPlaces){
+	string t_input = "";
+	while (t_nbPlaces < 1) {
+		t_input = "";
+		while(!Tools::estEntier(t_input)){
+			cout << "Nombre de places  : ";
+			cin >> t_input;
+				if (Tools::estEntier(t_input)){
+					t_nbPlaces = Tools::stringToInt(t_input);
+				} else
+					cout << "Veuillez entrer un nombre !"<< endl;
+			}			
+		if (t_nbPlaces < 1 ) {
+			cout << "Nombre de places insuffisant" << endl;
+			t_nbPlaces = 0;
+		}
+	}
+} 

@@ -29,6 +29,9 @@ class Parc {
 		void entrerImmat(string &i);
 		void entrerMarqueModele(string &t_ma, string &t_mo);
 		void entrerKilometrage(int &t_k);
+		void entrerVolumeUtile(float &t_v);
+		void entrerPoidsUtile(float &t_p);
+		void entrerNbPlaces(int &t_nbP);
 		
 	public:
 		/*!
