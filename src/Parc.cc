@@ -42,7 +42,7 @@ Parc::~Parc () {
 
 void Parc::ajouterLocation () {
 	// Déclaration des variables temporaires
-	char t_type;
+	string t_type;
 	string t_marque, t_modele, t_immat;
 	int t_kilom, t_nbPlaces = 0;
 	float t_poidsUtile, t_volumeUtile;
@@ -60,18 +60,18 @@ void Parc::ajouterLocation () {
 	entrerMarqueModele(t_marque, t_modele);
 	entrerKilometrage(t_kilom);
 		// Si c'est un camion => poidsUtile + volumeUtile
-		if (t_type == 'c') {
+		if (t_type == "c") {
 			entrerPoidsUtile(t_poidsUtile);
 			entrerVolumeUtile(t_volumeUtile);
 			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
 		}
 		// Si c'est une voiture => nbPlaces
-		else if (t_type == 'v') {
+		else if (t_type == "v") {
 			entrerNbPlaces(t_nbPlaces);
 			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
 		}
 		// Si c'est un utilitaire => volumeUtile
-		else if (t_type == 'u') {
+		else if (t_type == "u") {
 			entrerVolumeUtile(t_volumeUtile);
 			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
 		}
@@ -111,12 +111,12 @@ void Parc::sauvegarder(fstream &inFile) {
 	}
 }
 
-void Parc::entrerTypeVeh(char &t_type) {
-	while (t_type != 'c' && t_type != 'v' && t_type != 'u') {
+void Parc::entrerTypeVeh(string &t_type) {
+	while (t_type != "c" && t_type != "v" && t_type != "u") {
 		cout << "Type de véhicule (v/c/u) : ";
 		cin >> t_type;
-		Tools::charToLower(t_type);
-		if (t_type != 'c' && t_type != 'v' && t_type != 'u')
+		Tools::stringToLower(t_type);
+		if (t_type != "c" && t_type != "v" && t_type != "u")
 			cout << "Type incorrect ! " << endl;
 	}
 }
