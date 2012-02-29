@@ -62,13 +62,86 @@ bool ListeReservations::ajouterReservation (Reservation res) {
 	return ajouter;
 }
 
-
 void ListeReservations::afficher(Parc p) {
 	if (m_listeReservations.empty())
 		cout << "Aucune réservation !" << endl;
 	else {
-		for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
+		char typeRech;
+		// demander type de recherche : toutes, par date, restituables
+		while (typeRech != 'r' && typeRech != 'd' && typeRech != 'a' && typeRech != 't') {
+			cout << "Que souhaitez vous afficher : " << endl;
+			cout << "- (R)éservations à une date particulière" << endl;
+			cout << "- (D)isponibilités à une date particulière" << endl;
+			cout << "- R(e)stituables (a)ujourd'hui" << endl;
+			cout << "- (T)outes les réservations" << endl;
+			cin >> typeRech;
+			Tools::charToLower(typeRech);
+			if (typeRech != 'r' && typeRech != 'd' && typeRech != 'a' && typeRech != 't')
+				cout << "Type incorrect ! " << endl;
+		}
+		cout << typeRech << endl;
+		
+		if (typeRech == 't') {
+			// afficher tous
+			cout << "--- Toutes les réservations ---" << endl;
+			for (	m_listeReservationsI = m_listeReservations.begin();
+					m_listeReservationsI != m_listeReservations.end();
+					m_listeReservationsI++) {
 			m_listeReservationsI->afficher(p);
+			}
+		} else if (typeRech == 'a') {
+			// véhicule restituables
+			CDate d;
+			d = CDate::today();
+			cout << "--- Réservations du ";
+			d.afficher();
+			cout << " ---------------------------------" << endl;
+			for (	m_listeReservationsI = m_listeReservations.begin();
+					m_listeReservationsI != m_listeReservations.end();
+					m_listeReservationsI++) {
+				if (m_listeReservationsI->getDate('r') == d)
+					m_listeReservationsI->afficher(p);
+			}
+		} else if (typeRech =='r') {
+			// réservés à une date donnée
+			int j, m, a;
+			cout << "Date de recherche (J M A) : ";
+			cin >> j;
+			cin >> m;
+			cin >> a;
+			CDate d(j,m,a);
+			cout << "--- Réservations du ";
+			d.afficher();
+			cout << " ---------------------------------" << endl;
+			for (	m_listeReservationsI = m_listeReservations.begin();
+					m_listeReservationsI != m_listeReservations.end();
+					m_listeReservationsI++) 
+				{
+				if (m_listeReservationsI->getDate('d') == d ||
+					m_listeReservationsI->getDate('r') == d ||
+					(m_listeReservationsI->getDate('d') > d && m_listeReservationsI->getDate('r') < d))
+					m_listeReservationsI->afficher(p);
+			}
+		} else if (typeRech == 'd'){
+			// disponibles à une date donnée
+			int j, m, a;
+			cout << "Date de recherche (J M A) : ";
+			cin >> j;
+			cin >> m;
+			cin >> a;
+			CDate d(j,m,a);
+			cout << "--- Disponibilités du ";
+			d.afficher();
+			cout << " ---" << endl;
+
+			for (	m_listeReservationsI = m_listeReservations.begin();
+					m_listeReservationsI != m_listeReservations.end();
+					m_listeReservationsI++) 
+				{
+				if (m_listeReservationsI->getDate('d') < d &&
+					m_listeReservationsI->getDate('r') > d)
+					m_listeReservationsI->afficher(p);
+			}
 		}
 	}
 }

@@ -64,17 +64,6 @@ class ListeReservations {
 		bool ajouterReservation (Reservation res);
 		
 		/*!
-		*  \brief Supprimer réservation
-		*
-		*  Permet de supprimer une réservation
-		*
-		*  \param [in,out] resa Reservation, la réservation à supprimer
-		*  \return bool vrai si la réservation a été supprimée
-		*  \return bool faux si la réservation n'a pas pu être supprimée
-		*/
-		// bool supprimerReservation (Reservation resa);
-
-		/*!
 		*  \brief Modifier réservation
 		*
 		*  Permet de modifier une réservation existante
@@ -98,9 +87,9 @@ class ListeReservations {
 		/*!
 		*  \brief Afficher liste complète
 		*
-		*  Affiche la liste complète des réservations
+		*  Affiche la liste des réservations. La liste affichée peut contenir toutes les réservations, les réservations dont la date de départ est égale à date ou les véhicules restituables. Sont considérés restituables tous les véhicules dont la date de retour est celle du jour courant.
 		*
-		*  \param [in] p le parc de véhicule dans lequel rechercher les informations sur les véhicules réservés
+		*  \param [in] p Parc, le parc de véhicule dans lequel rechercher les informations sur les véhicules réservés
 		*  \return void
 		*/				
 		void afficher(Parc p);

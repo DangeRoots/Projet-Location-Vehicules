@@ -223,7 +223,7 @@ class CDate {
 		*  \param aucun
                 *  \return CDate, la date du jour
 		*/
-		CDate today();
+		static CDate today();
 
 		/*!
 		*  \brief Afficher date
