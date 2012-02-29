@@ -47,33 +47,24 @@ void Parc::ajouterLocation () {
 	int t_kilom, t_nbPlaces = 0;
 	float t_poidsUtile, t_volumeUtile;
 	string t_input = "";
-	
-	// si t_type == c ou u;
-	// t_volume = entrerVolume;
-	// si t_type == u;
-	// t_poids == entrerPoids;
-	// si t_type = v
-	// entrer t_nbPlaces
-
+//----------------------------------------------------------------------
 	entrerTypeVeh(t_type);
 	entrerImmat(t_immat);
 	entrerMarqueModele(t_marque, t_modele);
 	entrerKilometrage(t_kilom);
-		// Si c'est un camion => poidsUtile + volumeUtile
-		if (t_type == "c") {
-			entrerPoidsUtile(t_poidsUtile);
-			entrerVolumeUtile(t_volumeUtile);
-			m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
-		}
-		// Si c'est une voiture => nbPlaces
-		else if (t_type == "v") {
+		if (t_type == "v") {
 			entrerNbPlaces(t_nbPlaces);
 			m_parcAuto.push_back(Location(new VP(t_immat, t_marque, t_modele, t_nbPlaces), t_kilom));
 		}
-		// Si c'est un utilitaire => volumeUtile
-		else if (t_type == "u") {
+		if (t_type == "c" || t_type == "u") {
 			entrerVolumeUtile(t_volumeUtile);
-			m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+			if (t_type == "u") {
+				m_parcAuto.push_back(Location(new Utilitaire(t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+			}
+			else {
+				entrerPoidsUtile(t_poidsUtile);
+				m_parcAuto.push_back(Location(new Camion(t_poidsUtile,t_volumeUtile, t_immat, t_marque, t_modele), t_kilom));
+			}
 		}
 	cout << "Véhicule ajouté !" << endl;
 }
