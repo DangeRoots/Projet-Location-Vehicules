@@ -47,22 +47,19 @@ void Parc::ajouterLocation () {
 	int t_kilom, t_nbPlaces = 0;
 	float t_poidsUtile, t_volumeUtile;
 	string t_input = "";
-	bool existe = true;
-	while (t_type != 'c' && t_type != 'v' && t_type != 'u') {
-		cout << "Type de véhicule (v/c/u) : ";
-		cin >> t_type;
-		if (t_type != 'c' && t_type != 'v' && t_type != 'u')
-			cout << "Type incorrect ! " << endl;
-	}
-	while (existe) {
-		cout << "Immatriculation  : ";
-		cin >> t_immat;
-		Tools::stringToUpper(t_immat);
-		Location tmp;
-		existe = rechercherLocation(t_immat,tmp);
-		if (existe)
-			cout << "Véhicule existant !" << endl;
-	}
+	
+	// t_marque = entrerMarque;
+	// t_modele = entrerModele;
+	// si t_type == c ou u;
+	// t_volume = entrerVolume;
+	// si t_type == u;
+	// t_poids == entrerPoids;
+	// si t_type = v
+	// entrer t_nbPlaces
+
+	entrerTypeVeh(t_type);
+	entrerImmat(t_immat);
+	
 	cout << "Marque  : ";
 	cin >> t_marque;
 	cout << "Modele  : ";
@@ -161,5 +158,27 @@ void Parc::afficher() {
 void Parc::sauvegarder(fstream &inFile) {
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
 		m_parcAutoI->save(inFile);
+	}
+}
+
+void Parc::entrerTypeVeh(char &t_type) {
+	while (t_type != 'c' && t_type != 'v' && t_type != 'u') {
+		cout << "Type de véhicule (v/c/u) : ";
+		cin >> t_type;
+		if (t_type != 'c' && t_type != 'v' && t_type != 'u')
+			cout << "Type incorrect ! " << endl;
+	}
+}
+
+void Parc::entrerImmat(string &t_immat) {
+	bool existe = true;
+	while (existe) {
+		cout << "Immatriculation  : ";
+		cin >> t_immat;
+		Tools::stringToUpper(t_immat);
+		Location tmp;
+		existe = rechercherLocation(t_immat,tmp);
+		if (existe)
+			cout << "Véhicule existant !" << endl;
 	}
 }
