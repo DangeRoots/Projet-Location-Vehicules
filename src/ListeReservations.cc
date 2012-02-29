@@ -23,12 +23,13 @@ ListeReservations::ListeReservations (fstream &inFile) {
 	}
 }
 
+/*
 ListeReservations::ListeReservations() {
 }
+*/
 
 ListeReservations::~ListeReservations() {
 }
-
 
 bool ListeReservations::ajouterReservation (Reservation res) {
 	m_listeReservationsI = m_listeReservations.begin();
@@ -63,8 +64,12 @@ bool ListeReservations::ajouterReservation (Reservation res) {
 
 
 void ListeReservations::afficher(Parc p) {
-	for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
-		m_listeReservationsI->afficher(p);
+	if (m_listeReservations.empty())
+		cout << "Aucune réservation !" << endl;
+	else {
+		for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
+			m_listeReservationsI->afficher(p);
+		}
 	}
 }
 

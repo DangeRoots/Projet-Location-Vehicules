@@ -41,7 +41,7 @@ class ListeReservations {
 		*
 		*  \param aucun
 		*/
-		ListeReservations();
+		// ListeReservations();
 		
 		/*!
 		*  \brief Destructeur
