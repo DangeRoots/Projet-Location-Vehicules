@@ -25,6 +25,8 @@ class Parc {
 	private:
 		list<Location> m_parcAuto;
 		list<Location>::iterator m_parcAutoI;
+		void entrerTypeVeh(char &t);
+		void entrerImmat(string &i);
 		
 	public:
 		/*!
