@@ -87,6 +87,10 @@ class Tools {
 		 */				
 		static void stringToUpper (string &chaine);
 		
+		static void charToUpper (char &c);
+		
+		static void charToLower (char &c);
+		
 		static int stringToInt(const string val);
 };
 #endif

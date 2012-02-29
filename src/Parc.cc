@@ -48,8 +48,6 @@ void Parc::ajouterLocation () {
 	float t_poidsUtile, t_volumeUtile;
 	string t_input = "";
 	
-	// t_marque = entrerMarque;
-	// t_modele = entrerModele;
 	// si t_type == c ou u;
 	// t_volume = entrerVolume;
 	// si t_type == u;
@@ -59,21 +57,9 @@ void Parc::ajouterLocation () {
 
 	entrerTypeVeh(t_type);
 	entrerImmat(t_immat);
-	
-	cout << "Marque  : ";
-	cin >> t_marque;
-	cout << "Modele  : ";
-	cin >> t_modele;
-	Tools::stringToUpper(t_marque);
-	Tools::stringToUpper(t_modele);
-	while (!Tools::estEntier(t_input)){
-		cout << "Kilométrage  : ";
-		cin >> t_input;
-		if (Tools::estEntier(t_input)){
-			t_kilom = Tools::stringToInt(t_input);
-		} else 
-			cout << "Veuillez entrer un nombre !"<< endl;
-	}
+	entrerMarqueModele(t_marque, t_modele);
+	entrerKilometrage(t_kilom);
+
 	//
 	t_input = "";
 	if (t_type == 'c') {
@@ -165,6 +151,7 @@ void Parc::entrerTypeVeh(char &t_type) {
 	while (t_type != 'c' && t_type != 'v' && t_type != 'u') {
 		cout << "Type de véhicule (v/c/u) : ";
 		cin >> t_type;
+		Tools::charToLower(t_type);
 		if (t_type != 'c' && t_type != 'v' && t_type != 'u')
 			cout << "Type incorrect ! " << endl;
 	}
@@ -181,4 +168,25 @@ void Parc::entrerImmat(string &t_immat) {
 		if (existe)
 			cout << "Véhicule existant !" << endl;
 	}
+}
+
+void Parc::entrerMarqueModele(string &t_marque, string &t_modele) {
+	cout << "Marque  : ";
+	cin >> t_marque;
+	cout << "Modele  : ";
+	cin >> t_modele;
+	Tools::stringToUpper(t_marque);
+	Tools::stringToUpper(t_modele);	
+}
+
+void Parc::entrerKilometrage(int &t_kilom) {
+	string t_input = "";
+	while (!Tools::estEntier(t_input)){
+		cout << "Kilométrage  : ";
+		cin >> t_input;
+		if (Tools::estEntier(t_input)){
+			t_kilom = Tools::stringToInt(t_input);
+		} else 
+			cout << "Veuillez entrer un nombre !"<< endl;
+	}	
 }

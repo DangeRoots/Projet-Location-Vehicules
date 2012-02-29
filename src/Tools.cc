@@ -1,5 +1,6 @@
 #include <sstream>
 #include <algorithm>
+#include <cctype>
 
 using namespace std;
 
@@ -46,4 +47,11 @@ void Tools::stringToUpper (string &chaine) {
 	transform(chaine.begin(), chaine.end(), chaine.begin(), ::toupper);
 }
 
+void Tools::charToUpper (char &c) {
+	c = toupper(c);
+}
+
+void Tools::charToLower (char &c) {
+	c = tolower(c);
+}
 
