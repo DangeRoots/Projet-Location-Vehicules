@@ -4,33 +4,56 @@
 #include <iostream>
 #include <vector>
 
+/*!
+ * \file LocMenu.h
+ * \brief Classe LocMenu
+ * 
+ *  Cette classe permet de gérer le menu du logiciel de location
+ * 
+ * \author Gilles Coulais, Icham Sirat
+ * \version 0.1
+ */
+
 class LocMenu {
 
 	private:
-		vector<string> entrees;		
-		vector<string>::iterator menuI;
+			vector<string> entrees;		
+			vector<string>::iterator menuI;
 
 	public:
-
-	LocMenu();
-	
-	~LocMenu(); 
-	
-<<<<<<< HEAD
-	void afficher();
-
-	int recupererValeur(string texte);
-
-	void traiter(int choix);
-=======
+			
+		/*!
+		*  \brief Constructeur
+		*
+		*  Constructeur de la classe LocMenu
+		*
+		*  \param aucun
+		*/
 		LocMenu();
-		~LocMenu();		void afficher();
+
+		/*!
+		*  \brief Destructeur
+		*
+		*  Destructeur de la classe LocMenu
+		* 
+		*  \param aucun
+		*/				
+		~LocMenu(); 
+
+		/*!
+		*  \brief Afficher la liste du menu
+		*
+		*  Affiche la liste du menu. Le numéro qui précède l'intitulé du choix est le numéro du choix.
+		*
+		*  \param aucun
+		*  \return void
+		*/				
+		void afficher();
 
 		int recupererValeur(string texte);
 
 		void traiter(int choix);
 
->>>>>>> f61d26916c025588f072926c09374e5e62c83228
 };
 
 #endif

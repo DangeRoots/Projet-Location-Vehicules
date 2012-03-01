@@ -1,7 +1,6 @@
 using namespace std;
 
 #include <LocMenu.h>
-<<<<<<< HEAD
 
 /*! Dans le main
  * Avant la boucle : LocMenu monMenu;
@@ -27,8 +26,6 @@ void LocMenu::afficher() {
 	while (menuI != entrees.end()){
     cout << *menuI << endl;
     menuI ++;}
-
-	
 }
 
 int LocMenu::recupererValeur(string texte) {
@@ -104,21 +101,4 @@ int main() {
 	}
 	
 	return 0;
-=======
 
-LocMenu::LocMenu() {
-}
-		
-LocMenu::~LocMenu() {
-}
-
-void LocMenu::afficher() {
-}
-
-int LocMenu::recupererValeur(string texte) {
-	return 42;
-}
-
-void LocMenu::traiter(int choix) {
->>>>>>> f61d26916c025588f072926c09374e5e62c83228
-}
