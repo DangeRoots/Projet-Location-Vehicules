@@ -7,7 +7,7 @@
 class LocMenu {
 
 	private:
-		vector<string> entrees;
+		vector<string> entrees;		
 		vector<string>::iterator menuI;
 
 	public:
@@ -16,11 +16,21 @@ class LocMenu {
 	
 	~LocMenu(); 
 	
+<<<<<<< HEAD
 	void afficher();
 
 	int recupererValeur(string texte);
 
 	void traiter(int choix);
+=======
+		LocMenu();
+		~LocMenu();		void afficher();
+
+		int recupererValeur(string texte);
+
+		void traiter(int choix);
+
+>>>>>>> f61d26916c025588f072926c09374e5e62c83228
 };
 
 #endif
