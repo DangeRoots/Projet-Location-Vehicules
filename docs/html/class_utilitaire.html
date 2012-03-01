@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -80,8 +80,8 @@ Graphe d'héritage de Utilitaire:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#a8ccd7739f6755868098c7ba8c48ed3ef">Utilitaire</a> (float volume, string immat, string marque, string modele, int kilom)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a8ccd7739f6755868098c7ba8c48ed3ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#a8fdab85b9894115b001e296eea151dec">Utilitaire</a> (float volume, string immat, string marque, string modele)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a8fdab85b9894115b001e296eea151dec"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#a8a4af48b60aaeefe9b6399ed94495662">Utilitaire</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a8a4af48b60aaeefe9b6399ed94495662"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#af6e70ea8eb994ab8744429b37d5a9934">~Utilitaire</a> ()</td></tr>
@@ -92,9 +92,11 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier volume utile.  <a href="#a085a6c510c036cbb88d91682751f3588"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#a1092986e687a5a907bc86d252a8416c9">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher utilitaire.  <a href="#a1092986e687a5a907bc86d252a8416c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilitaire.html#a7ee59be5d77191b06b2c959bdf2297b7">save</a> (fstream &amp;fs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarder utilitaire  <a href="#a7ee59be5d77191b06b2c959bdf2297b7"></a><br/></td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a8ccd7739f6755868098c7ba8c48ed3ef"></a><!-- doxytag: member="Utilitaire::Utilitaire" ref="a8ccd7739f6755868098c7ba8c48ed3ef" args="(float volume, string immat, string marque, string modele, int kilom)" -->
+<a class="anchor" id="a8fdab85b9894115b001e296eea151dec"></a><!-- doxytag: member="Utilitaire::Utilitaire" ref="a8fdab85b9894115b001e296eea151dec" args="(float volume, string immat, string marque, string modele)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -120,13 +122,7 @@ Fonctions membres publiques</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>modele</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>kilom</em>&#160;</td>
+          <td class="paramname"><em>modele</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -145,7 +141,6 @@ Fonctions membres publiques</h2></td></tr>
     <tr><td class="paramname">immat,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
     <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
     <tr><td class="paramname">modele,chaîne</td><td>de caractères, le kilométrage du véhicule </td></tr>
-    <tr><td class="paramname">kilom,entier,le</td><td>kilométrage du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -247,6 +242,37 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7ee59be5d77191b06b2c959bdf2297b7"></a><!-- doxytag: member="Utilitaire::save" ref="a7ee59be5d77191b06b2c959bdf2297b7" args="(fstream &amp;fs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Utilitaire::save </td>
+          <td>(</td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>sauvegarder utilitaire </p>
+<p>Sauvegarde l'utilitaire</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">fs</td><td>fstream, le fichier de sauvegarde </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+<p>Réimplémentée à partir de <a class="el" href="class_vehicule.html#a197353085208f6ceaf70c8e0303e4581">Vehicule</a>.</p>
+
+<p>Réimplémentée dans <a class="el" href="class_camion.html#a2c715c85952a7e0bb2948494d79157b8">Camion</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a085a6c510c036cbb88d91682751f3588"></a><!-- doxytag: member="Utilitaire::setVolumeUtile" ref="a085a6c510c036cbb88d91682751f3588" args="(float volume)" -->
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +318,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:37 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

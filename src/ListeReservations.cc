@@ -34,30 +34,36 @@ ListeReservations::~ListeReservations() {
 bool ListeReservations::ajouterReservation (Reservation res) {
 	m_listeReservationsI = m_listeReservations.begin();
 	bool ajouter = true;
-	// vérification des réservations existantes et chevauchement des périodes de location
-	while (ajouter && (m_listeReservationsI != m_listeReservations.end())) {
-		if (res.getVehicule() == m_listeReservationsI->getVehicule()) {
-			if (res.getDate('d') == m_listeReservationsI->getDate('d'))
-				ajouter = false;
-			else if (	res.getDate('d') > m_listeReservationsI->getDate('d') &&
-						(res.getDate('d') < m_listeReservationsI->getDate('r') ||
-						res.getDate('d') == m_listeReservationsI->getDate('r')))
-				ajouter = false;
-			else if (	res.getDate('d') < m_listeReservationsI->getDate('d') &&
-						(res.getDate('r') > m_listeReservationsI->getDate('d') ||
-						res.getDate('r') == m_listeReservationsI->getDate('d')))
-				ajouter = false;
-			else
-				m_listeReservationsI++;
-		} else
-			m_listeReservationsI++;
-	}
-	
-	// Ajout ou rejet de la réservation
-	if (!ajouter) {
-		cout << "Réservation impossible : pas de disponibilité aux dates demandées" << endl;
+	// Cohérence des dates
+	if (res.getDate('d') > res.getDate('r')) {
+		ajouter = false;
+		cout << "La date de retour doit être supérieure ou égale à la date de départ." << endl;
 	} else {
-		m_listeReservations.push_back(res);
+		// vérification des réservations existantes et chevauchement des périodes de location
+		while (ajouter && (m_listeReservationsI != m_listeReservations.end())) {
+			if (res.getVehicule() == m_listeReservationsI->getVehicule()) {
+				if (res.getDate('d') == m_listeReservationsI->getDate('d'))
+					ajouter = false;
+				else if (	res.getDate('d') > m_listeReservationsI->getDate('d') &&
+							(res.getDate('d') < m_listeReservationsI->getDate('r') ||
+							res.getDate('d') == m_listeReservationsI->getDate('r')))
+					ajouter = false;
+				else if (	res.getDate('d') < m_listeReservationsI->getDate('d') &&
+							(res.getDate('r') > m_listeReservationsI->getDate('d') ||
+							res.getDate('r') == m_listeReservationsI->getDate('d')))
+					ajouter = false;
+				else
+					m_listeReservationsI++;
+			} else
+				m_listeReservationsI++;
+		}
+		
+		// Ajout ou rejet de la réservation
+		if (!ajouter) {
+			cout << "Réservation impossible : pas de disponibilité aux dates demandées" << endl;
+		} else {
+			m_listeReservations.push_back(res);
+		}
 	}
 	return ajouter;
 }

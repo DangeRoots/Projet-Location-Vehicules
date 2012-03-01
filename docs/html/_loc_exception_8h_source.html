@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Location de véhicules:  Fichier source de inc/LocException.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>inc/LocException.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_loc_exception_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef LOCEXCEPTION_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define LOCEXCEPTION_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;exception&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="keyword">using namespace </span>std;
+<a name="l00008"></a>00008 
+<a name="l00020"></a>00020 <span class="comment">//~ Commentaires particuliers</span>
+<a name="l00021"></a>00021 <span class="comment">//~ Voici le prototype du catch standard</span>
+<a name="l00022"></a>00022 <span class="comment">//~   catch(std::exception const&amp; e){</span>
+<a name="l00023"></a>00023 <span class="comment">//~     cerr &lt;&lt; &quot;ERREUR : &quot; &lt;&lt; e.what() &lt;&lt; endl;</span>
+<a name="l00024"></a>00024 <span class="comment">//~   }</span>
+<a name="l00025"></a>00025 <span class="comment">//~ Type d&#39;exception dérivant de la STL Exception (J&#39;ai pas encore compris =D)</span>
+<a name="l00026"></a>00026 <span class="comment">//~ domain_error                logique         A Lancer s&#39;il se produit une erreur de domaine mathématique.</span>
+<a name="l00027"></a>00027 <span class="comment">//~ invalid_argument    logique         A Lancer si un des arguments d&#39;une fonction est invalide.</span>
+<a name="l00028"></a>00028 <span class="comment">//~ length_error                logique         A Lancer si un objet aura une taille invalide.(ex: classe Pile qui a une taille dépassant la taille de la mémoire).</span>
+<a name="l00029"></a>00029 <span class="comment">//~ out_of_range                logique         A Lancer s&#39;il y a une erreur avec un indice.(ex: On essaye d&#39;accéder à une case inexistante d&#39;un tableau).</span>
+<a name="l00030"></a>00030 <span class="comment">//~ logic_error                 logique         A Lancer lors de n&#39;importe quel autre problème de logique du programme.</span>
+<a name="l00031"></a>00031 <span class="comment">//~ range_error                 exécution      A Lancer lors d&#39;une erreur de domaine à l&#39;exécution.</span>
+<a name="l00032"></a>00032 <span class="comment">//~ overflow_error              exécution      A Lancer s&#39;il y a une erreur d&#39;overflow.</span>
+<a name="l00033"></a>00033 <span class="comment">//~ underflow_error     exécution      A Lancer s&#39;il y a une erreur d&#39;underflow.</span>
+<a name="l00034"></a>00034 <span class="comment">//~ runtime_error               exécution      A Lancer pour tout autre type d&#39;erreur non-prévue survenant à l&#39;exécution.</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036  
+<a name="l00037"></a><a class="code" href="class_loc_exception.html">00037</a> <span class="keyword">class </span><a class="code" href="class_loc_exception.html">LocException</a>: <span class="keyword">public</span> exception{
+<a name="l00038"></a>00038         <span class="keyword">private</span>:
+<a name="l00039"></a>00039                 <span class="keywordtype">int</span> m_numero;               <span class="comment">// Numéro de l&#39;erreur.</span>
+<a name="l00040"></a>00040                 <span class="keywordtype">string</span> m_phrase;            <span class="comment">// Description de l&#39;erreur.</span>
+<a name="l00041"></a>00041                 <span class="keywordtype">int</span> m_niveau;               <span class="comment">// Niveau de l&#39;erreur.</span>
+<a name="l00042"></a>00042     
+<a name="l00043"></a>00043         <span class="keyword">public</span>:
+<a name="l00053"></a><a class="code" href="class_loc_exception.html#aab9f8d83c21dab10e85f49563d15baad">00053</a>                 <a class="code" href="class_loc_exception.html">LocException</a> (<span class="keywordtype">int</span> numero=0, <span class="keywordtype">string</span> <span class="keyword">const</span>&amp; phrase=<span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">int</span> niveau=0) 
+<a name="l00054"></a>00054                                         throw() : m_numero(numero),m_phrase(phrase),m_niveau(niveau){
+<a name="l00055"></a>00055                 }
+<a name="l00056"></a>00056                 
+<a name="l00066"></a><a class="code" href="class_loc_exception.html#a52ff1f609218097252ac7232a4305e28">00066</a>                 <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_loc_exception.html#a52ff1f609218097252ac7232a4305e28" title="Récupérer le libellé de l&amp;#39;exception.">what</a>() <span class="keyword">const</span> throw(){
+<a name="l00067"></a>00067                         <span class="keywordflow">return</span> m_phrase.c_str();
+<a name="l00068"></a>00068                 }
+<a name="l00069"></a>00069 
+<a name="l00079"></a><a class="code" href="class_loc_exception.html#a1ba59653e71c4c564a8336a15b8a224e">00079</a>                 <span class="keywordtype">int</span> <a class="code" href="class_loc_exception.html#a1ba59653e71c4c564a8336a15b8a224e" title="Récupérer le niveau de l&amp;#39;exception.">getNiveau</a>() <span class="keyword">const</span> throw(){
+<a name="l00080"></a>00080                         <span class="keywordflow">return</span> m_niveau;
+<a name="l00081"></a>00081                 }
+<a name="l00082"></a>00082                 
+<a name="l00088"></a><a class="code" href="class_loc_exception.html#a438ab07885f36f304b84e8efaf8dda8a">00088</a>                 <span class="keyword">virtual</span> <a class="code" href="class_loc_exception.html#a438ab07885f36f304b84e8efaf8dda8a" title="Destructeur.">~Erreur</a>() throw(){
+<a name="l00089"></a>00089                 }
+<a name="l00090"></a>00090 };
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:15 pour Location de véhicules par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>

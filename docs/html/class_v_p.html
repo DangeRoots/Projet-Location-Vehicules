@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -79,8 +79,8 @@ Graphe d'héritage de VP:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#a5891d83afa50a284ac37e84935bb793e">VP</a> (string immat, string marque, string modele, int kilometrage, int nbPlaces)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5891d83afa50a284ac37e84935bb793e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#a4bde97e27db770144037907d2eb0d081">VP</a> (string immat, string marque, string modele, int nbPlaces)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a4bde97e27db770144037907d2eb0d081"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#ad67a48c8f2f8d3cc8466431d4e0c2949">VP</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#ad67a48c8f2f8d3cc8466431d4e0c2949"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#ae9afa0cd76ea91730282e2ae82d0e203">~VP</a> ()</td></tr>
@@ -91,9 +91,11 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier le nombre de places.  <a href="#a678d522ed1085e94814660d93edd9e7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#a3af04349e81a3c643b497898ad19ef7a">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher <a class="el" href="class_v_p.html">VP</a>.  <a href="#a3af04349e81a3c643b497898ad19ef7a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_p.html#a3fe677e58cb952b7784d5f661ef426e6">save</a> (fstream &amp;fs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarder <a class="el" href="class_v_p.html">VP</a>  <a href="#a3fe677e58cb952b7784d5f661ef426e6"></a><br/></td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a5891d83afa50a284ac37e84935bb793e"></a><!-- doxytag: member="VP::VP" ref="a5891d83afa50a284ac37e84935bb793e" args="(string immat, string marque, string modele, int kilometrage, int nbPlaces)" -->
+<a class="anchor" id="a4bde97e27db770144037907d2eb0d081"></a><!-- doxytag: member="VP::VP" ref="a4bde97e27db770144037907d2eb0d081" args="(string immat, string marque, string modele, int nbPlaces)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -119,12 +121,6 @@ Fonctions membres publiques</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>kilometrage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>nbPlaces</em>&#160;</td>
         </tr>
         <tr>
@@ -143,7 +139,6 @@ Fonctions membres publiques</h2></td></tr>
     <tr><td class="paramname">immat,chaîne</td><td>de caractères, l'immatriculation de la voiture </td></tr>
     <tr><td class="paramname">modele,chaîne</td><td>de caractères, le modèle de la voiture </td></tr>
     <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque de la voiture </td></tr>
-    <tr><td class="paramname">kilometrage,entier,le</td><td>kilométrage de la voiture </td></tr>
     <tr><td class="paramname">nbPlaces,entier,le</td><td>nombre de place de la voiture </td></tr>
   </table>
   </dd>
@@ -256,6 +251,35 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3fe677e58cb952b7784d5f661ef426e6"></a><!-- doxytag: member="VP::save" ref="a3fe677e58cb952b7784d5f661ef426e6" args="(fstream &amp;fs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VP::save </td>
+          <td>(</td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>sauvegarder <a class="el" href="class_v_p.html">VP</a> </p>
+<p>Sauvegarde le <a class="el" href="class_v_p.html">VP</a></p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aucun</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+<p>Réimplémentée à partir de <a class="el" href="class_vehicule.html#a197353085208f6ceaf70c8e0303e4581">Vehicule</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a678d522ed1085e94814660d93edd9e7c"></a><!-- doxytag: member="VP::setNbPlaces" ref="a678d522ed1085e94814660d93edd9e7c" args="(int nbPlaces)" -->
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +325,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:38 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

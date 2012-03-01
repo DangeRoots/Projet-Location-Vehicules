@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -66,32 +66,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div>
 <div class="contents">
 <!-- doxytag: class="Location" -->
-<p><code>#include &lt;<a class="el" href="_location_8h_source.html">Location.h</a>&gt;</code></p>
-
 <p><a href="class_location-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a87790c14997fd8cdd12080c78c9794bb">Location</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a87790c14997fd8cdd12080c78c9794bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a5a09ef0b7e8bd346553572e4a17e916a">Location</a> (<a class="el" href="class_vehicule.html">Vehicule</a> *vehicule, <a class="el" href="class_c_date.html">CDate</a> dateDepart, <a class="el" href="class_c_date.html">CDate</a> dateRetourPrevu, <a class="el" href="class_c_date.html">CDate</a> dateRetourReel)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5a09ef0b7e8bd346553572e4a17e916a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a104db0410ddd4543691f3c5c4514af7a">Location</a> (<a class="el" href="class_vehicule.html">Vehicule</a> *vehicule, int kilometrage)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a104db0410ddd4543691f3c5c4514af7a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#af5be2c6550bbd96137cbb3144ec3c529">~Location</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#af5be2c6550bbd96137cbb3144ec3c529"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_vehicule.html">Vehicule</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a3f130f10a4a558d6b792b1e538e9fb40">getVehicule</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Accéder au véhicule.  <a href="#a3f130f10a4a558d6b792b1e538e9fb40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a66eaf6883a88c65a6281ccf111db3c03">setVehicule</a> (<a class="el" href="class_vehicule.html">Vehicule</a> *veh)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier véhicule.  <a href="#a66eaf6883a88c65a6281ccf111db3c03"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_date.html">CDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a02e6d2fc6aca23b344994df6e128ccff">getDate</a> (char type)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Accéder date début.  <a href="#a02e6d2fc6aca23b344994df6e128ccff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#ab01cd2764d9db2771d2f2c7befa8123c">setDate</a> (<a class="el" href="class_c_date.html">CDate</a> date, char type)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier date.  <a href="#ab01cd2764d9db2771d2f2c7befa8123c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#ad7dadc3847da51c3c012f0647f011706">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher location.  <a href="#ad7dadc3847da51c3c012f0647f011706"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a21ba483682871d05f08f1edbf3dd51e2">operator==</a> (<a class="el" href="class_location.html">Location</a> &amp;loc)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Locations identiques.  <a href="#a21ba483682871d05f08f1edbf3dd51e2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f0d241221d66fbc59e786539cc6155c"></a><!-- doxytag: member="Location::save" ref="a0f0d241221d66fbc59e786539cc6155c" args="(fstream &amp;inFile)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &amp;inFile)</td></tr>
 </table>
-<hr/><a name="_details"></a><h2>Description détaillée</h2>
-<div class="textblock"><p>Remarques Déclarer un pointeur { <a class="el" href="class_vehicule.html">Vehicule</a> *m_vehicule; } affecter un pointeur { <a class="el" href="class_vehicule.html">Vehicule</a> veh; m_vehicule =  } allouer un pointeur { m_vehicule = new Vehicule() ; } </p>
-</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
+<hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a87790c14997fd8cdd12080c78c9794bb"></a><!-- doxytag: member="Location::Location" ref="a87790c14997fd8cdd12080c78c9794bb" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -117,7 +113,7 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5a09ef0b7e8bd346553572e4a17e916a"></a><!-- doxytag: member="Location::Location" ref="a5a09ef0b7e8bd346553572e4a17e916a" args="(Vehicule *vehicule, CDate dateDepart, CDate dateRetourPrevu, CDate dateRetourReel)" -->
+<a class="anchor" id="a104db0410ddd4543691f3c5c4514af7a"></a><!-- doxytag: member="Location::Location" ref="a104db0410ddd4543691f3c5c4514af7a" args="(Vehicule *vehicule, int kilometrage)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -130,20 +126,8 @@ Fonctions membres publiques</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_c_date.html">CDate</a>&#160;</td>
-          <td class="paramname"><em>dateDepart</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_c_date.html">CDate</a>&#160;</td>
-          <td class="paramname"><em>dateRetourPrevu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_c_date.html">CDate</a>&#160;</td>
-          <td class="paramname"><em>dateRetourReel</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kilometrage</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,10 +142,8 @@ Fonctions membres publiques</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_location.html">Location</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">vehicule,un</td><td>pointeur de véhicule </td></tr>
-    <tr><td class="paramname">dateDepart,objet</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de début de location, NULL si le véhicule n'est pas loué </td></tr>
-    <tr><td class="paramname">dateRetourPrevue,objet</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de fin prévue de la location, NULL si le véhicule n'est pas loué </td></tr>
-    <tr><td class="paramname">dateRetourReel,objet</td><td><a class="el" href="class_c_date.html">CDate</a>, la date réelle du retour location, NULL si le véhicule n'est pas loué ou s'il est en cours de location </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vehicule</td><td>Pointeur de véhicule, le véhicule de la location </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kilometrage</td><td>entier, le kilométrage du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -220,39 +202,6 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a02e6d2fc6aca23b344994df6e128ccff"></a><!-- doxytag: member="Location::getDate" ref="a02e6d2fc6aca23b344994df6e128ccff" args="(char type)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_date.html">CDate</a> Location::getDate </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Accéder date début. </p>
-<p>Permet d'obtenir les dates associées à la location : date de départ, date de retour prévu, date de retour réel</p>
-<dl><dt><b>Paramètres:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">type,caractère,le</td><td>type de date souhaité : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>un objet <a class="el" href="class_c_date.html">CDate</a> </dd></dl>
-<dl><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">si</td><td>type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a3f130f10a4a558d6b792b1e538e9fb40"></a><!-- doxytag: member="Location::getVehicule" ref="a3f130f10a4a558d6b792b1e538e9fb40" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -279,47 +228,32 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab01cd2764d9db2771d2f2c7befa8123c"></a><!-- doxytag: member="Location::setDate" ref="ab01cd2764d9db2771d2f2c7befa8123c" args="(CDate date, char type)" -->
+<a class="anchor" id="a21ba483682871d05f08f1edbf3dd51e2"></a><!-- doxytag: member="Location::operator==" ref="a21ba483682871d05f08f1edbf3dd51e2" args="(Location &amp;loc)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Location::setDate </td>
+          <td class="memname">bool Location::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_date.html">CDate</a>&#160;</td>
-          <td class="paramname"><em>date</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="class_location.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>loc</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Modifier date. </p>
-<p>Permet de modifier les dates associées à la location : date de départ, date de retour prévu, date de retour réel</p>
+<p>Locations identiques. </p>
+<p>Permet de savoir si deux locations sont identiques</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">date,objet</td><td><a class="el" href="class_c_date.html">CDate</a>, la nouvelle date </td></tr>
-    <tr><td class="paramname">type,caractère,le</td><td>type de date à modifier : d pour dateDepart, r pour dateRetourReel, p pour dateRetourPrevu </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td><a class="el" href="class_location.html">Location</a>, la location à comparer </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
-<dl><dt><b>Exceptions:</b></dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">si</td><td>type différent de "d", "r", ou "p", lance une erreur "erreur(1) mauvais type de date" </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>true si elles sont identiques </dd>
+<dd>
+false si elles sont différentes </dd></dl>
 
 </div>
 </div>
@@ -368,7 +302,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:37 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
