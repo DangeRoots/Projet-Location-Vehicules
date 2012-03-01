@@ -11,7 +11,7 @@ Graphe d'héritage de VP:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_v_p_a5891d83afa50a284ac37e84935bb793e}{VP} (string immat, string marque, string modele, int kilometrage, int nbPlaces)
+\hyperlink{class_v_p_a4bde97e27db770144037907d2eb0d081}{VP} (string immat, string marque, string modele, int nbPlaces)
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
 \hyperlink{class_v_p_ad67a48c8f2f8d3cc8466431d4e0c2949}{VP} ()
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
@@ -22,11 +22,13 @@ int \hyperlink{class_v_p_a6e6a4443cb9f83e0d94e3459b70bd73d}{getNbPlaces} ()
 void \hyperlink{class_v_p_a678d522ed1085e94814660d93edd9e7c}{setNbPlaces} (int nbPlaces)
 \begin{DoxyCompactList}\small\item\em Modifier le nombre de places. \item\end{DoxyCompactList}\item 
 virtual void \hyperlink{class_v_p_a3af04349e81a3c643b497898ad19ef7a}{afficher} ()
-\begin{DoxyCompactList}\small\item\em Afficher \hyperlink{class_v_p}{VP}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afficher \hyperlink{class_v_p}{VP}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_v_p_a3fe677e58cb952b7784d5f661ef426e6}{save} (fstream \&fs)
+\begin{DoxyCompactList}\small\item\em sauvegarder \hyperlink{class_v_p}{VP} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{class_v_p_a5891d83afa50a284ac37e84935bb793e}{
+\hypertarget{class_v_p_a4bde97e27db770144037907d2eb0d081}{
 \index{VP@{VP}!VP@{VP}}
 \index{VP@{VP}!VP@{VP}}
 \subsubsection[{VP}]{\setlength{\rightskip}{0pt plus 5cm}VP::VP (
@@ -34,11 +36,10 @@ virtual void \hyperlink{class_v_p_a3af04349e81a3c643b497898ad19ef7a}{afficher} (
 \item[{string}]{immat, }
 \item[{string}]{marque, }
 \item[{string}]{modele, }
-\item[{int}]{kilometrage, }
 \item[{int}]{nbPlaces}
 \end{DoxyParamCaption}
 )}}
-\label{class_v_p_a5891d83afa50a284ac37e84935bb793e}
+\label{class_v_p_a4bde97e27db770144037907d2eb0d081}
 
 
 Constructeur. 
@@ -52,8 +53,6 @@ Constructeur de la classe \hyperlink{class_v_p}{VP}
 {\em modele,chaîne} & de caractères, le modèle de la voiture \\
 \hline
 {\em marque,chaîne} & de caractères, la marque de la voiture \\
-\hline
-{\em kilometrage,entier,le} & kilométrage de la voiture \\
 \hline
 {\em nbPlaces,entier,le} & nombre de place de la voiture \\
 \hline
@@ -151,6 +150,33 @@ Permet d'obtenir le nombre de place de la voiture
 \begin{DoxyReturn}{Renvoie}
 m\_\-nbPlaces, entier, le nombre de place de la voiture 
 \end{DoxyReturn}
+\hypertarget{class_v_p_a3fe677e58cb952b7784d5f661ef426e6}{
+\index{VP@{VP}!save@{save}}
+\index{save@{save}!VP@{VP}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual void VP::save (
+\begin{DoxyParamCaption}
+\item[{fstream \&}]{fs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_v_p_a3fe677e58cb952b7784d5f661ef426e6}
+
+
+sauvegarder \hyperlink{class_v_p}{VP} 
+
+Sauvegarde le \hyperlink{class_v_p}{VP}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em aucun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_vehicule_a197353085208f6ceaf70c8e0303e4581}{Vehicule}.
+
 \hypertarget{class_v_p_a678d522ed1085e94814660d93edd9e7c}{
 \index{VP@{VP}!setNbPlaces@{setNbPlaces}}
 \index{setNbPlaces@{setNbPlaces}!VP@{VP}}

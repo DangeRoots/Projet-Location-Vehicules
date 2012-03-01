@@ -11,7 +11,7 @@ Graphe d'héritage de Utilitaire:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_utilitaire_a8ccd7739f6755868098c7ba8c48ed3ef}{Utilitaire} (float volume, string immat, string marque, string modele, int kilom)
+\hyperlink{class_utilitaire_a8fdab85b9894115b001e296eea151dec}{Utilitaire} (float volume, string immat, string marque, string modele)
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
 \hyperlink{class_utilitaire_a8a4af48b60aaeefe9b6399ed94495662}{Utilitaire} ()
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
@@ -22,11 +22,13 @@ float \hyperlink{class_utilitaire_acde47d7bc100eb5fdf2195bb8307d36a}{getVolumeUt
 void \hyperlink{class_utilitaire_a085a6c510c036cbb88d91682751f3588}{setVolumeUtile} (float volume)
 \begin{DoxyCompactList}\small\item\em Modifier volume utile. \item\end{DoxyCompactList}\item 
 virtual void \hyperlink{class_utilitaire_a1092986e687a5a907bc86d252a8416c9}{afficher} ()
-\begin{DoxyCompactList}\small\item\em Afficher utilitaire. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afficher utilitaire. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_utilitaire_a7ee59be5d77191b06b2c959bdf2297b7}{save} (fstream \&fs)
+\begin{DoxyCompactList}\small\item\em sauvegarder utilitaire \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{class_utilitaire_a8ccd7739f6755868098c7ba8c48ed3ef}{
+\hypertarget{class_utilitaire_a8fdab85b9894115b001e296eea151dec}{
 \index{Utilitaire@{Utilitaire}!Utilitaire@{Utilitaire}}
 \index{Utilitaire@{Utilitaire}!Utilitaire@{Utilitaire}}
 \subsubsection[{Utilitaire}]{\setlength{\rightskip}{0pt plus 5cm}Utilitaire::Utilitaire (
@@ -34,11 +36,10 @@ virtual void \hyperlink{class_utilitaire_a1092986e687a5a907bc86d252a8416c9}{affi
 \item[{float}]{volume, }
 \item[{string}]{immat, }
 \item[{string}]{marque, }
-\item[{string}]{modele, }
-\item[{int}]{kilom}
+\item[{string}]{modele}
 \end{DoxyParamCaption}
 )}}
-\label{class_utilitaire_a8ccd7739f6755868098c7ba8c48ed3ef}
+\label{class_utilitaire_a8fdab85b9894115b001e296eea151dec}
 
 
 Constructeur. 
@@ -54,8 +55,6 @@ Constructeur de la classe \hyperlink{class_vehicule}{Vehicule}
 {\em marque,chaîne} & de caractères, la marque du véhicule \\
 \hline
 {\em modele,chaîne} & de caractères, le kilométrage du véhicule \\
-\hline
-{\em kilom,entier,le} & kilométrage du véhicule \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_utilitaire_a8a4af48b60aaeefe9b6399ed94495662}{
@@ -141,6 +140,37 @@ Renvoie le volume utile
 \begin{DoxyReturn}{Renvoie}
 float le volume utile 
 \end{DoxyReturn}
+\hypertarget{class_utilitaire_a7ee59be5d77191b06b2c959bdf2297b7}{
+\index{Utilitaire@{Utilitaire}!save@{save}}
+\index{save@{save}!Utilitaire@{Utilitaire}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Utilitaire::save (
+\begin{DoxyParamCaption}
+\item[{fstream \&}]{fs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_utilitaire_a7ee59be5d77191b06b2c959bdf2297b7}
+
+
+sauvegarder utilitaire 
+
+Sauvegarde l'utilitaire
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em fs} & fstream, le fichier de sauvegarde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_vehicule_a197353085208f6ceaf70c8e0303e4581}{Vehicule}.
+
+
+
+Réimplémentée dans \hyperlink{class_camion_a2c715c85952a7e0bb2948494d79157b8}{Camion}.
+
 \hypertarget{class_utilitaire_a085a6c510c036cbb88d91682751f3588}{
 \index{Utilitaire@{Utilitaire}!setVolumeUtile@{setVolumeUtile}}
 \index{setVolumeUtile@{setVolumeUtile}!Utilitaire@{Utilitaire}}

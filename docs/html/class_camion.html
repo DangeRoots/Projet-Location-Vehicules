@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -80,8 +80,8 @@ Graphe d'héritage de Camion:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#aa3d47c07926da939f321faad61cbcf9c">Camion</a> (float poids, float volume, string immat, string marque, string modele, int kilom)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#aa3d47c07926da939f321faad61cbcf9c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#ac33dc959ae263b822638aa73b9438ab1">Camion</a> (float poids, float volume, string immat, string marque, string modele)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#ac33dc959ae263b822638aa73b9438ab1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#a5eb698c16331e4fab2ba2cbfebbea8a4">Camion</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5eb698c16331e4fab2ba2cbfebbea8a4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#abd045aad98d33e8e353dcf1a6a7832c7">~Camion</a> ()</td></tr>
@@ -92,9 +92,11 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier poids utile.  <a href="#a3fe83aa0652ec440e915d983ac46f7d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#a1b7d9e844a03b1a1e7143a7618911157">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher utilitaire.  <a href="#a1b7d9e844a03b1a1e7143a7618911157"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#a2c715c85952a7e0bb2948494d79157b8">save</a> (fstream &amp;fs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarder camion  <a href="#a2c715c85952a7e0bb2948494d79157b8"></a><br/></td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="aa3d47c07926da939f321faad61cbcf9c"></a><!-- doxytag: member="Camion::Camion" ref="aa3d47c07926da939f321faad61cbcf9c" args="(float poids, float volume, string immat, string marque, string modele, int kilom)" -->
+<a class="anchor" id="ac33dc959ae263b822638aa73b9438ab1"></a><!-- doxytag: member="Camion::Camion" ref="ac33dc959ae263b822638aa73b9438ab1" args="(float poids, float volume, string immat, string marque, string modele)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -126,13 +128,7 @@ Fonctions membres publiques</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>modele</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>kilom</em>&#160;</td>
+          <td class="paramname"><em>modele</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,7 +148,6 @@ Fonctions membres publiques</h2></td></tr>
     <tr><td class="paramname">immat,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
     <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
     <tr><td class="paramname">modele,chaîne</td><td>de caractères, le kilométrage du véhicule </td></tr>
-    <tr><td class="paramname">kilom,entier,le</td><td>kilométrage du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,6 +247,35 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2c715c85952a7e0bb2948494d79157b8"></a><!-- doxytag: member="Camion::save" ref="a2c715c85952a7e0bb2948494d79157b8" args="(fstream &amp;fs)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Camion::save </td>
+          <td>(</td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>sauvegarder camion </p>
+<p>Sauvegarde le camion</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">fs</td><td>fstream, le fichier de sauvegarde </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+<p>Réimplémentée à partir de <a class="el" href="class_utilitaire.html#a7ee59be5d77191b06b2c959bdf2297b7">Utilitaire</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3fe83aa0652ec440e915d983ac46f7d7"></a><!-- doxytag: member="Camion::setPoidsUtile" ref="a3fe83aa0652ec440e915d983ac46f7d7" args="(float poids)" -->
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +321,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:37 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

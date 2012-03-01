@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Location de véhicules:  Fichier source de inc/Reservation.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.3 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>inc/Reservation.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_reservation_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef RESERVATION_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define RESERVATION_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;<a class="code" href="_c_date_8h.html" title="Classe cdate.">CDate.h</a>&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;<a class="code" href="_parc_8h.html" title="Classe Parc.">Parc.h</a>&gt;</span>
+<a name="l00008"></a>00008 
+<a name="l00019"></a><a class="code" href="class_reservation.html">00019</a> <span class="keyword">class </span><a class="code" href="class_reservation.html">Reservation</a> {
+<a name="l00020"></a>00020         <span class="keyword">private</span> :
+<a name="l00021"></a>00021                 <span class="keywordtype">string</span> m_vehicule;
+<a name="l00022"></a>00022                 <a class="code" href="class_c_date.html">CDate</a> m_dateDepart, m_dateRetour;
+<a name="l00023"></a>00023                 
+<a name="l00024"></a>00024         <span class="keyword">public</span> :
+<a name="l00034"></a>00034                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a> (<span class="keywordtype">string</span> veh, <a class="code" href="class_c_date.html">CDate</a> dateDep, <a class="code" href="class_c_date.html">CDate</a> dateRet);
+<a name="l00035"></a>00035                 
+<a name="l00043"></a>00043                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a>();
+<a name="l00044"></a>00044                 
+<a name="l00052"></a>00052                 <a class="code" href="class_reservation.html#abf387b06b84f8a12c8e2e95d431d3d60" title="Destructeur.">~Reservation</a>();
+<a name="l00053"></a>00053                 
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#ac72f95402ed4b92c2625ac8b546e95d0" title="Modifier date.">setDate</a> (<span class="keywordtype">char</span> type, <a class="code" href="class_c_date.html">CDate</a> newDate);
+<a name="l00064"></a>00064 
+<a name="l00073"></a>00073                 <a class="code" href="class_c_date.html">CDate</a> <a class="code" href="class_reservation.html#ab03159e8f06b63e5dcd2f10ec637f1f8" title="Obtenir date.">getDate</a> (<span class="keywordtype">char</span> type);
+<a name="l00074"></a>00074 
+<a name="l00083"></a>00083                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#a2760e98de6bd2b8c5259526962227a52" title="Afficher resservation.">afficher</a>(<a class="code" href="class_parc.html">Parc</a> p);
+<a name="l00084"></a>00084                 
+<a name="l00093"></a>00093                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#af99771d51bffe33abf02c10ab67bbbc9" title="Sauvegarder réservation.">save</a>(fstream &amp;outFile);
+<a name="l00094"></a>00094 
+<a name="l00105"></a>00105                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a1d28645be56bc6d703786cc41fab5bdc" title="Vérifie disponibilité">estDisponible</a>(<a class="code" href="class_c_date.html">CDate</a> dep, <a class="code" href="class_c_date.html">CDate</a> ret);
+<a name="l00106"></a>00106                 
+<a name="l00115"></a>00115                 <span class="keywordtype">string</span> <a class="code" href="class_reservation.html#a987ccbdd8ba917b439e2282baaf5ea12" title="Obtenir véhicule.">getVehicule</a>();
+<a name="l00116"></a>00116 
+<a name="l00126"></a>00126                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a5aa0fb5e7f6429bc414f02d4c7c5b142" title="Réservations égales.">operator==</a>(<a class="code" href="class_reservation.html">Reservation</a> &amp;res) <span class="keyword">const</span>;
+<a name="l00127"></a>00127 };
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:15 pour Location de véhicules par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
+</body>
+</html>

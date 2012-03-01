@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -65,25 +65,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;fstream&gt;</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;list&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;vector&gt;</span> <span class="comment">// Constructeur</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;sstream&gt;</span>
-<a name="l00009"></a>00009 <span class="comment">// #include &lt;iomanip&gt; // setw</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;<a class="code" href="_location_8h.html" title="Classe Location.">Location.h</a>&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="_vehicule_8h.html" title="Classe Vehicule.">Vehicule.h</a>&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="_camion_8h.html" title="Classe Camion.">Camion.h</a>&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;<a class="code" href="_c_date_8h.html" title="Classe cdate.">CDate.h</a>&gt;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;<a class="code" href="_v_p_8h.html" title="Classe VP.">VP.h</a>&gt;</span>
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 
-<a name="l00027"></a><a class="code" href="class_parc.html">00027</a> <span class="keyword">class </span><a class="code" href="class_parc.html">Parc</a> {
-<a name="l00028"></a>00028         <span class="keyword">private</span>:
-<a name="l00029"></a>00029                 list&lt;Location&gt; m_parcAuto;
-<a name="l00030"></a>00030                 list&lt;Location&gt;::iterator m_parcAutoI;
-<a name="l00031"></a>00031                 <span class="keywordtype">void</span> lectureDates(<span class="keywordtype">int</span> &amp;t_jDep, <span class="keywordtype">int</span> &amp;t_mDep,<span class="keywordtype">int</span> &amp;t_aDep,
-<a name="l00032"></a>00032                                                         <span class="keywordtype">int</span> &amp;t_jRetP, <span class="keywordtype">int</span> &amp;t_mRetP,<span class="keywordtype">int</span> &amp;t_aRetP,
-<a name="l00033"></a>00033                                                         <span class="keywordtype">int</span> &amp;t_jRetR, <span class="keywordtype">int</span> &amp;t_mRetR, <span class="keywordtype">int</span> &amp;t_aRetR,
-<a name="l00034"></a>00034                                                         fstream &amp;inFile);
-<a name="l00035"></a>00035         
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;<a class="code" href="_location_8h.html" title="Classe Location.">Location.h</a>&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;<a class="code" href="_camion_8h.html" title="Classe Camion.">Camion.h</a>&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;<a class="code" href="_utilitaire_8h.html" title="Classe Utilitaire.">Utilitaire.h</a>&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="_v_p_8h.html" title="Classe VP.">VP.h</a>&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="_tools_8h.html" title="Utilitaires variés.">Tools.h</a>&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00024"></a><a class="code" href="class_parc.html">00024</a> <span class="keyword">class </span><a class="code" href="class_parc.html">Parc</a> {
+<a name="l00025"></a>00025         <span class="keyword">private</span>:
+<a name="l00026"></a>00026                 list&lt;Location&gt; m_parcAuto;
+<a name="l00027"></a>00027                 list&lt;Location&gt;::iterator m_parcAutoI;
+<a name="l00028"></a>00028                 <span class="keywordtype">void</span> entrerTypeVeh(<span class="keywordtype">char</span> &amp;t);
+<a name="l00029"></a>00029                 <span class="keywordtype">void</span> entrerImmat(<span class="keywordtype">string</span> &amp;i);
+<a name="l00030"></a>00030                 <span class="keywordtype">void</span> entrerMarqueModele(<span class="keywordtype">string</span> &amp;t_ma, <span class="keywordtype">string</span> &amp;t_mo);
+<a name="l00031"></a>00031                 <span class="keywordtype">void</span> entrerKilometrage(<span class="keywordtype">int</span> &amp;t_k);
+<a name="l00032"></a>00032                 <span class="keywordtype">void</span> entrerVolumeUtile(<span class="keywordtype">float</span> &amp;t_v);
+<a name="l00033"></a>00033                 <span class="keywordtype">void</span> entrerPoidsUtile(<span class="keywordtype">float</span> &amp;t_p);
+<a name="l00034"></a>00034                 <span class="keywordtype">void</span> entrerNbPlaces(<span class="keywordtype">int</span> &amp;t_nbP);
+<a name="l00035"></a>00035                 
 <a name="l00036"></a>00036         <span class="keyword">public</span>:
 <a name="l00044"></a>00044                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a> (fstream &amp;inFile);
 <a name="l00045"></a>00045                 
@@ -91,28 +91,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00054"></a>00054                 
 <a name="l00062"></a>00062                 <a class="code" href="class_parc.html#a45de4ddcf862a8ad3da902bc63e0c1f6" title="Destructeur.">~Parc</a> ();
 <a name="l00063"></a>00063                 
-<a name="l00072"></a>00072                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a38f675f16195ff1a795d247d2ab2277c" title="Ajouter location.">ajouterLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#ad180ce771871b8f8790bf4703800d8b2" title="Ajouter location.">ajouterLocation</a> ();
 <a name="l00073"></a>00073                 
 <a name="l00082"></a>00082                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a9886186ab4182ee41a1480735600ed38" title="Supprimer location.">supprimerLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
 <a name="l00083"></a>00083 
 <a name="l00092"></a>00092                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880" title="Modifier location.">modifierLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
 <a name="l00093"></a>00093                 
 <a name="l00094"></a>00094                 
-<a name="l00105"></a>00105                 <span class="comment">//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);</span>
+<a name="l00105"></a>00105                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a289f4e8de154f1ee35fec6cc9868726f" title="Rechercher location.">rechercherLocation</a>(<span class="keywordtype">string</span> immat, <a class="code" href="class_location.html">Location</a> &amp;loc);
 <a name="l00106"></a>00106                 
-<a name="l00107"></a>00107                 
-<a name="l00116"></a>00116                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9" title="Rechercher location.">afficher</a>();
-<a name="l00117"></a>00117                 
-<a name="l00127"></a>00127                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a3b1165059db359bbcc910096bededc6d" title="Afficher véhicules loués.">afficherLoues</a> (<a class="code" href="class_c_date.html">CDate</a> dateDebut, <a class="code" href="class_c_date.html">CDate</a> dateFin);
-<a name="l00128"></a>00128                 
-<a name="l00138"></a>00138                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a0bf47b853e9c3cfaab5d11e9ce2f63dd" title="Afficher véhicules disponibles.">afficherDisponibles</a> (<a class="code" href="class_c_date.html">CDate</a> dateDebut, <a class="code" href="class_c_date.html">CDate</a> dateFin);
-<a name="l00139"></a>00139                 
-<a name="l00148"></a>00148                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9f61430cd0074b49b4e98b7fb7708de5" title="Afficher véhicules restituables.">afficherRestituables</a>(<a class="code" href="class_c_date.html">CDate</a> today);
-<a name="l00149"></a>00149                 
-<a name="l00158"></a>00158                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a144f06e69489648adc0c1d90b12dedd4" title="Sauvegarder parc.">sauvegarderParc</a>();
-<a name="l00159"></a>00159 };
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161 <span class="preprocessor">#endif</span>
+<a name="l00115"></a>00115                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9" title="Afficher liste complète.">afficher</a>();
+<a name="l00116"></a>00116                 
+<a name="l00125"></a>00125                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a8cb861e9323b182a98ba666c9d67c721" title="Sauvegarder parc.">sauvegarder</a>(fstream &amp;inFile);
+<a name="l00126"></a>00126 };
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -129,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:35 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:15 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

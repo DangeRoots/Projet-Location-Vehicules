@@ -39,14 +39,15 @@ bool \hyperlink{class_c_date_a2764c65e43a4ee956cd16f8ce242dbc7}{operator$<$} (co
 \begin{DoxyCompactList}\small\item\em Infériorité dates. \item\end{DoxyCompactList}\item 
 bool \hyperlink{class_c_date_ac653ba135b3681a64448872b2d6a0c17}{operator$>$} (const \hyperlink{class_c_date}{CDate} \&date) const 
 \begin{DoxyCompactList}\small\item\em Supériorité dates. \item\end{DoxyCompactList}\item 
-bool \hyperlink{class_c_date_a8fcb0b615460c60f3f4db15eb197011b}{operator$<$=} (const \hyperlink{class_c_date}{CDate} \&date) const 
-\begin{DoxyCompactList}\small\item\em Infériorité égalité dates. \item\end{DoxyCompactList}\item 
 bool \hyperlink{class_c_date_ac0553a16a486d0ec1c375846821ef460}{operator$>$=} (const \hyperlink{class_c_date}{CDate} \&date) const 
-\begin{DoxyCompactList}\small\item\em Supériorité égalité dates. \item\end{DoxyCompactList}\item 
-\hyperlink{class_c_date}{CDate} \hyperlink{class_c_date_a00a40e811874a7b1cca4461cbcee1356}{today} ()
-\begin{DoxyCompactList}\small\item\em Date du jour. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Infériorité égalité dates. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_c_date_a9b58a7c96cf53352328906e30891e4e4}{afficher} ()
 \begin{DoxyCompactList}\small\item\em Afficher date. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_c_date}{CDate} \hyperlink{class_c_date_a5367206ed910298afbf1bf57efe47c92}{today} ()
+\begin{DoxyCompactList}\small\item\em Date du jour. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentation des constructeurs et destructeur}
@@ -326,29 +327,6 @@ Renvoie vrai si la date passée en paramètre est inférieure
 \begin{DoxyReturn}{Renvoie}
 bool 
 \end{DoxyReturn}
-\hypertarget{class_c_date_a8fcb0b615460c60f3f4db15eb197011b}{
-\index{CDate@{CDate}!operator$<$=@{operator$<$=}}
-\index{operator$<$=@{operator$<$=}!CDate@{CDate}}
-\subsubsection[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool CDate::operator$<$= (
-\begin{DoxyParamCaption}
-\item[{const {\bf CDate} \&}]{date}
-\end{DoxyParamCaption}
-) const}}
-\label{class_c_date_a8fcb0b615460c60f3f4db15eb197011b}
-
-
-Infériorité égalité dates. 
-
-Renvoie vrai si la date passée en paramètre est inférieure ou égale
-
-
-\begin{DoxyParams}{Paramètres}
-{\em date,objet} & Date, la date à comparer \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-bool 
-\end{DoxyReturn}
 \hypertarget{class_c_date_a82e5b049e86145b62893f194b5638ad6}{
 \index{CDate@{CDate}!operator==@{operator==}}
 \index{operator==@{operator==}!CDate@{CDate}}
@@ -406,7 +384,19 @@ bool
 \label{class_c_date_ac0553a16a486d0ec1c375846821ef460}
 
 
-Supériorité égalité dates. 
+Infériorité égalité dates. 
+
+Renvoie vrai si la date passée en paramètre est inférieure ou égale
+
+
+\begin{DoxyParams}{Paramètres}
+{\em date,objet} & Date, la date à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool
+\end{DoxyReturn}
+Supériorité égalité dates
 
 Renvoie vrai si la date passée en paramètre est supérieure ou égale
 
@@ -487,15 +477,15 @@ Permet de modifier le mois de la date
 \begin{DoxyReturn}{Renvoie}
 void 
 \end{DoxyReturn}
-\hypertarget{class_c_date_a00a40e811874a7b1cca4461cbcee1356}{
+\hypertarget{class_c_date_a5367206ed910298afbf1bf57efe47c92}{
 \index{CDate@{CDate}!today@{today}}
 \index{today@{today}!CDate@{CDate}}
-\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CDate} CDate::today (
+\subsubsection[{today}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CDate} CDate::today (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}
-\label{class_c_date_a00a40e811874a7b1cca4461cbcee1356}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_c_date_a5367206ed910298afbf1bf57efe47c92}
 
 
 Date du jour. 

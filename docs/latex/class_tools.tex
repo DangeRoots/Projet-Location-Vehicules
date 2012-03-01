@@ -1,0 +1,253 @@
+\hypertarget{class_tools}{
+\section{Référence de la classe Tools}
+\label{class_tools}\index{Tools@{Tools}}
+}
+
+
+Utilitaires.  
+
+
+
+
+{\ttfamily \#include $<$Tools.h$>$}
+
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_tools_a1091376013e416681e90155ed87e977c}{isMinimum} (int a, int b)
+\begin{DoxyCompactList}\small\item\em donne le minimum \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_tools_a3b88f4e98469dd9d4cefcd0525aecde7}{estEntier} (const string \&data)
+\begin{DoxyCompactList}\small\item\em Est entier. \item\end{DoxyCompactList}\item 
+static bool \hyperlink{class_tools_ac293cf13e99e6d5739a5039cefa8753e}{estReel} (const string \&data)
+\begin{DoxyCompactList}\small\item\em Est réel. \item\end{DoxyCompactList}\item 
+static float \hyperlink{class_tools_a07892ec493ca75d5de5fbd01b1a7a223}{stringToFloat} (const string val)
+\begin{DoxyCompactList}\small\item\em Conversion en réel. \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_tools_a53e25a53c9f01b0a7e5b3af7673d881d}{stringToLower} (string \&chaine)
+\begin{DoxyCompactList}\small\item\em transforme en minuscules \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_tools_af1454104ca8edeb13cfbc7f6c39243d7}{stringToUpper} (string \&chaine)
+\begin{DoxyCompactList}\small\item\em transforme en majuscules \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_tools_a19db87aec2d67f14d10bf8a3cc04ec02}{charToUpper} (char \&c)
+\begin{DoxyCompactList}\small\item\em transforme en majuscules \item\end{DoxyCompactList}\item 
+static void \hyperlink{class_tools_a0826e70408c956f4c4e481aeefe2d9e1}{charToLower} (char \&c)
+\begin{DoxyCompactList}\small\item\em transforme en minuscules \item\end{DoxyCompactList}\item 
+static int \hyperlink{class_tools_af0a210f513662ed4dffc8a79e39fa537}{stringToInt} (const string val)
+\begin{DoxyCompactList}\small\item\em Conversion en entier. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Utilitaires. Cette classe fournit un certain nombre de fonctions utilitaires telles que la transformation de chaînes de caractères en majuscules 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_tools_a0826e70408c956f4c4e481aeefe2d9e1}{
+\index{Tools@{Tools}!charToLower@{charToLower}}
+\index{charToLower@{charToLower}!Tools@{Tools}}
+\subsubsection[{charToLower}]{\setlength{\rightskip}{0pt plus 5cm}static void Tools::charToLower (
+\begin{DoxyParamCaption}
+\item[{char \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a0826e70408c956f4c4e481aeefe2d9e1}
+
+
+transforme en minuscules 
+
+Transforme un caractère en lettre minuscule
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c,un} & caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+none 
+\end{DoxyReturn}
+\hypertarget{class_tools_a19db87aec2d67f14d10bf8a3cc04ec02}{
+\index{Tools@{Tools}!charToUpper@{charToUpper}}
+\index{charToUpper@{charToUpper}!Tools@{Tools}}
+\subsubsection[{charToUpper}]{\setlength{\rightskip}{0pt plus 5cm}static void Tools::charToUpper (
+\begin{DoxyParamCaption}
+\item[{char \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a19db87aec2d67f14d10bf8a3cc04ec02}
+
+
+transforme en majuscules 
+
+Transforme un caractère en lettre majuscule
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em c,un} & caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+none 
+\end{DoxyReturn}
+\hypertarget{class_tools_a3b88f4e98469dd9d4cefcd0525aecde7}{
+\index{Tools@{Tools}!estEntier@{estEntier}}
+\index{estEntier@{estEntier}!Tools@{Tools}}
+\subsubsection[{estEntier}]{\setlength{\rightskip}{0pt plus 5cm}static bool Tools::estEntier (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a3b88f4e98469dd9d4cefcd0525aecde7}
+
+
+Est entier. 
+
+Renvoie vrai si la chaîne de caractères fournie en paramètres est un entier
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool, vrai si data est un entier, faux sinon 
+\end{DoxyReturn}
+\hypertarget{class_tools_ac293cf13e99e6d5739a5039cefa8753e}{
+\index{Tools@{Tools}!estReel@{estReel}}
+\index{estReel@{estReel}!Tools@{Tools}}
+\subsubsection[{estReel}]{\setlength{\rightskip}{0pt plus 5cm}static bool Tools::estReel (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_ac293cf13e99e6d5739a5039cefa8753e}
+
+
+Est réel. 
+
+Renvoie vrai si la chaîne de caractères fournie en paramètres est un nombre réel
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool, vrai si data est un entier, faux sinon 
+\end{DoxyReturn}
+\hypertarget{class_tools_a1091376013e416681e90155ed87e977c}{
+\index{Tools@{Tools}!isMinimum@{isMinimum}}
+\index{isMinimum@{isMinimum}!Tools@{Tools}}
+\subsubsection[{isMinimum}]{\setlength{\rightskip}{0pt plus 5cm}static int Tools::isMinimum (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a1091376013e416681e90155ed87e977c}
+
+
+donne le minimum 
+
+Renvoie le plus petite valeur entre deux entiers fournis en paramètre
+
+
+\begin{DoxyParams}{Paramètres}
+{\em a} & et b, deux entiers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int, la valeur minimum 
+\end{DoxyReturn}
+\hypertarget{class_tools_a07892ec493ca75d5de5fbd01b1a7a223}{
+\index{Tools@{Tools}!stringToFloat@{stringToFloat}}
+\index{stringToFloat@{stringToFloat}!Tools@{Tools}}
+\subsubsection[{stringToFloat}]{\setlength{\rightskip}{0pt plus 5cm}static float Tools::stringToFloat (
+\begin{DoxyParamCaption}
+\item[{const string}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a07892ec493ca75d5de5fbd01b1a7a223}
+
+
+Conversion en réel. 
+
+Convertit une chaine de caractères en nombre réel
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float, un nombre réel 
+\end{DoxyReturn}
+\hypertarget{class_tools_af0a210f513662ed4dffc8a79e39fa537}{
+\index{Tools@{Tools}!stringToInt@{stringToInt}}
+\index{stringToInt@{stringToInt}!Tools@{Tools}}
+\subsubsection[{stringToInt}]{\setlength{\rightskip}{0pt plus 5cm}static int Tools::stringToInt (
+\begin{DoxyParamCaption}
+\item[{const string}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_af0a210f513662ed4dffc8a79e39fa537}
+
+
+Conversion en entier. 
+
+Convertit une chaine de caractères en nombre entier
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int, un nombre entier 
+\end{DoxyReturn}
+\hypertarget{class_tools_a53e25a53c9f01b0a7e5b3af7673d881d}{
+\index{Tools@{Tools}!stringToLower@{stringToLower}}
+\index{stringToLower@{stringToLower}!Tools@{Tools}}
+\subsubsection[{stringToLower}]{\setlength{\rightskip}{0pt plus 5cm}static void Tools::stringToLower (
+\begin{DoxyParamCaption}
+\item[{string \&}]{chaine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_a53e25a53c9f01b0a7e5b3af7673d881d}
+
+
+transforme en minuscules 
+
+Transforme une chaîne de caractères en lettres minuscules
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chaine,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+none 
+\end{DoxyReturn}
+\hypertarget{class_tools_af1454104ca8edeb13cfbc7f6c39243d7}{
+\index{Tools@{Tools}!stringToUpper@{stringToUpper}}
+\index{stringToUpper@{stringToUpper}!Tools@{Tools}}
+\subsubsection[{stringToUpper}]{\setlength{\rightskip}{0pt plus 5cm}static void Tools::stringToUpper (
+\begin{DoxyParamCaption}
+\item[{string \&}]{chaine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{class_tools_af1454104ca8edeb13cfbc7f6c39243d7}
+
+
+transforme en majuscules 
+
+Transforme une chaîne de caractères en lettres majuscules
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em chaine,une} & chaîne de caractères \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+none 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_tools_8h}{Tools.h}\end{DoxyCompactItemize}

@@ -11,7 +11,7 @@ Graphe d'héritage de Camion:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_camion_aa3d47c07926da939f321faad61cbcf9c}{Camion} (float poids, float volume, string immat, string marque, string modele, int kilom)
+\hyperlink{class_camion_ac33dc959ae263b822638aa73b9438ab1}{Camion} (float poids, float volume, string immat, string marque, string modele)
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
 \hyperlink{class_camion_a5eb698c16331e4fab2ba2cbfebbea8a4}{Camion} ()
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
@@ -22,11 +22,13 @@ float \hyperlink{class_camion_a5eb44123d320dec356d4d335a60b7f28}{getPoidsUtile} 
 void \hyperlink{class_camion_a3fe83aa0652ec440e915d983ac46f7d7}{setPoidsUtile} (float poids)
 \begin{DoxyCompactList}\small\item\em Modifier poids utile. \item\end{DoxyCompactList}\item 
 virtual void \hyperlink{class_camion_a1b7d9e844a03b1a1e7143a7618911157}{afficher} ()
-\begin{DoxyCompactList}\small\item\em Afficher utilitaire. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afficher utilitaire. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_camion_a2c715c85952a7e0bb2948494d79157b8}{save} (fstream \&fs)
+\begin{DoxyCompactList}\small\item\em sauvegarder camion \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{class_camion_aa3d47c07926da939f321faad61cbcf9c}{
+\hypertarget{class_camion_ac33dc959ae263b822638aa73b9438ab1}{
 \index{Camion@{Camion}!Camion@{Camion}}
 \index{Camion@{Camion}!Camion@{Camion}}
 \subsubsection[{Camion}]{\setlength{\rightskip}{0pt plus 5cm}Camion::Camion (
@@ -35,11 +37,10 @@ virtual void \hyperlink{class_camion_a1b7d9e844a03b1a1e7143a7618911157}{afficher
 \item[{float}]{volume, }
 \item[{string}]{immat, }
 \item[{string}]{marque, }
-\item[{string}]{modele, }
-\item[{int}]{kilom}
+\item[{string}]{modele}
 \end{DoxyParamCaption}
 )}}
-\label{class_camion_aa3d47c07926da939f321faad61cbcf9c}
+\label{class_camion_ac33dc959ae263b822638aa73b9438ab1}
 
 
 Constructeur. 
@@ -57,8 +58,6 @@ Constructeur de la classe \hyperlink{class_camion}{Camion}
 {\em marque,chaîne} & de caractères, la marque du véhicule \\
 \hline
 {\em modele,chaîne} & de caractères, le kilométrage du véhicule \\
-\hline
-{\em kilom,entier,le} & kilométrage du véhicule \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_camion_a5eb698c16331e4fab2ba2cbfebbea8a4}{
@@ -140,6 +139,33 @@ Renvoie le poidsutile
 \begin{DoxyReturn}{Renvoie}
 float le poids utile 
 \end{DoxyReturn}
+\hypertarget{class_camion_a2c715c85952a7e0bb2948494d79157b8}{
+\index{Camion@{Camion}!save@{save}}
+\index{save@{save}!Camion@{Camion}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Camion::save (
+\begin{DoxyParamCaption}
+\item[{fstream \&}]{fs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_camion_a2c715c85952a7e0bb2948494d79157b8}
+
+
+sauvegarder camion 
+
+Sauvegarde le camion
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em fs} & fstream, le fichier de sauvegarde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_utilitaire_a7ee59be5d77191b06b2c959bdf2297b7}{Utilitaire}.
+
 \hypertarget{class_camion_a3fe83aa0652ec440e915d983ac46f7d7}{
 \index{Camion@{Camion}!setPoidsUtile@{setPoidsUtile}}
 \index{setPoidsUtile@{setPoidsUtile}!Camion@{Camion}}

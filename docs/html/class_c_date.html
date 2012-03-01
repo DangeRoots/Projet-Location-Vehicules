@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.1</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -60,7 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Fonctions membres publiques</a>  </div>
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a>  </div>
   <div class="headertitle">
 <h1>Référence de la classe CDate</h1>  </div>
 </div>
@@ -104,14 +105,14 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Infériorité dates.  <a href="#a2764c65e43a4ee956cd16f8ce242dbc7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#ac653ba135b3681a64448872b2d6a0c17">operator&gt;</a> (const <a class="el" href="class_c_date.html">CDate</a> &amp;date) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Supériorité dates.  <a href="#ac653ba135b3681a64448872b2d6a0c17"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#a8fcb0b615460c60f3f4db15eb197011b">operator&lt;=</a> (const <a class="el" href="class_c_date.html">CDate</a> &amp;date) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Infériorité égalité dates.  <a href="#a8fcb0b615460c60f3f4db15eb197011b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#ac0553a16a486d0ec1c375846821ef460">operator&gt;=</a> (const <a class="el" href="class_c_date.html">CDate</a> &amp;date) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Supériorité égalité dates.  <a href="#ac0553a16a486d0ec1c375846821ef460"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_date.html">CDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#a00a40e811874a7b1cca4461cbcee1356">today</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Date du jour.  <a href="#a00a40e811874a7b1cca4461cbcee1356"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Infériorité égalité dates.  <a href="#ac0553a16a486d0ec1c375846821ef460"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#a9b58a7c96cf53352328906e30891e4e4">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher date.  <a href="#a9b58a7c96cf53352328906e30891e4e4"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_date.html">CDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_date.html#a5367206ed910298afbf1bf57efe47c92">today</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Date du jour.  <a href="#a5367206ed910298afbf1bf57efe47c92"></a><br/></td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="abaab9d809338418c9a749ce479fcea61"></a><!-- doxytag: member="CDate::CDate" ref="abaab9d809338418c9a749ce479fcea61" args="()" -->
@@ -457,33 +458,6 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8fcb0b615460c60f3f4db15eb197011b"></a><!-- doxytag: member="CDate::operator&lt;=" ref="a8fcb0b615460c60f3f4db15eb197011b" args="(const CDate &amp;date) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CDate::operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_c_date.html">CDate</a> &amp;&#160;</td>
-          <td class="paramname"><em>date</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Infériorité égalité dates. </p>
-<p>Renvoie vrai si la date passée en paramètre est inférieure ou égale</p>
-<dl><dt><b>Paramètres:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">date,objet</td><td>Date, la date à comparer </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a82e5b049e86145b62893f194b5638ad6"></a><!-- doxytag: member="CDate::operator==" ref="a82e5b049e86145b62893f194b5638ad6" args="(const CDate &amp;date) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +527,16 @@ Fonctions membres publiques</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Supériorité égalité dates. </p>
+<p>Infériorité égalité dates. </p>
+<p>Renvoie vrai si la date passée en paramètre est inférieure ou égale</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date,objet</td><td>Date, la date à comparer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool</dd></dl>
+<p>Supériorité égalité dates</p>
 <p>Renvoie vrai si la date passée en paramètre est supérieure ou égale</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
@@ -646,15 +629,15 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a00a40e811874a7b1cca4461cbcee1356"></a><!-- doxytag: member="CDate::today" ref="a00a40e811874a7b1cca4461cbcee1356" args="()" -->
+<a class="anchor" id="a5367206ed910298afbf1bf57efe47c92"></a><!-- doxytag: member="CDate::today" ref="a5367206ed910298afbf1bf57efe47c92" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_c_date.html">CDate</a> CDate::today </td>
+          <td class="memname">static <a class="el" href="class_c_date.html">CDate</a> CDate::today </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [static]</code></td>
         </tr>
       </table>
 </div>
@@ -735,7 +718,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Feb 20 2012 15:00:37 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
