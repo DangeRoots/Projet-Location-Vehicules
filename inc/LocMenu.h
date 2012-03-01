@@ -11,28 +11,32 @@ class LocMenu {
 		vector<string>::iterator menuI;
 
 	public:
+
+	LocMenu();
 	
-		LocMenu();
-		~LocMenu();		void afficher();
+	~LocMenu(); 
+	
+	void afficher();
 
-		int recupererValeur(string texte);
+	int recupererValeur(string texte);
 
-		void traiter(int choix);
-
-	/*
-	int main() {
-		int choix(-1);
-		
-		while (choix != 0) {
-			afficherMenu();
-			choix = recupererValeur("Quel est votre choix : ");
-			traiter(choix);
-		}
-		
-		return 0;
-	}
-	*/
-
+	void traiter(int choix);
 };
 
 #endif
+
+	//~ int main() {
+		//~ int choix(-1);
+		//~ 
+		//~ while (choix != 0) {
+			//~ afficherMenu();
+			//~ choix = recupererValeur("Quel est votre choix : ");
+			//~ traiter(choix);
+		//~ }
+		//~ 
+		//~ return 0;
+	//~ }
+	//~ */
+//~ };
+//~ 
+//~ #endif

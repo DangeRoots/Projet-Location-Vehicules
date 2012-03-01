@@ -1,6 +1,6 @@
-#include <LocMenu.h>
-
 using namespace std;
+
+#include <LocMenu.h>
 
 /*! Dans le main
  * Avant la boucle : LocMenu monMenu;
@@ -11,69 +11,88 @@ using namespace std;
  */
 
 LocMenu::LocMenu() {
-	entrees[0] = "Ajouter un véhicule";
-	}
+	entrees.push_back("[1] Ajouter un véhicule");
+	entrees.push_back("[2] Créer une nouvelle réservation");
+	entrees.push_back("[3] Afficher la liste des véhicules");
+	entrees.push_back("[4] Afficher les réservations");
+	entrees.push_back("[5] Quitter");
+}
+
+LocMenu::~LocMenu() {
+}
+
+void LocMenu::afficher() {
+	menuI= entrees.begin();
+	while (menuI != entrees.end()){
+    cout << *menuI << endl;
+    menuI ++;}
+
+	
+}
+
+int LocMenu::recupererValeur(string texte) {
+return 42;
+}
+
+void LocMenu::traiter(int choix) {
+}
+/*
+LocMenu::LocMenu() {
+	//~ entrees[0] = "Ajouter un véhicule";
+	//~ entrees[1] = "Créer une nouvelle réservation";
+	//~ entrees[2] = "Afficher la liste des véhicules";
+	//~ entrees[3] = "Afficher les réservations";
+	//~ entrees[4] = "Quitter";
+}
 		
-LocMenu::~LocMenu();
+LocMenu::~LocMenu(){
+}
 
 void LocMenu::afficher() {
 // Affiche le menu général de l'application
 // TODO
-// for (menuI = entrees.begin(); mneuI != entrees.end(); menuI++)
-// 		cout << *menuI << endl;
-	cout << "Choisissez une option : " << endl;
-	cout << "1. Rectangle " << endl;
-	cout << "2. Carré" << endl;
-	cout << "3. Triangle rectangle isocèle" << endl;
-	cout << "4. Triangle isocèle" << endl;
-	cout << "5. Losange" << endl << endl;
-	cout << "0. Quitter" << endl << endl;
-	return;
+	for (menuI = entrees.begin(); menuI != entrees.end(); menuI ++){
+		cout << *menuI << endl; 
 }
 
 int LocMenu::recupererValeur(string texte) {
 // Permet de récupérer une valeur entière entrée par l'utilisateur
 // TODO
-	int valeur;
-	cout << texte;
-	cin >> valeur;
-	return valeur;
+	//~ int valeur;
+	//~ cout << texte;
+	//~ cin >> valeur;
+	//~ return valeur;
+	return 12;
 }
 
 void LocMenu::traiter(int choix) {
-/* Dessine l'objet choisi par l'utilisateur 
- * en appelant les fonctions correspondant
- * aux entrées de menu */
  // TODO
  
-	int l, h;
-	
-	if (choix == 1) {
-		l = recupererValeur("Longueur : ");
-		h = recupererValeur("Hauteur : ");
-		rectangle(l, h);
-	}
-	if (choix == 2) {
-		l = recupererValeur("Côté : ");
-		carre(l);
-	}
-	if (choix == 3) {
-		h = recupererValeur("Hauteur : ");
-		rectIso(h);
-	}
-	if (choix == 4) {
-		h = recupererValeur("Hauteur : ");
-		triIso(h);
-	}
-	if (choix == 5) {
-		h = recupererValeur("Hauteur : ");
-		losange(h);
-	}
 
-	return;
+	//~ if (choix == 1) {
+		//~ l = recupererValeur("Longueur : ");
+		//~ h = recupererValeur("Hauteur : ");
+		//~ rectangle(l, h);
+	//~ }
+	//~ if (choix == 2) {
+		//~ l = recupererValeur("Côté : ");
+		//~ carre(l);
+	//~ }
+	//~ if (choix == 3) {
+		//~ h = recupererValeur("Hauteur : ");
+		//~ rectIso(h);
+	//~ }
+	//~ if (choix == 4) {
+		//~ h = recupererValeur("Hauteur : ");
+		//~ triIso(h);
+	//~ }
+	//~ if (choix == 5) {
+		 h = recupererValeur("Hauteur : ");
+		 losange(h);
+	 }
 }
 
-/*
+
 int main() {
 	int choix(-1);
 	

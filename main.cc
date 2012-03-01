@@ -6,19 +6,21 @@ using namespace std;
 #include <ListeReservations.h>
 #include <Location.h>
 #include <Reservation.h>
+#include <LocException.h>
+#include <LocMenu.h>
 
 int main(int argc, char *argv[]) {
+
 	/*	
 	if (argc < 2) {
 		cerr << "Argument manquant : chemin/vers/fichier/locations ! Impossible de poursuivre !" << endl;
 		exit (-1);
 	}
 	*/
-
+	
 	fstream vehFile, resaFile;
 	string nomFichierVeh = "res/Vehicule.data";
 	string nomFichierResa = "res/ReservationsDates.data";
-	
 	
 	vehFile.open(nomFichierVeh.c_str(),ios::in);
 	resaFile.open(nomFichierResa.c_str(),ios::in);
@@ -32,32 +34,52 @@ int main(int argc, char *argv[]) {
 		exit (-2);
 	}
 
+	// Création instance Parc (véhicule)
 	Parc p1(vehFile);
 	vehFile.close();
+	cout << "Fichier des véhicules chargé" << endl;
+	
+	// Création instance Réservation (immat + date)
 	ListeReservations resa(resaFile);
 	resaFile.close();
-
-	int done = 1;
-	while (done != 0) {
-		p1.afficher();
-		cout << "----- Ajout véhicule -----" << endl;
-		p1.ajouterLocation();
-		cout << "autre ajout (0 pour arrêter) ?" << endl;
-		cin >> done;
-	}
-
-	cout << "--- après ajout ---" << endl;
-	p1.afficher();
-
-	vehFile.open(nomFichierVeh.c_str(),ios::out);
-	if (vehFile.fail()) {
-		cerr << "Ouverture du fichier " << nomFichierVeh << " impossible : fichier introuvable !" << endl;
-		exit (-2);
-	}
-	cout << "Sauvegarde fichier" << endl;
-	p1.sauvegarder(vehFile);
-	cout << "Fin Sauvegarde fichier" << endl;
+	cout << "Fichier des réservations chargé" << endl;
+		
+	LocMenu monMenu;
+	monMenu.afficher();
 	
+	// Afficher le menu
+		// Ajouter un vehicule
+		// Enregistrement d'une location (nvelle reservation)
+		// Afficher avec un sous menu 
+		//		-> tous les veh
+		//		-> des veh loués
+		//		-> veh loués devant etre restitués
+		// Quitter (sauvegarder)
+
+	//~ int done = 1;
+	//~ while (done != 0) {
+		//~ cout << "*************************************"<<endl;
+		//~ cout << "Logiciel de Réservations de Véhicule "<< endl;
+		//~ cout << "*************************************"<<endl;
+		
+		//p1.afficher();
+		//cout << "----- Ajout véhicule -----" << endl;
+		//p1.ajouterLocation();
+		//cout << "autre ajout (0 pour arrêter) ?" << endl;
+		//cin >> done;
+	//~ }
+	//~ cout << "--- après ajout ---" << endl;
+	//~ p1.afficher();
+//~ 
+	//~ vehFile.open(nomFichierVeh.c_str(),ios::out);
+	//~ if (vehFile.fail()) {
+		//~ cerr << "Ouverture du fichier " << nomFichierVeh << " impossible : fichier introuvable !" << endl;
+		//~ exit (-2);
+	//~ }
+	//~ cout << "Sauvegarde fichier" << endl;
+	//~ p1.sauvegarder(vehFile);
+	//~ cout << "Fin Sauvegarde fichier" << endl;
+	//~ 
 	/*
 	cout << "-- Tests de disponibilités -- " << endl;
 	Reservation testDate("111FE33", CDate(10,01,2012), CDate(10,01,2012));

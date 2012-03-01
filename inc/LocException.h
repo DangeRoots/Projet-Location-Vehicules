@@ -1,10 +1,10 @@
 #ifndef LOCEXCEPTION_H
 #define LOCEXCEPTION_H
 
+#include <iostream>
 #include <exception>
 #include <string>
 
-using namespace std;
 
 /*!
  * \file LocException.h
@@ -50,9 +50,8 @@ class LocException: public exception{
 		*  \param phrase, chaîne de caractères, libellé de l'exception
 		*  \param niveau, entier, niveau de l'exception
 		*/
-		LocException (int numero=0, string const& phrase="", int niveau=0) 
-					throw() : m_numero(numero),m_phrase(phrase),m_niveau(niveau){
-		}
+		LocException (int numero, string const& phrase, int niveau) 
+					throw();//:m_numero(numero),m_phrase(phrase),m_niveau(niveau);
 		
 		/*!
 		 *  \fn virtual const char* what() const throw()
@@ -63,9 +62,7 @@ class LocException: public exception{
 		 *  \param none
 		 *  \return chaîne de caractère, le libellé de l'exception
 		 */		
-		virtual const char* what() const throw(){
-			return m_phrase.c_str();
-		}
+		virtual const char* what() const throw();
 
 		/*!
 		 *  \fn int getNiveau() const throw()
@@ -76,17 +73,17 @@ class LocException: public exception{
 		 *  \param none
 		 *  \return entier le niveau de l'exception
 		 */     
-		int getNiveau() const throw(){
-			return m_niveau;
-		}
+		int getNiveau() const throw();
 		
 		/*!
 		*  \brief Destructeur
 		*
 		*  Destructeur de la classe Erreur
 		*/    
-		virtual ~Erreur() throw(){
-		}
+		virtual ~LocException() throw();
+
+		LocException OpenFail (int numero=0, string const& phrase="", int niveau=0) 
+		throw();//:m_numero(numero),m_phrase(phrase),m_niveau(niveau){
 };
 
 #endif
