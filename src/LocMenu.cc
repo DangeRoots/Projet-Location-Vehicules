@@ -28,40 +28,17 @@ void LocMenu::afficher() {
     menuI ++;}
 }
 
-int LocMenu::recupererValeur(string texte) {
-return 42;
+string LocMenu::recupererValeur(string texte) {
+	string c;
+	cout << texte <<endl;
+	cin >>  c;
+
+	return c;
 }
 
 void LocMenu::traiter(int choix) {
 }
 /*
-LocMenu::LocMenu() {
-	//~ entrees[0] = "Ajouter un véhicule";
-	//~ entrees[1] = "Créer une nouvelle réservation";
-	//~ entrees[2] = "Afficher la liste des véhicules";
-	//~ entrees[3] = "Afficher les réservations";
-	//~ entrees[4] = "Quitter";
-}
-		
-LocMenu::~LocMenu(){
-}
-
-void LocMenu::afficher() {
-// Affiche le menu général de l'application
-// TODO
-	for (menuI = entrees.begin(); menuI != entrees.end(); menuI ++){
-		cout << *menuI << endl; 
-}
-
-int LocMenu::recupererValeur(string texte) {
-// Permet de récupérer une valeur entière entrée par l'utilisateur
-// TODO
-	//~ int valeur;
-	//~ cout << texte;
-	//~ cin >> valeur;
-	//~ return valeur;
-	return 12;
-}
 
 void LocMenu::traiter(int choix) {
  // TODO
@@ -101,4 +78,4 @@ int main() {
 	}
 	
 	return 0;
-
+*/

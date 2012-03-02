@@ -50,7 +50,7 @@ class LocMenu {
 		*/				
 		void afficher();
 
-		int recupererValeur(string texte);
+		string recupererValeur(string texte);
 
 		void traiter(int choix);
 

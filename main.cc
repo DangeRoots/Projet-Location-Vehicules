@@ -8,6 +8,7 @@ using namespace std;
 #include <Reservation.h>
 #include <LocException.h>
 #include <LocMenu.h>
+#include <Tools.h>
 
 int main(int argc, char *argv[]) {
 
@@ -43,10 +44,34 @@ int main(int argc, char *argv[]) {
 	ListeReservations resa(resaFile);
 	resaFile.close();
 	cout << "Fichier des réservations chargé" << endl;
-		
+	
+	// Création du menu 	
 	LocMenu monMenu;
 	monMenu.afficher();
 	
+	// boucle de récupération du choix avec contrôle de type
+	// j'ai du modifier la méthode récupérer valeur-> elle retourne un string désormais
+	// C'est peut-être à factoriser =)
+	string t_input = "";
+	while(!Tools::estEntier(t_input)){
+		t_input = monMenu.recupererValeur("Choix : ");
+		if (Tools::estEntier(t_input)){
+			int choix = Tools::stringToInt(t_input);
+			cout << choix << endl;
+		} else
+			cout  << "Veuillez entrer un nombre !"<< endl;
+	}
+}
+	//~ string t_input = "";
+	//~ while(!Tools::estReel(t_input)){
+		//~ cout << "Volume : ";
+		//~ cin >> t_input;
+		//~ if (Tools::estReel(t_input)){
+			//~ t_volumeUtile = Tools::stringToFloat(t_input);
+		//~ } else 
+			//~ cout << "Veuillez entrer un nombre !"<< endl;
+		//~ }
+//~ }
 	// Afficher le menu
 		// Ajouter un vehicule
 		// Enregistrement d'une location (nvelle reservation)
@@ -114,5 +139,5 @@ int main(int argc, char *argv[]) {
 	}
 	resa.sauvegarder(resaFile);
 	*/
-}
+//}
 	
