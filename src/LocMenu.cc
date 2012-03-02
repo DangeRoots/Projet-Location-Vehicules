@@ -15,7 +15,7 @@ LocMenu::LocMenu() {
 	entrees.push_back("[2] Créer une nouvelle réservation");
 	entrees.push_back("[3] Afficher la liste des véhicules");
 	entrees.push_back("[4] Afficher les réservations");
-	entrees.push_back("[5] Quitter");
+	entrees.push_back("[0] Quitter");
 }
 
 LocMenu::~LocMenu() {
@@ -37,6 +37,32 @@ string LocMenu::recupererValeur(string texte) {
 }
 
 void LocMenu::traiter(int choix) {
+	switch (choix){
+		case 1:{
+			cout << "Choix 1"<<endl;
+			break;
+		}
+		case 2:{
+			cout << "Choix 2"<<endl;
+			break;
+		}
+		case 3:{
+			cout << "Choix 3"<<endl;
+			break;
+		}
+		case 4:{
+			cout << "Choix 4"<<endl;
+			break;
+		}
+		case 0:{
+			cout << "Au revoir"<<endl;
+			break;
+		}
+		default :{
+			cout << "Choix invalide !"<<endl;
+			break;
+		}
+	}
 }
 /*
 

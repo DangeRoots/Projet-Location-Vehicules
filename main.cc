@@ -45,7 +45,10 @@ int main(int argc, char *argv[]) {
 	resaFile.close();
 	cout << "Fichier des réservations chargé" << endl;
 	
-	// Création du menu 	
+	// Création du menu 
+	int choix = -1;	
+	
+	while (choix != 0){
 	LocMenu monMenu;
 	monMenu.afficher();
 	
@@ -56,22 +59,16 @@ int main(int argc, char *argv[]) {
 	while(!Tools::estEntier(t_input)){
 		t_input = monMenu.recupererValeur("Choix : ");
 		if (Tools::estEntier(t_input)){
-			int choix = Tools::stringToInt(t_input);
-			cout << choix << endl;
+			choix = Tools::stringToInt(t_input);
 		} else
 			cout  << "Veuillez entrer un nombre !"<< endl;
+			monMenu.afficher();//réaffichage du menu lors d'un mauvais choix
 	}
+	monMenu.traiter(choix);
+
+
+	}//while du choix != 0
 }
-	//~ string t_input = "";
-	//~ while(!Tools::estReel(t_input)){
-		//~ cout << "Volume : ";
-		//~ cin >> t_input;
-		//~ if (Tools::estReel(t_input)){
-			//~ t_volumeUtile = Tools::stringToFloat(t_input);
-		//~ } else 
-			//~ cout << "Veuillez entrer un nombre !"<< endl;
-		//~ }
-//~ }
 	// Afficher le menu
 		// Ajouter un vehicule
 		// Enregistrement d'une location (nvelle reservation)
