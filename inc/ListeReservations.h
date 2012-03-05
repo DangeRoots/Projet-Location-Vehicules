@@ -64,27 +64,6 @@ class ListeReservations {
 		bool ajouterReservation (Reservation res);
 		
 		/*!
-		*  \brief Modifier réservation
-		*
-		*  Permet de modifier une réservation existante
-		*
-		*  \param [in,out] resa Reservation, la réservation à modifier
-		*  \return bool vrai si la réservation a été modifiée
-		*  \return bool faux si la réservation n'a pas pu être modifiée
-		*/
-		// void modifierReservation (Location loc);
-		
-		
-		/*!
-		*  \brief Rechercher réservation
-		*
-		*  Permet de rechercher une réservation dans la liste
-		*
-		*  \return Reservation une réservation
-		*/		
-		//Location rechercherLocation(char type, CDate dateDepart, CDate dateRetour);
-		
-		/*!
 		*  \brief Afficher liste complète
 		*
 		*  Affiche la liste des réservations. La liste affichée peut contenir toutes les réservations, les réservations dont la date de départ est égale à date ou les véhicules restituables. Sont considérés restituables tous les véhicules dont la date de retour est celle du jour courant.
@@ -99,10 +78,10 @@ class ListeReservations {
 		*
 		*  Sauvegarde la liste des réservations dans un fichier
 		*
-		*  \param [in,out] outFile fstream, le fichier de sauvegarde
+		*  \param [in,out] nomFichier string, le nom du fichier de sauvegarde
 		*  \return void
 		*/												
-		void sauvegarder(fstream &outFile);
+		void sauvegarder(string nomFichier);
 };
 
 #endif
