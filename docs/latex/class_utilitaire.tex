@@ -2,10 +2,23 @@
 \section{Référence de la classe Utilitaire}
 \label{class_utilitaire}\index{Utilitaire@{Utilitaire}}
 }
-Graphe d'héritage de Utilitaire:\begin{figure}[H]
+
+
+Graphe d'héritage de Utilitaire:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_utilitaire}
+\includegraphics[width=134pt]{class_utilitaire__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Utilitaire:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_utilitaire__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Fonctions membres publiques}
@@ -47,14 +60,14 @@ Constructeur.
 Constructeur de la classe \hyperlink{class_vehicule}{Vehicule}
 
 
-\begin{DoxyParams}{Paramètres}
-{\em volume,réel,volume} & utile \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em volume} & réel, volume utile \\
 \hline
-{\em immat,chaîne} & de caractères, le modèle du véhicule \\
+\mbox{\tt in}  & {\em immat} & chaîne de caractères, le modèle du véhicule \\
 \hline
-{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\mbox{\tt in}  & {\em marque} & chaîne de caractères, la marque du véhicule \\
 \hline
-{\em modele,chaîne} & de caractères, le kilométrage du véhicule \\
+\mbox{\tt in}  & {\em modele} & chaîne de caractères, le kilométrage du véhicule \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_utilitaire_a8a4af48b60aaeefe9b6399ed94495662}{
@@ -187,8 +200,8 @@ Modifier volume utile.
 Modifie le volume utile
 
 
-\begin{DoxyParams}{Paramètres}
-{\em volume,réel,le} & volume utile \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em volume} & réel, le volume utile \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

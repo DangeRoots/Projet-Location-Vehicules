@@ -10,11 +10,11 @@
  * \file VP.h
  * \brief Classe VP
  * 
- *  Cette classe propose un contenu basique pour créer une voiture particulière.
+ *  Cette classe permet de créer une voiture particulière.
  * 
  * \author Gilles Coulais, 
  * \author Icham Sirat
- * \version 0.2
+ * \version 1.0
  */
 
 class VP: public Vehicule {	
@@ -27,10 +27,10 @@ class VP: public Vehicule {
 		*
 		*  Constructeur de la classe VP
 		*
-		*  \param immat, chaîne de caractères, l'immatriculation de la voiture
-		*  \param modele, chaîne de caractères, le modèle de la voiture
-		*  \param marque, chaîne de caractères, la marque de la voiture
-		*  \param nbPlaces, entier, le nombre de place de la voiture
+		*  \param [in] immat chaîne de caractères, l'immatriculation de la voiture
+		*  \param [in] modele chaîne de caractères, le modèle de la voiture
+		*  \param [in] marque chaîne de caractères, la marque de la voiture
+		*  \param [in] nbPlaces entier, le nombre de place de la voiture
 		*/
 		VP(string immat, string marque, string modele, int nbPlaces);
 		
@@ -58,7 +58,7 @@ class VP: public Vehicule {
 		 *  Permet d'obtenir le nombre de place de la voiture
 		 *
 		 *  \param aucun
-		 *  \return m_nbPlaces, entier, le nombre de place de la voiture
+		 *  \return m_nbPlaces entier, le nombre de place de la voiture
 		 */		
 		int getNbPlaces();
 
@@ -67,7 +67,7 @@ class VP: public Vehicule {
 		 *
 		 *  Permet de modifier le nombre de place de la voiture
 		 *
-		 *  \param nbPlaces, entier, le nombre de place de la voiture
+		 *  \param [in] nbPlaces entier, le nombre de place de la voiture
 		 *  \return void
 		 */		
 		void setNbPlaces(int nbPlaces);
@@ -87,7 +87,7 @@ class VP: public Vehicule {
 		*
 		*  Sauvegarde le VP
 		*
-		*  \param aucun
+		*  \param [in,out] fs fstream, le fichier de sauvegarde
 		*  \return void
 		*/								
 		virtual void save(fstream &fs);

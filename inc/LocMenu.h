@@ -18,7 +18,7 @@
  *  Cette classe permet de gérer le menu du logiciel de location
  * 
  * \author Gilles Coulais, Icham Sirat
- * \version 0.1
+ * \version 1.0
  */
 
 class LocMenu {

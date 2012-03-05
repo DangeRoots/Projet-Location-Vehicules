@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -68,13 +68,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <!-- doxytag: class="Utilitaire" --><!-- doxytag: inherits="Vehicule" --><div class="dynheader">
 Graphe d'héritage de Utilitaire:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_utilitaire.png" usemap="#Utilitaire_map" alt=""/>
-  <map id="Utilitaire_map" name="Utilitaire_map">
-<area href="class_vehicule.html" alt="Vehicule" shape="rect" coords="0,0,62,24"/>
-<area href="class_camion.html" alt="Camion" shape="rect" coords="0,112,62,136"/>
-</map>
- </div></div>
+<div class="center"><img src="class_utilitaire__inherit__graph.png" border="0" usemap="#_utilitaire_inherit__map" alt="Inheritance graph"/></div>
+<map name="_utilitaire_inherit__map" id="_utilitaire_inherit__map">
+<area shape="rect" id="node5" href="class_camion.html" title="Création de camions." alt="" coords="8,160,75,189"/><area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de Utilitaire:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_utilitaire__coll__graph.png" border="0" usemap="#_utilitaire_coll__map" alt="Collaboration graph"/></div>
+<map name="_utilitaire_coll__map" id="_utilitaire_coll__map">
+<area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 
 <p><a href="class_utilitaire-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
@@ -137,10 +141,10 @@ Fonctions membres publiques</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_vehicule.html">Vehicule</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">volume,réel,volume</td><td>utile </td></tr>
-    <tr><td class="paramname">immat,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
-    <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
-    <tr><td class="paramname">modele,chaîne</td><td>de caractères, le kilométrage du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>réel, volume utile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, le modèle du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marque</td><td>chaîne de caractères, la marque du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modele</td><td>chaîne de caractères, le kilométrage du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -292,7 +296,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Modifie le volume utile</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">volume,réel,le</td><td>volume utile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>réel, le volume utile </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,7 +322,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

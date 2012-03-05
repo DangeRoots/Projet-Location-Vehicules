@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -65,16 +65,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h1>Référence de la classe Camion</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Camion" --><!-- doxytag: inherits="Utilitaire" --><div class="dynheader">
+<!-- doxytag: class="Camion" --><!-- doxytag: inherits="Utilitaire" -->
+<p>Création de camions.  
+<a href="#_details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_camion_8h_source.html">Camion.h</a>&gt;</code></p>
+<div class="dynheader">
 Graphe d'héritage de Camion:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_camion.png" usemap="#Camion_map" alt=""/>
-  <map id="Camion_map" name="Camion_map">
-<area href="class_utilitaire.html" alt="Utilitaire" shape="rect" coords="0,56,62,80"/>
-<area href="class_vehicule.html" alt="Vehicule" shape="rect" coords="0,0,62,24"/>
-</map>
- </div></div>
+<div class="center"><img src="class_camion__inherit__graph.png" border="0" usemap="#_camion_inherit__map" alt="Inheritance graph"/></div>
+<map name="_camion_inherit__map" id="_camion_inherit__map">
+<area shape="rect" id="node2" href="class_utilitaire.html" title="Utilitaire" alt="" coords="7,83,76,112"/><area shape="rect" id="node4" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de Camion:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_camion__coll__graph.png" border="0" usemap="#_camion_coll__map" alt="Collaboration graph"/></div>
+<map name="_camion_coll__map" id="_camion_coll__map">
+<area shape="rect" id="node2" href="class_utilitaire.html" title="Utilitaire" alt="" coords="7,83,76,112"/><area shape="rect" id="node4" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 
 <p><a href="class_camion-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
@@ -95,7 +104,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camion.html#a2c715c85952a7e0bb2948494d79157b8">save</a> (fstream &amp;fs)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarder camion  <a href="#a2c715c85952a7e0bb2948494d79157b8"></a><br/></td></tr>
 </table>
-<hr/><h2>Documentation des constructeurs et destructeur</h2>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Création de camions. </p>
+<p>Cette classe permet de créer des camions, ie des utilitaires de plus de 3,5T. Pour les utilitaires de moins de 3,5t, il est conseillé d'utiliser la classe <a class="el" href="class_utilitaire.html">Utilitaire</a> </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ac33dc959ae263b822638aa73b9438ab1"></a><!-- doxytag: member="Camion::Camion" ref="ac33dc959ae263b822638aa73b9438ab1" args="(float poids, float volume, string immat, string marque, string modele)" -->
 <div class="memitem">
 <div class="memproto">
@@ -140,14 +152,14 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur de la classe <a class="el" href="class_camion.html">Camion</a></p>
+<p>Constructeur de la classe <a class="el" href="class_camion.html" title="Création de camions.">Camion</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">poids,réel,poids</td><td>utile </td></tr>
-    <tr><td class="paramname">volume,réel,volume</td><td>utile </td></tr>
-    <tr><td class="paramname">immat,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
-    <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
-    <tr><td class="paramname">modele,chaîne</td><td>de caractères, le kilométrage du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poids</td><td>réel, poids utile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>réel, volume utile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, le modèle du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marque</td><td>chaîne de caractères, la marque du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modele</td><td>chaîne de caractères, le kilométrage du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -169,7 +181,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur par défaut de la classe <a class="el" href="class_camion.html">Camion</a> </p>
+<p>Constructeur par défaut de la classe <a class="el" href="class_camion.html" title="Création de camions.">Camion</a> </p>
 
 </div>
 </div>
@@ -188,7 +200,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Destructeur. </p>
-<p>Destructeur de la classe <a class="el" href="class_camion.html">Camion</a> </p>
+<p>Destructeur de la classe <a class="el" href="class_camion.html" title="Création de camions.">Camion</a> </p>
 
 </div>
 </div>
@@ -295,7 +307,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Modifie le poids utile</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">poids,réel,le</td><td>volume utile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poids</td><td>réel, le volume utile </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,7 +333,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

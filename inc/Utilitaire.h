@@ -12,7 +12,7 @@
  *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe Camion
  * 
  * \author Gilles Coulais
- * \version 0.1
+ * \version 1.0
  */
 
 class Utilitaire : public Vehicule {
@@ -25,10 +25,10 @@ class Utilitaire : public Vehicule {
 		*
 		*  Constructeur de la classe Vehicule
 		*
-		*  \param volume, réel, volume utile
-		*  \param immat, chaîne de caractères, le modèle du véhicule
-		*  \param marque, chaîne de caractères, la marque du véhicule
-		*  \param modele, chaîne de caractères, le kilométrage du véhicule
+		*  \param [in] volume réel, volume utile
+		*  \param [in] immat chaîne de caractères, le modèle du véhicule
+		*  \param [in] marque chaîne de caractères, la marque du véhicule
+		*  \param [in] modele chaîne de caractères, le kilométrage du véhicule
 		*/
 		Utilitaire(float volume, string immat, string marque, string modele);
 
@@ -63,7 +63,7 @@ class Utilitaire : public Vehicule {
 		 *
 		 *  Modifie le volume utile
 		 *
-		 *  \param volume, réel, le volume utile
+		 *  \param [in] volume réel, le volume utile
 		 *  \return void
 		 */			
 		void setVolumeUtile(float volume);

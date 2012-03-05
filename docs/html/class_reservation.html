@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -65,7 +65,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h1>Référence de la classe Reservation</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Reservation" -->
+<!-- doxytag: class="Reservation" --><div class="dynheader">
+Graphe de collaboration de Reservation:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_reservation__coll__graph.png" border="0" usemap="#_reservation_coll__map" alt="Collaboration graph"/></div>
+<map name="_reservation_coll__map" id="_reservation_coll__map">
+<area shape="rect" id="node2" href="class_c_date.html" title="Création et gestion de dates." alt="" coords="21,5,80,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+
 <p><a href="class_reservation-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -128,8 +135,8 @@ Fonctions membres publiques</h2></td></tr>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">veh</td><td>string, l'immatriculation du véhicule </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dateDep</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de début de réservation </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dateRet</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de fin de réservation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dateDep</td><td><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a>, la date de début de réservation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dateRet</td><td><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a>, la date de fin de réservation </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,8 +250,8 @@ Fonctions membres publiques</h2></td></tr>
 <p>Vérifie la disponibilité du véhicule dans la période comprise en deux dates</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dep</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de départ souhaitée </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ret</td><td><a class="el" href="class_c_date.html">CDate</a>, la date de retour souhaitée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dep</td><td><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a>, la date de départ souhaitée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ret</td><td><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a>, la date de retour souhaitée </td></tr>
   </table>
   </dd>
 </dl>
@@ -277,7 +284,7 @@ bool faux si le véhicule est indisponible </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="class_c_date.html">CDate</a> la date recherchée </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> la date recherchée </dd></dl>
 
 </div>
 </div>
@@ -393,7 +400,7 @@ bool faux si les deux réservations sont différentes. </dd></dl>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>char, le type de date : d pour départ, r pour retour </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">newDate</td><td><a class="el" href="class_c_date.html">CDate</a>, la nouvelle date </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newDate</td><td><a class="el" href="class_c_date.html" title="Création et gestion de dates.">CDate</a>, la nouvelle date </td></tr>
   </table>
   </dd>
 </dl>
@@ -419,7 +426,7 @@ bool faux si les deux réservations sont différentes. </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

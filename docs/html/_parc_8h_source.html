@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -76,36 +76,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00025"></a>00025         <span class="keyword">private</span>:
 <a name="l00026"></a>00026                 list&lt;Location&gt; m_parcAuto;
 <a name="l00027"></a>00027                 list&lt;Location&gt;::iterator m_parcAutoI;
-<a name="l00028"></a>00028                 <span class="keywordtype">void</span> entrerTypeVeh(<span class="keywordtype">char</span> &amp;t);
-<a name="l00029"></a>00029                 <span class="keywordtype">void</span> entrerImmat(<span class="keywordtype">string</span> &amp;i);
-<a name="l00030"></a>00030                 <span class="keywordtype">void</span> entrerMarqueModele(<span class="keywordtype">string</span> &amp;t_ma, <span class="keywordtype">string</span> &amp;t_mo);
-<a name="l00031"></a>00031                 <span class="keywordtype">void</span> entrerKilometrage(<span class="keywordtype">int</span> &amp;t_k);
-<a name="l00032"></a>00032                 <span class="keywordtype">void</span> entrerVolumeUtile(<span class="keywordtype">float</span> &amp;t_v);
-<a name="l00033"></a>00033                 <span class="keywordtype">void</span> entrerPoidsUtile(<span class="keywordtype">float</span> &amp;t_p);
-<a name="l00034"></a>00034                 <span class="keywordtype">void</span> entrerNbPlaces(<span class="keywordtype">int</span> &amp;t_nbP);
-<a name="l00035"></a>00035                 
-<a name="l00036"></a>00036         <span class="keyword">public</span>:
-<a name="l00044"></a>00044                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a> (fstream &amp;inFile);
-<a name="l00045"></a>00045                 
-<a name="l00053"></a>00053                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a>();
-<a name="l00054"></a>00054                 
-<a name="l00062"></a>00062                 <a class="code" href="class_parc.html#a45de4ddcf862a8ad3da902bc63e0c1f6" title="Destructeur.">~Parc</a> ();
-<a name="l00063"></a>00063                 
-<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#ad180ce771871b8f8790bf4703800d8b2" title="Ajouter location.">ajouterLocation</a> ();
-<a name="l00073"></a>00073                 
-<a name="l00082"></a>00082                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a9886186ab4182ee41a1480735600ed38" title="Supprimer location.">supprimerLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
-<a name="l00083"></a>00083 
-<a name="l00092"></a>00092                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880" title="Modifier location.">modifierLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
-<a name="l00093"></a>00093                 
-<a name="l00094"></a>00094                 
-<a name="l00105"></a>00105                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a289f4e8de154f1ee35fec6cc9868726f" title="Rechercher location.">rechercherLocation</a>(<span class="keywordtype">string</span> immat, <a class="code" href="class_location.html">Location</a> &amp;loc);
-<a name="l00106"></a>00106                 
-<a name="l00115"></a>00115                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9" title="Afficher liste complète.">afficher</a>();
-<a name="l00116"></a>00116                 
-<a name="l00125"></a>00125                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a8cb861e9323b182a98ba666c9d67c721" title="Sauvegarder parc.">sauvegarder</a>(fstream &amp;inFile);
-<a name="l00126"></a>00126 };
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 <span class="preprocessor">#endif</span>
+<a name="l00028"></a>00028                 
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> entrerTypeVeh(<span class="keywordtype">string</span> &amp;t);
+<a name="l00038"></a>00038 
+<a name="l00047"></a>00047                 <span class="keywordtype">void</span> entrerImmat(<span class="keywordtype">string</span> &amp;i);
+<a name="l00048"></a>00048                 
+<a name="l00058"></a>00058                 <span class="keywordtype">void</span> entrerMarqueModele(<span class="keywordtype">string</span> &amp;t_ma, <span class="keywordtype">string</span> &amp;t_mo);
+<a name="l00059"></a>00059                 
+<a name="l00068"></a>00068                 <span class="keywordtype">void</span> entrerKilometrage(<span class="keywordtype">int</span> &amp;t_k);
+<a name="l00069"></a>00069                 
+<a name="l00078"></a>00078                 <span class="keywordtype">void</span> entrerVolumeUtile(<span class="keywordtype">float</span> &amp;t_v);
+<a name="l00079"></a>00079 
+<a name="l00088"></a>00088                 <span class="keywordtype">void</span> entrerPoidsUtile(<span class="keywordtype">float</span> &amp;t_p);
+<a name="l00089"></a>00089                 
+<a name="l00098"></a>00098                 <span class="keywordtype">void</span> entrerNbPlaces(<span class="keywordtype">int</span> &amp;t_nbP);
+<a name="l00099"></a>00099                 
+<a name="l00100"></a>00100         <span class="keyword">public</span>:
+<a name="l00108"></a>00108                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a> (fstream &amp;inFile);
+<a name="l00109"></a>00109                 
+<a name="l00117"></a>00117                 <a class="code" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363" title="Constructeur.">Parc</a>();
+<a name="l00118"></a>00118                 
+<a name="l00126"></a>00126                 <a class="code" href="class_parc.html#a45de4ddcf862a8ad3da902bc63e0c1f6" title="Destructeur.">~Parc</a> ();
+<a name="l00127"></a>00127                 
+<a name="l00135"></a>00135                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#ad180ce771871b8f8790bf4703800d8b2" title="Ajouter location.">ajouterLocation</a> ();
+<a name="l00136"></a>00136 
+<a name="l00145"></a>00145                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880" title="Modifier location.">modifierLocation</a> (<a class="code" href="class_location.html">Location</a> loc);
+<a name="l00146"></a>00146                 
+<a name="l00156"></a>00156                 <span class="keywordtype">bool</span> <a class="code" href="class_parc.html#a0f8b465d0d57410882787d5bad933a38" title="Vérifie si un véhicule est dans le parc.">estDansLeParc</a>(<span class="keywordtype">string</span> immat, <a class="code" href="class_location.html">Location</a> &amp;loc);
+<a name="l00157"></a>00157                 
+<a name="l00166"></a>00166                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9" title="Afficher liste complète.">afficher</a>();
+<a name="l00167"></a>00167                 
+<a name="l00176"></a>00176                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#ad67130a49e7e1848c9f068c2cb266487" title="Sauvegarder parc.">sauvegarder</a>(<span class="keywordtype">string</span> nomFichier);
+<a name="l00177"></a>00177 
+<a name="l00187"></a>00187                 <span class="keywordtype">void</span> <a class="code" href="class_parc.html#a98acdf9cb77006a57ceebf4ad4e465f2" title="Enregistrer retour.">enregistrerRetour</a>(<span class="keywordtype">int</span> kilom, <span class="keywordtype">string</span> immat);
+<a name="l00188"></a>00188 
+<a name="l00197"></a>00197                 list&lt;Location&gt;::iterator <a class="code" href="class_parc.html#a43f28692c3b2a3523640002fe7a296eb" title="Rechercher location.">rechercherLocation</a>(<span class="keywordtype">string</span> immat);
+<a name="l00198"></a>00198 };
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -122,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:15 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

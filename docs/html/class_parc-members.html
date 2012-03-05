@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -66,12 +66,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 Liste complète des membres de <a class="el" href="class_parc.html">Parc</a>, y compris les membres hérités :<table>
   <tr class="memlist"><td><a class="el" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9">afficher</a>()</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_parc.html#ad180ce771871b8f8790bf4703800d8b2">ajouterLocation</a>()</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_parc.html#a98acdf9cb77006a57ceebf4ad4e465f2">enregistrerRetour</a>(int kilom, string immat)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_parc.html#a0f8b465d0d57410882787d5bad933a38">estDansLeParc</a>(string immat, Location &amp;loc)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880">modifierLocation</a>(Location loc)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_parc.html#ac974868bc248cc8ded2ac7c7d536251f">Parc</a>(fstream &amp;inFile)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_parc.html#ad7545bbf00b69b6bc47d8bc9e6584363">Parc</a>()</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_parc.html#a289f4e8de154f1ee35fec6cc9868726f">rechercherLocation</a>(string immat, Location &amp;loc)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_parc.html#a8cb861e9323b182a98ba666c9d67c721">sauvegarder</a>(fstream &amp;inFile)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_parc.html#a9886186ab4182ee41a1480735600ed38">supprimerLocation</a>(Location loc)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_parc.html#a43f28692c3b2a3523640002fe7a296eb">rechercherLocation</a>(string immat)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_parc.html#ad67130a49e7e1848c9f068c2cb266487">sauvegarder</a>(string nomFichier)</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_parc.html#a45de4ddcf862a8ad3da902bc63e0c1f6">~Parc</a>()</td><td><a class="el" href="class_parc.html">Parc</a></td><td></td></tr>
 </table></div>
 <!--- window showing the filter options -->
@@ -88,7 +89,7 @@ Liste complète des membres de <a class="el" href="class_parc.html">Parc</a>, y 
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

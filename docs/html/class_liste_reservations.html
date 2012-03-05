@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -66,6 +66,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div>
 <div class="contents">
 <!-- doxytag: class="ListeReservations" -->
+<p>Création de listes de réservations de véhicules.  
+<a href="#_details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_liste_reservations_8h_source.html">ListeReservations.h</a>&gt;</code></p>
+
 <p><a href="class_liste_reservations-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -73,15 +78,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#a588814a2a1a844ad70e790d1cf7f3d45">ListeReservations</a> (fstream &amp;inFile)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a588814a2a1a844ad70e790d1cf7f3d45"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#a32f73522c4b7e1dc98dc6ed8a06e7ec6">~ListeReservations</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a32f73522c4b7e1dc98dc6ed8a06e7ec6"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a32f73522c4b7e1dc98dc6ed8a06e7ec6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#abc616def701c55e0643f7ace4e0dd0c5">ajouterReservation</a> (<a class="el" href="class_reservation.html">Reservation</a> res)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter réservation.  <a href="#abc616def701c55e0643f7ace4e0dd0c5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#a6a199865ea417f472c46cd981bdb9e2c">afficher</a> (<a class="el" href="class_parc.html">Parc</a> p)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier réservation.  <a href="#a6a199865ea417f472c46cd981bdb9e2c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#a360b471263f043a38feca49f137f7993">sauvegarder</a> (fstream &amp;outFile)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder liste réservations.  <a href="#a360b471263f043a38feca49f137f7993"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher liste complète.  <a href="#a6a199865ea417f472c46cd981bdb9e2c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_liste_reservations.html#a0d55928f73787fe75e77df3fd79da52e">sauvegarder</a> (string nomFichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder liste réservations.  <a href="#a0d55928f73787fe75e77df3fd79da52e"></a><br/></td></tr>
 </table>
-<hr/><h2>Documentation des constructeurs et destructeur</h2>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Création de listes de réservations de véhicules. </p>
+<p>Cette classe permet de gérer la liste des réservations de véhicules </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a588814a2a1a844ad70e790d1cf7f3d45"></a><!-- doxytag: member="ListeReservations::ListeReservations" ref="a588814a2a1a844ad70e790d1cf7f3d45" args="(fstream &amp;inFile)" -->
 <div class="memitem">
 <div class="memproto">
@@ -98,7 +106,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur de la classe <a class="el" href="class_liste_reservations.html">ListeReservations</a></p>
+<p>Constructeur de la classe <a class="el" href="class_liste_reservations.html" title="Création de listes de réservations de véhicules.">ListeReservations</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">inFile</td><td>fstream, le fichier contenant la liste des réservations </td></tr>
@@ -122,16 +130,8 @@ Fonctions membres publiques</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Constructeur. </p>
-<p>Constructeur par défaut de la classe <a class="el" href="class_liste_reservations.html">ListeReservations</a></p>
-<dl><dt><b>Paramètres:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aucun</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Destructeur</p>
-<p>Destructeur de la classe <a class="el" href="class_liste_reservations.html">ListeReservations</a></p>
+<p>Destructeur. </p>
+<p>Destructeur de la classe <a class="el" href="class_liste_reservations.html" title="Création de listes de réservations de véhicules.">ListeReservations</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aucun</td><td></td></tr>
@@ -157,21 +157,7 @@ Fonctions membres publiques</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Modifier réservation. </p>
-<p>Permet de modifier une réservation existante</p>
-<dl><dt><b>Paramètres:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">resa</td><td><a class="el" href="class_reservation.html">Reservation</a>, la réservation à modifier </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool vrai si la réservation a été modifiée </dd>
-<dd>
-bool faux si la réservation n'a pas pu être modifiée</dd></dl>
-<p>Rechercher réservation</p>
-<p>Permet de rechercher une réservation dans la liste</p>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="class_reservation.html">Reservation</a> une réservation</dd></dl>
-<p>Afficher liste complète</p>
+<p>Afficher liste complète. </p>
 <p>Affiche la liste des réservations. La liste affichée peut contenir toutes les réservations, les réservations dont la date de départ est égale à date ou les véhicules restituables. Sont considérés restituables tous les véhicules dont la date de retour est celle du jour courant.</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
@@ -212,15 +198,15 @@ bool faux si la réservation n'a pas pu être ajoutée à la liste </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a360b471263f043a38feca49f137f7993"></a><!-- doxytag: member="ListeReservations::sauvegarder" ref="a360b471263f043a38feca49f137f7993" args="(fstream &amp;outFile)" -->
+<a class="anchor" id="a0d55928f73787fe75e77df3fd79da52e"></a><!-- doxytag: member="ListeReservations::sauvegarder" ref="a0d55928f73787fe75e77df3fd79da52e" args="(string nomFichier)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ListeReservations::sauvegarder </td>
           <td>(</td>
-          <td class="paramtype">fstream &amp;&#160;</td>
-          <td class="paramname"><em>outFile</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nomFichier</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -231,7 +217,7 @@ bool faux si la réservation n'a pas pu être ajoutée à la liste </dd></dl>
 <p>Sauvegarde la liste des réservations dans un fichier</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">outFile</td><td>fstream, le fichier de sauvegarde </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nomFichier</td><td>string, le nom du fichier de sauvegarde </td></tr>
   </table>
   </dd>
 </dl>
@@ -257,7 +243,7 @@ bool faux si la réservation n'a pas pu être ajoutée à la liste </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

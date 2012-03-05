@@ -10,12 +10,16 @@
 /*!
  * \file ListeReservations.h
  * \brief Classe ListeReservations
- * 
- *  Cette classe permet de gérer la liste des réservations de véhicules
- * 
  * \author Gilles Coulais
- * \version 0.1
+ * \version 1.0
  */
+
+/*! 
+* \class ListeReservations
+* \brief Création de listes de réservations de véhicules
+*
+*  Cette classe permet de gérer la liste des réservations de véhicules
+*/
 
 class ListeReservations {
 	private:

@@ -5,13 +5,15 @@
  * \file Tools.h
  * \brief Utilitaires variés
  * \author Gilles Coulais
- * \version 0.2
+ * \version 0.3
  */
 
 /*! \class Tools
    * \brief Utilitaires
    *
-   *  Cette classe fournit un certain nombre de fonctions utilitaires telles que la transformation de chaînes de caractères en majuscules
+   *  Cette classe fournit un certain nombre de fonctions utilitaires, utilisables via des méthodes statiques.
+   *  - Conversion de chaînes de caractères en majuscules et minuscules
+   *  - fonction de vérification et conversion d'entiers et réels depuis des chaînes de caractères
    */
 
 class Tools {
@@ -22,10 +24,9 @@ class Tools {
 		 *
 		 *  Renvoie le plus petite valeur entre deux entiers fournis en paramètre
 		 *
-		 *  \param
-		 * 		a et b, deux entiers
-		 *  \return
-		 * 		int, la valeur minimum
+		 *  \param [in] a un entier
+		 *  \param [in] b un entier
+		 *  \return	entier, la valeur minimum entre a et b
 		 */		
 		static int isMinimum(int a, int b);
 		
@@ -34,10 +35,9 @@ class Tools {
 		 *
 		 *  Renvoie vrai si la chaîne de caractères fournie en paramètres est un entier
 		 *
-		 *  \param
-		 * 		data, une chaîne de caractères
-		 *  \return
-		 * 		bool, vrai si data est un entier, faux sinon
+		 *  \param [in,out] data une chaîne de caractères
+		 *  \return	vrai si data est un entier
+		 *  \return	faux si data n'est pas un entier
 		 */		
 		static bool estEntier(const string &data);
 		
@@ -46,10 +46,9 @@ class Tools {
 		 *
 		 *  Renvoie vrai si la chaîne de caractères fournie en paramètres est un nombre réel
 		 *
-		 *  \param
-		 * 		data, une chaîne de caractères
-		 *  \return
-		 * 		bool, vrai si data est un entier, faux sinon
+		 *  \param [in,out] data une chaîne de caractères
+		 *  \return	vrai si data est un réel
+		 *  \return	faux si data n'est pas un réel
 		 */		
 		static bool estReel(const string &data);
 		
@@ -58,10 +57,8 @@ class Tools {
 		 *
 		 *  Convertit une chaine de caractères en nombre réel
 		 *
-		 *  \param
-		 * 		val, une chaîne de caractères
-		 *  \return
-		 * 		float, un nombre réel
+		 *  \param [in] val une chaîne de caractères représentant un ,ombre réel
+		 *  \return	float, un nombre réel
 		 */		
 		static float stringToFloat(const string val);
 		
@@ -70,10 +67,8 @@ class Tools {
 		 *
 		 *  Transforme une chaîne de caractères en lettres minuscules
 		 *
-		 *  \param
-		 * 		chaine, une chaîne de caractères
-		 *  \return
-		 * 		none
+		 *  \param [in,out]	chaine, une chaîne de caractères
+		 *  \return void
 		 */		
 		static void stringToLower (string &chaine);
 
@@ -83,7 +78,7 @@ class Tools {
 		 *  Transforme une chaîne de caractères en lettres majuscules
 		 *
 		 *  \param [in,out]	chaine, une chaîne de caractères
-		 *  \return none
+		 *  \return void
 		 */				
 		static void stringToUpper (string &chaine);
 
@@ -93,7 +88,7 @@ class Tools {
 		 *  Transforme un caractère en lettre majuscule
 		 *
 		 *  \param [in,out]	c, un caractère
-		 *  \return none
+		 *  \return void
 		 */				
 		static void charToUpper (char &c);
 		
@@ -102,8 +97,8 @@ class Tools {
 		 *
 		 *  Transforme un caractère en lettre minuscule
 		 *
-		 *  \param c, un caractères
-		 *  \return none
+		 *  \param [in,out]	c, un caractères
+		 *  \return void
 		 */		
 		static void charToLower (char &c);
 		
@@ -112,11 +107,9 @@ class Tools {
 		 *
 		 *  Convertit une chaine de caractères en nombre entier
 		 *
-		 *  \param
-		 * 		val, une chaîne de caractères
-		 *  \return
-		 * 		int, un nombre entier
-		 */
+		 *  \param [in] val une chaîne de caractères représentant un entier
+		 *  \return	int, un nombre réel
+		 */		
 		static int stringToInt(const string val);
 };
 #endif

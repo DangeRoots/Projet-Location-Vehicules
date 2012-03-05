@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -68,14 +68,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <!-- doxytag: class="Vehicule" --><div class="dynheader">
 Graphe d'héritage de Vehicule:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_vehicule.png" usemap="#Vehicule_map" alt=""/>
-  <map id="Vehicule_map" name="Vehicule_map">
-<area href="class_utilitaire.html" alt="Utilitaire" shape="rect" coords="0,56,62,80"/>
-<area href="class_v_p.html" alt="VP" shape="rect" coords="72,56,134,80"/>
-<area href="class_camion.html" alt="Camion" shape="rect" coords="0,112,62,136"/>
-</map>
- </div></div>
+<div class="center"><img src="class_vehicule__inherit__graph.png" border="0" usemap="#_vehicule_inherit__map" alt="Inheritance graph"/></div>
+<map name="_vehicule_inherit__map" id="_vehicule_inherit__map">
+<area shape="rect" id="node3" href="class_utilitaire.html" title="Utilitaire" alt="" coords="5,83,75,112"/><area shape="rect" id="node7" href="class_v_p.html" title="VP" alt="" coords="99,83,139,112"/><area shape="rect" id="node5" href="class_camion.html" title="Création de camions." alt="" coords="7,160,73,189"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 
 <p><a href="class_vehicule-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
@@ -142,11 +138,9 @@ Fonctions membres publiques</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_vehicule.html">Vehicule</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">immat,chaîne</td><td>de caractères, l'immatriculation du véhicule </td></tr>
-    <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
-    <tr><td class="paramname">modele,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
-    <tr><td class="paramname">kilometrage,entier,le</td><td>kilométrage du véhicule </td></tr>
-    <tr><td class="paramname">nbLocation,entier,le</td><td>nombre de locations du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, l'immatriculation du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marque</td><td>chaîne de caractères, la marque du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modele</td><td>chaîne de caractères, le modèle du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,7 +248,7 @@ Fonctions membres publiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_immatriculation, chaîne de caractères, l'immatriculation du véhicule </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_immatriculation chaîne de caractères, l'immatriculation du véhicule </dd></dl>
 
 </div>
 </div>
@@ -280,7 +274,7 @@ Fonctions membres publiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_marque, chaîne de caractères, la marque du véhicule </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_marque chaîne de caractères, la marque du véhicule </dd></dl>
 
 </div>
 </div>
@@ -306,7 +300,7 @@ Fonctions membres publiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_modele, chaîne de caractères, le modèle du véhicule </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_modele chaîne de caractères, le modèle du véhicule </dd></dl>
 
 </div>
 </div>
@@ -326,7 +320,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Véhicule identiques. </p>
-<p>Permet de savoir si deux véhicules sont identiques</p>
+<p>Permet de savoir si deux véhicules sont identiques (même immatriculation)</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">veh</td><td><a class="el" href="class_vehicule.html">Vehicule</a>, le véhicule à comparer </td></tr>
@@ -387,7 +381,7 @@ false s'il sont différents </dd></dl>
 <p>Permet de modifier l'immatriculation du véhicule</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">immat,chaîne</td><td>de caractères, l'immatriculation du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, l'immatriculation du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -414,7 +408,7 @@ false s'il sont différents </dd></dl>
 <p>Permet de modifier la marque du véhicule</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marque</td><td>chaîne de caractères, la marque du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -441,7 +435,7 @@ false s'il sont différents </dd></dl>
 <p>Permet de modifier le modèle du véhicule</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">modele,chaîne</td><td>de caractères, le modèle du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modele</td><td>chaîne de caractères, le modèle du véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -467,7 +461,7 @@ false s'il sont différents </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

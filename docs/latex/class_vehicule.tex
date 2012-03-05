@@ -2,10 +2,14 @@
 \section{Référence de la classe Vehicule}
 \label{class_vehicule}\index{Vehicule@{Vehicule}}
 }
-Graphe d'héritage de Vehicule:\begin{figure}[H]
+
+
+Graphe d'héritage de Vehicule:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_vehicule}
+\includegraphics[width=180pt]{class_vehicule__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Fonctions membres publiques}
@@ -56,16 +60,12 @@ Constructeur.
 Constructeur de la classe \hyperlink{class_vehicule}{Vehicule}
 
 
-\begin{DoxyParams}{Paramètres}
-{\em immat,chaîne} & de caractères, l'immatriculation du véhicule \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em immat} & chaîne de caractères, l'immatriculation du véhicule \\
 \hline
-{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\mbox{\tt in}  & {\em marque} & chaîne de caractères, la marque du véhicule \\
 \hline
-{\em modele,chaîne} & de caractères, le modèle du véhicule \\
-\hline
-{\em kilometrage,entier,le} & kilométrage du véhicule \\
-\hline
-{\em nbLocation,entier,le} & nombre de locations du véhicule \\
+\mbox{\tt in}  & {\em modele} & chaîne de caractères, le modèle du véhicule \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_vehicule_ac9352572d0ca9cd4d3138247842c4ce8}{
@@ -159,7 +159,7 @@ Permet d'obtenir l'immatriculation du véhicule
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-m\_\-immatriculation, chaîne de caractères, l'immatriculation du véhicule 
+m\_\-immatriculation chaîne de caractères, l'immatriculation du véhicule 
 \end{DoxyReturn}
 \hypertarget{class_vehicule_aca7733632f1a0f1f56d76726895a8c78}{
 \index{Vehicule@{Vehicule}!getMarque@{getMarque}}
@@ -182,7 +182,7 @@ Permet d'obtenir la marque du véhicule
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-m\_\-marque, chaîne de caractères, la marque du véhicule 
+m\_\-marque chaîne de caractères, la marque du véhicule 
 \end{DoxyReturn}
 \hypertarget{class_vehicule_a61fd72adc19ab2aaa08e3a36775f27ba}{
 \index{Vehicule@{Vehicule}!getModele@{getModele}}
@@ -205,7 +205,7 @@ Permet d'obtenir le modèle du véhicule
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-m\_\-modele, chaîne de caractères, le modèle du véhicule 
+m\_\-modele chaîne de caractères, le modèle du véhicule 
 \end{DoxyReturn}
 \hypertarget{class_vehicule_afa55989329da4544093cad8e99b2f3b2}{
 \index{Vehicule@{Vehicule}!operator==@{operator==}}
@@ -220,7 +220,7 @@ m\_\-modele, chaîne de caractères, le modèle du véhicule
 
 Véhicule identiques. 
 
-Permet de savoir si deux véhicules sont identiques
+Permet de savoir si deux véhicules sont identiques (même immatriculation)
 
 
 \begin{DoxyParams}[1]{Paramètres}
@@ -275,8 +275,8 @@ Modifier immatriculation.
 Permet de modifier l'immatriculation du véhicule
 
 
-\begin{DoxyParams}{Paramètres}
-{\em immat,chaîne} & de caractères, l'immatriculation du véhicule \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em immat} & chaîne de caractères, l'immatriculation du véhicule \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
@@ -298,8 +298,8 @@ Modifier marque.
 Permet de modifier la marque du véhicule
 
 
-\begin{DoxyParams}{Paramètres}
-{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em marque} & chaîne de caractères, la marque du véhicule \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
@@ -321,8 +321,8 @@ Modifier modele.
 Permet de modifier le modèle du véhicule
 
 
-\begin{DoxyParams}{Paramètres}
-{\em modele,chaîne} & de caractères, le modèle du véhicule \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em modele} & chaîne de caractères, le modèle du véhicule \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

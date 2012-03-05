@@ -6,15 +6,20 @@
 #include <time.h>
 #include <cstdlib>
 
-/*!
+ /*!
  * \file CDate.h
  * \brief Classe cdate
- * 
- *  Cette classe propose des outils pour gérer une date
- * 
  * \author Franck Ruby, Gilles Coulais, Icham Sirat
- * \version 0.4
+ * \version 1.0
  */
+
+/*! 
+* \class CDate
+* \brief Création et gestion de dates
+*
+*  Cette classe propose des outils pour gérer une date
+*/
+
  
 class CDate {
 	private:
@@ -37,7 +42,7 @@ class CDate {
 		*
 		*  Constructeur par copie de la classe date
 		*
-		*  \param date, CDate, une date
+		*  \param [in] date CDate, une date
 		*/
 		CDate(const CDate& date);
 		
@@ -46,9 +51,9 @@ class CDate {
 		*
 		*  Constructeur de la classe date
 		*
-		*  \param jour, entier, le jour
-		*  \param mois, entier, le mois
-		*  \param annee, entier, l'année
+		*  \param [in] jour entier, le jour
+		*  \param [in] mois entier, le mois
+		*  \param [in] annee entier, l'année
 		*/
 		CDate(int jour, int mois, int annee);
 
@@ -67,7 +72,7 @@ class CDate {
 		*  Permet d'obtenir le jour de la date
 		*
 		*  \param aucun
-		*  \return un entier
+		*  \return un entier, le jour de la date
 		*/		
 		int getJour(){ return m_jour;}
 
@@ -77,7 +82,7 @@ class CDate {
 		*  Permet d'obtenir le mois de la date
 		*
 		*  \param aucun
-		*  \return un entier
+		*  \return un entier, le mois de la date
 		*/		
 		int getMois(){ return m_mois;}
 
@@ -87,7 +92,7 @@ class CDate {
 		*  Permet d'obtenir l'année de la date
 		*
 		*  \param aucun
-		*  \return un entier
+		*  \return un entier, l'année de la date
 		*/	
 		int getAnnee(){ return m_annee;}
 	
@@ -96,7 +101,7 @@ class CDate {
 		*
 		*  Permet de modifier le jour de la date
 		*
-		*  \param jour, entier, le jour
+		*  \param [in] jour entier, le nouveau jour
 		*  \return void
 		*/
 		void setJour(int jour){ m_jour = jour;}
@@ -106,7 +111,7 @@ class CDate {
 		*
 		*  Permet de modifier le mois de la date
 		*
-		*  \param mois, entier, le mois
+		*  \param [in] mois entier, le nouveau mois
 		*  \return void
 		*/				
 		void setMois(int mois){ m_mois = mois;}
@@ -116,7 +121,7 @@ class CDate {
 		*
 		*  Permet de modifier l'année de la date
 		*
-		*  \param annee, entier, l'année
+		*  \param [in] annee entier, la nouvelle année
 		*  \return void
 		*/				
 		void setAnnee(int annee){ m_annee = annee;}
@@ -127,9 +132,9 @@ class CDate {
 		*  Permet de récupérer le nom du mois
 		*
 		*  \param aucun
-		*  \return une chaine de caractères
+		*  \return chaine de caractères, le nom du mois
 		*/						
-		std::string GetStrMois();
+		string GetStrMois();
 		
 		/*!
 		*  \brief Indique le nombre de jours du mois
@@ -137,9 +142,9 @@ class CDate {
 		*  Permet de connaitre le nombre de jours d'un mois par rapport à l'année.
 		*  Appel de la fonction estBissextile 
 		*
-		*  \param mois, entier, le mois
-		*  \param annee, entier, l'année
-		*  \return un entier
+		*  \param [in] mois entier, le mois
+		*  \param [in] annee entier, l'année
+		*  \return un entier, le nombre de jours du mois
 		*/								
 		int nbJours (int mois, int annee);
 
@@ -148,8 +153,9 @@ class CDate {
 		*
 		*  Permet de connaitre si une année est bissextile ou pas 
 		*
-		*  \param annee, entier, l'année
-		*  \return bool
+		*  \param [in] annee entier, l'année
+		*  \return bool, vrai si l'année est bissextile
+		*  \return bool, faux si l'année n'est pas bissextile
 		*/								
 		bool estBissextile(int annee);
 	    	
@@ -158,10 +164,11 @@ class CDate {
 		*
 		*  Vérifie si une année est valide ou pas 
 		*
-		*  \param jour, entier, le jour
-		*  \param mois, entier, le mois
-		*  \param annee, entier, l'année
-		*  \return bool
+		*  \param [in] jour entier, le jour
+		*  \param [in] mois entier, le mois
+		*  \param [in] annee entier, l'année
+		*  \return bool, vrai si la date est valide
+		*  \return bool, faux si la date n'est pas valide
 		*/
 		bool validerDate( int jour, int mois, int annee);
 
@@ -170,8 +177,9 @@ class CDate {
 		*
 		*  Renvoie vrai si deux dates sont égales, faux sinon
 		*
-		*  \param date, objet Date, la date à comparer
-		*  \return bool
+		*  \param [in] date Date, la date à comparer
+		*  \return bool, vrai si les deux dates sont égales
+		*  \return bool, faux si les deux dates sont différentes
 		*/									    
 		bool operator==(const CDate &date) const;
 	   	 
@@ -180,8 +188,9 @@ class CDate {
 		*
 		*  Renvoie vrai si la date passée en paramètre est inférieure
 		*
-		*  \param date, objet Date, la date à comparer
-		*  \return bool
+		*  \param [in] date Date, la date à comparer
+		*  \return bool, vrai si la date passée en paramètre est inférieure
+		*  \return bool, faux si la date passée en paramètre n'est pas inférieure
 		*/									    
 		bool operator <(const CDate &date) const;
 
@@ -190,30 +199,11 @@ class CDate {
 		*
 		*  Renvoie vrai si la date passée en paramètre est supérieure
 		*
-		*  \param date, objet Date, la date à comparer
-		*  \return bool
+		*  \param [in] date Date, la date à comparer
+		*  \return bool, vrai si la date passée en paramètre est supérieure
+		*  \return bool, faux si la date passée en paramètre n'est pas supérieure
 		*/									    
 		bool operator >(const CDate &date) const;
-
-	    	/*!
-		*  \brief Infériorité égalité dates
-		*
-		*  Renvoie vrai si la date passée en paramètre est inférieure ou égale
-		*
-		*  \param date, objet Date, la date à comparer
-		*  \return bool
-		*/									    
-    	// bool operator <=(const CDate &date) const;
-
-	    	/*!
-		*  \brief Supériorité égalité dates
-		*
-		*  Renvoie vrai si la date passée en paramètre est supérieure ou égale
-		*
-		*  \param date, objet Date, la date à comparer
-		*  \return bool
-		*/									    
-    	bool operator >=(const CDate &date) const;
 
 		/*!
 		*  \brief Date du jour
@@ -221,7 +211,7 @@ class CDate {
 		*  Renvoie la date du jour 
 		*
 		*  \param aucun
-                *  \return CDate, la date du jour
+        *  \return CDate, la date du jour
 		*/
 		static CDate today();
 
