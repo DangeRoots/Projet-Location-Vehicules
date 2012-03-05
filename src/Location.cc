@@ -11,6 +11,11 @@ Location::Location(	Vehicule *vehicule,
 	m_kilometrage = kilom;
 }
 
+Location::Location(const Location &loc) {
+	m_vehicule = loc.m_vehicule;
+	m_kilometrage = loc.m_kilometrage;
+}
+
 Location::~Location() {
 }
 
@@ -20,6 +25,10 @@ Vehicule* Location::getVehicule() {
 
 void Location::setVehicule(Vehicule *veh) {
 	m_vehicule = veh;
+}
+
+void Location::setKilom(int kilom) {
+	m_kilometrage = kilom;
 }
 
 void Location::afficher() {

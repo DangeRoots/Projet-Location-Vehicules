@@ -93,6 +93,6 @@ CDate CDate::today(){
 }
 
 void CDate::afficher(){
-	cout << m_jour <<"/"<< m_mois <<"/"<< m_annee <<endl;
+	cout << m_jour <<"/"<< m_mois <<"/"<< m_annee;
 }
 

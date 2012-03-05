@@ -11,17 +11,10 @@ using namespace std;
 #include <Tools.h>
 
 int main(int argc, char *argv[]) {
-
-	/*	
-	if (argc < 2) {
-		cerr << "Argument manquant : chemin/vers/fichier/locations ! Impossible de poursuivre !" << endl;
-		exit (-1);
-	}
-	*/
 	
 	fstream vehFile, resaFile;
 	string nomFichierVeh = "res/Vehicule.data";
-	string nomFichierResa = "res/ReservationsDates.data";
+	string nomFichierResa = "res/Reservations.data";
 	
 	vehFile.open(nomFichierVeh.c_str(),ios::in);
 	resaFile.open(nomFichierResa.c_str(),ios::in);
@@ -63,9 +56,7 @@ int main(int argc, char *argv[]) {
 				choix = Tools::stringToInt(t_input);
 			} else
 				cout  << "Veuillez entrer un nombre !"<< endl;
-				// monMenu.afficher();//réaffichage du menu lors d'un mauvais choix
 		}
-
 		monMenu.traiter(choix, p1, resa, nomFichierVeh, nomFichierResa);
 	}//while du choix != 0
 }

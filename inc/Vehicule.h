@@ -2,7 +2,7 @@
 #define VEHICULE_H
 
 #include <iostream>
-// #include <iomanip>
+#include <iomanip>
 #include <fstream>
 
 /*!
@@ -20,7 +20,6 @@
 class Vehicule {	
 	private:
 		string m_immatriculation, m_marque, m_modele;
-		// int m_kilometrage;
 			
 	public:
 		/*!

@@ -21,9 +21,6 @@ class Location {
 	private:
 		Vehicule *m_vehicule;
 		int m_kilometrage;
-		// CDate m_dateDepart;
-		// CDate m_dateRetourPrevu;
-		// CDate m_dateRetourReel;
 
 	public:
 		/*!
@@ -34,6 +31,15 @@ class Location {
 		*  \param aucun
 		*/
 		Location();
+
+		/*!
+		*  \brief Constructeur 
+		*
+		*  Constructeur par copie de la classe Location
+		*
+		*  \param aucun
+		*/
+		Location(const Location &loc);
 
 		/*!
 		*  \brief Constructeur
@@ -73,6 +79,16 @@ class Location {
 		*  \return void
 		*/		
 		void setVehicule(Vehicule *veh);
+
+		/*!
+		*  \brief Modifier kilométrage
+		*
+		*  Permet de modifier le kilométrage du véhicule
+		*
+		*  \param [in] kilom entier, le nouveau kilométrage
+		*  \return void
+		*/		
+		void setKilom(int kilom);
 
 		/*!
 		*  \brief Afficher location

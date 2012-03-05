@@ -9,6 +9,7 @@
 #include <CDate.h>
 #include <Reservation.h>
 #include <ListeReservations.h>
+#include <Location.h>
 
 /*!
  * \file LocMenu.h
@@ -56,26 +57,30 @@ class LocMenu {
 		*/				
 		void afficher();
 
+		/*!
+		*  \brief Récupérer valeur utilisateur
+		*
+		*  Permet de récupérer une valeur entrée au clavier par l'utilisateur
+		*
+		*  \param [in] texte chaîne, le texte à afficher à l'utilisateur
+		*  \return une chaîne de caractère
+		*/				
 		string recupererValeur(string texte);
 
+		/*!
+		*  \brief traiter choix
+		*
+		*  Traite le choix réalisé par l'utilisateur dans les options du menu
+		*
+		*  \param [in] choix entier, le choix de l'utilisateur
+		*  \param [in,out] p Parc, un parc de véhicule
+		*  \param [in,out] r ListeReservations, une liste de réservations
+		*  \param [in] nomFichierVeh chaîne, le nom du fichier de sauvegarde des véhicules
+		*  \param [in] nomFichierResa chaîne, le nom du fichier de sauvegarde des réservations
+		*  \return void
+		*/				
 		void traiter(int choix, Parc &p, ListeReservations &r, string nomFichierVeh, string nomFichierResa);
 
 };
 
 #endif
-
-	//~ int main() {
-		//~ int choix(-1);
-		//~ 
-		//~ while (choix != 0) {
-			//~ afficherMenu();
-			//~ choix = recupererValeur("Quel est votre choix : ");
-			//~ traiter(choix);
-		//~ }
-		//~ 
-		//~ return 0;
-	//~ }
-	//~ */
-//~ };
-//~ 
-//~ #endif
