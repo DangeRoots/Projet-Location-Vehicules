@@ -63,6 +63,7 @@ bool ListeReservations::ajouterReservation (Reservation res) {
 			cout << "Réservation impossible : pas de disponibilité aux dates demandées" << endl;
 		} else {
 			m_listeReservations.push_back(res);
+			cout << "Réservation ajoutée" << endl;
 		}
 	}
 	return ajouter;
