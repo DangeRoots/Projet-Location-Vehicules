@@ -22,6 +22,7 @@ LocMenu::~LocMenu() {
 }
 
 void LocMenu::afficher() {
+	system("clear");
 	menuI= entrees.begin();
 	while (menuI != entrees.end()){
     cout << *menuI << endl;
@@ -38,23 +39,23 @@ string LocMenu::recupererValeur(string texte) {
 
 void LocMenu::traiter(int choix) {
 	switch (choix){
-		case 1:{
+		case 1:{ // ajouter un véhicule
 			cout << "Choix 1"<<endl;
 			break;
 		}
-		case 2:{
+		case 2:{ // nouvelle réservation
 			cout << "Choix 2"<<endl;
 			break;
 		}
-		case 3:{
+		case 3:{ // afficher liste des véhicules
 			cout << "Choix 3"<<endl;
 			break;
 		}
-		case 4:{
+		case 4:{ // afficher les réservations
 			cout << "Choix 4"<<endl;
 			break;
 		}
-		case 0:{
+		case 0:{ // quitter
 			cout << "Au revoir"<<endl;
 			break;
 		}
