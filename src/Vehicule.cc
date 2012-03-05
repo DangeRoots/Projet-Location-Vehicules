@@ -47,7 +47,10 @@ bool Vehicule::operator==(const Vehicule &veh) {
 }
 
 void Vehicule::afficher() {
-	cout << m_marque << " " << m_modele << " " << m_immatriculation << " ";
+	cout << left
+		 << setw(10) << m_marque
+		 << setw(9) << m_modele 
+		 << setw(10) << m_immatriculation;
 }
 
 void Vehicule::save(fstream &fs) {

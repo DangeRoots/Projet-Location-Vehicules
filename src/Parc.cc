@@ -69,15 +69,10 @@ void Parc::ajouterLocation () {
 	cout << "Véhicule ajouté !" << endl;
 }
 
-
-bool Parc::supprimerLocation (Location loc) {
-	return true;
-}
-
 void Parc::modifierLocation (Location loc) {
 }
 
-bool Parc::rechercherLocation(string immat, Location &loc) {
+bool Parc::estDansLeParc(string immat, Location &loc) {
 	bool trouve = false;
 	m_parcAutoI=m_parcAuto.begin();
 	while(!trouve && m_parcAutoI !=m_parcAuto.end()) {
@@ -90,7 +85,39 @@ bool Parc::rechercherLocation(string immat, Location &loc) {
 	return trouve;
 }
 
+list<Location>::iterator Parc::rechercherLocation(string immat) {
+	bool trouve = false;
+	m_parcAutoI=m_parcAuto.begin();
+	while(!trouve && m_parcAutoI !=m_parcAuto.end()) {
+		if (m_parcAutoI->getVehicule()->getImmatriculation() == immat) {
+			trouve = true;
+		}
+		else m_parcAutoI++;
+	}
+	return m_parcAutoI;
+}
+
+void Parc::enregistrerRetour(int kilom, string immat) {
+	Location oldLoc;
+	if (estDansLeParc(immat,oldLoc)) {
+		rechercherLocation(immat)->setKilom(kilom);
+		// loc.afficher();
+		cout << "Retour enregistré" << endl;
+	} else {
+		cout << "Véhicule non trouvé" << endl;
+	}
+}
+
 void Parc::afficher() {
+	cout << left
+		 << setw(10) << "Marque"
+		 << setw(10) << "Modèle"
+		 << setw(10) << "Immat"
+		 << setw(10) << "Places"
+		 << setw(10) << "P.U"
+		 << setw(10) << "M3"
+		 << setw(6) << "Kms"
+		 <<endl;
 	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
 		m_parcAutoI->afficher();
 	}
@@ -126,7 +153,7 @@ void Parc::entrerImmat(string &t_immat) {
 		cin >> t_immat;
 		Tools::stringToUpper(t_immat);
 		Location tmp;
-		existe = rechercherLocation(t_immat,tmp);
+		existe = estDansLeParc(t_immat,tmp);
 		if (existe)
 			cout << "Véhicule existant !" << endl;
 	}

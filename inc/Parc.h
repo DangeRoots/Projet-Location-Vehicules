@@ -70,16 +70,6 @@ class Parc {
 		*  \return booléen, vrai si la location a été ajoutée, faux sinon 
 		*/		
 		void ajouterLocation ();
-		
-		/*!
-		*  \brief Supprimer location
-		*
-		*  Permet de supprimer un véhicule du parc
-		*
-		*  \param loc, Location
-		*  \return booléen, vrai si le véhicule a été trouvé et supprimé, faux sinon
-		*/
-		bool supprimerLocation (Location loc);
 
 		/*!
 		*  \brief Modifier location
@@ -102,7 +92,7 @@ class Parc {
 		*  \param dateRetour, CDate, la date de fin de location souhaitée
 		*  \return un objet Location
 		*/		
-		bool rechercherLocation(string immat, Location &loc);
+		bool estDansLeParc(string immat, Location &loc);
 		
 		/*!
 		*  \brief Afficher liste complète
@@ -123,6 +113,26 @@ class Parc {
 		*  \return void
 		*/												
 		void sauvegarder(string nomFichier);
+
+		/*!
+		*  \brief Enregistrer retour
+		*
+		*  Enregistre le retour d'une location
+		*
+		*  \param [in] kilom entier, le kilométrage au retour du véhicule
+		*  \return void
+		*/														
+		void enregistrerRetour(int kilom, string immat);
+
+		/*!
+		*  \brief Rechercher location
+		*
+		*  Renvoie un itérateur sur la position d'une location, dont l'immatriculation est donnée en argument.
+		*
+		*  \param [in] immat string, l'immatriculation du véhicule recherché
+		*  \return un itérateur de Location
+		*/													
+		list<Location>::iterator rechercherLocation(string immat);
 };
 
 #endif

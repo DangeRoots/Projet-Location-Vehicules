@@ -28,7 +28,8 @@ void VP::setNbPlaces(int nbPlaces){
 
 void VP::afficher(){
 	Vehicule::afficher();
-	cout << m_nbPlaces << " ";
+	cout << setw(10) << m_nbPlaces
+		 << setw(20) << " ";
 }
 
 

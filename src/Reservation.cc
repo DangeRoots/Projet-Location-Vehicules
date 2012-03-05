@@ -34,15 +34,16 @@ CDate Reservation::getDate (char type) {
 
 void Reservation::afficher(Parc p) {
 	Location loc;
-	bool trouve = p.rechercherLocation(m_vehicule,loc);
+	bool trouve = p.estDansLeParc(m_vehicule,loc);
 	if (!trouve)
 		cout << "Véhicule inconnu !" << endl;
 	else {
 		loc.afficher();
 		cout << "Date départ : ";
 		m_dateDepart.afficher();
-		cout << "Date retour : ";
+		cout << "     " << "Date retour : ";
 		m_dateRetour.afficher();
+		cout << endl;
 	}
 	
 }

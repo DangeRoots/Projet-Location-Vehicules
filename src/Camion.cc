@@ -16,7 +16,6 @@ Camion::Camion():Utilitaire() {
 }
 
 Camion::~Camion() {
-	// cout << "Destructeur de Camion" << endl;
 }
 
 float Camion::getPoidsUtile() {
@@ -28,8 +27,10 @@ void Camion::setPoidsUtile(float poids) {
 }
 
 void Camion::afficher() {
-	Utilitaire::afficher();
-	cout << m_poidsUtile << " ";
+	Vehicule::afficher();
+	cout << setw(10) << " " //éviter nbPlaces
+		 << setw(10) << this->getVolumeUtile()
+		 << setw(10) << m_poidsUtile;
 }
 
 void Camion::save(fstream &fs) {

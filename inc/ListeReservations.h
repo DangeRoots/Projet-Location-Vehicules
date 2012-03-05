@@ -5,7 +5,6 @@
 #include <fstream>
 #include <list>
 
-// #include <Location.h>
 #include <Reservation.h>
 
 /*!
@@ -33,16 +32,7 @@ class ListeReservations {
 		*  \param [in,out] inFile fstream, le fichier contenant la liste des réservations
 		*/
 		ListeReservations (fstream &inFile);
-		
-		/*!
-		*  \brief Constructeur
-		*
-		*  Constructeur par défaut de la classe ListeReservations
-		*
-		*  \param aucun
-		*/
-		// ListeReservations();
-		
+				
 		/*!
 		*  \brief Destructeur
 		*

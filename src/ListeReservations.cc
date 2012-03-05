@@ -18,15 +18,9 @@ ListeReservations::ListeReservations (fstream &inFile) {
 		inFile >> t_anneeRet;
 		m_listeReservations.push_back(Reservation(t_immat,CDate(t_jourDep, t_moisDep, t_anneeDep),
 		 												CDate(t_jourRet, t_moisRet, t_anneeRet)));
-		// m_listeReservations.push_back(Reservation(t_immat,CDate(),CDate()));
 		inFile >> t_immat;
 	}
 }
-
-/*
-ListeReservations::ListeReservations() {
-}
-*/
 
 ListeReservations::~ListeReservations() {
 }
@@ -79,14 +73,24 @@ void ListeReservations::afficher(Parc p) {
 			cout << "Que souhaitez vous afficher : " << endl;
 			cout << "- (R)éservations à une date particulière" << endl;
 			cout << "- (D)isponibilités à une date particulière" << endl;
-			cout << "- R(e)stituables (a)ujourd'hui" << endl;
+			cout << "- Restituables (a)ujourd'hui" << endl;
 			cout << "- (T)outes les réservations" << endl;
+			cout << "Votre choix : ";
 			cin >> typeRech;
 			Tools::charToLower(typeRech);
 			if (typeRech != 'r' && typeRech != 'd' && typeRech != 'a' && typeRech != 't')
 				cout << "Type incorrect ! " << endl;
 		}
-		cout << typeRech << endl;
+		
+		cout << left
+			 << setw(10) << "Marque"
+			 << setw(10) << "Modèle"
+			 << setw(10) << "Immat"
+			 << setw(10) << "Places"
+			 << setw(10) << "P.U"
+			 << setw(10) << "M3"
+			 << setw(6) << "Kms"
+			 <<endl;
 		
 		if (typeRech == 't') {
 			// afficher tous
@@ -94,7 +98,8 @@ void ListeReservations::afficher(Parc p) {
 			for (	m_listeReservationsI = m_listeReservations.begin();
 					m_listeReservationsI != m_listeReservations.end();
 					m_listeReservationsI++) {
-			m_listeReservationsI->afficher(p);
+				m_listeReservationsI->afficher(p);
+				cout << "---------------" << endl;
 			}
 		} else if (typeRech == 'a') {
 			// véhicule restituables
@@ -166,3 +171,4 @@ void ListeReservations::sauvegarder(string nomFichier) {
 	}
 	resaFile.close();
 }
+
