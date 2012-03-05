@@ -1,7 +1,0 @@
-Classes
-- date
-- parc
-- véhicule
-- VP (hérite de véhicule)
-- Utilitaire (hérite de véhicule)
-- Camion (hérite de utilitaire)
