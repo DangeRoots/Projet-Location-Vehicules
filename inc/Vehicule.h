@@ -14,7 +14,7 @@
  * 
  * \author Gilles Coulais, 
  * \author Icham Sirat
- * \version 0.2
+ * \version 1.0
  */
 
 class Vehicule {	
@@ -27,13 +27,10 @@ class Vehicule {
 		*
 		*  Constructeur de la classe Vehicule
 		*
-		*  \param immat, chaîne de caractères, l'immatriculation du véhicule
-		*  \param marque, chaîne de caractères, la marque du véhicule
-		*  \param modele, chaîne de caractères, le modèle du véhicule
-		*  \param kilometrage, entier, le kilométrage du véhicule
-		*  \param nbLocation, entier, le nombre de locations du véhicule
+		*  \param [in] immat chaîne de caractères, l'immatriculation du véhicule
+		*  \param [in] marque chaîne de caractères, la marque du véhicule
+		*  \param [in] modele chaîne de caractères, le modèle du véhicule
 		*/
-		// Vehicule(string immat, string marque, string modele, int kilometrage, int nbLocation);
 		Vehicule(string immat, string marque, string modele);
 		
 		/*!
@@ -60,7 +57,7 @@ class Vehicule {
 		 *  Permet d'obtenir l'immatriculation du véhicule
 		 *
 		 *  \param aucun
-		 *  \return m_immatriculation, chaîne de caractères, l'immatriculation du véhicule
+		 *  \return m_immatriculation chaîne de caractères, l'immatriculation du véhicule
 		 */		
 		string getImmatriculation();
 
@@ -69,7 +66,7 @@ class Vehicule {
 		 *
 		 *  Permet de modifier l'immatriculation du véhicule
 		 *
-		 *  \param immat, chaîne de caractères, l'immatriculation du véhicule
+		 *  \param [in] immat chaîne de caractères, l'immatriculation du véhicule
 		 *  \return void
 		 */		
 		void setImmatriculation(string immat);
@@ -80,7 +77,7 @@ class Vehicule {
 		 *  Permet d'obtenir le modèle du véhicule
 		 *
 		 *  \param aucun
-		 *  \return m_modele, chaîne de caractères, le modèle du véhicule
+		 *  \return m_modele chaîne de caractères, le modèle du véhicule
 		 */		
 		string getModele();
 
@@ -89,7 +86,7 @@ class Vehicule {
 		 *
 		 *  Permet de modifier le modèle du véhicule
 		 *
-		 *  \param modele, chaîne de caractères, le modèle du véhicule
+		 *  \param [in] modele chaîne de caractères, le modèle du véhicule
 		 *  \return void
 		 */		
 		void setModele(string modele);
@@ -100,7 +97,7 @@ class Vehicule {
 		 *  Permet d'obtenir la marque du véhicule
 		 *
 		 *  \param aucun
-		 *  \return m_marque, chaîne de caractères, la marque du véhicule
+		 *  \return m_marque chaîne de caractères, la marque du véhicule
 		 */		
 		string getMarque();
 
@@ -109,7 +106,7 @@ class Vehicule {
 		 *
 		 *  Permet de modifier la marque du véhicule
 		 *
-		 *  \param marque, chaîne de caractères, la marque du véhicule
+		 *  \param [in] marque chaîne de caractères, la marque du véhicule
 		 *  \return void
 		 */		
 		void setMarque(string marque);
@@ -117,7 +114,7 @@ class Vehicule {
 		/*!
 		 *  \brief Véhicule identiques
 		 *
-		 *  Permet de savoir si deux véhicules sont identiques
+		 *  Permet de savoir si deux véhicules sont identiques (même immatriculation)
 		 *
 		 *  \param [in] veh Vehicule, le véhicule à comparer
 		 *  \return true s'il sont identiques

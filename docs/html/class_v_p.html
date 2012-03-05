@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -68,12 +68,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <!-- doxytag: class="VP" --><!-- doxytag: inherits="Vehicule" --><div class="dynheader">
 Graphe d'héritage de VP:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_v_p.png" usemap="#VP_map" alt=""/>
-  <map id="VP_map" name="VP_map">
-<area href="class_vehicule.html" alt="Vehicule" shape="rect" coords="0,0,62,24"/>
-</map>
- </div></div>
+<div class="center"><img src="class_v_p__inherit__graph.png" border="0" usemap="#_v_p_inherit__map" alt="Inheritance graph"/></div>
+<map name="_v_p_inherit__map" id="_v_p_inherit__map">
+<area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
+Graphe de collaboration de VP:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_p__coll__graph.png" border="0" usemap="#_v_p_coll__map" alt="Collaboration graph"/></div>
+<map name="_v_p_coll__map" id="_v_p_coll__map">
+<area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 
 <p><a href="class_v_p-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
@@ -136,10 +141,10 @@ Fonctions membres publiques</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_v_p.html">VP</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">immat,chaîne</td><td>de caractères, l'immatriculation de la voiture </td></tr>
-    <tr><td class="paramname">modele,chaîne</td><td>de caractères, le modèle de la voiture </td></tr>
-    <tr><td class="paramname">marque,chaîne</td><td>de caractères, la marque de la voiture </td></tr>
-    <tr><td class="paramname">nbPlaces,entier,le</td><td>nombre de place de la voiture </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, l'immatriculation de la voiture </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">modele</td><td>chaîne de caractères, le modèle de la voiture </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">marque</td><td>chaîne de caractères, la marque de la voiture </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbPlaces</td><td>entier, le nombre de place de la voiture </td></tr>
   </table>
   </dd>
 </dl>
@@ -247,7 +252,7 @@ Fonctions membres publiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_nbPlaces, entier, le nombre de place de la voiture </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>m_nbPlaces entier, le nombre de place de la voiture </dd></dl>
 
 </div>
 </div>
@@ -270,7 +275,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Sauvegarde le <a class="el" href="class_v_p.html">VP</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">aucun</td><td></td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">fs</td><td>fstream, le fichier de sauvegarde </td></tr>
   </table>
   </dd>
 </dl>
@@ -299,7 +304,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Permet de modifier le nombre de place de la voiture</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">nbPlaces,entier,le</td><td>nombre de place de la voiture </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbPlaces</td><td>entier, le nombre de place de la voiture </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,7 +330,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -78,16 +78,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a45de4ddcf862a8ad3da902bc63e0c1f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#ad180ce771871b8f8790bf4703800d8b2">ajouterLocation</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter location.  <a href="#ad180ce771871b8f8790bf4703800d8b2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a9886186ab4182ee41a1480735600ed38">supprimerLocation</a> (<a class="el" href="class_location.html">Location</a> loc)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprimer location.  <a href="#a9886186ab4182ee41a1480735600ed38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a4ce1969e29ebff5c149c7050e358e880">modifierLocation</a> (<a class="el" href="class_location.html">Location</a> loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier location.  <a href="#a4ce1969e29ebff5c149c7050e358e880"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a289f4e8de154f1ee35fec6cc9868726f">rechercherLocation</a> (string immat, <a class="el" href="class_location.html">Location</a> &amp;loc)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rechercher location.  <a href="#a289f4e8de154f1ee35fec6cc9868726f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a0f8b465d0d57410882787d5bad933a38">estDansLeParc</a> (string immat, <a class="el" href="class_location.html">Location</a> &amp;loc)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si un véhicule est dans le parc.  <a href="#a0f8b465d0d57410882787d5bad933a38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a9e12eab27b180061f18c222e8cc30ee9">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher liste complète.  <a href="#a9e12eab27b180061f18c222e8cc30ee9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a8cb861e9323b182a98ba666c9d67c721">sauvegarder</a> (fstream &amp;inFile)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder parc.  <a href="#a8cb861e9323b182a98ba666c9d67c721"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#ad67130a49e7e1848c9f068c2cb266487">sauvegarder</a> (string nomFichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder parc.  <a href="#ad67130a49e7e1848c9f068c2cb266487"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a98acdf9cb77006a57ceebf4ad4e465f2">enregistrerRetour</a> (int kilom, string immat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistrer retour.  <a href="#a98acdf9cb77006a57ceebf4ad4e465f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="class_location.html">Location</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parc.html#a43f28692c3b2a3523640002fe7a296eb">rechercherLocation</a> (string immat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rechercher location.  <a href="#a43f28692c3b2a3523640002fe7a296eb"></a><br/></td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ac974868bc248cc8ded2ac7c7d536251f"></a><!-- doxytag: member="Parc::Parc" ref="ac974868bc248cc8ded2ac7c7d536251f" args="(fstream &amp;inFile)" -->
@@ -109,7 +111,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_parc.html">Parc</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">inFile,fstream,le</td><td>fichier contenant la liste des locations </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">inFile</td><td>fstream, le fichier contenant la liste des véhicules </td></tr>
   </table>
   </dd>
 </dl>
@@ -209,13 +211,84 @@ Fonctions membres publiques</h2></td></tr>
 
 <p>Ajouter location. </p>
 <p>Permet d'ajouter un véhicule dans le parc</p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98acdf9cb77006a57ceebf4ad4e465f2"></a><!-- doxytag: member="Parc::enregistrerRetour" ref="a98acdf9cb77006a57ceebf4ad4e465f2" args="(int kilom, string immat)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parc::enregistrerRetour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kilom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>immat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enregistrer retour. </p>
+<p>Enregistre le retour d'une location</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">loc,<a class="el" href="class_location.html">Location</a></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kilom</td><td>entier, le kilométrage au retour du véhicule </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>chaîne de caractères, l'immatriculation du véhicule </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>booléen, vrai si la location a été ajoutée, faux sinon </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0f8b465d0d57410882787d5bad933a38"></a><!-- doxytag: member="Parc::estDansLeParc" ref="a0f8b465d0d57410882787d5bad933a38" args="(string immat, Location &amp;loc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Parc::estDansLeParc </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>immat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_location.html">Location</a> &amp;&#160;</td>
+          <td class="paramname"><em>loc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vérifie si un véhicule est dans le parc. </p>
+<p>Permet de rechercher une location dans le parc</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>caractères, l'immatriculation du véhicule </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool, vrai si le véhicule est dans le parc </dd>
+<dd>
+bool, faux si le véhicule n'est pas dans le parc </dd></dl>
 
 </div>
 </div>
@@ -238,7 +311,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Permet de modifier une location du parc</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">loc,<a class="el" href="class_location.html">Location</a>,la</td><td>location à modifier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td><a class="el" href="class_location.html">Location</a>, la location à modifier </td></tr>
   </table>
   </dd>
 </dl>
@@ -246,54 +319,42 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a289f4e8de154f1ee35fec6cc9868726f"></a><!-- doxytag: member="Parc::rechercherLocation" ref="a289f4e8de154f1ee35fec6cc9868726f" args="(string immat, Location &amp;loc)" -->
+<a class="anchor" id="a43f28692c3b2a3523640002fe7a296eb"></a><!-- doxytag: member="Parc::rechercherLocation" ref="a43f28692c3b2a3523640002fe7a296eb" args="(string immat)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Parc::rechercherLocation </td>
+          <td class="memname">list&lt;<a class="el" href="class_location.html">Location</a>&gt;::iterator Parc::rechercherLocation </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>immat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>immat</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_location.html">Location</a> &amp;&#160;</td>
-          <td class="paramname"><em>loc</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Rechercher location. </p>
-<p>Permet de rechercher une location dans le parc</p>
+<p>Renvoie un itérateur sur la position d'une location, dont l'immatriculation est donnée en argument.</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">type,caractères,le</td><td>type de véhicule recherché : v pour vp, u pour utilitaire, c pour camion </td></tr>
-    <tr><td class="paramname">dateDepart,<a class="el" href="class_c_date.html">CDate</a>,la</td><td>date de début de location souhaitée </td></tr>
-    <tr><td class="paramname">dateRetour,<a class="el" href="class_c_date.html">CDate</a>,la</td><td>date de fin de location souhaitée </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">immat</td><td>string, l'immatriculation du véhicule recherché </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>un objet <a class="el" href="class_location.html">Location</a> </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>un itérateur de <a class="el" href="class_location.html">Location</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a8cb861e9323b182a98ba666c9d67c721"></a><!-- doxytag: member="Parc::sauvegarder" ref="a8cb861e9323b182a98ba666c9d67c721" args="(fstream &amp;inFile)" -->
+<a class="anchor" id="ad67130a49e7e1848c9f068c2cb266487"></a><!-- doxytag: member="Parc::sauvegarder" ref="ad67130a49e7e1848c9f068c2cb266487" args="(string nomFichier)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Parc::sauvegarder </td>
           <td>(</td>
-          <td class="paramtype">fstream &amp;&#160;</td>
-          <td class="paramname"><em>inFile</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nomFichier</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -304,38 +365,11 @@ Fonctions membres publiques</h2></td></tr>
 <p>Sauvegarde le parc dans un fichier</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">inFile</td><td>fstream, le fichier de sauvegarde </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nomFichier</td><td>string, le nom du fichier de sauvegarde </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9886186ab4182ee41a1480735600ed38"></a><!-- doxytag: member="Parc::supprimerLocation" ref="a9886186ab4182ee41a1480735600ed38" args="(Location loc)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Parc::supprimerLocation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_location.html">Location</a>&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Supprimer location. </p>
-<p>Permet de supprimer un véhicule du parc</p>
-<dl><dt><b>Paramètres:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">loc,<a class="el" href="class_location.html">Location</a></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>booléen, vrai si le véhicule a été trouvé et supprimé, faux sinon </dd></dl>
 
 </div>
 </div>
@@ -357,7 +391,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

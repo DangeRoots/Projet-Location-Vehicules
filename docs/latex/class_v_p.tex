@@ -2,10 +2,24 @@
 \section{Référence de la classe VP}
 \label{class_v_p}\index{VP@{VP}}
 }
-Graphe d'héritage de VP:\begin{figure}[H]
+
+
+Graphe d'héritage de VP:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_v_p}
+\includegraphics[width=134pt]{class_v_p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de VP:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_v_p__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Fonctions membres publiques}
@@ -47,14 +61,14 @@ Constructeur.
 Constructeur de la classe \hyperlink{class_v_p}{VP}
 
 
-\begin{DoxyParams}{Paramètres}
-{\em immat,chaîne} & de caractères, l'immatriculation de la voiture \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em immat} & chaîne de caractères, l'immatriculation de la voiture \\
 \hline
-{\em modele,chaîne} & de caractères, le modèle de la voiture \\
+\mbox{\tt in}  & {\em modele} & chaîne de caractères, le modèle de la voiture \\
 \hline
-{\em marque,chaîne} & de caractères, la marque de la voiture \\
+\mbox{\tt in}  & {\em marque} & chaîne de caractères, la marque de la voiture \\
 \hline
-{\em nbPlaces,entier,le} & nombre de place de la voiture \\
+\mbox{\tt in}  & {\em nbPlaces} & entier, le nombre de place de la voiture \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_v_p_ad67a48c8f2f8d3cc8466431d4e0c2949}{
@@ -148,7 +162,7 @@ Permet d'obtenir le nombre de place de la voiture
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-m\_\-nbPlaces, entier, le nombre de place de la voiture 
+m\_\-nbPlaces entier, le nombre de place de la voiture 
 \end{DoxyReturn}
 \hypertarget{class_v_p_a3fe677e58cb952b7784d5f661ef426e6}{
 \index{VP@{VP}!save@{save}}
@@ -166,8 +180,8 @@ sauvegarder \hyperlink{class_v_p}{VP}
 Sauvegarde le \hyperlink{class_v_p}{VP}
 
 
-\begin{DoxyParams}{Paramètres}
-{\em aucun} & \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em fs} & fstream, le fichier de sauvegarde \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
@@ -193,8 +207,8 @@ Modifier le nombre de places.
 Permet de modifier le nombre de place de la voiture
 
 
-\begin{DoxyParams}{Paramètres}
-{\em nbPlaces,entier,le} & nombre de place de la voiture \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em nbPlaces} & entier, le nombre de place de la voiture \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

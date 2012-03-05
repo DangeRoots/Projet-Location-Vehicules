@@ -10,10 +10,10 @@
  * \file Reservation.h
  * \brief Classe Reservation
  * 
- *  Cette classe permet de gérer une réservation de véhicule
+ *  Cette classe permet de gérer une réservation de véhicule comprennant une immatriculation permettant l'identification du véhicule, la date de départ et la date de retour
  * 
  * \author Gilles Coulais
- * \version 0.1
+ * \version 1.0
  */
 
 class Reservation {

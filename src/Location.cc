@@ -11,11 +11,6 @@ Location::Location(	Vehicule *vehicule,
 	m_kilometrage = kilom;
 }
 
-Location::Location(const Location &loc) {
-	m_vehicule = loc.m_vehicule;
-	m_kilometrage = loc.m_kilometrage;
-}
-
 Location::~Location() {
 }
 

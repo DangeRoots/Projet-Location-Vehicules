@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -65,7 +65,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h1>Référence de la classe Location</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Location" -->
+<!-- doxytag: class="Location" --><div class="dynheader">
+Graphe de collaboration de Location:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_location__coll__graph.png" border="0" usemap="#_location_coll__map" alt="Collaboration graph"/></div>
+<map name="_location_coll__map" id="_location_coll__map">
+<area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+
 <p><a href="class_location-members.html">Liste de tous les membres</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -80,6 +87,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Accéder au véhicule.  <a href="#a3f130f10a4a558d6b792b1e538e9fb40"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a66eaf6883a88c65a6281ccf111db3c03">setVehicule</a> (<a class="el" href="class_vehicule.html">Vehicule</a> *veh)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier véhicule.  <a href="#a66eaf6883a88c65a6281ccf111db3c03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a4971bacb1641fa3605d986fd87d10814">setKilom</a> (int kilom)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifier kilométrage.  <a href="#a4971bacb1641fa3605d986fd87d10814"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#ad7dadc3847da51c3c012f0647f011706">afficher</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher location.  <a href="#ad7dadc3847da51c3c012f0647f011706"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a21ba483682871d05f08f1edbf3dd51e2">operator==</a> (<a class="el" href="class_location.html">Location</a> &amp;loc)</td></tr>
@@ -257,6 +266,33 @@ false si elles sont différentes </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a4971bacb1641fa3605d986fd87d10814"></a><!-- doxytag: member="Location::setKilom" ref="a4971bacb1641fa3605d986fd87d10814" args="(int kilom)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Location::setKilom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kilom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Modifier kilométrage. </p>
+<p>Permet de modifier le kilométrage du véhicule</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">kilom</td><td>entier, le nouveau kilométrage </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a66eaf6883a88c65a6281ccf111db3c03"></a><!-- doxytag: member="Location::setVehicule" ref="a66eaf6883a88c65a6281ccf111db3c03" args="(Vehicule *veh)" -->
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +338,7 @@ false si elles sont différentes </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -2,10 +2,24 @@
 \section{Référence de la classe Camion}
 \label{class_camion}\index{Camion@{Camion}}
 }
-Graphe d'héritage de Camion:\begin{figure}[H]
+
+
+Graphe d'héritage de Camion:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_camion}
+\includegraphics[width=134pt]{class_camion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Camion:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_camion__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Fonctions membres publiques}
@@ -48,16 +62,16 @@ Constructeur.
 Constructeur de la classe \hyperlink{class_camion}{Camion}
 
 
-\begin{DoxyParams}{Paramètres}
-{\em poids,réel,poids} & utile \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em poids} & réel, poids utile \\
 \hline
-{\em volume,réel,volume} & utile \\
+\mbox{\tt in}  & {\em volume} & réel, volume utile \\
 \hline
-{\em immat,chaîne} & de caractères, le modèle du véhicule \\
+\mbox{\tt in}  & {\em immat} & chaîne de caractères, le modèle du véhicule \\
 \hline
-{\em marque,chaîne} & de caractères, la marque du véhicule \\
+\mbox{\tt in}  & {\em marque} & chaîne de caractères, la marque du véhicule \\
 \hline
-{\em modele,chaîne} & de caractères, le kilométrage du véhicule \\
+\mbox{\tt in}  & {\em modele} & chaîne de caractères, le kilométrage du véhicule \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_camion_a5eb698c16331e4fab2ba2cbfebbea8a4}{
@@ -182,8 +196,8 @@ Modifier poids utile.
 Modifie le poids utile
 
 
-\begin{DoxyParams}{Paramètres}
-{\em poids,réel,le} & volume utile \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em poids} & réel, le volume utile \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

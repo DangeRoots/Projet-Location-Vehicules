@@ -7,13 +7,18 @@
 /*!
  * \file Camion.h
  * \brief Classe Camion
- * 
- *  Cette classe permet de créer des camions, ie des utilitaires de plus de 3,5T. 
- *  Pour les utilitaires de moins de 3,5t, il est conseillé d'utiliser la classe Utilitaire
- * 
  * \author Gilles Coulais
- * \version 0.1
+ * \version 1.0
  */
+
+/*! 
+* \class Camion
+* \brief Création de camions
+*
+*  Cette classe permet de créer des camions, ie des utilitaires de plus de 3,5T. 
+*  Pour les utilitaires de moins de 3,5t, il est conseillé d'utiliser la classe Utilitaire
+*/
+
 
 class Camion : public Utilitaire {
 	private:
@@ -25,11 +30,11 @@ class Camion : public Utilitaire {
 		*
 		*  Constructeur de la classe Camion
 		*
-		*  \param poids, réel, poids utile
-		*  \param volume, réel, volume utile
-		*  \param immat, chaîne de caractères, le modèle du véhicule
-		*  \param marque, chaîne de caractères, la marque du véhicule
-		*  \param modele, chaîne de caractères, le kilométrage du véhicule
+		*  \param [in] poids réel, poids utile
+		*  \param [in] volume réel, volume utile
+		*  \param [in] immat chaîne de caractères, le modèle du véhicule
+		*  \param [in] marque chaîne de caractères, la marque du véhicule
+		*  \param [in] modele chaîne de caractères, le kilométrage du véhicule
 		*/
 		Camion(float poids, float volume, string immat, string marque, string modele);
 
@@ -48,7 +53,6 @@ class Camion : public Utilitaire {
 		virtual ~Camion();
 		
 		/*!
-		 *  \fn float getPoidsUtile()
 		 *  \brief Récupérer poids utile
 		 *
 		 *  Renvoie le poidsutile
@@ -59,12 +63,11 @@ class Camion : public Utilitaire {
 		float getPoidsUtile();
 		
 		/*!
-		 *  \fn void setPoidsUtile()
 		 *  \brief Modifier poids utile
 		 *
 		 *  Modifie le poids utile
 		 *
-		 *  \param poids, réel, le volume utile
+		 *  \param [in] poids réel, le volume utile
 		 *  \return void
 		 */			
 		void setPoidsUtile(float poids);

@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -96,7 +96,11 @@ Fonctions membres publiques statiques</h2></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Utilitaires. </p>
-<p>Cette classe fournit un certain nombre de fonctions utilitaires telles que la transformation de chaînes de caractères en majuscules </p>
+<p>Cette classe fournit un certain nombre de fonctions utilitaires, utilisables via des méthodes statiques.</p>
+<ul>
+<li>Conversion de chaînes de caractères en majuscules et minuscules</li>
+<li>fonction de vérification et conversion d'entiers et réels depuis des chaînes de caractères </li>
+</ul>
 </div><hr/><h2>Documentation des fonctions membres</h2>
 <a class="anchor" id="a0826e70408c956f4c4e481aeefe2d9e1"></a><!-- doxytag: member="Tools::charToLower" ref="a0826e70408c956f4c4e481aeefe2d9e1" args="(char &amp;c)" -->
 <div class="memitem">
@@ -117,11 +121,11 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Transforme un caractère en lettre minuscule</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">c,un</td><td>caractères </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">c,un</td><td>caractères </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>none </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -148,7 +152,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>none </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -171,11 +175,13 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Renvoie vrai si la chaîne de caractères fournie en paramètres est un entier</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data,une</td><td>chaîne de caractères </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>une chaîne de caractères </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool, vrai si data est un entier, faux sinon </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>vrai si data est un entier </dd>
+<dd>
+faux si data n'est pas un entier </dd></dl>
 
 </div>
 </div>
@@ -198,11 +204,13 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Renvoie vrai si la chaîne de caractères fournie en paramètres est un nombre réel</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data,une</td><td>chaîne de caractères </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>une chaîne de caractères </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>bool, vrai si data est un entier, faux sinon </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>vrai si data est un réel </dd>
+<dd>
+faux si data n'est pas un réel </dd></dl>
 
 </div>
 </div>
@@ -235,11 +243,12 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Renvoie le plus petite valeur entre deux entiers fournis en paramètre</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>et b, deux entiers </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>un entier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>un entier </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>int, la valeur minimum </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>entier, la valeur minimum entre a et b </dd></dl>
 
 </div>
 </div>
@@ -262,7 +271,7 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Convertit une chaine de caractères en nombre réel</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">val,une</td><td>chaîne de caractères </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>une chaîne de caractères représentant un ,ombre réel </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,11 +298,11 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Convertit une chaine de caractères en nombre entier</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">val,une</td><td>chaîne de caractères </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>une chaîne de caractères représentant un entier </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>int, un nombre entier </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>int, un nombre réel </dd></dl>
 
 </div>
 </div>
@@ -316,11 +325,11 @@ Fonctions membres publiques statiques</h2></td></tr>
 <p>Transforme une chaîne de caractères en lettres minuscules</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">chaine,une</td><td>chaîne de caractères </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">chaine,une</td><td>chaîne de caractères </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>none </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -347,7 +356,7 @@ Fonctions membres publiques statiques</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>none </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -369,7 +378,7 @@ Fonctions membres publiques statiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

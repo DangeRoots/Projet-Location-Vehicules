@@ -14,7 +14,7 @@
  *  Cette classe permet de gérer la location d'un véhicule
  * 
  * \author Gilles Coulais, Icham Sirat
- * \version 0.1
+ * \version 1.0
  */
 
 class Location {
@@ -31,15 +31,6 @@ class Location {
 		*  \param aucun
 		*/
 		Location();
-
-		/*!
-		*  \brief Constructeur 
-		*
-		*  Constructeur par copie de la classe Location
-		*
-		*  \param aucun
-		*/
-		Location(const Location &loc);
 
 		/*!
 		*  \brief Constructeur

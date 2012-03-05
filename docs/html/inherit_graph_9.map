@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_vehicule.html" title="Vehicule" alt="" coords="5,32,77,61"/>
+<area shape="rect" id="node3" href="$class_utilitaire.html" title="Utilitaire" alt="" coords="127,5,196,35"/>
+<area shape="rect" id="node7" href="$class_v_p.html" title="VP" alt="" coords="141,59,181,88"/>
+<area shape="rect" id="node5" href="$class_camion.html" title="Création de camions." alt="" coords="245,5,312,35"/>
+</map>

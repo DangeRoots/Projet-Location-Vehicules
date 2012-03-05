@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_location_8h.html" title="Classe Location." alt="" coords="5,160,107,189"/>
+<area shape="rect" id="node16" href="$_utilitaire_8h.html" title="Classe Utilitaire." alt="" coords="117,83,219,112"/>
+<area shape="rect" id="node22" href="$_v_p_8h.html" title="Classe VP." alt="" coords="273,83,345,112"/>
+<area shape="rect" id="node5" href="$_loc_menu_8h.html" title="Classe LocMenu." alt="" coords="79,469,185,499"/>
+<area shape="rect" id="node7" href="$_parc_8h.html" title="Classe Parc." alt="" coords="135,237,215,267"/>
+<area shape="rect" id="node10" href="$_reservation_8h.html" title="Classe Reservation." alt="" coords="144,315,267,344"/>
+<area shape="rect" id="node12" href="$_liste_reservations_8h.html" title="Classe ListeReservations." alt="" coords="195,392,352,421"/>
+<area shape="rect" id="node18" href="$_camion_8h.html" title="Classe Camion." alt="" coords="181,160,280,189"/>
+</map>

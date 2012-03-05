@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -72,31 +72,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00021"></a>00021         <span class="keyword">private</span>:
 <a name="l00022"></a>00022                 <a class="code" href="class_vehicule.html">Vehicule</a> *m_vehicule;
 <a name="l00023"></a>00023                 <span class="keywordtype">int</span> m_kilometrage;
-<a name="l00024"></a>00024                 <span class="comment">// CDate m_dateDepart;</span>
-<a name="l00025"></a>00025                 <span class="comment">// CDate m_dateRetourPrevu;</span>
-<a name="l00026"></a>00026                 <span class="comment">// CDate m_dateRetourReel;</span>
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028         <span class="keyword">public</span>:
-<a name="l00036"></a>00036                 <a class="code" href="class_location.html#a87790c14997fd8cdd12080c78c9794bb" title="Constructeur.">Location</a>();
-<a name="l00037"></a>00037 
-<a name="l00046"></a>00046                 <a class="code" href="class_location.html#a87790c14997fd8cdd12080c78c9794bb" title="Constructeur.">Location</a>(<a class="code" href="class_vehicule.html">Vehicule</a> *vehicule, <span class="keywordtype">int</span> kilometrage);
-<a name="l00047"></a>00047                 
-<a name="l00055"></a>00055                 <a class="code" href="class_location.html#af5be2c6550bbd96137cbb3144ec3c529" title="Destructeur.">~Location</a>();
-<a name="l00056"></a>00056                 
-<a name="l00065"></a>00065                 <a class="code" href="class_vehicule.html">Vehicule</a>* <a class="code" href="class_location.html#a3f130f10a4a558d6b792b1e538e9fb40" title="Accéder au véhicule.">getVehicule</a>();
-<a name="l00066"></a>00066 
-<a name="l00075"></a>00075                 <span class="keywordtype">void</span> <a class="code" href="class_location.html#a66eaf6883a88c65a6281ccf111db3c03" title="Modifier véhicule.">setVehicule</a>(<a class="code" href="class_vehicule.html">Vehicule</a> *veh);
-<a name="l00076"></a>00076 
-<a name="l00085"></a>00085                 <span class="keywordtype">void</span> <a class="code" href="class_location.html#ad7dadc3847da51c3c012f0647f011706" title="Afficher location.">afficher</a>();
-<a name="l00086"></a>00086                 
-<a name="l00096"></a>00096                 <span class="keywordtype">bool</span> <a class="code" href="class_location.html#a21ba483682871d05f08f1edbf3dd51e2" title="Locations identiques.">operator==</a>(<a class="code" href="class_location.html">Location</a> &amp;loc);
-<a name="l00097"></a>00097                 
-<a name="l00098"></a>00098                 <span class="comment">// Sauvegarde</span>
-<a name="l00099"></a>00099                 <span class="keywordtype">void</span> save(fstream &amp;inFile);
-<a name="l00100"></a>00100                 <span class="comment">// void save();</span>
-<a name="l00101"></a>00101 };
-<a name="l00102"></a>00102 
-<a name="l00103"></a>00103 <span class="preprocessor">#endif</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         <span class="keyword">public</span>:
+<a name="l00033"></a>00033                 <a class="code" href="class_location.html#a87790c14997fd8cdd12080c78c9794bb" title="Constructeur.">Location</a>();
+<a name="l00034"></a>00034 
+<a name="l00043"></a>00043                 <a class="code" href="class_location.html#a87790c14997fd8cdd12080c78c9794bb" title="Constructeur.">Location</a>(<a class="code" href="class_vehicule.html">Vehicule</a> *vehicule, <span class="keywordtype">int</span> kilometrage);
+<a name="l00044"></a>00044                 
+<a name="l00052"></a>00052                 <a class="code" href="class_location.html#af5be2c6550bbd96137cbb3144ec3c529" title="Destructeur.">~Location</a>();
+<a name="l00053"></a>00053                 
+<a name="l00062"></a>00062                 <a class="code" href="class_vehicule.html">Vehicule</a>* <a class="code" href="class_location.html#a3f130f10a4a558d6b792b1e538e9fb40" title="Accéder au véhicule.">getVehicule</a>();
+<a name="l00063"></a>00063 
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_location.html#a66eaf6883a88c65a6281ccf111db3c03" title="Modifier véhicule.">setVehicule</a>(<a class="code" href="class_vehicule.html">Vehicule</a> *veh);
+<a name="l00073"></a>00073 
+<a name="l00082"></a>00082                 <span class="keywordtype">void</span> <a class="code" href="class_location.html#a4971bacb1641fa3605d986fd87d10814" title="Modifier kilométrage.">setKilom</a>(<span class="keywordtype">int</span> kilom);
+<a name="l00083"></a>00083 
+<a name="l00092"></a>00092                 <span class="keywordtype">void</span> <a class="code" href="class_location.html#ad7dadc3847da51c3c012f0647f011706" title="Afficher location.">afficher</a>();
+<a name="l00093"></a>00093                 
+<a name="l00103"></a>00103                 <span class="keywordtype">bool</span> <a class="code" href="class_location.html#a21ba483682871d05f08f1edbf3dd51e2" title="Locations identiques.">operator==</a>(<a class="code" href="class_location.html">Location</a> &amp;loc);
+<a name="l00104"></a>00104                 
+<a name="l00105"></a>00105                 <span class="comment">// Sauvegarde</span>
+<a name="l00106"></a>00106                 <span class="keywordtype">void</span> save(fstream &amp;inFile);
+<a name="l00107"></a>00107                 <span class="comment">// void save();</span>
+<a name="l00108"></a>00108 };
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -113,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:15 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

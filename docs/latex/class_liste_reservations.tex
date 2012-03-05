@@ -8,12 +8,12 @@
 \hyperlink{class_liste_reservations_a588814a2a1a844ad70e790d1cf7f3d45}{ListeReservations} (fstream \&inFile)
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
 \hyperlink{class_liste_reservations_a32f73522c4b7e1dc98dc6ed8a06e7ec6}{$\sim$ListeReservations} ()
-\begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\item 
 bool \hyperlink{class_liste_reservations_abc616def701c55e0643f7ace4e0dd0c5}{ajouterReservation} (\hyperlink{class_reservation}{Reservation} res)
 \begin{DoxyCompactList}\small\item\em Ajouter réservation. \item\end{DoxyCompactList}\item 
 void \hyperlink{class_liste_reservations_a6a199865ea417f472c46cd981bdb9e2c}{afficher} (\hyperlink{class_parc}{Parc} p)
-\begin{DoxyCompactList}\small\item\em Modifier réservation. \item\end{DoxyCompactList}\item 
-void \hyperlink{class_liste_reservations_a360b471263f043a38feca49f137f7993}{sauvegarder} (fstream \&outFile)
+\begin{DoxyCompactList}\small\item\em Afficher liste complète. \item\end{DoxyCompactList}\item 
+void \hyperlink{class_liste_reservations_a0d55928f73787fe75e77df3fd79da52e}{sauvegarder} (string nomFichier)
 \begin{DoxyCompactList}\small\item\em Sauvegarder liste réservations. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -49,16 +49,7 @@ Constructeur de la classe \hyperlink{class_liste_reservations}{ListeReservations
 \label{class_liste_reservations_a32f73522c4b7e1dc98dc6ed8a06e7ec6}
 
 
-Constructeur. 
-
-Constructeur par défaut de la classe \hyperlink{class_liste_reservations}{ListeReservations}
-
-
-\begin{DoxyParams}{Paramètres}
-{\em aucun} & \\
-\hline
-\end{DoxyParams}
-Destructeur
+Destructeur. 
 
 Destructeur de la classe \hyperlink{class_liste_reservations}{ListeReservations}
 
@@ -81,28 +72,7 @@ Destructeur de la classe \hyperlink{class_liste_reservations}{ListeReservations}
 \label{class_liste_reservations_a6a199865ea417f472c46cd981bdb9e2c}
 
 
-Modifier réservation. 
-
-Permet de modifier une réservation existante
-
-
-\begin{DoxyParams}[1]{Paramètres}
-\mbox{\tt in,out}  & {\em resa} & \hyperlink{class_reservation}{Reservation}, la réservation à modifier \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-bool vrai si la réservation a été modifiée 
-
-bool faux si la réservation n'a pas pu être modifiée
-\end{DoxyReturn}
-Rechercher réservation
-
-Permet de rechercher une réservation dans la liste
-
-\begin{DoxyReturn}{Renvoie}
-\hyperlink{class_reservation}{Reservation} une réservation
-\end{DoxyReturn}
-Afficher liste complète
+Afficher liste complète. 
 
 Affiche la liste des réservations. La liste affichée peut contenir toutes les réservations, les réservations dont la date de départ est égale à date ou les véhicules restituables. Sont considérés restituables tous les véhicules dont la date de retour est celle du jour courant.
 
@@ -139,15 +109,15 @@ bool vrai si la réservation a été ajoutée à la liste
 
 bool faux si la réservation n'a pas pu être ajoutée à la liste 
 \end{DoxyReturn}
-\hypertarget{class_liste_reservations_a360b471263f043a38feca49f137f7993}{
+\hypertarget{class_liste_reservations_a0d55928f73787fe75e77df3fd79da52e}{
 \index{ListeReservations@{ListeReservations}!sauvegarder@{sauvegarder}}
 \index{sauvegarder@{sauvegarder}!ListeReservations@{ListeReservations}}
 \subsubsection[{sauvegarder}]{\setlength{\rightskip}{0pt plus 5cm}void ListeReservations::sauvegarder (
 \begin{DoxyParamCaption}
-\item[{fstream \&}]{outFile}
+\item[{string}]{nomFichier}
 \end{DoxyParamCaption}
 )}}
-\label{class_liste_reservations_a360b471263f043a38feca49f137f7993}
+\label{class_liste_reservations_a0d55928f73787fe75e77df3fd79da52e}
 
 
 Sauvegarder liste réservations. 
@@ -156,7 +126,7 @@ Sauvegarde la liste des réservations dans un fichier
 
 
 \begin{DoxyParams}[1]{Paramètres}
-\mbox{\tt in,out}  & {\em outFile} & fstream, le fichier de sauvegarde \\
+\mbox{\tt in,out}  & {\em nomFichier} & string, le nom du fichier de sauvegarde \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

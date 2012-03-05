@@ -5,28 +5,33 @@
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_loc_exception_aab9f8d83c21dab10e85f49563d15baad}{LocException} (int numero=0, string const \&phrase=\char`\"{}\char`\"{}, int niveau=0)  throw ()
+\hyperlink{class_loc_exception_a3d645ef652cd97c4f962f887958fc524}{LocException} (int numero, string const \&phrase, int niveau)  throw ()
 \begin{DoxyCompactList}\small\item\em Constructeur. \item\end{DoxyCompactList}\item 
 virtual const char $\ast$ \hyperlink{class_loc_exception_a52ff1f609218097252ac7232a4305e28}{what} () const   throw ()
 \begin{DoxyCompactList}\small\item\em Récupérer le libellé de l'exception. \item\end{DoxyCompactList}\item 
 int \hyperlink{class_loc_exception_a1ba59653e71c4c564a8336a15b8a224e}{getNiveau} () const   throw ()
 \begin{DoxyCompactList}\small\item\em Récupérer le niveau de l'exception. \item\end{DoxyCompactList}\item 
-virtual \hyperlink{class_loc_exception_a438ab07885f36f304b84e8efaf8dda8a}{$\sim$Erreur} ()  throw ()
-\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual \hyperlink{class_loc_exception_ac76c91ff8b34674c8adaf73e5b526066}{$\sim$LocException} ()  throw ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \item\end{DoxyCompactList}\item 
+\hypertarget{class_loc_exception_a964415733b549601aad5dcda137a5504}{
+\hyperlink{class_loc_exception}{LocException} {\bfseries OpenFail} (int numero=0, string const \&phrase=\char`\"{}\char`\"{}, int niveau=0)  throw ()}
+\label{class_loc_exception_a964415733b549601aad5dcda137a5504}
+
+\end{DoxyCompactItemize}
 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{class_loc_exception_aab9f8d83c21dab10e85f49563d15baad}{
+\hypertarget{class_loc_exception_a3d645ef652cd97c4f962f887958fc524}{
 \index{LocException@{LocException}!LocException@{LocException}}
 \index{LocException@{LocException}!LocException@{LocException}}
 \subsubsection[{LocException}]{\setlength{\rightskip}{0pt plus 5cm}LocException::LocException (
 \begin{DoxyParamCaption}
-\item[{int}]{numero = {\ttfamily 0}, }
-\item[{string const \&}]{phrase = {\ttfamily \char`\"{}\char`\"{}}, }
-\item[{int}]{niveau = {\ttfamily 0}}
+\item[{int}]{numero, }
+\item[{string const \&}]{phrase, }
+\item[{int}]{niveau}
 \end{DoxyParamCaption}
-)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{class_loc_exception_aab9f8d83c21dab10e85f49563d15baad}
+)  throw ()}}
+\label{class_loc_exception_a3d645ef652cd97c4f962f887958fc524}
 
 
 Constructeur. 
@@ -42,15 +47,15 @@ Constructeur de la classe exception
 {\em niveau,entier,niveau} & de l'exception \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_loc_exception_a438ab07885f36f304b84e8efaf8dda8a}{
-\index{LocException@{LocException}!$\sim$Erreur@{$\sim$Erreur}}
-\index{$\sim$Erreur@{$\sim$Erreur}!LocException@{LocException}}
-\subsubsection[{$\sim$Erreur}]{\setlength{\rightskip}{0pt plus 5cm}virtual LocException::$\sim$Erreur (
+\hypertarget{class_loc_exception_ac76c91ff8b34674c8adaf73e5b526066}{
+\index{LocException@{LocException}!$\sim$LocException@{$\sim$LocException}}
+\index{$\sim$LocException@{$\sim$LocException}!LocException@{LocException}}
+\subsubsection[{$\sim$LocException}]{\setlength{\rightskip}{0pt plus 5cm}virtual LocException::$\sim$LocException (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
-\label{class_loc_exception_a438ab07885f36f304b84e8efaf8dda8a}
+)  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_loc_exception_ac76c91ff8b34674c8adaf73e5b526066}
 
 
 Destructeur. 
@@ -65,7 +70,7 @@ Destructeur de la classe Erreur
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+) const  throw ()}}
 \label{class_loc_exception_a1ba59653e71c4c564a8336a15b8a224e}
 
 
@@ -88,7 +93,7 @@ entier le niveau de l'exception
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+) const  throw ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{class_loc_exception_a52ff1f609218097252ac7232a4305e28}
 
 

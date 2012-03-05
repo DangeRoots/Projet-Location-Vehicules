@@ -19,7 +19,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">0.6</span></div>
+   <div id="projectname">Location de véhicules&#160;<span id="projectnumber">1.0</span></div>
    <div id="projectbrief">Mise en œuvre de mécanismes d'héritage, utilisation de structures de données de la STL</div>
   </td>
  </tr>
@@ -53,7 +53,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
-      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -70,17 +70,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#aab9f8d83c21dab10e85f49563d15baad">LocException</a> (int numero=0, string const &amp;phrase=&quot;&quot;, int niveau=0)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#aab9f8d83c21dab10e85f49563d15baad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#a3d645ef652cd97c4f962f887958fc524">LocException</a> (int numero, string const &amp;phrase, int niveau)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a3d645ef652cd97c4f962f887958fc524"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#a52ff1f609218097252ac7232a4305e28">what</a> () const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer le libellé de l'exception.  <a href="#a52ff1f609218097252ac7232a4305e28"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#a1ba59653e71c4c564a8336a15b8a224e">getNiveau</a> () const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupérer le niveau de l'exception.  <a href="#a1ba59653e71c4c564a8336a15b8a224e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#a438ab07885f36f304b84e8efaf8dda8a">~Erreur</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#a438ab07885f36f304b84e8efaf8dda8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loc_exception.html#ac76c91ff8b34674c8adaf73e5b526066">~LocException</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur.  <a href="#ac76c91ff8b34674c8adaf73e5b526066"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a964415733b549601aad5dcda137a5504"></a><!-- doxytag: member="LocException::OpenFail" ref="a964415733b549601aad5dcda137a5504" args="(int numero=0, string const &amp;phrase=&quot;&quot;, int niveau=0)" -->
+<a class="el" href="class_loc_exception.html">LocException</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OpenFail</b> (int numero=0, string const &amp;phrase=&quot;&quot;, int niveau=0)  throw ()</td></tr>
 </table>
 <hr/><h2>Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="aab9f8d83c21dab10e85f49563d15baad"></a><!-- doxytag: member="LocException::LocException" ref="aab9f8d83c21dab10e85f49563d15baad" args="(int numero=0, string const &amp;phrase=&quot;&quot;, int niveau=0)" -->
+<a class="anchor" id="a3d645ef652cd97c4f962f887958fc524"></a><!-- doxytag: member="LocException::LocException" ref="a3d645ef652cd97c4f962f887958fc524" args="(int numero, string const &amp;phrase, int niveau)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -88,24 +90,24 @@ Fonctions membres publiques</h2></td></tr>
           <td class="memname">LocException::LocException </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numero</em> = <code>0</code>, </td>
+          <td class="paramname"><em>numero</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>phrase</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>phrase</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>niveau</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>niveau</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [inline]</code></td>
+          <td></td><td>  throw ()</td>
         </tr>
       </table>
 </div>
@@ -124,15 +126,15 @@ Fonctions membres publiques</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a438ab07885f36f304b84e8efaf8dda8a"></a><!-- doxytag: member="LocException::~Erreur" ref="a438ab07885f36f304b84e8efaf8dda8a" args="()" -->
+<a class="anchor" id="ac76c91ff8b34674c8adaf73e5b526066"></a><!-- doxytag: member="LocException::~LocException" ref="ac76c91ff8b34674c8adaf73e5b526066" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual LocException::~Erreur </td>
+          <td class="memname">virtual LocException::~LocException </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()<code> [inline, virtual]</code></td>
+          <td>  throw ()<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -152,7 +154,7 @@ Fonctions membres publiques</h2></td></tr>
           <td class="memname">int LocException::getNiveau </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const  throw ()<code> [inline]</code></td>
+          <td> const  throw ()</td>
         </tr>
       </table>
 </div>
@@ -178,7 +180,7 @@ Fonctions membres publiques</h2></td></tr>
           <td class="memname">const char * LocException::what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const  throw ()<code> [inline, virtual]</code></td>
+          <td> const  throw ()<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -214,7 +216,7 @@ Fonctions membres publiques</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Wed Feb 29 2012 17:04:17 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:29:29 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
