@@ -49,92 +49,23 @@ int main(int argc, char *argv[]) {
 	int choix = -1;	
 	
 	while (choix != 0){
-	LocMenu monMenu;
-	monMenu.afficher();
-	
-	// boucle de récupération du choix avec contrôle de type
-	// j'ai du modifier la méthode récupérer valeur-> elle retourne un string désormais
-	// C'est peut-être à factoriser =)
-	string t_input = "";
-	while(!Tools::estEntier(t_input)){
-		t_input = monMenu.recupererValeur("Choix : ");
-		if (Tools::estEntier(t_input)){
-			choix = Tools::stringToInt(t_input);
-		} else
-			cout  << "Veuillez entrer un nombre !"<< endl;
-			monMenu.afficher();//réaffichage du menu lors d'un mauvais choix
-	}
-	monMenu.traiter(choix);
+		LocMenu monMenu;
+		// monMenu.afficher();
+			
+		// boucle de récupération du choix avec contrôle de type
+		// j'ai du modifier la méthode récupérer valeur-> elle retourne un string désormais
+		// C'est peut-être à factoriser =)
+		string t_input = "";
+		while(!Tools::estEntier(t_input)){
+			monMenu.afficher();
+			t_input = monMenu.recupererValeur("Choix : ");
+			if (Tools::estEntier(t_input)){
+				choix = Tools::stringToInt(t_input);
+			} else
+				cout  << "Veuillez entrer un nombre !"<< endl;
+				// monMenu.afficher();//réaffichage du menu lors d'un mauvais choix
+		}
 
-
+		monMenu.traiter(choix, p1, resa, nomFichierVeh, nomFichierResa);
 	}//while du choix != 0
 }
-	// Afficher le menu
-		// Ajouter un vehicule
-		// Enregistrement d'une location (nvelle reservation)
-		// Afficher avec un sous menu 
-		//		-> tous les veh
-		//		-> des veh loués
-		//		-> veh loués devant etre restitués
-		// Quitter (sauvegarder)
-
-	//~ int done = 1;
-	//~ while (done != 0) {
-		//~ cout << "*************************************"<<endl;
-		//~ cout << "Logiciel de Réservations de Véhicule "<< endl;
-		//~ cout << "*************************************"<<endl;
-		
-		//p1.afficher();
-		//cout << "----- Ajout véhicule -----" << endl;
-		//p1.ajouterLocation();
-		//cout << "autre ajout (0 pour arrêter) ?" << endl;
-		//cin >> done;
-	//~ }
-	//~ cout << "--- après ajout ---" << endl;
-	//~ p1.afficher();
-//~ 
-	//~ vehFile.open(nomFichierVeh.c_str(),ios::out);
-	//~ if (vehFile.fail()) {
-		//~ cerr << "Ouverture du fichier " << nomFichierVeh << " impossible : fichier introuvable !" << endl;
-		//~ exit (-2);
-	//~ }
-	//~ cout << "Sauvegarde fichier" << endl;
-	//~ p1.sauvegarder(vehFile);
-	//~ cout << "Fin Sauvegarde fichier" << endl;
-	//~ 
-	/*
-	cout << "-- Tests de disponibilités -- " << endl;
-	Reservation testDate("111FE33", CDate(10,01,2012), CDate(10,01,2012));
-	cout << endl << "--- liste avant ajout ---" << endl;
-	resa.afficher(p1);
-	cout << "--- Nouvelle réservation ---" << endl;
-	testDate.afficher(p1);
-	cout << "10/01/2012 au 10/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(13,01,2012));
-	testDate.setDate('r', CDate(14,01,2012));
-	testDate.afficher(p1);
-	cout << "13/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(12,01,2012));
-	testDate.setDate('r', CDate(14,01,2012));
-	testDate.afficher(p1);
-	cout << "12/01/2012 au 14/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(14,01,2012));
-	testDate.setDate('r', CDate(18,01,2012));
-	testDate.afficher(p1);
-	cout << "14/01/2012 au 18/01/2012 : KO " << resa.ajouterReservation(testDate) << endl;
-	testDate.setDate('d', CDate(15,01,2012));
-	testDate.setDate('r', CDate(19,01,2012));
-	testDate.afficher(p1);
-	cout << "15/01/2012 au 19/01/2012 : OK " << resa.ajouterReservation(testDate) << endl;
-	cout << endl << "--- liste après ajout ---" << endl;
-	resa.afficher(p1);
-	
-	resaFile.open(nomFichierResa.c_str(),ios::out);
-	if (resaFile.fail()) {
-		cerr << "Ouverture du fichier " << nomFichierResa << " impossible : fichier introuvable !" << endl;
-		exit (-2);
-	}
-	resa.sauvegarder(resaFile);
-	*/
-//}
-	

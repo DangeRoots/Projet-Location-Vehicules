@@ -96,10 +96,17 @@ void Parc::afficher() {
 	}
 }
 
-void Parc::sauvegarder(fstream &inFile) {
-	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
-		m_parcAutoI->save(inFile);
+void Parc::sauvegarder(string nomFichier) {
+	fstream vehFile;
+	vehFile.open(nomFichier.c_str(),ios::out);
+	if (vehFile.fail()) {
+		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
+		exit (-2);
 	}
+	for (m_parcAutoI=m_parcAuto.begin();m_parcAutoI !=m_parcAuto.end(); m_parcAutoI++) {
+		m_parcAutoI->save(vehFile);
+	}
+	vehFile.close();
 }
 
 void Parc::entrerTypeVeh(string &t_type) {

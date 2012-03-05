@@ -22,7 +22,10 @@ LocMenu::~LocMenu() {
 }
 
 void LocMenu::afficher() {
-	system("clear");
+	// system("clear");
+	cout << "-----------------------------------" << endl;
+	cout << "---    Location de véhicules    ---" << endl;
+	cout << "-----------------------------------" << endl;
 	menuI= entrees.begin();
 	while (menuI != entrees.end()){
     cout << *menuI << endl;
@@ -37,22 +40,34 @@ string LocMenu::recupererValeur(string texte) {
 	return c;
 }
 
-void LocMenu::traiter(int choix) {
+void LocMenu::traiter(int choix, Parc &p, ListeReservations &r, string nomFichierVeh, string nomFichierResa) {
 	switch (choix){
 		case 1:{ // ajouter un véhicule
-			cout << "Choix 1"<<endl;
+			p.ajouterLocation();
+			p.sauvegarder(nomFichierVeh);
 			break;
 		}
 		case 2:{ // nouvelle réservation
-			cout << "Choix 2"<<endl;
+			string immat;
+			int j_Dep, m_Dep, a_Dep;
+			int j_Ret, m_Ret, a_Ret;
+			cout << "Immatriculation : ";
+			cin >> immat;
+			cout << "Date départ (JJ MM AAAA) : ";
+			cin >> j_Dep >> m_Dep >> a_Dep;
+			cout << "Date retour (JJ MM AAAA) : ";
+			cin >> j_Ret >> m_Ret >> a_Ret;
+			r.ajouterReservation(Reservation(immat,CDate(j_Dep,m_Dep,a_Dep),CDate(j_Ret,m_Ret,a_Ret)));
+			r.sauvegarder(nomFichierResa);
 			break;
 		}
 		case 3:{ // afficher liste des véhicules
-			cout << "Choix 3"<<endl;
+			p.afficher();
 			break;
 		}
 		case 4:{ // afficher les réservations
-			cout << "Choix 4"<<endl;
+			// cout << "Choix 4"<<endl;
+			r.afficher(p);
 			break;
 		}
 		case 0:{ // quitter

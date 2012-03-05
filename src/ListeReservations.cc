@@ -152,8 +152,16 @@ void ListeReservations::afficher(Parc p) {
 	}
 }
 
-void ListeReservations::sauvegarder(fstream &outFile) {
-	for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
-		m_listeReservationsI->save(outFile);
+void ListeReservations::sauvegarder(string nomFichier) {
+	fstream resaFile;
+	resaFile.open(nomFichier.c_str(),ios::out);
+
+	if (resaFile.fail()) {
+		cerr << "Ouverture du fichier " << nomFichier << " impossible : fichier introuvable !" << endl;
+		exit (-2);
 	}
+	for (m_listeReservationsI = m_listeReservations.begin();m_listeReservationsI != m_listeReservations.end();m_listeReservationsI++) {
+		m_listeReservationsI->save(resaFile);
+	}
+	resaFile.close();
 }

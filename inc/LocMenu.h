@@ -5,6 +5,11 @@
 #include <vector>
 #include <cstdlib>
 
+#include <Parc.h>
+#include <CDate.h>
+#include <Reservation.h>
+#include <ListeReservations.h>
+
 /*!
  * \file LocMenu.h
  * \brief Classe LocMenu
@@ -53,7 +58,7 @@ class LocMenu {
 
 		string recupererValeur(string texte);
 
-		void traiter(int choix);
+		void traiter(int choix, Parc &p, ListeReservations &r, string nomFichierVeh, string nomFichierResa);
 
 };
 

@@ -119,10 +119,10 @@ class Parc {
 		*
 		*  Sauvegarde le parc dans un fichier
 		*
-		*  \param [in,out] inFile fstream, le fichier de sauvegarde
+		*  \param [in,out] nomFichier string, le nom du fichier de sauvegarde
 		*  \return void
 		*/												
-		void sauvegarder(fstream &inFile);
+		void sauvegarder(string nomFichier);
 };
 
 #endif
