@@ -3,17 +3,21 @@
 
 #include <iostream>
 #include <iomanip>
-#include <Vehicule.h> // classe de base
+#include <Vehicule.h>
 
 /*!
- * \file Utilitaire.h
- * \brief Classe Utilitaire
- * 
- *  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe Camion
- * 
- * \author Gilles Coulais
- * \version 1.0
- */
+* \file Utilitaire.h
+* \brief Classe Utilitaire
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class Utilitaire
+* \brief Création d'utilitaire
+*
+*  Cette classe permet de créer des utilitaires. Pour les utilitaires de plus de 3,5t, il est conseillé d'utiliser la classe Camion
+*/
 
 class Utilitaire : public Vehicule {
 	private:

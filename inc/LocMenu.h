@@ -12,14 +12,18 @@
 #include <Location.h>
 
 /*!
- * \file LocMenu.h
- * \brief Classe LocMenu
- * 
- *  Cette classe permet de gérer le menu du logiciel de location
- * 
- * \author Gilles Coulais, Icham Sirat
- * \version 1.0
- */
+* \file LocMenu.h
+* \brief Classe LocMenu
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class LocMenu
+* \brief Création du menu du logiciel
+*
+*  Cette classe permet de gérer le menu du logiciel de location
+*/
 
 class LocMenu {
 

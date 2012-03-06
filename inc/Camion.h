@@ -2,14 +2,14 @@
 #define CAMION_H
 
 #include <iostream>
-#include <Utilitaire.h> // classe de base
+#include <Utilitaire.h> 
 
 /*!
- * \file Camion.h
- * \brief Classe Camion
- * \author Gilles Coulais
- * \version 1.0
- */
+* \file Camion.h
+* \brief Classe Camion
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
 
 /*! 
 * \class Camion
@@ -18,7 +18,6 @@
 *  Cette classe permet de créer des camions, ie des utilitaires de plus de 3,5T. 
 *  Pour les utilitaires de moins de 3,5t, il est conseillé d'utiliser la classe Utilitaire
 */
-
 
 class Camion : public Utilitaire {
 	private:

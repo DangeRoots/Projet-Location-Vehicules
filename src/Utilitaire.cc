@@ -15,6 +15,9 @@ Utilitaire::Utilitaire():Vehicule() {
 }
 
 Utilitaire::~Utilitaire() {
+#ifdef DEBUG
+	cout << "Destructeur de Utilitaire" << endl;
+#endif
 }
 
 float Utilitaire::getVolumeUtile() {

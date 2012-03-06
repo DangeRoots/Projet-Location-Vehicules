@@ -2,19 +2,20 @@
 #define TOOLS_H
 
 /*!
- * \file Tools.h
- * \brief Utilitaires variés
- * \author Gilles Coulais
- * \version 0.3
- */
+* \file Tools.h
+* \brief Utilitaires variés
+* \author Gilles Coulais
+* \version 0.3
+*/
 
-/*! \class Tools
-   * \brief Utilitaires
-   *
-   *  Cette classe fournit un certain nombre de fonctions utilitaires, utilisables via des méthodes statiques.
-   *  - Conversion de chaînes de caractères en majuscules et minuscules
-   *  - fonction de vérification et conversion d'entiers et réels depuis des chaînes de caractères
-   */
+/*! 
+* \class Tools
+* \brief Utilitaires
+*
+*  Cette classe fournit un certain nombre de fonctions utilitaires, utilisables via des méthodes statiques.
+*  - Conversion de chaînes de caractères en majuscules et minuscules
+*  - fonction de vérification et conversion d'entiers et réels depuis des chaînes de caractères
+*/
 
 class Tools {
 	

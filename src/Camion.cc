@@ -16,6 +16,9 @@ Camion::Camion():Utilitaire() {
 }
 
 Camion::~Camion() {
+#ifdef DEBUG
+	cout << "Destructeur de Camion" << endl;
+#endif
 }
 
 float Camion::getPoidsUtile() {
@@ -36,5 +39,3 @@ void Camion::afficher() {
 void Camion::save(fstream &fs) {
 	fs << "c " << getImmatriculation() << " " << getMarque() << " " <<  getModele() << " " << getVolumeUtile() << " " << m_poidsUtile << " ";
 }
-	
-	

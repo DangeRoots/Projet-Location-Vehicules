@@ -12,6 +12,9 @@ LocMenu::LocMenu() {
 }
 
 LocMenu::~LocMenu() {
+#ifdef DEBUG
+	cout << "Destructeur de LocMenu" << endl;
+#endif
 }
 
 void LocMenu::afficher() {
@@ -91,7 +94,7 @@ void LocMenu::traiter(int choix, Parc &p, ListeReservations &r, string nomFichie
 			cout << "Au revoir"<<endl;
 			break;
 		}
-		default :{
+		default :{ // choix non valide
 			cout << "Choix invalide !"<<endl;
 			break;
 		}

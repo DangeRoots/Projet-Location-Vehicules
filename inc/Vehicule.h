@@ -6,16 +6,19 @@
 #include <fstream>
 
 /*!
- * \file Vehicule.h
- * \brief Classe Vehicule
- * 
- *  Cette classe propose un contenu basique pour créer un véhicule.
- * 	Elle est destinée à être dérivée pour créer de nouvelles classes spécialisées.
- * 
- * \author Gilles Coulais, 
- * \author Icham Sirat
- * \version 1.0
- */
+* \file Vehicule.h
+* \brief Classe Vehicule
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class Vehicule
+* \brief Création de véhicule
+*
+*  Cette classe propose un contenu basique pour créer un véhicule.
+*  Elle est destinée à être dérivée pour créer de nouvelles classes spécialisées.
+*/
 
 class Vehicule {	
 	private:

@@ -8,11 +8,11 @@
 #include <Reservation.h>
 
 /*!
- * \file ListeReservations.h
- * \brief Classe ListeReservations
- * \author Gilles Coulais
- * \version 1.0
- */
+* \file ListeReservations.h
+* \brief Classe ListeReservations
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
 
 /*! 
 * \class ListeReservations

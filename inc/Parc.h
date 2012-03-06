@@ -12,14 +12,18 @@
 #include <Tools.h>
 
 /*!
- * \file Parc.h
- * \brief Classe Parc
- * 
- *  Cette classe permet de gérer un parc de locations de véhicules
- * 
- * \author Gilles Coulais, Icham Sirat
- * \version 1.0
- */
+* \file Parc.h
+* \brief Classe Parc
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class Parc
+* \brief Création et gestion d'un parc de locations
+*
+*  Cette classe permet de gérer un parc de locations de véhicules
+*/
 
 class Parc {
 	private:

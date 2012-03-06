@@ -54,4 +54,3 @@ void Tools::charToUpper (char &c) {
 void Tools::charToLower (char &c) {
 	c = tolower(c);
 }
-

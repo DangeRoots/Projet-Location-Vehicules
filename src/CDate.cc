@@ -20,9 +20,13 @@ CDate::CDate(int jour, int mois, int annee){
 	m_annee = annee;
 }
 
-CDate::~CDate(){}
+CDate::~CDate(){
+#ifdef DEBUG
+	cout << "Destructeur de CDate" << endl;
+#endif
+}
 
-std::string CDate::GetStrMois(){
+string CDate::GetStrMois(){
     string tab[12]={"Janvier","Février","Mars","Avril","Mai","Juin",
 					"Juillet","Aout","Septembre","Octobre","Novembre","Décembre"};
 	return tab[m_mois-1];
@@ -95,4 +99,3 @@ CDate CDate::today(){
 void CDate::afficher(){
 	cout << m_jour <<"/"<< m_mois <<"/"<< m_annee;
 }
-

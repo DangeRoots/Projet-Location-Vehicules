@@ -6,7 +6,6 @@ using namespace std;
 #include <ListeReservations.h>
 #include <Location.h>
 #include <Reservation.h>
-#include <LocException.h>
 #include <LocMenu.h>
 #include <Tools.h>
 
@@ -42,11 +41,8 @@ int main(int argc, char *argv[]) {
 	int choix = -1;	
 	
 	while (choix != 0){
-		LocMenu monMenu;
-		// monMenu.afficher();
-			
+		LocMenu monMenu;		
 		// boucle de récupération du choix avec contrôle de type
-		// j'ai du modifier la méthode récupérer valeur-> elle retourne un string désormais
 		// C'est peut-être à factoriser =)
 		string t_input = "";
 		while(!Tools::estEntier(t_input)){
@@ -58,5 +54,5 @@ int main(int argc, char *argv[]) {
 				cout  << "Veuillez entrer un nombre !"<< endl;
 		}
 		monMenu.traiter(choix, p1, resa, nomFichierVeh, nomFichierResa);
-	}//while du choix != 0
+	}// fin while du choix != 0
 }

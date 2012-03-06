@@ -6,12 +6,12 @@
 #include <time.h>
 #include <cstdlib>
 
- /*!
- * \file CDate.h
- * \brief Classe cdate
- * \author Franck Ruby, Gilles Coulais, Icham Sirat
- * \version 1.0
- */
+/*!
+* \file CDate.h
+* \brief Classe cdate
+* \author Franck Ruby, Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
 
 /*! 
 * \class CDate

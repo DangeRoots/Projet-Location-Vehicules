@@ -15,6 +15,9 @@ Reservation::Reservation() {
 }
 
 Reservation::~Reservation() {
+#ifdef DEBUG
+	cout << "Destructeur de Reservation" << endl;
+#endif
 }
 
 void Reservation::setDate (char type, CDate newDate) {
@@ -25,7 +28,6 @@ void Reservation::setDate (char type, CDate newDate) {
 }
 
 CDate Reservation::getDate (char type) {
-	//Exception à ajouter
 	if (type == 'd')
 		return m_dateDepart;
 	else
@@ -45,7 +47,6 @@ void Reservation::afficher(Parc p) {
 		m_dateRetour.afficher();
 		cout << endl;
 	}
-	
 }
 
 void Reservation::save(fstream &outFile) {

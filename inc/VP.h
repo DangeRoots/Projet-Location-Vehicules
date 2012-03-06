@@ -1,21 +1,23 @@
 #ifndef VP_H
 #define VP_H
 
-// #include <string>
 #include <iostream>
 #include <iomanip>
 #include <Vehicule.h>
 
 /*!
- * \file VP.h
- * \brief Classe VP
- * 
- *  Cette classe permet de créer une voiture particulière.
- * 
- * \author Gilles Coulais, 
- * \author Icham Sirat
- * \version 1.0
- */
+* \file VP.h
+* \brief Classe VP
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class VP
+* \brief Création de voiture particulière
+*
+*  Cette classe permet de créer une voiture particulière.
+*/
 
 class VP: public Vehicule {	
 	private:
@@ -92,12 +94,4 @@ class VP: public Vehicule {
 		*/								
 		virtual void save(fstream &fs);
 };
-
 #endif
-
-		
-		
-		
-		
-		
-		

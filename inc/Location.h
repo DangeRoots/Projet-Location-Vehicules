@@ -5,17 +5,20 @@
 #include <fstream>
 #include <Vehicule.h>
 #include <CDate.h>
-#include <Erreur.h>
 
 /*!
- * \file Location.h
- * \brief Classe Location
- * 
- *  Cette classe permet de gérer la location d'un véhicule
- * 
- * \author Gilles Coulais, Icham Sirat
- * \version 1.0
- */
+* \file Location.h
+* \brief Classe Location
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class Location
+* \brief Création de location de véhicules
+*
+*  Cette classe permet de gérer la location d'un véhicule
+*/
 
 class Location {
 	private:
@@ -102,9 +105,14 @@ class Location {
 		*/										
 		bool operator==(Location &loc);
 		
-		// Sauvegarde
+		/*!
+		*  \brief Sauvegarder liste locations
+		*
+		*  Sauvegarde la liste des locations dans un fichier
+		*
+		*  \param [in,out] nomFichier string, le nom du fichier de sauvegarde
+		*  \return void
+		*/		
 		void save(fstream &inFile);
-		// void save();
 };
-
 #endif

@@ -31,13 +31,12 @@ Parc::Parc (fstream &inFile) {
 }
 
 Parc::Parc() {
-#ifdef DEBUG
-	cout << "Destructeur de parc" << endl;
-#endif
 }
 
 Parc::~Parc () {
-	// @TODO
+#ifdef DEBUG
+	cout << "Destructeur de Parc" << endl;
+#endif
 }
 
 void Parc::ajouterLocation () {
@@ -101,7 +100,6 @@ void Parc::enregistrerRetour(int kilom, string immat) {
 	Location oldLoc;
 	if (estDansLeParc(immat,oldLoc)) {
 		rechercherLocation(immat)->setKilom(kilom);
-		// loc.afficher();
 		cout << "Retour enregistré" << endl;
 	} else {
 		cout << "Véhicule non trouvé" << endl;

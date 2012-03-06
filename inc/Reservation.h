@@ -7,14 +7,18 @@
 #include <Parc.h>
 
 /*!
- * \file Reservation.h
- * \brief Classe Reservation
- * 
- *  Cette classe permet de gérer une réservation de véhicule comprennant une immatriculation permettant l'identification du véhicule, la date de départ et la date de retour
- * 
- * \author Gilles Coulais
- * \version 1.0
- */
+* \file Reservation.h
+* \brief Classe Reservation
+* \author Gilles Coulais, Icham Sirat
+* \version 1.0
+*/
+
+/*! 
+* \class Reservation
+* \brief Création et gestion de reservations de véhicule
+*
+*  Cette classe permet de gérer une réservation de véhicule comprennant une immatriculation permettant l'identification du véhicule, la date de départ et la date de retour
+*/
 
 class Reservation {
 	private :
