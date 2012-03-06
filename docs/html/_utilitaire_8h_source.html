@@ -64,29 +64,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &lt;iomanip&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;<a class="code" href="_vehicule_8h.html" title="Classe Vehicule.">Vehicule.h</a>&gt;</span> <span class="comment">// classe de base</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;<a class="code" href="_vehicule_8h.html" title="Classe Vehicule.">Vehicule.h</a>&gt;</span>
 <a name="l00007"></a>00007 
-<a name="l00018"></a><a class="code" href="class_utilitaire.html">00018</a> <span class="keyword">class </span><a class="code" href="class_utilitaire.html">Utilitaire</a> : <span class="keyword">public</span> <a class="code" href="class_vehicule.html">Vehicule</a> {
-<a name="l00019"></a>00019         <span class="keyword">private</span>:
-<a name="l00020"></a>00020                 <span class="keywordtype">float</span> m_volumeUtile;
-<a name="l00021"></a>00021         
-<a name="l00022"></a>00022         <span class="keyword">public</span>:
-<a name="l00033"></a>00033                 <a class="code" href="class_utilitaire.html#a8a4af48b60aaeefe9b6399ed94495662" title="Constructeur.">Utilitaire</a>(<span class="keywordtype">float</span> volume, <span class="keywordtype">string</span> immat, <span class="keywordtype">string</span> marque, <span class="keywordtype">string</span> modele);
-<a name="l00034"></a>00034 
-<a name="l00040"></a>00040                 <a class="code" href="class_utilitaire.html#a8a4af48b60aaeefe9b6399ed94495662" title="Constructeur.">Utilitaire</a>();
-<a name="l00041"></a>00041                 
-<a name="l00047"></a>00047                 <span class="keyword">virtual</span> <a class="code" href="class_utilitaire.html#af6e70ea8eb994ab8744429b37d5a9934" title="Destructeur.">~Utilitaire</a>();
-<a name="l00048"></a>00048                 
-<a name="l00058"></a>00058                 <span class="keywordtype">float</span> <a class="code" href="class_utilitaire.html#acde47d7bc100eb5fdf2195bb8307d36a" title="Récupérer volume utile.">getVolumeUtile</a>();
-<a name="l00059"></a>00059                 
-<a name="l00069"></a>00069                 <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a085a6c510c036cbb88d91682751f3588" title="Modifier volume utile.">setVolumeUtile</a>(<span class="keywordtype">float</span> volume);
-<a name="l00070"></a>00070 
-<a name="l00079"></a>00079                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a1092986e687a5a907bc86d252a8416c9" title="Afficher utilitaire.">afficher</a>();
-<a name="l00080"></a>00080                 
-<a name="l00089"></a>00089                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a7ee59be5d77191b06b2c959bdf2297b7" title="sauvegarder utilitaire">save</a>(fstream &amp;fs);
-<a name="l00090"></a>00090 };
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092 <span class="preprocessor">#endif</span>
+<a name="l00022"></a><a class="code" href="class_utilitaire.html">00022</a> <span class="keyword">class </span><a class="code" href="class_utilitaire.html" title="Création d&amp;#39;utilitaire.">Utilitaire</a> : <span class="keyword">public</span> <a class="code" href="class_vehicule.html" title="Création de véhicule.">Vehicule</a> {
+<a name="l00023"></a>00023         <span class="keyword">private</span>:
+<a name="l00024"></a>00024                 <span class="keywordtype">float</span> m_volumeUtile;
+<a name="l00025"></a>00025         
+<a name="l00026"></a>00026         <span class="keyword">public</span>:
+<a name="l00037"></a>00037                 <a class="code" href="class_utilitaire.html#a8a4af48b60aaeefe9b6399ed94495662" title="Constructeur.">Utilitaire</a>(<span class="keywordtype">float</span> volume, <span class="keywordtype">string</span> immat, <span class="keywordtype">string</span> marque, <span class="keywordtype">string</span> modele);
+<a name="l00038"></a>00038 
+<a name="l00044"></a>00044                 <a class="code" href="class_utilitaire.html#a8a4af48b60aaeefe9b6399ed94495662" title="Constructeur.">Utilitaire</a>();
+<a name="l00045"></a>00045                 
+<a name="l00051"></a>00051                 <span class="keyword">virtual</span> <a class="code" href="class_utilitaire.html#af6e70ea8eb994ab8744429b37d5a9934" title="Destructeur.">~Utilitaire</a>();
+<a name="l00052"></a>00052                 
+<a name="l00062"></a>00062                 <span class="keywordtype">float</span> <a class="code" href="class_utilitaire.html#acde47d7bc100eb5fdf2195bb8307d36a" title="Récupérer volume utile.">getVolumeUtile</a>();
+<a name="l00063"></a>00063                 
+<a name="l00073"></a>00073                 <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a085a6c510c036cbb88d91682751f3588" title="Modifier volume utile.">setVolumeUtile</a>(<span class="keywordtype">float</span> volume);
+<a name="l00074"></a>00074 
+<a name="l00083"></a>00083                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a1092986e687a5a907bc86d252a8416c9" title="Afficher utilitaire.">afficher</a>();
+<a name="l00084"></a>00084                 
+<a name="l00093"></a>00093                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_utilitaire.html#a7ee59be5d77191b06b2c959bdf2297b7" title="sauvegarder utilitaire">save</a>(fstream &amp;fs);
+<a name="l00094"></a>00094 };
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

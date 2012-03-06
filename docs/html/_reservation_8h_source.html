@@ -67,34 +67,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00006"></a>00006 <span class="preprocessor">#include &lt;<a class="code" href="_c_date_8h.html" title="Classe cdate.">CDate.h</a>&gt;</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include &lt;<a class="code" href="_parc_8h.html" title="Classe Parc.">Parc.h</a>&gt;</span>
 <a name="l00008"></a>00008 
-<a name="l00019"></a><a class="code" href="class_reservation.html">00019</a> <span class="keyword">class </span><a class="code" href="class_reservation.html">Reservation</a> {
-<a name="l00020"></a>00020         <span class="keyword">private</span> :
-<a name="l00021"></a>00021                 <span class="keywordtype">string</span> m_vehicule;
-<a name="l00022"></a>00022                 <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> m_dateDepart, m_dateRetour;
-<a name="l00023"></a>00023                 
-<a name="l00024"></a>00024         <span class="keyword">public</span> :
-<a name="l00034"></a>00034                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a> (<span class="keywordtype">string</span> veh, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dateDep, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dateRet);
-<a name="l00035"></a>00035                 
-<a name="l00043"></a>00043                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a>();
-<a name="l00044"></a>00044                 
-<a name="l00052"></a>00052                 <a class="code" href="class_reservation.html#abf387b06b84f8a12c8e2e95d431d3d60" title="Destructeur.">~Reservation</a>();
-<a name="l00053"></a>00053                 
-<a name="l00063"></a>00063                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#ac72f95402ed4b92c2625ac8b546e95d0" title="Modifier date.">setDate</a> (<span class="keywordtype">char</span> type, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> newDate);
-<a name="l00064"></a>00064 
-<a name="l00073"></a>00073                 <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> <a class="code" href="class_reservation.html#ab03159e8f06b63e5dcd2f10ec637f1f8" title="Obtenir date.">getDate</a> (<span class="keywordtype">char</span> type);
-<a name="l00074"></a>00074 
-<a name="l00083"></a>00083                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#a2760e98de6bd2b8c5259526962227a52" title="Afficher resservation.">afficher</a>(<a class="code" href="class_parc.html">Parc</a> p);
-<a name="l00084"></a>00084                 
-<a name="l00093"></a>00093                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#af99771d51bffe33abf02c10ab67bbbc9" title="Sauvegarder réservation.">save</a>(fstream &amp;outFile);
-<a name="l00094"></a>00094 
-<a name="l00105"></a>00105                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a1d28645be56bc6d703786cc41fab5bdc" title="Vérifie disponibilité">estDisponible</a>(<a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dep, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> ret);
-<a name="l00106"></a>00106                 
-<a name="l00115"></a>00115                 <span class="keywordtype">string</span> <a class="code" href="class_reservation.html#a987ccbdd8ba917b439e2282baaf5ea12" title="Obtenir véhicule.">getVehicule</a>();
-<a name="l00116"></a>00116 
-<a name="l00126"></a>00126                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a5aa0fb5e7f6429bc414f02d4c7c5b142" title="Réservations égales.">operator==</a>(<a class="code" href="class_reservation.html">Reservation</a> &amp;res) <span class="keyword">const</span>;
-<a name="l00127"></a>00127 };
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif</span>
+<a name="l00023"></a><a class="code" href="class_reservation.html">00023</a> <span class="keyword">class </span><a class="code" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a> {
+<a name="l00024"></a>00024         <span class="keyword">private</span> :
+<a name="l00025"></a>00025                 <span class="keywordtype">string</span> m_vehicule;
+<a name="l00026"></a>00026                 <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> m_dateDepart, m_dateRetour;
+<a name="l00027"></a>00027                 
+<a name="l00028"></a>00028         <span class="keyword">public</span> :
+<a name="l00038"></a>00038                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a> (<span class="keywordtype">string</span> veh, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dateDep, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dateRet);
+<a name="l00039"></a>00039                 
+<a name="l00047"></a>00047                 <a class="code" href="class_reservation.html#a63b283053695e6f50fa44c50da2b3de5" title="Constructeur.">Reservation</a>();
+<a name="l00048"></a>00048                 
+<a name="l00056"></a>00056                 <a class="code" href="class_reservation.html#abf387b06b84f8a12c8e2e95d431d3d60" title="Destructeur.">~Reservation</a>();
+<a name="l00057"></a>00057                 
+<a name="l00067"></a>00067                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#ac72f95402ed4b92c2625ac8b546e95d0" title="Modifier date.">setDate</a> (<span class="keywordtype">char</span> type, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> newDate);
+<a name="l00068"></a>00068 
+<a name="l00077"></a>00077                 <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> <a class="code" href="class_reservation.html#ab03159e8f06b63e5dcd2f10ec637f1f8" title="Obtenir date.">getDate</a> (<span class="keywordtype">char</span> type);
+<a name="l00078"></a>00078 
+<a name="l00087"></a>00087                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#a2760e98de6bd2b8c5259526962227a52" title="Afficher resservation.">afficher</a>(<a class="code" href="class_parc.html" title="Création et gestion d&amp;#39;un parc de locations.">Parc</a> p);
+<a name="l00088"></a>00088                 
+<a name="l00097"></a>00097                 <span class="keywordtype">void</span> <a class="code" href="class_reservation.html#af99771d51bffe33abf02c10ab67bbbc9" title="Sauvegarder réservation.">save</a>(fstream &amp;outFile);
+<a name="l00098"></a>00098 
+<a name="l00109"></a>00109                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a1d28645be56bc6d703786cc41fab5bdc" title="Vérifie disponibilité">estDisponible</a>(<a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> dep, <a class="code" href="class_c_date.html" title="Création et gestion de dates.">CDate</a> ret);
+<a name="l00110"></a>00110                 
+<a name="l00119"></a>00119                 <span class="keywordtype">string</span> <a class="code" href="class_reservation.html#a987ccbdd8ba917b439e2282baaf5ea12" title="Obtenir véhicule.">getVehicule</a>();
+<a name="l00120"></a>00120 
+<a name="l00130"></a>00130                 <span class="keywordtype">bool</span> <a class="code" href="class_reservation.html#a5aa0fb5e7f6429bc414f02d4c7c5b142" title="Réservations égales.">operator==</a>(<a class="code" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a> &amp;res) <span class="keyword">const</span>;
+<a name="l00131"></a>00131 };
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

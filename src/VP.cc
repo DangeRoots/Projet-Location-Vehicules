@@ -11,9 +11,6 @@ VP::VP():Vehicule(){
 };
 
 VP::~VP(){
-#ifdef DEBUG
-	cout << "Destructeur de VP" << endl;
-#endif
 }
 
 int VP::getNbPlaces(){

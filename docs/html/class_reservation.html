@@ -65,7 +65,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h1>Référence de la classe Reservation</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Reservation" --><div class="dynheader">
+<!-- doxytag: class="Reservation" -->
+<p>Création et gestion de réservations de véhicule.  
+<a href="#_details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_reservation_8h_source.html">Reservation.h</a>&gt;</code></p>
+<div class="dynheader">
 Graphe de collaboration de Reservation:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_reservation__coll__graph.png" border="0" usemap="#_reservation_coll__map" alt="Collaboration graph"/></div>
@@ -98,7 +103,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reservation.html#a5aa0fb5e7f6429bc414f02d4c7c5b142">operator==</a> (<a class="el" href="class_reservation.html">Reservation</a> &amp;res) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Réservations égales.  <a href="#a5aa0fb5e7f6429bc414f02d4c7c5b142"></a><br/></td></tr>
 </table>
-<hr/><h2>Documentation des constructeurs et destructeur</h2>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Création et gestion de réservations de véhicule. </p>
+<p>Cette classe permet de gérer une réservation de véhicule comprennant une immatriculation permettant l'identification du véhicule, la date de départ et la date de retour </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ac7957aefcd95b0f9a36fa07f377a1072"></a><!-- doxytag: member="Reservation::Reservation" ref="ac7957aefcd95b0f9a36fa07f377a1072" args="(string veh, CDate dateDep, CDate dateRet)" -->
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +139,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur de la classe <a class="el" href="class_reservation.html">Reservation</a></p>
+<p>Constructeur de la classe <a class="el" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">veh</td><td>string, l'immatriculation du véhicule </td></tr>
@@ -158,7 +166,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur par défaut de la classe <a class="el" href="class_reservation.html">Reservation</a></p>
+<p>Constructeur par défaut de la classe <a class="el" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aucun</td><td></td></tr>
@@ -183,7 +191,7 @@ Fonctions membres publiques</h2></td></tr>
 <div class="memdoc">
 
 <p>Destructeur. </p>
-<p>Destructeur de la classe <a class="el" href="class_reservation.html">Reservation</a></p>
+<p>Destructeur de la classe <a class="el" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aucun</td><td></td></tr>
@@ -213,7 +221,7 @@ Fonctions membres publiques</h2></td></tr>
 <p>Affiche une réservation, en récupérant les caractéristiques du véhicule dans le parc passé en paramètre</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td><a class="el" href="class_parc.html">Parc</a>, le parc à explorer. Les informations sur les véhicules doivent être stockées dans une instance de la classe <a class="el" href="class_parc.html">Parc</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td><a class="el" href="class_parc.html" title="Création et gestion d&#39;un parc de locations.">Parc</a>, le parc à explorer. Les informations sur les véhicules doivent être stockées dans une instance de la classe <a class="el" href="class_parc.html" title="Création et gestion d&#39;un parc de locations.">Parc</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -333,7 +341,7 @@ bool faux si le véhicule est indisponible </dd></dl>
 <p>Vérifie si deux réservations sont identiques</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">res</td><td><a class="el" href="class_reservation.html">Reservation</a>, la réservation à comparer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">res</td><td><a class="el" href="class_reservation.html" title="Création et gestion de réservations de véhicule.">Reservation</a>, la réservation à comparer </td></tr>
   </table>
   </dd>
 </dl>
@@ -426,7 +434,7 @@ bool faux si les deux réservations sont différentes. </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

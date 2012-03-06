@@ -65,12 +65,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <h1>Référence de la classe Location</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="Location" --><div class="dynheader">
+<!-- doxytag: class="Location" -->
+<p>Création de location de véhicules.  
+<a href="#_details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_location_8h_source.html">Location.h</a>&gt;</code></p>
+<div class="dynheader">
 Graphe de collaboration de Location:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_location__coll__graph.png" border="0" usemap="#_location_coll__map" alt="Collaboration graph"/></div>
 <map name="_location_coll__map" id="_location_coll__map">
-<area shape="rect" id="node2" href="class_vehicule.html" title="Vehicule" alt="" coords="5,5,77,35"/></map>
+<area shape="rect" id="node2" href="class_vehicule.html" title="Création de véhicule." alt="" coords="5,5,77,35"/></map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 
 <p><a href="class_location-members.html">Liste de tous les membres</a></p>
@@ -93,10 +98,13 @@ Fonctions membres publiques</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher location.  <a href="#ad7dadc3847da51c3c012f0647f011706"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a21ba483682871d05f08f1edbf3dd51e2">operator==</a> (<a class="el" href="class_location.html">Location</a> &amp;loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Locations identiques.  <a href="#a21ba483682871d05f08f1edbf3dd51e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f0d241221d66fbc59e786539cc6155c"></a><!-- doxytag: member="Location::save" ref="a0f0d241221d66fbc59e786539cc6155c" args="(fstream &amp;inFile)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &amp;inFile)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_location.html#a0f0d241221d66fbc59e786539cc6155c">save</a> (fstream &amp;inFile)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sauvegarder liste locations.  <a href="#a0f0d241221d66fbc59e786539cc6155c"></a><br/></td></tr>
 </table>
-<hr/><h2>Documentation des constructeurs et destructeur</h2>
+<hr/><a name="_details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Création de location de véhicules. </p>
+<p>Cette classe permet de gérer la location d'un véhicule </p>
+</div><hr/><h2>Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a87790c14997fd8cdd12080c78c9794bb"></a><!-- doxytag: member="Location::Location" ref="a87790c14997fd8cdd12080c78c9794bb" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -112,7 +120,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &am
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur par défaut de la classe <a class="el" href="class_location.html">Location</a></p>
+<p>Constructeur par défaut de la classe <a class="el" href="class_location.html" title="Création de location de véhicules.">Location</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aucun</td><td></td></tr>
@@ -148,7 +156,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &am
 <div class="memdoc">
 
 <p>Constructeur. </p>
-<p>Constructeur de la classe <a class="el" href="class_location.html">Location</a></p>
+<p>Constructeur de la classe <a class="el" href="class_location.html" title="Création de location de véhicules.">Location</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">vehicule</td><td>Pointeur de véhicule, le véhicule de la location </td></tr>
@@ -174,7 +182,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &am
 <div class="memdoc">
 
 <p>Destructeur. </p>
-<p>Destructeur de la classe <a class="el" href="class_location.html">Location</a></p>
+<p>Destructeur de la classe <a class="el" href="class_location.html" title="Création de location de véhicules.">Location</a></p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aucun</td><td></td></tr>
@@ -233,7 +241,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &am
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Renvoie:</b></dt><dd>un pointeur vers un objet <a class="el" href="class_vehicule.html">Vehicule</a> </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>un pointeur vers un objet <a class="el" href="class_vehicule.html" title="Création de véhicule.">Vehicule</a> </dd></dl>
 
 </div>
 </div>
@@ -256,13 +264,40 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (fstream &am
 <p>Permet de savoir si deux locations sont identiques</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td><a class="el" href="class_location.html">Location</a>, la location à comparer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td><a class="el" href="class_location.html" title="Création de location de véhicules.">Location</a>, la location à comparer </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>true si elles sont identiques </dd>
 <dd>
 false si elles sont différentes </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0f0d241221d66fbc59e786539cc6155c"></a><!-- doxytag: member="Location::save" ref="a0f0d241221d66fbc59e786539cc6155c" args="(fstream &amp;inFile)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Location::save </td>
+          <td>(</td>
+          <td class="paramtype">fstream &amp;&#160;</td>
+          <td class="paramname"><em>inFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sauvegarder liste locations. </p>
+<p>Sauvegarde la liste des locations dans un fichier</p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nomFichier</td><td>string, le nom du fichier de sauvegarde </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -312,7 +347,7 @@ false si elles sont différentes </dd></dl>
 <p>Permet de modifier le véhicule à partir de son immatriculation</p>
 <dl><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">veh,un</td><td>pointeur vers un objet <a class="el" href="class_vehicule.html">Vehicule</a>, le nouveau véhicule </td></tr>
+    <tr><td class="paramname">veh,un</td><td>pointeur vers un objet <a class="el" href="class_vehicule.html" title="Création de véhicule.">Vehicule</a>, le nouveau véhicule </td></tr>
   </table>
   </dd>
 </dl>
@@ -338,7 +373,7 @@ false si elles sont différentes </dd></dl>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

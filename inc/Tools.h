@@ -10,7 +10,7 @@
 
 /*! 
 * \class Tools
-* \brief Utilitaires
+* \brief Utilitaires de manipulation de chaînes, détection et conversion d'entiers et réels
 *
 *  Cette classe fournit un certain nombre de fonctions utilitaires, utilisables via des méthodes statiques.
 *  - Conversion de chaînes de caractères en majuscules et minuscules

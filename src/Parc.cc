@@ -34,9 +34,6 @@ Parc::Parc() {
 }
 
 Parc::~Parc () {
-#ifdef DEBUG
-	cout << "Destructeur de Parc" << endl;
-#endif
 }
 
 void Parc::ajouterLocation () {

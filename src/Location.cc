@@ -12,9 +12,6 @@ Location::Location(	Vehicule *vehicule,
 }
 
 Location::~Location() {
-#ifdef DEBUG
-	cout << "Destructeur de Location" << endl;
-#endif
 }
 
 Vehicule* Location::getVehicule() {

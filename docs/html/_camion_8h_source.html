@@ -63,29 +63,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define CAMION_H</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;<a class="code" href="_utilitaire_8h.html" title="Classe Utilitaire.">Utilitaire.h</a>&gt;</span> <span class="comment">// classe de base</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;<a class="code" href="_utilitaire_8h.html" title="Classe Utilitaire.">Utilitaire.h</a>&gt;</span> 
 <a name="l00006"></a>00006 
-<a name="l00023"></a><a class="code" href="class_camion.html">00023</a> <span class="keyword">class </span><a class="code" href="class_camion.html" title="Création de camions.">Camion</a> : <span class="keyword">public</span> <a class="code" href="class_utilitaire.html">Utilitaire</a> {
-<a name="l00024"></a>00024         <span class="keyword">private</span>:
-<a name="l00025"></a>00025                 <span class="keywordtype">float</span> m_poidsUtile;
-<a name="l00026"></a>00026         
-<a name="l00027"></a>00027         <span class="keyword">public</span>:
-<a name="l00039"></a>00039                 <a class="code" href="class_camion.html#a5eb698c16331e4fab2ba2cbfebbea8a4" title="Constructeur.">Camion</a>(<span class="keywordtype">float</span> poids, <span class="keywordtype">float</span> volume, <span class="keywordtype">string</span> immat, <span class="keywordtype">string</span> marque, <span class="keywordtype">string</span> modele);
-<a name="l00040"></a>00040 
-<a name="l00046"></a>00046                 <a class="code" href="class_camion.html#a5eb698c16331e4fab2ba2cbfebbea8a4" title="Constructeur.">Camion</a>();
-<a name="l00047"></a>00047                 
-<a name="l00053"></a>00053                 <span class="keyword">virtual</span> <a class="code" href="class_camion.html#abd045aad98d33e8e353dcf1a6a7832c7" title="Destructeur.">~Camion</a>();
-<a name="l00054"></a>00054                 
-<a name="l00063"></a>00063                 <span class="keywordtype">float</span> <a class="code" href="class_camion.html#a5eb44123d320dec356d4d335a60b7f28" title="Récupérer poids utile.">getPoidsUtile</a>();
-<a name="l00064"></a>00064                 
-<a name="l00073"></a>00073                 <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a3fe83aa0652ec440e915d983ac46f7d7" title="Modifier poids utile.">setPoidsUtile</a>(<span class="keywordtype">float</span> poids);
-<a name="l00074"></a>00074 
-<a name="l00083"></a>00083                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a1b7d9e844a03b1a1e7143a7618911157" title="Afficher utilitaire.">afficher</a>();
-<a name="l00084"></a>00084                 
-<a name="l00093"></a>00093                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a2c715c85952a7e0bb2948494d79157b8" title="sauvegarder camion">save</a>(fstream &amp;fs);
-<a name="l00094"></a>00094 };
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096 <span class="preprocessor">#endif</span>
+<a name="l00022"></a><a class="code" href="class_camion.html">00022</a> <span class="keyword">class </span><a class="code" href="class_camion.html" title="Création de camions.">Camion</a> : <span class="keyword">public</span> <a class="code" href="class_utilitaire.html" title="Création d&amp;#39;utilitaire.">Utilitaire</a> {
+<a name="l00023"></a>00023         <span class="keyword">private</span>:
+<a name="l00024"></a>00024                 <span class="keywordtype">float</span> m_poidsUtile;
+<a name="l00025"></a>00025         
+<a name="l00026"></a>00026         <span class="keyword">public</span>:
+<a name="l00038"></a>00038                 <a class="code" href="class_camion.html#a5eb698c16331e4fab2ba2cbfebbea8a4" title="Constructeur.">Camion</a>(<span class="keywordtype">float</span> poids, <span class="keywordtype">float</span> volume, <span class="keywordtype">string</span> immat, <span class="keywordtype">string</span> marque, <span class="keywordtype">string</span> modele);
+<a name="l00039"></a>00039 
+<a name="l00045"></a>00045                 <a class="code" href="class_camion.html#a5eb698c16331e4fab2ba2cbfebbea8a4" title="Constructeur.">Camion</a>();
+<a name="l00046"></a>00046                 
+<a name="l00052"></a>00052                 <span class="keyword">virtual</span> <a class="code" href="class_camion.html#abd045aad98d33e8e353dcf1a6a7832c7" title="Destructeur.">~Camion</a>();
+<a name="l00053"></a>00053                 
+<a name="l00062"></a>00062                 <span class="keywordtype">float</span> <a class="code" href="class_camion.html#a5eb44123d320dec356d4d335a60b7f28" title="Récupérer poids utile.">getPoidsUtile</a>();
+<a name="l00063"></a>00063                 
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a3fe83aa0652ec440e915d983ac46f7d7" title="Modifier poids utile.">setPoidsUtile</a>(<span class="keywordtype">float</span> poids);
+<a name="l00073"></a>00073 
+<a name="l00082"></a>00082                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a1b7d9e844a03b1a1e7143a7618911157" title="Afficher utilitaire.">afficher</a>();
+<a name="l00083"></a>00083                 
+<a name="l00092"></a>00092                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_camion.html#a2c715c85952a7e0bb2948494d79157b8" title="sauvegarder camion">save</a>(fstream &amp;fs);
+<a name="l00093"></a>00093 };
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

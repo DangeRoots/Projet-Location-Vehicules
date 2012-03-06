@@ -12,9 +12,6 @@ LocMenu::LocMenu() {
 }
 
 LocMenu::~LocMenu() {
-#ifdef DEBUG
-	cout << "Destructeur de LocMenu" << endl;
-#endif
 }
 
 void LocMenu::afficher() {
