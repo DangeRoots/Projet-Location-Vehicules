@@ -1,12 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$_reservation_8h.html" title="Classe Reservation." alt="" coords="117,83,219,112"/>
-<area shape="rect" id="node13" href="$_c_date_8h.html" title="Classe cdate." alt="" coords="256,392,325,421"/>
-<area shape="rect" id="node22" href="$_parc_8h.html" title="Classe Parc." alt="" coords="407,160,465,189"/>
-<area shape="rect" id="node27" href="$_location_8h.html" title="Classe Location." alt="" coords="337,315,420,344"/>
-<area shape="rect" id="node40" href="$_camion_8h.html" title="Classe Camion." alt="" coords="524,237,601,267"/>
-<area shape="rect" id="node43" href="$_utilitaire_8h.html" title="Classe Utilitaire." alt="" coords="523,315,603,344"/>
-<area shape="rect" id="node49" href="$_v_p_8h.html" title="Classe VP." alt="" coords="635,315,685,344"/>
-<area shape="rect" id="node54" href="$_tools_8h.html" title="Utilitaires variés." alt="" coords="625,237,689,267"/>
-<area shape="rect" id="node31" href="$_vehicule_8h.html" title="Classe Vehicule." alt="" coords="491,392,573,421"/>
-<area shape="rect" id="node38" href="$_erreur_8h_source.html" title="Erreur.h" alt="" coords="400,392,467,421"/>
+<area shape="rect" id="node9" href="$_reservation_8h.html" title="Classe Reservation." alt="" coords="531,83,632,112"/>
+<area shape="rect" id="node13" href="$_c_date_8h.html" title="Classe cdate." alt="" coords="783,392,852,421"/>
+<area shape="rect" id="node22" href="$_parc_8h.html" title="Classe Parc." alt="" coords="376,160,435,189"/>
+<area shape="rect" id="node27" href="$_location_8h.html" title="Classe Location." alt="" coords="328,315,411,344"/>
+<area shape="rect" id="node38" href="$_camion_8h.html" title="Classe Camion." alt="" coords="443,237,520,267"/>
+<area shape="rect" id="node41" href="$_utilitaire_8h.html" title="Classe Utilitaire." alt="" coords="435,315,515,344"/>
+<area shape="rect" id="node47" href="$_v_p_8h.html" title="Classe VP." alt="" coords="253,315,304,344"/>
+<area shape="rect" id="node52" href="$_tools_8h.html" title="Utilitaires variés." alt="" coords="93,237,157,267"/>
+<area shape="rect" id="node31" href="$_vehicule_8h.html" title="Classe Vehicule." alt="" coords="245,392,328,421"/>
 </map>

@@ -15,7 +15,7 @@
 
 /*! 
 * \class Reservation
-* \brief Création et gestion de reservations de véhicule
+* \brief Création et gestion de réservations de véhicule
 *
 *  Cette classe permet de gérer une réservation de véhicule comprennant une immatriculation permettant l'identification du véhicule, la date de départ et la date de retour
 */

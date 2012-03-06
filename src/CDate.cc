@@ -21,9 +21,6 @@ CDate::CDate(int jour, int mois, int annee){
 }
 
 CDate::~CDate(){
-#ifdef DEBUG
-	cout << "Destructeur de CDate" << endl;
-#endif
 }
 
 string CDate::GetStrMois(){

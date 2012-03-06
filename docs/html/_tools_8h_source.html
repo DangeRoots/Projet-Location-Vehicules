@@ -62,28 +62,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a href="_tools_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef TOOLS_H</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define TOOLS_H</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00019"></a><a class="code" href="class_tools.html">00019</a> <span class="keyword">class </span><a class="code" href="class_tools.html" title="Utilitaires.">Tools</a> {
-<a name="l00020"></a>00020         
-<a name="l00021"></a>00021         <span class="keyword">public</span>:
-<a name="l00031"></a>00031                 <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tools.html#a1091376013e416681e90155ed87e977c" title="donne le minimum">isMinimum</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);
-<a name="l00032"></a>00032                 
-<a name="l00042"></a>00042                 <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_tools.html#a3b88f4e98469dd9d4cefcd0525aecde7" title="Est entier.">estEntier</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;data);
-<a name="l00043"></a>00043                 
-<a name="l00053"></a>00053                 <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_tools.html#ac293cf13e99e6d5739a5039cefa8753e" title="Est réel.">estReel</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;data);
-<a name="l00054"></a>00054                 
-<a name="l00063"></a>00063                 <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_tools.html#a07892ec493ca75d5de5fbd01b1a7a223" title="Conversion en réel.">stringToFloat</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> val);
-<a name="l00064"></a>00064                 
-<a name="l00073"></a>00073                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a53e25a53c9f01b0a7e5b3af7673d881d" title="transforme en minuscules">stringToLower</a> (<span class="keywordtype">string</span> &amp;chaine);
-<a name="l00074"></a>00074 
-<a name="l00083"></a>00083                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#af1454104ca8edeb13cfbc7f6c39243d7" title="transforme en majuscules">stringToUpper</a> (<span class="keywordtype">string</span> &amp;chaine);
-<a name="l00084"></a>00084 
-<a name="l00093"></a>00093                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a19db87aec2d67f14d10bf8a3cc04ec02" title="transforme en majuscules">charToUpper</a> (<span class="keywordtype">char</span> &amp;c);
-<a name="l00094"></a>00094                 
-<a name="l00103"></a>00103                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a0826e70408c956f4c4e481aeefe2d9e1" title="transforme en minuscules">charToLower</a> (<span class="keywordtype">char</span> &amp;c);
-<a name="l00104"></a>00104                 
-<a name="l00113"></a>00113                 <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tools.html#af0a210f513662ed4dffc8a79e39fa537" title="Conversion en entier.">stringToInt</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> val);
-<a name="l00114"></a>00114 };
-<a name="l00115"></a>00115 <span class="preprocessor">#endif</span>
+<a name="l00020"></a><a class="code" href="class_tools.html">00020</a> <span class="keyword">class </span><a class="code" href="class_tools.html" title="Utilitaires de manipulation de chaînes, détection et conversion d&amp;#39;entiers et réels.">Tools</a> {
+<a name="l00021"></a>00021         
+<a name="l00022"></a>00022         <span class="keyword">public</span>:
+<a name="l00032"></a>00032                 <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tools.html#a1091376013e416681e90155ed87e977c" title="donne le minimum">isMinimum</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);
+<a name="l00033"></a>00033                 
+<a name="l00043"></a>00043                 <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_tools.html#a3b88f4e98469dd9d4cefcd0525aecde7" title="Est entier.">estEntier</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;data);
+<a name="l00044"></a>00044                 
+<a name="l00054"></a>00054                 <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_tools.html#ac293cf13e99e6d5739a5039cefa8753e" title="Est réel.">estReel</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;data);
+<a name="l00055"></a>00055                 
+<a name="l00064"></a>00064                 <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_tools.html#a07892ec493ca75d5de5fbd01b1a7a223" title="Conversion en réel.">stringToFloat</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> val);
+<a name="l00065"></a>00065                 
+<a name="l00074"></a>00074                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a53e25a53c9f01b0a7e5b3af7673d881d" title="transforme en minuscules">stringToLower</a> (<span class="keywordtype">string</span> &amp;chaine);
+<a name="l00075"></a>00075 
+<a name="l00084"></a>00084                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#af1454104ca8edeb13cfbc7f6c39243d7" title="transforme en majuscules">stringToUpper</a> (<span class="keywordtype">string</span> &amp;chaine);
+<a name="l00085"></a>00085 
+<a name="l00094"></a>00094                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a19db87aec2d67f14d10bf8a3cc04ec02" title="transforme en majuscules">charToUpper</a> (<span class="keywordtype">char</span> &amp;c);
+<a name="l00095"></a>00095                 
+<a name="l00104"></a>00104                 <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_tools.html#a0826e70408c956f4c4e481aeefe2d9e1" title="transforme en minuscules">charToLower</a> (<span class="keywordtype">char</span> &amp;c);
+<a name="l00105"></a>00105                 
+<a name="l00114"></a>00114                 <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tools.html#af0a210f513662ed4dffc8a79e39fa537" title="Conversion en entier.">stringToInt</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> val);
+<a name="l00115"></a>00115 };
+<a name="l00116"></a>00116 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -100,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

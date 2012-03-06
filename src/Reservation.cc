@@ -15,9 +15,6 @@ Reservation::Reservation() {
 }
 
 Reservation::~Reservation() {
-#ifdef DEBUG
-	cout << "Destructeur de Reservation" << endl;
-#endif
 }
 
 void Reservation::setDate (char type, CDate newDate) {

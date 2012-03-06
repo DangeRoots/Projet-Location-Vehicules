@@ -23,9 +23,6 @@ ListeReservations::ListeReservations (fstream &inFile) {
 }
 
 ListeReservations::~ListeReservations() {
-#ifdef DEBUG
-	cout << "Destructeur de ListeReservations" << endl;
-#endif
 }
 
 bool ListeReservations::ajouterReservation (Reservation res) {

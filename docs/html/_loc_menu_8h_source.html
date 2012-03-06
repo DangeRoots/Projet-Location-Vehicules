@@ -72,27 +72,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="_liste_reservations_8h.html" title="Classe ListeReservations.">ListeReservations.h</a>&gt;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;<a class="code" href="_location_8h.html" title="Classe Location.">Location.h</a>&gt;</span>
 <a name="l00013"></a>00013 
-<a name="l00024"></a><a class="code" href="class_loc_menu.html">00024</a> <span class="keyword">class </span><a class="code" href="class_loc_menu.html">LocMenu</a> {
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026         <span class="keyword">private</span>:
-<a name="l00027"></a>00027                         vector&lt;string&gt; entrees;         
-<a name="l00028"></a>00028                         vector&lt;string&gt;::iterator menuI;
+<a name="l00028"></a><a class="code" href="class_loc_menu.html">00028</a> <span class="keyword">class </span><a class="code" href="class_loc_menu.html" title="Création du menu du logiciel.">LocMenu</a> {
 <a name="l00029"></a>00029 
-<a name="l00030"></a>00030         <span class="keyword">public</span>:
-<a name="l00031"></a>00031                         
-<a name="l00039"></a>00039                 <a class="code" href="class_loc_menu.html#a8a5ba1025bf18ae8f7b103517f87d057" title="Constructeur.">LocMenu</a>();
-<a name="l00040"></a>00040 
-<a name="l00048"></a>00048                 <a class="code" href="class_loc_menu.html#ad4f2fe2ed5d7789908649301102f2dc3" title="Destructeur.">~LocMenu</a>(); 
-<a name="l00049"></a>00049 
-<a name="l00058"></a>00058                 <span class="keywordtype">void</span> <a class="code" href="class_loc_menu.html#aef44c96ab96e7cfb155a39c01a24c32e" title="Afficher la liste du menu.">afficher</a>();
-<a name="l00059"></a>00059 
-<a name="l00068"></a>00068                 <span class="keywordtype">string</span> <a class="code" href="class_loc_menu.html#aec95d16c95fb328c8306884417be6b4a" title="Récupérer valeur utilisateur.">recupererValeur</a>(<span class="keywordtype">string</span> texte);
-<a name="l00069"></a>00069 
-<a name="l00082"></a>00082                 <span class="keywordtype">void</span> <a class="code" href="class_loc_menu.html#a39ea93ab3e1fbca88093550c7f058220" title="traiter choix">traiter</a>(<span class="keywordtype">int</span> choix, <a class="code" href="class_parc.html">Parc</a> &amp;p, <a class="code" href="class_liste_reservations.html" title="Création de listes de réservations de véhicules.">ListeReservations</a> &amp;r, <span class="keywordtype">string</span> nomFichierVeh, <span class="keywordtype">string</span> nomFichierResa);
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 };
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086 <span class="preprocessor">#endif</span>
+<a name="l00030"></a>00030         <span class="keyword">private</span>:
+<a name="l00031"></a>00031                         vector&lt;string&gt; entrees;         
+<a name="l00032"></a>00032                         vector&lt;string&gt;::iterator menuI;
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034         <span class="keyword">public</span>:
+<a name="l00035"></a>00035                         
+<a name="l00043"></a>00043                 <a class="code" href="class_loc_menu.html#a8a5ba1025bf18ae8f7b103517f87d057" title="Constructeur.">LocMenu</a>();
+<a name="l00044"></a>00044 
+<a name="l00052"></a>00052                 <a class="code" href="class_loc_menu.html#ad4f2fe2ed5d7789908649301102f2dc3" title="Destructeur.">~LocMenu</a>(); 
+<a name="l00053"></a>00053 
+<a name="l00062"></a>00062                 <span class="keywordtype">void</span> <a class="code" href="class_loc_menu.html#aef44c96ab96e7cfb155a39c01a24c32e" title="Afficher la liste du menu.">afficher</a>();
+<a name="l00063"></a>00063 
+<a name="l00072"></a>00072                 <span class="keywordtype">string</span> <a class="code" href="class_loc_menu.html#aec95d16c95fb328c8306884417be6b4a" title="Récupérer valeur utilisateur.">recupererValeur</a>(<span class="keywordtype">string</span> texte);
+<a name="l00073"></a>00073 
+<a name="l00086"></a>00086                 <span class="keywordtype">void</span> <a class="code" href="class_loc_menu.html#a39ea93ab3e1fbca88093550c7f058220" title="traiter choix">traiter</a>(<span class="keywordtype">int</span> choix, <a class="code" href="class_parc.html" title="Création et gestion d&amp;#39;un parc de locations.">Parc</a> &amp;p, <a class="code" href="class_liste_reservations.html" title="Création de listes de réservations de véhicules.">ListeReservations</a> &amp;r, <span class="keywordtype">string</span> nomFichierVeh, <span class="keywordtype">string</span> nomFichierResa);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 };
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!--- window showing the filter options -->
@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Généré le Mon Mar 5 2012 22:33:13 pour Location de véhicules par&#160;
+<hr class="footer"/><address class="footer"><small>Généré le Tue Mar 6 2012 14:05:59 pour Location de véhicules par&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
